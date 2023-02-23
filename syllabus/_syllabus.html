@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.269">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Design and Implementation of User Interfaces</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="_syllabus_files/libs/clipboard/clipboard.min.js"></script>
+<script src="_syllabus_files/libs/quarto-html/quarto.js"></script>
+<script src="_syllabus_files/libs/quarto-html/popper.min.js"></script>
+<script src="_syllabus_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="_syllabus_files/libs/quarto-html/anchor.min.js"></script>
+<link href="_syllabus_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="_syllabus_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="_syllabus_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="_syllabus_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="_syllabus_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+
+
+</head>
+
+<body class="fullcontent">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Design and Implementation of User Interfaces</h1>
+<p class="subtitle lead">Spring 2023 <br> MWF 11am-12pm, East Hall 2214</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="instructor-and-course-links" class="level2">
+<h2 class="anchored" data-anchor-id="instructor-and-course-links">Instructor and course links</h2>
+<p>Dr.&nbsp;John Leonard, Professor, <a href="mailto:jdleonard@vcu.edu">jdleonard@vcu.edu</a>, Office: ERB 2327</p>
+<p>Canvas “announcements” will be used to send out official emails regarding updates and changes to the syllabus, course outline, and course projects. Regularly check the course Canvas and watch your email for changes.</p>
+<p>GradeScope will be used for most homework submissions and grading. You should know how to create PDF documents and post PDF documents to Gradescope. You should know how to use Github, as many homework assignments will require submission of material to Gradescope using a Github repository.</p>
+<p>Discord is the unofficial communications platform for the course. Join the discord and then change your server name to your preferred/real name associated with the course roster.</p>
+<p>This is a face-to-face course. In class participation is an important part of learning this material and will score points towards your final grade. However, recognizing that life happens I will work to stream the lectures live and record the lectures using Zoom. Recordings will be posted to the course Canvas.</p>
+</section>
+<section id="contact-information" class="level2">
+<h2 class="anchored" data-anchor-id="contact-information">Contact information</h2>
+<p>If you have course related questions, I HIGHLY PREFER that you use the course discord. I regularly monitor discord. You’ll get the added benefit that other students in the class may be able to get your question answered faster. Please do not DM (direct message) me in discord, I cannot guarantee that I will respond. (I also can’t tell who you are!)</p>
+<p>If you need to contact me directly USE EMAIL. My goal is to respond to your email within 24 hours or much less. If I will be unavailable for a longer stretch of time, I will let the class know in an announcement.</p>
+</section>
+<section id="course-catalog-description" class="level2">
+<h2 class="anchored" data-anchor-id="course-catalog-description">Course catalog description</h2>
+<p>Semester course; 3 lecture hours. 3 credits. Prerequisite: CMSC 355 with a minimum grade of C. Enrollment is restricted to majors in the computer science program. This course investigates the design and implementation of user interfaces and the evaluation of user experiences. Particular emphasis is placed on creating professional-quality designs and implementations and on evaluating these implementations with end-users. Students will create their own UIs as well as critique others to develop a deep understanding of what works in practice.</p>
+</section>
+<section id="instructors-course-description" class="level2">
+<h2 class="anchored" data-anchor-id="instructors-course-description">Instructor’s Course Description</h2>
+<p>At completion of the course students will be able to design and implement user interfaces appropriate to the design need following best UI practices. Students will build wireframes, prototypes, working models, and evaluate their designs. Students will be evaluated on their submissions and on their participation in classroom activities.</p>
+</section>
+<section id="abet-student-learning-outcomes" class="level2">
+<h2 class="anchored" data-anchor-id="abet-student-learning-outcomes">ABET Student Learning Outcomes</h2>
+<ul>
+<li><p>Analyze a complex computing problem and to apply principles of computing and other relevant disciplines to identify solutions.</p></li>
+<li><p>Design, implement, and evaluate a computing-based solution to meet a given set of computing requirements in the context of the program’s discipline.</p></li>
+<li><p>Communicate effectively in a variety of professional contexts.</p></li>
+<li><p>Function effectively as a member or leader of a team engaged in activities appropriate to the program’s discipline.</p></li>
+<li><p>Apply computer science theory and software development fundamentals to produce computing-based solutions.</p></li>
+<li><p>Software Engineering: Apply software engineering techniques to implement practical solutions within the context of a larger team in a timely, organized, and professional manner</p></li>
+</ul>
+</section>
+<section id="course-structure" class="level2">
+<h2 class="anchored" data-anchor-id="course-structure">Course Structure</h2>
+<p>Follow the course schedule, watch the assigned videos, review the assigned readings prior to class, and perform any other activities prior to each class period.</p>
+<p>This course will require active participation and collaboration with fellow classmates. Be prepared to complete assignments as well as participate in group discussions on topics related to the assigned readings.</p>
+<p>Class materials will be available from the course Canvas.</p>
+<p>Assignments and projects will be submitted online.</p>
+</section>
+<section id="online-learning-considerations" class="level2">
+<h2 class="anchored" data-anchor-id="online-learning-considerations">Online Learning Considerations</h2>
+<p>Some elements of the course may require remote participation in classroom activities. When learning remotely it is important to keep up with the class content (readings &amp; videos) as well as the discussion and assignments. Check the course schedule regularly to familiarize yourself with the work and due dates.</p>
+</section>
+<section id="final-exam-date-and-time" class="level2">
+<h2 class="anchored" data-anchor-id="final-exam-date-and-time">Final Exam Date and time</h2>
+</section>
+<section id="course-assessment-and-grading-policy" class="level2">
+<h2 class="anchored" data-anchor-id="course-assessment-and-grading-policy">Course assessment and grading policy</h2>
+<p>Throughout the semester you will submit in-class exercises and outside-of-class assignments. When working in groups each member of the group will receive the same score unless otherwise noted. See the course outline for a tentative list of assignments and due dates.</p>
+<p><a href="#tbl-panel">Table&nbsp;1</a> below highlights how grades are assigned and the weights associated with the different course deliverables.</p>
+<div id="tbl-panel" class="tbl-parent quarto-layout-panel anchored">
+<div class="panel-caption table-caption">
+<p>Table&nbsp;1: Course grading scheme</p>
+</div>
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div id="tbl-left" class="quarto-layout-cell quarto-layout-cell-subref anchored" data-ref-parent="tbl-panel" style="flex-basis: 50.0%;justify-content: center;">
+<table class="table">
+<caption>(a) Grading scale</caption>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Score range</th>
+<th style="text-align: center;">Grade</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">90&lt;= X</td>
+<td style="text-align: center;">A</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">80&lt;= X &lt; 90</td>
+<td style="text-align: center;">B</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">70&lt;= X &lt; 80</td>
+<td style="text-align: center;">C</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">60&lt;= X &lt; 70</td>
+<td style="text-align: center;">D</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">X &lt; 60</td>
+<td style="text-align: center;">F</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="tbl-right" class="quarto-layout-cell quarto-layout-cell-subref anchored" data-ref-parent="tbl-panel" style="flex-basis: 50.0%;justify-content: center;">
+<table class="table">
+<caption>(b) Grade weights</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Deliverable</th>
+<th style="text-align: center;">%</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Projects</td>
+<td style="text-align: center;">50%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">In-class</td>
+<td style="text-align: center;">30%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Midterm</td>
+<td style="text-align: center;">10%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Final</td>
+<td style="text-align: center;">10%</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+<section id="technology-considerations" class="level2">
+<h2 class="anchored" data-anchor-id="technology-considerations">Technology considerations</h2>
+<p>This is a course in computer science. This course builds on knowledge, skills, and abilities you have acquired in previous classes. Bring your laptop to class and be prepared to use a browser, a text/code editor, and other general purpose computing tools. All the standard VCU technology guidelines and College of Engineering technology guidelines apply.</p>
+</section>
+<section id="university-resources" class="level2">
+<h2 class="anchored" data-anchor-id="university-resources">University Resources</h2>
+<p>Use VCU Libraries to find and access library resources, spaces, technology and services that support and enhance all learning opportunities at the university. <a href="https://www.library.vcu.edu/" class="uri">https://www.library.vcu.edu/</a></p>
+</section>
+<section id="institutional-policies" class="level2">
+<h2 class="anchored" data-anchor-id="institutional-policies">Institutional Policies</h2>
+<p>Students should visit http://go.vcu.edu/syllabus and review all syllabus statement information. The full university syllabus statement includes information on safety, registration, the VCU Honor Code, student conduct, withdrawal and more.<br>
+Accommodations for Students with Disabilities Disability Statement: If you are a student with a disability requesting reasonable accommodations in this course, please visit Student Accessibility and Educational Opportunity. All requests for reasonable accommodations require registration with SAEO in advance of need. Faculty, students and SAEO will work together regarding classroom accommodations. You are encouraged to discuss approved accommodations with your faculty. Counseling Services Resources for online students can be found through the Online Counseling Center. Tutoring The Campus Learning Center offers appointment, drop-in and group tutoring in undergraduate courses across the disciplines. Writing Center The writing center provides assistance at all stages of the writing process, from brainstorming to final draft. Cheating and Plagiarism Plagiarism is stealing and passing off the ideas or words of another as one’s own; it is using another’s production without crediting the source. The best way to avoid plagiarism is to cite properly in any assignment information and concepts that are not your own originally. If a student is discovered to have plagiarized, that student will fail that particular assignment. Academic integrity is expected in all aspects at the university including this course. Don’t expect less of yourself than you do of your students For more information: <a href="https://students.vcu.edu/studentconduct/" class="uri">https://students.vcu.edu/studentconduct/</a></p>
+</section>
+<section id="course-policies" class="level2">
+<h2 class="anchored" data-anchor-id="course-policies">Course Policies</h2>
+<section id="latemissing-work-policy" class="level3">
+<h3 class="anchored" data-anchor-id="latemissing-work-policy">Late/Missing Work Policy</h3>
+<p>Late work will sometimes be accepted on an assignment-by-assignment basis. Please review the course calendar to ensure you are aware of all due dates and that you plan accordingly. All due dates are in Eastern Standard Time. If you have a reason for an extended absence from your academic studies, such as hospitalization or incarceration, please contact me.</p>
+</section>
+<section id="group-assignments-and-collaboration" class="level3">
+<h3 class="anchored" data-anchor-id="group-assignments-and-collaboration">Group assignments and collaboration</h3>
+<p>Please read the assignments to determine whether they are to be completed individually or in teams. I appreciate and promote collaboration between students on ALL activities. It’s good to share ideas and strategies. New and different experiences and perspectives will help you grow and expand your own perspectives.</p>
+<p>Individual assignments often require internal reflection, writing and coding. For individual assignments, I expect you to create your own code (not cut and paste from friend) and present YOUR OWN ideas as part of the submission. I’ll be providing feedback on your ideas.</p>
+<p>Group assignments often require brainstorming, strategizing and problem solving, and debating. For group assignments I expect everyone on the team to participate in one role or another.</p>
+<p>Ultimately, YOU are responsible for your own learning. I can guide you and your classmates can contribute to your learning, but in the end, the responsibility and the grade are yours alone.</p>
+</section>
+<section id="accessibility-concerns" class="level3">
+<h3 class="anchored" data-anchor-id="accessibility-concerns">Accessibility Concerns</h3>
+<p>I will do all I can to accommodate any special learning needs. I welcome your feedback and suggestions. As noted earlier, if you require formal accommodations, please coordinate with the</p>
+<p>Student Accessibility and Educational Opportunity Office: (https://saeo.vcu.edu/getting-started/who-we-serve/)</p>
+</section>
+<section id="intellectual-property-and-copyright" class="level3">
+<h3 class="anchored" data-anchor-id="intellectual-property-and-copyright">Intellectual Property and Copyright</h3>
+<p>Intellectual property and copyrighted material that is presented in this course is not for redistribution.</p>
+</section>
+</section>
+<section id="vcu-syllabus-statement" class="level2">
+<h2 class="anchored" data-anchor-id="vcu-syllabus-statement">VCU Syllabus Statement</h2>
+<p>Students should visit <a href="http://go.vcu.edu/syllabus" class="uri">http://go.vcu.edu/syllabus</a> and review all syllabus statement information. The full university syllabus statement includes information on safety, registration, the VCU Honor Code, student conduct, withdrawal and more.</p>
+</section>
+<section id="vcu-important-dates" class="level2">
+<h2 class="anchored" data-anchor-id="vcu-important-dates">VCU Important dates</h2>
+<p>Important dates for the current and future semesters are listed in the <a href="https://academiccalendars.vcu.edu/">VCU Academic Calendar</a>.</p>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

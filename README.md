@@ -1,2 +1,2 @@
-# ssgvip-quarto-cmsc-courses
-Quarto project for Computer Science department
+# cmsc-course-materials
+Central repo for CMSC course materials in standard format

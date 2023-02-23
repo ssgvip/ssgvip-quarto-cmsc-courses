@@ -1,0 +1,128 @@
+[
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "cmsc-course-materials",
+    "section": "",
+    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
+  },
+  {
+    "objectID": "syllabus/cmsc475.html",
+    "href": "syllabus/cmsc475.html",
+    "title": "Design and Implementation of User Interfaces",
+    "section": "",
+    "text": "Dr. John Leonard, Professor, jdleonard@vcu.edu, Office: ERB 2327\nCanvas “announcements” will be used to send out official emails regarding updates and changes to the syllabus, course outline, and course projects. Regularly check the course Canvas and watch your email for changes.\nGradeScope will be used for most homework submissions and grading. You should know how to create PDF documents and post PDF documents to Gradescope. You should know how to use Github, as many homework assignments will require submission of material to Gradescope using a Github repository.\nDiscord is the unofficial communications platform for the course. Join the discord and then change your server name to your preferred/real name associated with the course roster.\nThis is a face-to-face course. In class participation is an important part of learning this material and will score points towards your final grade. However, recognizing that life happens I will work to stream the lectures live and record the lectures using Zoom. Recordings will be posted to the course Canvas."
+  },
+  {
+    "objectID": "syllabus/cmsc475.html#contact-information",
+    "href": "syllabus/cmsc475.html#contact-information",
+    "title": "Design and Implementation of User Interfaces",
+    "section": "Contact information",
+    "text": "Contact information\nIf you have course related questions, I HIGHLY PREFER that you use the course discord. I regularly monitor discord. You’ll get the added benefit that other students in the class may be able to get your question answered faster. Please do not DM (direct message) me in discord, I cannot guarantee that I will respond. (I also can’t tell who you are!)\nIf you need to contact me directly USE EMAIL. My goal is to respond to your email within 24 hours or much less. If I will be unavailable for a longer stretch of time, I will let the class know in an announcement."
+  },
+  {
+    "objectID": "syllabus/cmsc475.html#course-catalog-description",
+    "href": "syllabus/cmsc475.html#course-catalog-description",
+    "title": "Design and Implementation of User Interfaces",
+    "section": "Course catalog description",
+    "text": "Course catalog description\nSemester course; 3 lecture hours. 3 credits. Prerequisite: CMSC 355 with a minimum grade of C. Enrollment is restricted to majors in the computer science program. This course investigates the design and implementation of user interfaces and the evaluation of user experiences. Particular emphasis is placed on creating professional-quality designs and implementations and on evaluating these implementations with end-users. Students will create their own UIs as well as critique others to develop a deep understanding of what works in practice."
+  },
+  {
+    "objectID": "syllabus/cmsc475.html#instructors-course-description",
+    "href": "syllabus/cmsc475.html#instructors-course-description",
+    "title": "Design and Implementation of User Interfaces",
+    "section": "Instructor’s Course Description",
+    "text": "Instructor’s Course Description\nAt completion of the course students will be able to design and implement user interfaces appropriate to the design need following best UI practices. Students will build wireframes, prototypes, working models, and evaluate their designs. Students will be evaluated on their submissions and on their participation in classroom activities."
+  },
+  {
+    "objectID": "syllabus/cmsc475.html#abet-student-learning-outcomes",
+    "href": "syllabus/cmsc475.html#abet-student-learning-outcomes",
+    "title": "Design and Implementation of User Interfaces",
+    "section": "ABET Student Learning Outcomes",
+    "text": "ABET Student Learning Outcomes\n\nAnalyze a complex computing problem and to apply principles of computing and other relevant disciplines to identify solutions.\nDesign, implement, and evaluate a computing-based solution to meet a given set of computing requirements in the context of the program’s discipline.\nCommunicate effectively in a variety of professional contexts.\nFunction effectively as a member or leader of a team engaged in activities appropriate to the program’s discipline.\nApply computer science theory and software development fundamentals to produce computing-based solutions.\nSoftware Engineering: Apply software engineering techniques to implement practical solutions within the context of a larger team in a timely, organized, and professional manner"
+  },
+  {
+    "objectID": "syllabus/cmsc475.html#course-structure",
+    "href": "syllabus/cmsc475.html#course-structure",
+    "title": "Design and Implementation of User Interfaces",
+    "section": "Course Structure",
+    "text": "Course Structure\nFollow the course schedule, watch the assigned videos, review the assigned readings prior to class, and perform any other activities prior to each class period.\nThis course will require active participation and collaboration with fellow classmates. Be prepared to complete assignments as well as participate in group discussions on topics related to the assigned readings.\nClass materials will be available from the course Canvas.\nAssignments and projects will be submitted online."
+  },
+  {
+    "objectID": "syllabus/cmsc475.html#online-learning-considerations",
+    "href": "syllabus/cmsc475.html#online-learning-considerations",
+    "title": "Design and Implementation of User Interfaces",
+    "section": "Online Learning Considerations",
+    "text": "Online Learning Considerations\nSome elements of the course may require remote participation in classroom activities. When learning remotely it is important to keep up with the class content (readings & videos) as well as the discussion and assignments. Check the course schedule regularly to familiarize yourself with the work and due dates."
+  },
+  {
+    "objectID": "syllabus/cmsc475.html#final-exam-date-and-time",
+    "href": "syllabus/cmsc475.html#final-exam-date-and-time",
+    "title": "Design and Implementation of User Interfaces",
+    "section": "Final Exam Date and time",
+    "text": "Final Exam Date and time"
+  },
+  {
+    "objectID": "syllabus/cmsc475.html#course-assessment-and-grading-policy",
+    "href": "syllabus/cmsc475.html#course-assessment-and-grading-policy",
+    "title": "Design and Implementation of User Interfaces",
+    "section": "Course assessment and grading policy",
+    "text": "Course assessment and grading policy\nThroughout the semester you will submit in-class exercises and outside-of-class assignments. When working in groups each member of the group will receive the same score unless otherwise noted. See the course outline for a tentative list of assignments and due dates.\nTable 1 below highlights how grades are assigned and the weights associated with the different course deliverables.\n\n\nTable 1: Course grading scheme\n\n\n\n\n(a) Grading scale\n\n\nScore range\nGrade\n\n\n\n\n90<= X\nA\n\n\n80<= X < 90\nB\n\n\n70<= X < 80\nC\n\n\n60<= X < 70\nD\n\n\nX < 60\nF\n\n\n\n\n\n\n(b) Grade weights\n\n\nDeliverable\n%\n\n\n\n\nProjects\n50%\n\n\nIn-class\n30%\n\n\nMidterm\n10%\n\n\nFinal\n10%"
+  },
+  {
+    "objectID": "syllabus/cmsc475.html#technology-considerations",
+    "href": "syllabus/cmsc475.html#technology-considerations",
+    "title": "Design and Implementation of User Interfaces",
+    "section": "Technology considerations",
+    "text": "Technology considerations\nThis is a course in computer science. This course builds on knowledge, skills, and abilities you have acquired in previous classes. Bring your laptop to class and be prepared to use a browser, a text/code editor, and other general purpose computing tools. All the standard VCU technology guidelines and College of Engineering technology guidelines apply."
+  },
+  {
+    "objectID": "syllabus/cmsc475.html#university-resources",
+    "href": "syllabus/cmsc475.html#university-resources",
+    "title": "Design and Implementation of User Interfaces",
+    "section": "University Resources",
+    "text": "University Resources\nUse VCU Libraries to find and access library resources, spaces, technology and services that support and enhance all learning opportunities at the university. See: https://www.library.vcu.edu/"
+  },
+  {
+    "objectID": "syllabus/cmsc475.html#institutional-policies",
+    "href": "syllabus/cmsc475.html#institutional-policies",
+    "title": "Design and Implementation of User Interfaces",
+    "section": "Institutional Policies",
+    "text": "Institutional Policies\nStudents should visit http://go.vcu.edu/syllabus and review all syllabus statement information. The full university syllabus statement includes information on safety, registration, the VCU Honor Code, student conduct, withdrawal and more.\n\nAccommodations for Students with Disabilities\nDisability Statement: If you are a student with a disability requesting reasonable accommodations in this course, please visit Student Accessibility and Educational Opportunity. All requests for reasonable accommodations require registration with SAEO in advance of need. Faculty, students and SAEO will work together regarding classroom accommodations. You are encouraged to discuss approved accommodations with your faculty.\n\n\nCounseling Services\nResources for online students can be found through the Online Counseling Center.\n\n\nTutoring\nThe Campus Learning Center offers appointment, drop-in and group tutoring in undergraduate courses across the disciplines. Writing Center The writing center provides assistance at all stages of the writing process, from brainstorming to final draft. Cheating and Plagiarism Plagiarism is stealing and passing off the ideas or words of another as one’s own; it is using another’s production without crediting the source. The best way to avoid plagiarism is to cite properly in any assignment information and concepts that are not your own originally. If a student is discovered to have plagiarized, that student will fail that particular assignment. Academic integrity is expected in all aspects at the university including this course. Don’t expect less of yourself than you do of your students For more information: https://students.vcu.edu/studentconduct/"
+  },
+  {
+    "objectID": "syllabus/cmsc475.html#course-policies",
+    "href": "syllabus/cmsc475.html#course-policies",
+    "title": "Design and Implementation of User Interfaces",
+    "section": "Course Policies",
+    "text": "Course Policies\n\nLate/Missing Work Policy\nLate work will sometimes be accepted on an assignment-by-assignment basis. Please review the course calendar to ensure you are aware of all due dates and that you plan accordingly. All due dates are in Eastern Standard Time. If you have a reason for an extended absence from your academic studies, such as hospitalization or incarceration, please contact me.\n\n\nGroup assignments and collaboration\nPlease read the assignments to determine whether they are to be completed individually or in teams. I appreciate and promote collaboration between students on ALL activities. It’s good to share ideas and strategies. New and different experiences and perspectives will help you grow and expand your own perspectives.\nIndividual assignments often require internal reflection, writing and coding. For individual assignments, I expect you to create your own code (not cut and paste from friend) and present YOUR OWN ideas as part of the submission. I’ll be providing feedback on your ideas.\nGroup assignments often require brainstorming, strategizing and problem solving, and debating. For group assignments I expect everyone on the team to participate in one role or another.\nUltimately, YOU are responsible for your own learning. I can guide you and your classmates can contribute to your learning, but in the end, the responsibility and the grade are yours alone.\n\n\nAccessibility Concerns\nI will do all I can to accommodate any special learning needs. I welcome your feedback and suggestions. As noted earlier, if you require formal accommodations, please coordinate with the\nStudent Accessibility and Educational Opportunity Office: (https://saeo.vcu.edu/getting-started/who-we-serve/)\n\n\nIntellectual Property and Copyright\nIntellectual property and copyrighted material that is presented in this course is not for redistribution."
+  },
+  {
+    "objectID": "syllabus/cmsc475.html#vcu-syllabus-statement",
+    "href": "syllabus/cmsc475.html#vcu-syllabus-statement",
+    "title": "Design and Implementation of User Interfaces",
+    "section": "VCU Syllabus Statement",
+    "text": "VCU Syllabus Statement\nStudents should visit http://go.vcu.edu/syllabus and review all syllabus statement information. The full university syllabus statement includes information on safety, registration, the VCU Honor Code, student conduct, withdrawal and more."
+  },
+  {
+    "objectID": "syllabus/cmsc475.html#vcu-important-dates",
+    "href": "syllabus/cmsc475.html#vcu-important-dates",
+    "title": "Design and Implementation of User Interfaces",
+    "section": "VCU Important dates",
+    "text": "VCU Important dates\nImportant dates for the current and future semesters are listed in the VCU Academic Calendar."
+  },
+  {
+    "objectID": "syllabus/cmsc508.html",
+    "href": "syllabus/cmsc508.html",
+    "title": "CMSC508",
+    "section": "",
+    "text": "Section 1\nthis is section 1\n\n\nSection 2\nthis is section 2\n\n\nSection 3\nthis is section 3\n\n\nSection 4\nthis is section 4"
+  }
+]
