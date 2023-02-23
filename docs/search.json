@@ -18,21 +18,7 @@
     "href": "syllabus/cmsc475.html",
     "title": "Design and Implementation of User Interfaces",
     "section": "",
-    "text": "Dr. John Leonard, Professor, jdleonard@vcu.edu, Office: ERB 2327\nCanvas “announcements” will be used to send out official emails regarding updates and changes to the syllabus, course outline, and course projects. Regularly check the course Canvas and watch your email for changes.\nGradeScope will be used for most homework submissions and grading. You should know how to create PDF documents and post PDF documents to Gradescope. You should know how to use Github, as many homework assignments will require submission of material to Gradescope using a Github repository.\nDiscord is the unofficial communications platform for the course. Join the discord and then change your server name to your preferred/real name associated with the course roster.\nThis is a face-to-face course. In class participation is an important part of learning this material and will score points towards your final grade. However, recognizing that life happens I will work to stream the lectures live and record the lectures using Zoom. Recordings will be posted to the course Canvas."
-  },
-  {
-    "objectID": "syllabus/cmsc475.html#contact-information",
-    "href": "syllabus/cmsc475.html#contact-information",
-    "title": "Design and Implementation of User Interfaces",
-    "section": "Contact information",
-    "text": "Contact information\nIf you have course related questions, I HIGHLY PREFER that you use the course discord. I regularly monitor discord. You’ll get the added benefit that other students in the class may be able to get your question answered faster. Please do not DM (direct message) me in discord, I cannot guarantee that I will respond. (I also can’t tell who you are!)\nIf you need to contact me directly USE EMAIL. My goal is to respond to your email within 24 hours or much less. If I will be unavailable for a longer stretch of time, I will let the class know in an announcement."
-  },
-  {
-    "objectID": "syllabus/cmsc475.html#course-catalog-description",
-    "href": "syllabus/cmsc475.html#course-catalog-description",
-    "title": "Design and Implementation of User Interfaces",
-    "section": "Course catalog description",
-    "text": "Course catalog description\nSemester course; 3 lecture hours. 3 credits. Prerequisite: CMSC 355 with a minimum grade of C. Enrollment is restricted to majors in the computer science program. This course investigates the design and implementation of user interfaces and the evaluation of user experiences. Particular emphasis is placed on creating professional-quality designs and implementations and on evaluating these implementations with end-users. Students will create their own UIs as well as critique others to develop a deep understanding of what works in practice."
+    "text": "Semester course; 3 lecture hours. 3 credits. Prerequisite: CMSC 355 with a minimum grade of C. Enrollment is restricted to majors in the computer science program. This course investigates the design and implementation of user interfaces and the evaluation of user experiences. Particular emphasis is placed on creating professional-quality designs and implementations and on evaluating these implementations with end-users. Students will create their own UIs as well as critique others to develop a deep understanding of what works in practice."
   },
   {
     "objectID": "syllabus/cmsc475.html#instructors-course-description",
@@ -40,6 +26,20 @@
     "title": "Design and Implementation of User Interfaces",
     "section": "Instructor’s Course Description",
     "text": "Instructor’s Course Description\nAt completion of the course students will be able to design and implement user interfaces appropriate to the design need following best UI practices. Students will build wireframes, prototypes, working models, and evaluate their designs. Students will be evaluated on their submissions and on their participation in classroom activities."
+  },
+  {
+    "objectID": "syllabus/cmsc475.html#instructor-and-course-links",
+    "href": "syllabus/cmsc475.html#instructor-and-course-links",
+    "title": "Design and Implementation of User Interfaces",
+    "section": "Instructor and course links",
+    "text": "Instructor and course links\nDr. John Leonard, Professor, jdleonard@vcu.edu, Office: ERB 2327\nCanvas “announcements” will be used to send out official emails regarding updates and changes to the syllabus, course outline, and course projects. Regularly check the course Canvas and watch your email for changes.\nGradeScope will be used for most homework submissions and grading. You should know how to create PDF documents and post PDF documents to Gradescope. You should know how to use Github, as many homework assignments will require submission of material to Gradescope using a Github repository.\nDiscord is the unofficial communications platform for the course. Join the discord and then change your server name to your preferred/real name associated with the course roster.\nThis is a face-to-face course. In class participation is an important part of learning this material and will score points towards your final grade. However, recognizing that life happens I will work to stream the lectures live and record the lectures using Zoom. Recordings will be posted to the course Canvas."
+  },
+  {
+    "objectID": "syllabus/cmsc475.html#contact-information",
+    "href": "syllabus/cmsc475.html#contact-information",
+    "title": "Design and Implementation of User Interfaces",
+    "section": "Contact information",
+    "text": "Contact information\nIf you have course related questions, I HIGHLY PREFER that you use the course discord. I regularly monitor discord. You’ll get the added benefit that other students in the class may be able to get your question answered faster. Please do not DM (direct message) me in discord, I cannot guarantee that I will respond. (I also can’t tell who you are!)\nIf you need to contact me directly USE EMAIL. My goal is to respond to your email within 24 hours or much less. If I will be unavailable for a longer stretch of time, I will let the class know in an announcement."
   },
   {
     "objectID": "syllabus/cmsc475.html#abet-student-learning-outcomes",
