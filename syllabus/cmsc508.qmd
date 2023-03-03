@@ -1,19 +1,113 @@
 ---
-title: "CMSC508"
+semester: "Spring 2023"
+course-prefix-and-number: "CMSC 508"
+course-title: "Database Theory"
+meeting-days-and-times: "Thuesday and Thursday 12:30-1:45PM"
+meeting-location: "E3229"
+instructor-name: "Alberto Cano"
+instructor-title: "Professor"
+instructor-email: "acano@vcu.edu"
+instructor-office-hours: "TR 2:00-3:00 PM"
+instructor-office-location: "ERB2314"
+course-description: "(course description here)"
+
+course-canvas-url:
+course-discord-url:
+course-gradescope-url:
+
+title: "{{< meta course-title  >}}"
+subtitle: "{{< meta semester >}}, {{< meta meeting-days-and-times >}}, {{< meta meeting-location >}}"
+
 ---
-# Section 1
 
-this is section 1
+## Course catalog description
 
-# Section 2
+Semester course; 3 lecture hours. 3 credits.
+Introduction to databases. Database design and the Entity-Relationship model. Relational database design, normalization and decomposition. Relational algebra. SQL. Data definition language. Data manipulation language. Data query language. Queries, subqueries, functions, procedures, cursors, views, triggers,indexes and transactions. Security, performance, and scalability of databases. Database installation, configuration, and administration. MySQL and the web.
 
-this is section 2
+## Instructor’s Course Description
 
-# Section 3
+Upon successful completion of this course, the student will be able to:
+1. Understand the concepts underlying databases design.
+2. Analyze problems to identify data requirements, types and relations.
+3. Create Entity-Relationship and relational designs from problem statements.
+4. Design data structures and functions to store and process the information.
+5. Design and implement databases using SQL language.
+6. Query and manipulate data using SQL language.
+7. Interact with a SQL database using a web interface.
+## Instructor and course links
 
-this is section 3
+{{< meta instructor-name >}}, {{< meta instructor-title >}}, [{{< meta instructor-email >}}](mailto:{{< meta instructor-email >}}), Office: {{< meta instructor-office-location >}}
 
-# Section 4
 
-this is section 4
+
+## Contact information
+
+
+
+## ABET Student Learning Outcomes
+
+
+
+## Course Structure
+
+
+
+## Online Learning Considerations
+
+
+
+
+## Final Exam Date and time
+
+## Course assessment and grading policy 
+
+
+::: {#tbl-panel layout-ncol=2}
+
+
+
+## Technology considerations
+
+
+## University Resources
+
+
+## Institutional Policies
+
+
+### Accommodations for Students with Disabilities
+
+
+### Counseling Services
+
+
+### Tutoring
+The Campus Learning Center offers appointment, drop-in and group tutoring in undergraduate courses across the disciplines.
+Writing Center
+The writing center provides assistance at all stages of the writing process, from brainstorming to final draft.
+Cheating and Plagiarism
+Plagiarism is stealing and passing off the ideas or words of another as one’s own; it is using another’s production without crediting the source. The best way to avoid plagiarism is to cite properly in any assignment information and concepts that are not your own originally. If a student is discovered to have plagiarized, that student will fail that particular assignment.
+Academic integrity is expected in all aspects at the university including this course. Don’t expect less of yourself than you do of your students For more information: <https://students.vcu.edu/studentconduct/>
+
+## Course Policies
+
+### Late/Missing Work Policy
+
+### Group assignments and collaboration
+
+
+
+
+
+### Accessibility Concerns
+
+
+
+### Intellectual Property and Copyright
+
+
+## VCU Syllabus Statement
+
+## VCU Important dates
 

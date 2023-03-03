@@ -121,8 +121,99 @@
   {
     "objectID": "syllabus/cmsc508.html",
     "href": "syllabus/cmsc508.html",
-    "title": "CMSC508",
+    "title": "Database Theory",
     "section": "",
-    "text": "Section 1\nthis is section 1\n\n\nSection 2\nthis is section 2\n\n\nSection 3\nthis is section 3\n\n\nSection 4\nthis is section 4"
+    "text": "Semester course; 3 lecture hours. 3 credits. Introduction to databases. Database design and the Entity-Relationship model. Relational database design, normalization and decomposition. Relational algebra. SQL. Data definition language. Data manipulation language. Data query language. Queries, subqueries, functions, procedures, cursors, views, triggers,indexes and transactions. Security, performance, and scalability of databases. Database installation, configuration, and administration. MySQL and the web."
+  },
+  {
+    "objectID": "syllabus/cmsc508.html#instructors-course-description",
+    "href": "syllabus/cmsc508.html#instructors-course-description",
+    "title": "Database Theory",
+    "section": "Instructor’s Course Description",
+    "text": "Instructor’s Course Description\nUpon successful completion of this course, the student will be able to: 1. Understand the concepts underlying databases design. 2. Analyze problems to identify data requirements, types and relations. 3. Create Entity-Relationship and relational designs from problem statements. 4. Design data structures and functions to store and process the information. 5. Design and implement databases using SQL language. 6. Query and manipulate data using SQL language. 7. Interact with a SQL database using a web interface. ## Instructor and course links\nAlberto Cano, Professor, acano@vcu.edu, Office: ERB2314"
+  },
+  {
+    "objectID": "syllabus/cmsc508.html#contact-information",
+    "href": "syllabus/cmsc508.html#contact-information",
+    "title": "Database Theory",
+    "section": "Contact information",
+    "text": "Contact information"
+  },
+  {
+    "objectID": "syllabus/cmsc508.html#abet-student-learning-outcomes",
+    "href": "syllabus/cmsc508.html#abet-student-learning-outcomes",
+    "title": "Database Theory",
+    "section": "ABET Student Learning Outcomes",
+    "text": "ABET Student Learning Outcomes"
+  },
+  {
+    "objectID": "syllabus/cmsc508.html#course-structure",
+    "href": "syllabus/cmsc508.html#course-structure",
+    "title": "Database Theory",
+    "section": "Course Structure",
+    "text": "Course Structure"
+  },
+  {
+    "objectID": "syllabus/cmsc508.html#online-learning-considerations",
+    "href": "syllabus/cmsc508.html#online-learning-considerations",
+    "title": "Database Theory",
+    "section": "Online Learning Considerations",
+    "text": "Online Learning Considerations"
+  },
+  {
+    "objectID": "syllabus/cmsc508.html#final-exam-date-and-time",
+    "href": "syllabus/cmsc508.html#final-exam-date-and-time",
+    "title": "Database Theory",
+    "section": "Final Exam Date and time",
+    "text": "Final Exam Date and time"
+  },
+  {
+    "objectID": "syllabus/cmsc508.html#course-assessment-and-grading-policy",
+    "href": "syllabus/cmsc508.html#course-assessment-and-grading-policy",
+    "title": "Database Theory",
+    "section": "Course assessment and grading policy",
+    "text": "Course assessment and grading policy\n::: {#tbl-panel layout-ncol=2}"
+  },
+  {
+    "objectID": "syllabus/cmsc508.html#technology-considerations",
+    "href": "syllabus/cmsc508.html#technology-considerations",
+    "title": "Database Theory",
+    "section": "Technology considerations",
+    "text": "Technology considerations"
+  },
+  {
+    "objectID": "syllabus/cmsc508.html#university-resources",
+    "href": "syllabus/cmsc508.html#university-resources",
+    "title": "Database Theory",
+    "section": "University Resources",
+    "text": "University Resources"
+  },
+  {
+    "objectID": "syllabus/cmsc508.html#institutional-policies",
+    "href": "syllabus/cmsc508.html#institutional-policies",
+    "title": "Database Theory",
+    "section": "Institutional Policies",
+    "text": "Institutional Policies\n\nAccommodations for Students with Disabilities\n\n\nCounseling Services\n\n\nTutoring\nThe Campus Learning Center offers appointment, drop-in and group tutoring in undergraduate courses across the disciplines. Writing Center The writing center provides assistance at all stages of the writing process, from brainstorming to final draft. Cheating and Plagiarism Plagiarism is stealing and passing off the ideas or words of another as one’s own; it is using another’s production without crediting the source. The best way to avoid plagiarism is to cite properly in any assignment information and concepts that are not your own originally. If a student is discovered to have plagiarized, that student will fail that particular assignment. Academic integrity is expected in all aspects at the university including this course. Don’t expect less of yourself than you do of your students For more information: https://students.vcu.edu/studentconduct/"
+  },
+  {
+    "objectID": "syllabus/cmsc508.html#course-policies",
+    "href": "syllabus/cmsc508.html#course-policies",
+    "title": "Database Theory",
+    "section": "Course Policies",
+    "text": "Course Policies\n\nLate/Missing Work Policy\n\n\nGroup assignments and collaboration\n\n\nAccessibility Concerns\n\n\nIntellectual Property and Copyright"
+  },
+  {
+    "objectID": "syllabus/cmsc508.html#vcu-syllabus-statement",
+    "href": "syllabus/cmsc508.html#vcu-syllabus-statement",
+    "title": "Database Theory",
+    "section": "VCU Syllabus Statement",
+    "text": "VCU Syllabus Statement"
+  },
+  {
+    "objectID": "syllabus/cmsc508.html#vcu-important-dates",
+    "href": "syllabus/cmsc508.html#vcu-important-dates",
+    "title": "Database Theory",
+    "section": "VCU Important dates",
+    "text": "VCU Important dates"
   }
 ]

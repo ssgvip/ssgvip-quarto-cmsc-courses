@@ -1,5 +1,8 @@
 ---
 title: "cmsc-course-materials"
+theme:
+  light: flatly
+  dark: [darkly]
 ---
 
 This is a Quarto website.
