@@ -15,10 +15,17 @@ course-canvas-url:
 course-discord-url:
 course-gradescope-url:
 
-title: "{{< meta course-title >}}"
-subtitle: "{{< meta semester >}}, {{< meta meeting-days-and-times >}}, {{< meta meeting-location >}}"
-
+title: "{{< meta course-prefix-and-number >}}"
 ---
+
+## Course title
+
+{{< meta course-prefix-and-number >}} - {{< meta course-title >}}
+
+## Course meetings
+
+{{< meta meeting-days-and-times >}}
+
 
 ## Course catalog description
 
