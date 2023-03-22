@@ -17,10 +17,12 @@ website:
         contents:
           - href: cmsc475.qmd
             text: "CMSC475"
+          - href: cmsc508.qmd
+            text: "CMSC508"
       - section: "Graduate"
         contents:
-          - href: cmsc475.qmd
-            text: "CMSC475"
+          - href: cmsc615.qmd
+            text: "CMSC615"
 
 format:
   html:
