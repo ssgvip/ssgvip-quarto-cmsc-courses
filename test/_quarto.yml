@@ -15,6 +15,8 @@ website:
     contents:
       - section: "Undergraduate"
         contents:
+          - href: cmsc210_203020.QMD
+            text: "CMSC210"
           - href: cmsc475.qmd
             text: "CMSC475"
           - href: cmsc508.qmd
