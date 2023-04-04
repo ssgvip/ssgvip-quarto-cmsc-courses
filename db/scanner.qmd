@@ -1,0 +1,87 @@
+---
+title: "Processing the XLSX"
+format:
+  html:
+    toc: true
+    html-math-method: katex
+    css: styles.css
+---
+
+A list of CMSC courses was downloaded from the [campus bulletin](http://bulletin.vcu.edu/azcourses/cmsc/).
+
+The list was loaded into XLSX and cleaned. The following sections
+provide a view of the CMSC courses from the Bulletin.
+
+The script below loads the cleaned XLSX.
+
+```{python}
+
+import pandas as pd
+from IPython.display import Markdown
+from tabulate import tabulate
+
+filename = "cmsc-bulletin-spring-2023.xlsx"
+xlsx = pd.ExcelFile( filename )
+df1 = pd.read_excel(xlsx,"CMSC-Courses")
+```
+
+```{python}
+#| echo: false
+
+collist = "', '".join(df1.columns)
+display(Markdown(f"Here is a list of columns:<br/>'{collist}'."))
+```
+
+## CMSC Courses in the Bulletin
+
+```{python}
+#| echo: false
+#| label: tbl-table1
+#| tbl-cap: List of courses
+
+cols = ["ID","Title"]
+
+display(Markdown(f"""
+@tbl-table1 presents a list of CMSC courses in the bulletin.
+There are {len(df1.index)} courses in the bulletin.
+
+"""
+))
+
+Markdown(tabulate(
+  df1[ cols ],
+  showindex=False,
+  headers=cols
+))
+
+
+```
+
+# Course Descriptions with Restrictions
+
+The section below uses the panda dataframe from above and lists
+out courses, restrictions, and descriptions.
+
+```{python}
+#| echo: true
+# Display each course using markdown.
+
+## The entire block of markdown is created and rendered.
+## There can be only one "display(Markdown())" call per code block.
+## The spacing is expanded to accomodate the Markdown processor.
+
+block = "";
+for index, row in df1.iterrows():
+  block = block + f"""
+## {row["ID"]} - {row["Title"]}
+   
+**Restrictions:** {row["Restrictions"]}
+
+**Description:** {row["Isolated Description"]}
+
+
+"""
+display(Markdown( block ))
+```
+
+

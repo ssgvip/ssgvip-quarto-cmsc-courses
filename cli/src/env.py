@@ -1,4 +1,4 @@
-""" module verify.py
+""" module {__file__}
 """
 import os
 import click
