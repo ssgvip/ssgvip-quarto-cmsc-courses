@@ -1,0 +1,22 @@
+---
+title: "CMSC 254 - Introduction to Problem-solving"
+date: last-modified
+format:
+  html:
+    toc: true
+---
+
+## Catalog Description
+
+Semester course; 3 lecture and 2 laboratory hours. 4 credits. Introduction to problem solving and implementation of solutions using Python. The course introduces students to concepts and practice of structured programming, problem-solving, top-down design of algorithms, a Python language syntax, control structures and arrays. The course content also includes instruction in critical-thinking and problem-solving skills using contemporary tools. Specific topics include flowcharting, pseudocode and program control structures, including sequence, selection, repetition and modularization.
+
+
+## Restrictions
+ 
+(none)
+
+## Description
+
+Introduction to problem solving and implementation of solutions using Python. The course introduces students to concepts and practice of structured programming, problem-solving, top-down design of algorithms, a Python language syntax, control structures and arrays. The course content also includes instruction in critical-thinking and problem-solving skills using contemporary tools. Specific topics include flowcharting, pseudocode and program control structures, including sequence, selection, repetition and modularization.
+
+

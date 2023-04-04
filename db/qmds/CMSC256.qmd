@@ -1,0 +1,22 @@
+---
+title: "CMSC 256 - Data Structures and Object Oriented Programming"
+date: last-modified
+format:
+  html:
+    toc: true
+---
+
+## Catalog Description
+
+Semester course; 3 lecture and 2 laboratory hours. 4 credits. Prerequisite: CMSC 255 with a minimum grade of C; corequisite: CMSC 302. Advanced programming using Java. Topics include introduction to object-oriented design, inheritance, polymorphism, exceptions, interfaces, linked lists, stacks, queues, binary trees, recursion, and basic searching and sorting techniques. Continued focus on program testing and UML notation. Students may not receive credit for both CMSC 256 and INFO 350.
+
+
+## Restrictions
+ 
+CMSC 255 with a minimum grade of C; corequisite: CMSC 302.
+
+## Description
+
+Advanced programming using Java. Topics include introduction to object-oriented design, inheritance, polymorphism, exceptions, interfaces, linked lists, stacks, queues, binary trees, recursion, and basic searching and sorting techniques. Continued focus on program testing and UML notation. Students may not receive credit for both CMSC 256 and INFO 350.
+
+

@@ -1,0 +1,22 @@
+---
+title: "CMSC 622 - Network and System Security"
+date: last-modified
+format:
+  html:
+    toc: true
+---
+
+## Catalog Description
+
+Semester course; 3 lecture hours (delivered online, face-to-face or hybrid). 3 credits. Studies the principles of network security and system security. Included are topics relating to application layer security, TCP layer security, network layer security and link layer security and the use of access control, intrusion detection, intrusion prevention and other related tools.
+
+
+## Restrictions
+ 
+(none)
+
+## Description
+
+Studies the principles of network security and system security. Included are topics relating to application layer security, TCP layer security, network layer security and link layer security and the use of access control, intrusion detection, intrusion prevention and other related tools.
+
+

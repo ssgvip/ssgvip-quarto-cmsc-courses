@@ -1,0 +1,22 @@
+---
+title: "CMSC 302 - Introduction to Discrete Structures"
+date: last-modified
+format:
+  html:
+    toc: true
+---
+
+## Catalog Description
+
+Semester course; 3 lecture hours. 3 credits. Prerequisite: CMSC 255 with minimum grade of C. Logic and proofs, sets, functions, sequences and sums, relations, graphs, trees, induction and recursion, advanced counting technique (recurrences).
+
+
+## Restrictions
+ 
+CMSC 255 with minimum grade of C.
+
+## Description
+
+Logic and proofs, sets, functions, sequences and sums, relations, graphs, trees, induction and recursion, advanced counting technique (recurrences).
+
+

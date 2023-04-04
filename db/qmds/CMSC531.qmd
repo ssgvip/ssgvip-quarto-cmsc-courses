@@ -1,0 +1,22 @@
+---
+title: "CMSC 531 - 3D Computer Vision for Robot Navigation"
+date: last-modified
+format:
+  html:
+    toc: true
+---
+
+## Catalog Description
+
+Semester course; 3 lecture hours. 3 credits. Enrollment is restricted to graduate students in computer science or related discipline or to students accepted into the five-year accelerated program in computer science. The course focuses on recent advancements in 3D robotic vision. It covers basic concepts and computational models of 3D sensing, robotic mapping, visual odometry, simultaneous localization and mapping, as well as 3D point data processing for robotic navigation. Students will acquire in-depth knowledge in robotic vision by completing a course project.
+
+
+## Restrictions
+ 
+Enrollment is restricted to graduate students in computer science or related discipline or to students accepted into the five-year accelerated program in computer science.
+
+## Description
+
+The course focuses on recent advancements in 3D robotic vision. It covers basic concepts and computational models of 3D sensing, robotic mapping, visual odometry, simultaneous localization and mapping, as well as 3D point data processing for robotic navigation. Students will acquire in-depth knowledge in robotic vision by completing a course project.
+
+

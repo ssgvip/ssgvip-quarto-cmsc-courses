@@ -1,0 +1,22 @@
+---
+title: "CMSC 413 - Introduction to Cybersecurity"
+date: last-modified
+format:
+  html:
+    toc: true
+---
+
+## Catalog Description
+
+Semester course; 3 lecture hours. 3 credits. Prerequisite: CMSC 401 with a minimum grade of C. This course provides introduction and basic concepts of computer security, cyber attacks, cyber defense, cyber forensics and cyber ethics.
+
+
+## Restrictions
+ 
+CMSC 401 with a minimum grade of C.
+
+## Description
+
+This course provides introduction and basic concepts of computer security, cyber attacks, cyber defense, cyber forensics and cyber ethics.
+
+

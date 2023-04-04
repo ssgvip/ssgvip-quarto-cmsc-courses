@@ -1,0 +1,22 @@
+---
+title: "CMSC 623 - Cloud Computing"
+date: last-modified
+format:
+  html:
+    toc: true
+---
+
+## Catalog Description
+
+Semester course; 3 lecture hours (delivered online, face-to-face or hybrid). 3 credits. Provides an introduction to cloud computing architecture and cloud computing security. The course covers the basic concepts of cloud computing, including memory virtualization, device virtualization and related security problems in cloud computing.
+
+
+## Restrictions
+ 
+(none)
+
+## Description
+
+Provides an introduction to cloud computing architecture and cloud computing security. The course covers the basic concepts of cloud computing, including memory virtualization, device virtualization and related security problems in cloud computing.
+
+

@@ -1,0 +1,22 @@
+---
+title: "CMSC 502 - Parallel Algorithms"
+date: last-modified
+format:
+  html:
+    toc: true
+---
+
+## Catalog Description
+
+Semester course; 3 lecture hours (delivered online, face-to-face or hybrid). 3 credits. Prerequisites: CMSC 312 and CMSC 401. Enrollment is restricted to students with graduate standing or those accepted into the accelerated B.S. to M.S. program in computer science. Software and hardware mechanisms for providing mutual exclusion in uniprocessor and multiprocessor environments. Architectural issues including pipeline design, superscalar computers, multiprocessors, memory systems, peripherals, interfacing techniques, networks, performance and software issues. Design and uses of parallel algorithms to solve concurrency problems in a distributed environment including message passing and remote procedure calls. Students will work in teams (as well as on individual projects) to design and implement parallel algorithms.
+
+
+## Restrictions
+ 
+CMSC 312 and CMSC 401. Enrollment is restricted to students with graduate standing or those accepted into the accelerated BS to MS program in computer science.
+
+## Description
+
+Software and hardware mechanisms for providing mutual exclusion in uniprocessor and multiprocessor environments. Architectural issues including pipeline design, superscalar computers, multiprocessors, memory systems, peripherals, interfacing techniques, networks, performance and software issues. Design and uses of parallel algorithms to solve concurrency problems in a distributed environment including message passing and remote procedure calls. Students will work in teams (as well as on individual projects) to design and implement parallel algorithms.
+
+

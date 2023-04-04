@@ -1,0 +1,22 @@
+---
+title: "CMSC 311 - Computer Organization"
+date: last-modified
+format:
+  html:
+    toc: true
+---
+
+## Catalog Description
+
+Semester course; 3 lecture hours. 3 credits. Prerequisite: CMSC 302 with minimum grade of C; corequisite: CMSC 257. Introduction to the basic organization of computers including elementary digital logic design, processor and arithmetic/logic unit design, data paths, memory hierarchy, I/O devices, instruction set architecture and addressing modes.
+
+
+## Restrictions
+ 
+CMSC 302 with minimum grade of C; corequisite: CMSC 257.
+
+## Description
+
+Introduction to the basic organization of computers including elementary digital logic design, processor and arithmetic/logic unit design, data paths, memory hierarchy, I/O devices, instruction set architecture and addressing modes.
+
+

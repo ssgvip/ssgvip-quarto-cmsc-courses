@@ -1,0 +1,22 @@
+---
+title: "CMSC 340 - Cybersecurity Skills"
+date: last-modified
+format:
+  html:
+    toc: true
+---
+
+## Catalog Description
+
+Semester course; 3 lecture hours (delivered online). 3 credits. Prerequisite: CMSC 210. Introduction to cybersecurity skills. The course introduces students to cybersecurity terminology, standards and best practices. Students will apply these practices as part of a cybersecurity-focused project. This course is not applicable for credit toward any College of Engineering degrees.
+
+
+## Restrictions
+ 
+CMSC 210.
+
+## Description
+
+Introduction to cybersecurity skills. The course introduces students to cybersecurity terminology, standards and best practices. Students will apply these practices as part of a cybersecurity-focused project. This course is not applicable for credit toward any College of Engineering degrees.
+
+

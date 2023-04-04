@@ -1,0 +1,22 @@
+---
+title: "CMSC 618 - Database and Application Security"
+date: last-modified
+format:
+  html:
+    toc: true
+---
+
+## Catalog Description
+
+Semester course; 3 lecture hours. 3 credits. Theory and practice of database and software security focusing in particular on some common database software security risks and on the identification of potential threats and vulnerabilities. Crosslisted as: CISS 618.
+
+
+## Restrictions
+ 
+(none)
+
+## Description
+
+Theory and practice of database and software security focusing in particular on some common database software security risks and on the identification of potential threats and vulnerabilities. Crosslisted as: CISS 618.
+
+

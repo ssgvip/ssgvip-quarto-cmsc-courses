@@ -1,0 +1,22 @@
+---
+title: "CMSC 475 - Design and Implementation of User Interfaces"
+date: last-modified
+format:
+  html:
+    toc: true
+---
+
+## Catalog Description
+
+Semester course; 3 lecture hours. 3 credits. Prerequisite: CMSC 355 with a minimum grade of C. Enrollment is restricted to majors in the computer science program. This course investigates the design and implementation of user interfaces and the evaluation of user experiences. Particular emphasis is placed on creating professional-quality designs and implementations and on evaluating these implementations with end-users. Students will create their own UIs as well as critique others to develop a deep understanding of what works in practice.
+
+
+## Restrictions
+ 
+CMSC 355 with a minimum grade of C. Enrollment is restricted to majors in the computer science program.
+
+## Description
+
+This course investigates the design and implementation of user interfaces and the evaluation of user experiences. Particular emphasis is placed on creating professional-quality designs and implementations and on evaluating these implementations with end-users. Students will create their own UIs as well as critique others to develop a deep understanding of what works in practice.
+
+

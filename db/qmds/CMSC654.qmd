@@ -1,0 +1,22 @@
+---
+title: "CMSC 654 - Memory and Malware Forensics"
+date: last-modified
+format:
+  html:
+    toc: true
+---
+
+## Catalog Description
+
+Semester course; 3 lecture hours (delivered online, face-to-face or hybrid). 3 credits. Prerequisite: CMSC 312. Enrollment is restricted to students with graduate standing in computer science or a related discipline, or those accepted into the accelerated B.S. to M.S. program in computer science. Students should have significant programming experience. This course provides foundation for memory and malware forensics, using the Volatility memory forensics framework, an open source toolkit written in Python. It is focused on investigation of the contents of volatile computer memory (RAM), to reveal hidden malware processes, network connections, clipboard contents, evidence of malware and other malicious evidence. The course will teach skills for analyzing internals of operating systems, such as Mac, Windows and Linux, by concentrating on data structures used by these operating systems.
+
+
+## Restrictions
+ 
+CMSC 312. Enrollment is restricted to students with graduate standing in computer science or a related discipline, or those accepted into the accelerated BS to MS program in computer science.
+
+## Description
+
+Students should have significant programming experience. This course provides foundation for memory and malware forensics, using the Volatility memory forensics framework, an open source toolkit written in Python. It is focused on investigation of the contents of volatile computer memory (RAM), to reveal hidden malware processes, network connections, clipboard contents, evidence of malware and other malicious evidence. The course will teach skills for analyzing internals of operating systems, such as Mac, Windows and Linux, by concentrating on data structures used by these operating systems.
+
+

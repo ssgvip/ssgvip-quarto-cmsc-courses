@@ -1,0 +1,22 @@
+---
+title: "CMSC 591 - Topics in Computer Science"
+date: last-modified
+format:
+  html:
+    toc: true
+---
+
+## Catalog Description
+
+Semester course; 3 lecture hours (delivered online, face-to-face or hybrid). 3 credits. May be repeated for credit. Enrollment requires permission of the instructor. The course is open to students with graduate standing or those accepted into the accelerated B.S. to M.S. program in computer science. A study of selected topic(s) in computer science at the graduate level. See the Schedule of Classes for specific topics to be offered each semester.
+
+
+## Restrictions
+ 
+(none)
+
+## Description
+
+May be repeated for credit. Enrollment requires permission of the instructor. The course is open to students with graduate standing or those accepted into the accelerated BS to MS program in computer science. A study of selected topic(s) in computer science at the graduate level. See the Schedule of Classes for specific topics to be offered each semester.
+
+

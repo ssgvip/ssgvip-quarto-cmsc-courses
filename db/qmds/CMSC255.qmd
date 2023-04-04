@@ -1,0 +1,22 @@
+---
+title: "CMSC 255 - Introduction to Programming"
+date: last-modified
+format:
+  html:
+    toc: true
+---
+
+## Catalog Description
+
+Semester course; 3 lecture and 2 laboratory hours. 4 credits. Prerequisite: calculus-level placement on the VCU Mathematics Placement Test within the one-year period immediately preceding enrollment in the course, or MATH 151 or equivalent. Students are expected to have fundamental computer skills. Introduction to object-oriented programming using Java. Topics include problem-solving, top-down design of algorithms using control structures, methods, arrays, basic I/O, basic concepts of objects and classes in Java, Java classes for manipulating strings, and introduction to program testing, UML notation and integrated development environments. Students may not receive credit for both CMSC 255 and INFO 250.
+
+
+## Restrictions
+ 
+calculus-level placement on the VCU Mathematics Placement Test within the one-year period immediately preceding enrollment in the course, or MATH 151 or equivalent. Students are expected to have fundamental computer skills.
+
+## Description
+
+Introduction to object-oriented programming using Java. Topics include problem-solving, top-down design of algorithms using control structures, methods, arrays, basic I/O, basic concepts of objects and classes in Java, Java classes for manipulating strings, and introduction to program testing, UML notation and integrated development environments. Students may not receive credit for both CMSC 255 and INFO 250.
+
+

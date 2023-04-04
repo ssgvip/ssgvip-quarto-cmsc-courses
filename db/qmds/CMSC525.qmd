@@ -1,0 +1,22 @@
+---
+title: "CMSC 525 - Introduction to Software Analysis, Testing and Verification"
+date: last-modified
+format:
+  html:
+    toc: true
+---
+
+## Catalog Description
+
+Semester course; 3 lecture hours (delivered online, face-to-face or hybrid). 3 credits. Prerequisites: CMSC 401 and 403. Enrollment is restricted to students with graduate standing or those accepted into the accelerated B.S. to M.S. program in computer science. An introduction to concepts and techniques used in the analysis of software for certain properties. Using analytic results to derive test data and verify the correct implementation of programs. Flow graphs, fault/failure model, theoretical and practical limitations. Control flow, data flow and error flow analyses. Testing strategies including random, structural, mutation and error flow. Software metrics.
+
+
+## Restrictions
+ 
+CMSC 401 and 403. Enrollment is restricted to students with graduate standing or those accepted into the accelerated BS to MS program in computer science.
+
+## Description
+
+An introduction to concepts and techniques used in the analysis of software for certain properties. Using analytic results to derive test data and verify the correct implementation of programs. Flow graphs, fault/failure model, theoretical and practical limitations. Control flow, data flow and error flow analyses. Testing strategies including random, structural, mutation and error flow. Software metrics.
+
+

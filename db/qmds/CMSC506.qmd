@@ -1,0 +1,22 @@
+---
+title: "CMSC 506 - Computer Networks and Communications"
+date: last-modified
+format:
+  html:
+    toc: true
+---
+
+## Catalog Description
+
+Semester course; 3 lecture hours. 3 credits. Prerequisite: CMSC 312. Theoretical and applied analysis of basic data communication systems; design of networks in the framework of the OSI reference model; Local and Wide Area Networks; performance analysis of networks; error control and security. Students will work in teams to design and implement a small computer network. Crosslisted as: EGRE 526.
+
+
+## Restrictions
+ 
+CMSC 312.
+
+## Description
+
+Theoretical and applied analysis of basic data communication systems; design of networks in the framework of the OSI reference model; Local and Wide Area Networks; performance analysis of networks; error control and security. Students will work in teams to design and implement a small computer network. Crosslisted as: EGRE 526.
+
+

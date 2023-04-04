@@ -1,0 +1,22 @@
+---
+title: "CMSC 636 - Artificial Neural Networks and Deep Learning"
+date: last-modified
+format:
+  html:
+    toc: true
+---
+
+## Catalog Description
+
+Semester course; 3 lecture hours (delivered online, face-to-face or hybrid). 3 credits. Enrollment is restricted to students with graduate standing in computer science. The course will assume undergraduate-level background in programming, algorithms, linear algebra, calculus, statistics and probability. Topics ranging from fundamental learning rules, functional, cascade correlational, recurrent and gradient descent networks, to neocognitron, softmax, deep convolutional networks, autoencoders and pretrained deep learning (restricted Boltzmann machines). Students will be required to work in teams on a class paper.
+
+
+## Restrictions
+ 
+Enrollment is restricted to students with graduate standing in computer science.
+
+## Description
+
+The course will assume undergraduate-level background in programming, algorithms, linear algebra, calculus, statistics and probability. Topics ranging from fundamental learning rules, functional, cascade correlational, recurrent and gradient descent networks, to neocognitron, softmax, deep convolutional networks, autoencoders and pretrained deep learning (restricted Boltzmann machines). Students will be required to work in teams on a class paper.
+
+

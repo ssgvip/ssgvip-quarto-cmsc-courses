@@ -1,0 +1,22 @@
+---
+title: "CMSC 391 - Topics in Computer Science"
+date: last-modified
+format:
+  html:
+    toc: true
+---
+
+## Catalog Description
+
+Semester course; 3 lecture hours. 3 credits. May be repeated for credit. Prerequisite: permission of the instructor. This course will teach selected topics in computer science. See the Schedule of Classes for specific topics to be offered each semester and prerequisites.
+
+
+## Restrictions
+ 
+permission of the instructor.
+
+## Description
+
+This course will teach selected topics in computer science. See the Schedule of Classes for specific topics to be offered each semester and prerequisites.
+
+

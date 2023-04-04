@@ -1,0 +1,22 @@
+---
+title: "CMSC 412 - Social Network Analysis and Cybersecurity Risks"
+date: last-modified
+format:
+  html:
+    toc: true
+---
+
+## Catalog Description
+
+Semester course; 3 lecture hours. 3 credits. Prerequisites: CMSC 401 with a minimum grade of C. Covers network models, link prediction and analysis, centrality measures, random networks, power-laws and preferential attachment, small world phenomenon and decentralized search, community structure, information propagation in networks, and security and privacy issues in OSNs.
+
+
+## Restrictions
+ 
+CMSC 401 with a minimum grade of C.
+
+## Description
+
+Covers network models, link prediction and analysis, centrality measures, random networks, power-laws and preferential attachment, small world phenomenon and decentralized search, community structure, information propagation in networks, and security and privacy issues in OSNs.
+
+

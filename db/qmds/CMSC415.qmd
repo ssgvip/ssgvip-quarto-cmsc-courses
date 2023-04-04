@@ -1,0 +1,22 @@
+---
+title: "CMSC 415 - Introduction to Cryptography"
+date: last-modified
+format:
+  html:
+    toc: true
+---
+
+## Catalog Description
+
+Semester course; 3 lecture hours. 3 credits. Prerequisite: CMSC 401 with a minimum grade of C. This course provides a rigorous and theoretical introduction to modern cryptography. Key topics include symmetric key encryption and authentication, public key encryption, and digital signatures.
+
+
+## Restrictions
+ 
+CMSC 401 with a minimum grade of C.
+
+## Description
+
+This course provides a rigorous and theoretical introduction to modern cryptography. Key topics include symmetric key encryption and authentication, public key encryption, and digital signatures.
+
+

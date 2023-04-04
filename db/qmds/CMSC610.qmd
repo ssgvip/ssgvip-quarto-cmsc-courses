@@ -1,0 +1,22 @@
+---
+title: "CMSC 610 - Algorithmic Foundations of Bioinformatics"
+date: last-modified
+format:
+  html:
+    toc: true
+---
+
+## Catalog Description
+
+Semester course; 3 lecture hours. 3 credits. Prerequisite: Graduate student standing or acceptance into five-year accelerated program in computer science or related discipline such as bioinformatics. The purpose of the course is to teach algorithms for analyzing biological and medical data. The focus will be on understanding the inner workings of algorithms used in bioinformatics tools. Topic covered will include algorithms for assembling and searching biological sequences, finding patterns associated with disease, and exploring biological networks.
+
+
+## Restrictions
+ 
+Graduate student standing or acceptance into five-year accelerated program in computer science or related discipline such as bioinformatics.
+
+## Description
+
+The purpose of the course is to teach algorithms for analyzing biological and medical data. The focus will be on understanding the inner workings of algorithms used in bioinformatics tools. Topic covered will include algorithms for assembling and searching biological sequences, finding patterns associated with disease, and exploring biological networks.
+
+

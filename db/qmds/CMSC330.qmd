@@ -1,0 +1,22 @@
+---
+title: "CMSC 330 - Data Science Skills"
+date: last-modified
+format:
+  html:
+    toc: true
+---
+
+## Catalog Description
+
+Semester course; 3 lecture hours (delivered online). 3 credits. Prerequisite: CMSC 210. Introduction to data science skills. The course introduces students to the foundations of data science and the tools used to collect, analyze and represent data. Students will apply these principles in both analysis and visualization projects. This course is not applicable for credit toward any College of Engineering degrees.
+
+
+## Restrictions
+ 
+CMSC 210.
+
+## Description
+
+Introduction to data science skills. The course introduces students to the foundations of data science and the tools used to collect, analyze and represent data. Students will apply these principles in both analysis and visualization projects. This course is not applicable for credit toward any College of Engineering degrees.
+
+

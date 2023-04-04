@@ -1,0 +1,22 @@
+---
+title: "CMSC 501 - Advanced Algorithms"
+date: last-modified
+format:
+  html:
+    toc: true
+---
+
+## Catalog Description
+
+Semester course; 3 lecture hours (delivered online, face-to-face or hybrid). 3 credits. Prerequisite: CMSC 401 or equivalent. Enrollment is restricted to students with graduate standing or those accepted into the accelerated B.S. to M.S. program in computer science. Advanced graph algorithms, advanced data structures, applied numerical algorithms, optimization methods, approximation methods for hard graph and string problems and computational geometry algorithms.
+
+
+## Restrictions
+ 
+CMSC 401 or equivalent. Enrollment is restricted to students with graduate standing or those accepted into the accelerated BS to MS program in computer science.
+
+## Description
+
+Advanced graph algorithms, advanced data structures, applied numerical algorithms, optimization methods, approximation methods for hard graph and string problems and computational geometry algorithms.
+
+

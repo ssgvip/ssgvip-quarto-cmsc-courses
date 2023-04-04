@@ -1,0 +1,22 @@
+---
+title: "CMSC 608 - Advanced Database"
+date: last-modified
+format:
+  html:
+    toc: true
+---
+
+## Catalog Description
+
+Semester course; 3 lecture hours. 3 credits. Prerequisite: CMSC 508. Topics discussed include: handling of missing information; the relationship between relational calculus, relational algebra and SQL; logic databases; distributed databases; outer joins; and transaction processing. Emphasis is placed on theoretical issues involved in these topics. In addition students will work in teams to develop a working database application.
+
+
+## Restrictions
+ 
+CMSC 508.
+
+## Description
+
+Topics discussed include: handling of missing information; the relationship between relational calculus, relational algebra and SQL; logic databases; distributed databases; outer joins; and transaction processing. Emphasis is placed on theoretical issues involved in these topics. In addition students will work in teams to develop a working database application.
+
+

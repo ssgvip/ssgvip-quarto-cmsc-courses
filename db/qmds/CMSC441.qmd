@@ -1,0 +1,22 @@
+---
+title: "CMSC 441 - Senior Design Studio I (Laboratory/Project Time)"
+date: last-modified
+format:
+  html:
+    toc: true
+---
+
+## Catalog Description
+
+Semester course; 6 laboratory hours. 2 credits. Prerequisites: CMSC 355; and UNIV 200 or HONR 200 or equivalent, both with minimum grades of C. Corequisite: CMSC 451. Enrollment is restricted to computer science majors with senior standing who have 24 credits in computer science courses. A minimum of six laboratory hours per week dedicated to the execution phase of the senior design (capstone) project for the computer science major. Tasks include team meetings, brainstorming, sponsor advising, researching, designing, implementing, reviewing, testing and validating projects. Each student will participate, either individually or as part of a team, in a project or other experience approved by the course coordinator or sponsored by another computer science faculty member. Students will submit a detailed written description of their proposed project or experience and will present orally some aspect of what they have learned and/or done during the semester. This course cannot be counted as upper-level CMSC electives for students graduating under bulletins prior to 2008-09.
+
+
+## Restrictions
+ 
+CMSC 355; and UNIV 200 or HONR 200 or equivalent, both with minimum grades of C. Corequisite: CMSC 451. Enrollment is restricted to computer science majors with senior standing who have 24 credits in computer science courses.
+
+## Description
+
+A minimum of six laboratory hours per week dedicated to the execution phase of the senior design (capstone) project for the computer science major. Tasks include team meetings, brainstorming, sponsor advising, researching, designing, implementing, reviewing, testing and validating projects. Each student will participate, either individually or as part of a team, in a project or other experience approved by the course coordinator or sponsored by another computer science faculty member. Students will submit a detailed written description of their proposed project or experience and will present orally some aspect of what they have learned and/or done during the semester. This course cannot be counted as upper-level CMSC electives for students graduating under bullet
+
+

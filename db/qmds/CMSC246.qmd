@@ -1,0 +1,22 @@
+---
+title: "CMSC 246 - Advanced Programming Using C++"
+date: last-modified
+format:
+  html:
+    toc: true
+---
+
+## Catalog Description
+
+Semester course; 3 lecture hours. 3 credits. Prerequisite: CMSC 245. Advanced programming in C++. Topics include program design, objects, classes, inheritance, files, strings, linked lists, stacks, queues, binary trees, recursion, and basic searching and sorting techniques. This course is intended for engineering majors.
+
+
+## Restrictions
+ 
+CMSC 245.
+
+## Description
+
+Advanced programming in C++. Topics include program design, objects, classes, inheritance, files, strings, linked lists, stacks, queues, binary trees, recursion, and basic searching and sorting techniques. This course is intended for engineering majors.
+
+

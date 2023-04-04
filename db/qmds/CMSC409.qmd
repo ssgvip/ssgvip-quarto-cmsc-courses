@@ -1,0 +1,22 @@
+---
+title: "CMSC 409 - Artificial Intelligence"
+date: last-modified
+format:
+  html:
+    toc: true
+---
+
+## Catalog Description
+
+Semester course; 3 lecture hours. 3 credits. Prerequisites: CMSC 401 with a minimum grade of C and MATH 310. Covers problem spaces, problem-solving methods, game playing, knowledge representatives, expert systems, natural language understanding.
+
+
+## Restrictions
+ 
+CMSC 401 with a minimum grade of C and MATH 310.
+
+## Description
+
+Covers problem spaces, problem-solving methods, game playing, knowledge representatives, expert systems, natural language understanding.
+
+

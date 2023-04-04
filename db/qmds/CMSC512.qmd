@@ -1,0 +1,22 @@
+---
+title: "CMSC 512 - Advanced Social Network Analysis and Security"
+date: last-modified
+format:
+  html:
+    toc: true
+---
+
+## Catalog Description
+
+Semester course; 3 lecture hours (delivered online, face-to-face or hybrid). 3 credits. Pre- or corequisites: CMSC 412 and CMSC 501. Enrollment is restricted to students with graduate standing in computer science or a related discipline such as bioinformatics or acceptance into the accelerated B.S. to M.S. program in computer science. The purpose of the course is to teach algorithms for analyzing social networks and complex systems. The focus will be on understanding the inner workings of algorithms using in-network analysis and security threats in online social network sites. Topic covered will include modeling social and technological networks, methods for analyzing structure and dynamical processes on the network, and security and privacy issues in online social networks such as inference attacks, network anonymization, sybil attacks and defense, social bots.
+
+
+## Restrictions
+ 
+CMSC 412 and CMSC 501. Enrollment is restricted to students with graduate standing in computer science or a related discipline such as bioinformatics or acceptance into the accelerated BS to MS program in computer science.
+
+## Description
+
+The purpose of the course is to teach algorithms for analyzing social networks and complex systems. The focus will be on understanding the inner workings of algorithms using in-network analysis and security threats in online social network sites. Topic covered will include modeling social and technological networks, methods for analyzing structure and dynamical processes on the network, and security and privacy issues in online social networks such as inference attacks, network anonymization, sybil attacks and defense, social bots.
+
+

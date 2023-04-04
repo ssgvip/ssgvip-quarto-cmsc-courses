@@ -1,0 +1,22 @@
+---
+title: "CMSC 101 - Introduction to Computer Science"
+date: last-modified
+format:
+  html:
+    toc: true
+---
+
+## Catalog Description
+
+Semester course; 3 lecture hours. 3 credits. Prerequisite: MATH 139 or MATH 141 with a minimum grade of C. An introduction to the work of computer scientists, including an overview of current research and application areas as well as career opportunities. Topics include problem-solving, the basics of computer organization, the software engineering life cycle, research resources and social and ethical aspects of technology. Additional topics also include binary, hexadecimal, two’s complement, floating point representation, ASCII and Unicode.
+
+
+## Restrictions
+ 
+MATH 139 or MATH 141 with a minimum grade of C.
+
+## Description
+
+An introduction to the work of computer scientists, including an overview of current research and application areas as well as career opportunities. Topics include problem-solving, the basics of computer organization, the software engineering life cycle, research resources and social and ethical aspects of technology. Additional topics also include binary, hexadecimal, two’s complement, floating point representation, ASCII and Unicode.
+
+

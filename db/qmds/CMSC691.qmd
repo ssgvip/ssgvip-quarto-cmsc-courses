@@ -1,0 +1,22 @@
+---
+title: "CMSC 691 - Special Topics in Computer Science"
+date: last-modified
+format:
+  html:
+    toc: true
+---
+
+## Catalog Description
+
+Semester course; 3 lecture hours. 3 credits. May be repeated for credit. Prerequisites: at least one graduate-level computer science course pertaining to the topic area and permission of instructor. An advanced study of selected topic(s) in computer science at the graduate level. See the Schedule of Classes for specific topics to be offered each semester.
+
+
+## Restrictions
+ 
+at least one graduate-level computer science course pertaining to the topic area and permission of instructor.
+
+## Description
+
+An advanced study of selected topic(s) in computer science at the graduate level. See the Schedule of Classes for specific topics to be offered each semester.
+
+

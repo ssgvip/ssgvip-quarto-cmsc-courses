@@ -1,0 +1,22 @@
+---
+title: "CMSC 245 - Introduction to Programming Using C++"
+date: last-modified
+format:
+  html:
+    toc: true
+---
+
+## Catalog Description
+
+Semester course; 3 lecture hours. 3 credits. Prerequisite: MATH 151 or satisfactory score on the Mathematical Placement Test. Students registering for CMSC 245 must have taken the VCU Mathematics Placement Test within the one-year period immediately preceding the beginning of the course. An exception to this policy is made in the case in which the stated alternative prerequisite course has been completed at VCU. Students are expected to have fundamental computer skills. Introduction to the concepts and practice of structured programming using C++. Problem-solving, top-down design of algorithms, objects, basic C++ syntax, control structures, functions and arrays. This course is intended for engineering majors.
+
+
+## Restrictions
+ 
+MATH 151 or satisfactory score on the Mathematical Placement Test. Students registering for CMSC 245 must have taken the VCU Mathematics Placement Test within the one-year period immediately preceding the beginning of the course. An exception to this policy is made in the case in which the stated alternative prerequisite course has been completed at VCU. Students are expected to have fundamental computer skills.
+
+## Description
+
+Introduction to the concepts and practice of structured programming using C++. Problem-solving, top-down design of algorithms, objects, basic C++ syntax, control structures, functions and arrays. This course is intended for engineering majors.
+
+

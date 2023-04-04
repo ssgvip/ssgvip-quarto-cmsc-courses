@@ -1,0 +1,29 @@
+project:
+  type: website
+  output-dir: ..\..\docs
+
+website:
+  title: "CMSC Courses"
+  navbar:
+    background: primary
+    search: true
+    left:
+      - text: "Home"
+        file: index.qmd
+      - text: "Listing"
+        file: listing.qmd
+  sidebar:
+    style: "docked"
+    search: true
+    contents:
+    - _contents.yml
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+    html-math-method: katex
+
+metadata-files:
+  - _contents.yml

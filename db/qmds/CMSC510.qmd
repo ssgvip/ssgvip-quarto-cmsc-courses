@@ -1,0 +1,22 @@
+---
+title: "CMSC 510 - Regularization Methods for Machine Learning"
+date: last-modified
+format:
+  html:
+    toc: true
+---
+
+## Catalog Description
+
+Semester course; 3 lecture hours (delivered online, face-to-face or hybrid). 3 credits. Enrollment is restricted to students with graduate standing in computer science or related discipline such as bioinformatics or acceptance into the accelerated B.S. to M.S. program in computer science. The course will assume undergraduate-level background in algorithms, linear algebra, calculus, statistics and probability. Upon successful completion of this course, the student will be able to understand recent advances in machine learning and apply machine-learning tools that go beyond learning from data, as well as have the ability to incorporate additional knowledge about the learning problem. Topics covered will include optimization-based view of supervised machine learning; classical regularization approaches including weight decay and Lasso; regularization terms incorporating additional knowledge about structures in the feature space, including group lasso and graph-based regularization terms; semi-supervised learning using graphs linking unlabeled and labeled samples.
+
+
+## Restrictions
+ 
+Enrollment is restricted to students with graduate standing in computer science or related discipline such as bioinformatics or acceptance into the accelerated BS to MS program in computer science.
+
+## Description
+
+The course will assume undergraduate-level background in algorithms, linear algebra, calculus, statistics and probability. Upon successful completion of this course, the student will be able to understand recent advances in machine learning and apply machine-learning tools that go beyond learning from data, as well as have the ability to incorporate additional knowledge about the learning problem. Topics covered will include optimization-based view of supervised machine learning; classical regularization approaches including weight decay and Lasso; regularization terms incorporating additional knowledge about structures in the feature space, including group lasso and graph-based regularization terms; semi-supervised learning using graphs linking unlabeled and labeled samples.
+
+

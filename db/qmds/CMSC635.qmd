@@ -1,0 +1,22 @@
+---
+title: "CMSC 635 - Knowledge Discovery and Data Mining"
+date: last-modified
+format:
+  html:
+    toc: true
+---
+
+## Catalog Description
+
+Semester course; 3 lecture hours (delivered online, face-to-face or hybrid). 3 credits. Prerequisite: CMSC 401 or corequisite: CMSC 501. Enrollment is restricted to students with graduate standing in computer science or a related discipline such as bioinformatics, or those accepted into the accelerated B.S. to M.S. program in computer science. Covers knowledge discovery and data mining concepts, tools and methods; provides hands-on experience based on a project involving analysis of large real-life data. Topics include the knowledge discovery process, data storage and representation, preprocessing algorithms for missing data imputation, feature selection and discretization; unsupervised learning algorithms for clustering and association mining; supervised learning algorithms including decision trees, Bayesian models and introduction to support vector machines and neural networks; ensemble learning; protocols and measures for validation of predictive models; and data security and privacy issues.
+
+
+## Restrictions
+ 
+CMSC 401 or corequisite: CMSC 501. Enrollment is restricted to students with graduate standing in computer science or a related discipline such as bioinformatics, or those accepted into the accelerated BS to MS program in computer science.
+
+## Description
+
+Covers knowledge discovery and data mining concepts, tools and methods; provides hands-on experience based on a project involving analysis of large real-life data. Topics include the knowledge discovery process, data storage and representation, preprocessing algorithms for missing data imputation, feature selection and discretization; unsupervised learning algorithms for clustering and association mining; supervised learning algorithms including decision trees, Bayesian models and introduction to support vector machines and neural networks; ensemble learning; protocols and measures for validation of predictive models; and data security and privacy issues.
+
+

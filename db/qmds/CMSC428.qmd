@@ -1,0 +1,22 @@
+---
+title: "CMSC 428 - Mobile Programming: iOS"
+date: last-modified
+format:
+  html:
+    toc: true
+---
+
+## Catalog Description
+
+Semester course; 3 lecture hours. 3 credits. Prerequisite: CMSC 355, with a minimum grade of C. This course covers the fundamentals of Swift, Xcode and iOS for programming and design of iOS applications. Background in object-oriented programming and access to a computer with Xcode platform is required.
+
+
+## Restrictions
+ 
+CMSC 355, with a minimum grade of C.
+
+## Description
+
+This course covers the fundamentals of Swift, Xcode and iOS for programming and design of iOS applications. Background in object-oriented programming and access to a computer with Xcode platform is required.
+
+

@@ -1,0 +1,22 @@
+---
+title: "CMSC 692 - Independent Study"
+date: last-modified
+format:
+  html:
+    toc: true
+---
+
+## Catalog Description
+
+Semester course; 1-3 variable hours (to be arranged). 1-3 credits. Enrollment restricted to students with graduate standing and consent of instructor. Independent study done under the supervision of a faculty member. The student must identify a faculty member willing to supervise the research and submit a proposal for approval by the computer science graduate committee no later than the 10th week of the prior semester. A written report and an oral presentation are required upon completion of the research project. Graded as Pass/Fail.
+
+
+## Restrictions
+ 
+Enrollment restricted to students with graduate standing and consent of instructor.
+
+## Description
+
+Independent study done under the supervision of a faculty member. The student must identify a faculty member willing to supervise the research and submit a proposal for approval by the computer science graduate committee no later than the 10th week of the prior semester. A written report and an oral presentation are required upon completion of the research project. Graded as Pass/Fail.
+
+

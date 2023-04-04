@@ -81,7 +81,160 @@ for index, row in df1.iterrows():
 
 
 """
-display(Markdown( block ))
+
+```
+
+
+# Autogenerating QMD files
+
+Now for the tricky AND fun part. Using the data from the XLSX file, let's create a bunch of QMDs.
+
+```{python}
+#| echo: true
+
+block = "";
+for index, row in df1.iterrows():
+  filename = f'./qmds/{row["Subject"]}{row["Number"]}.qmd'
+  with open(filename, 'w',encoding="utf-8") as file:
+    file.write(f"""---
+title: "{row["ID"]} - {row["Title"]}"
+date: last-modified
+format:
+  html:
+    toc: true
+---
+
+## Catalog Description
+
+{row["Catalog Description"]}
+
+
+## Restrictions
+ 
+{row["Restrictions"]}
+
+## Description
+
+{row["Isolated Description"]}
+
+
+"""
+    )
+    file.close()
+
+  block = block + f"""
+
+{filename}
+
+
+"""
+```
+
+# Autogenerating *_contents.yml* 
+
+
+```{python}
+#| echo: true
+
+filename = "qmds/_contents.yml"
+with open(filename, 'w',encoding="utf-8") as file:
+  file.write("""website:
+  sidebar:
+    contents:
+    - section: "Undergrad"
+      contents:
+"""
+)
+
+  for index, row in df1.iterrows():
+    if (row["Number"]<600):
+      file.write(f'        - href: {row["Subject"]}{row["Number"]}.qmd\n')
+      file.write(f'          text: {row["Subject"]} {row["Number"]}\n')
+
+  file.write("""
+    - section: "Graduate"
+      contents:
+"""
+)
+
+  for index, row in df1.iterrows():
+    if (row["Number"]>=600):
+      file.write(f'        - href: {row["Subject"]}{row["Number"]}.qmd\n')
+      file.write(f'          text: {row["Subject"]} {row["Number"]}\n')
+  file.write("\n")
+  file.close()
+
+
+```
+
+# Autogenerating *index.qmd* 
+
+
+```{python}
+#| echo: true
+
+filename = "qmds/index.qmd"
+with open(filename, 'w',encoding="utf-8") as file:
+  file.write(f"""---
+title: "CMSC Courses and Titles"
+date: last-modified
+---
+""" )
+
+  df1['urlID'] = "[" + df1["ID"].astype(str) + "](" + df1["Subject"].astype(str) + df1["Number"].astype(str) + '.html)'
+  df1['urlTitle'] = "[" + df1["Title"].astype(str) + "](" + df1["Subject"].astype(str) + df1["Number"].astype(str) + '.html)'
+
+
+  cols = ["urlID","urlTitle"]
+  file.write(tabulate(
+  df1[ cols ],
+  showindex=False,
+  headers=["Course","Title"],
+  tablefmt="fancy"
+    )
+  )
+  file.close()
+  
+```
+
+
+# Autogenerating *listing.qmd* 
+
+
+```{python}
+#| echo: true
+
+df1['urlHeader'] = "[" + df1["ID"].astype(str) + "-" +  df1["Title"].astype(str) + "](" + df1["Subject"].astype(str) + df1["Number"].astype(str) + '.qmd)'
+
+block = "";
+for index, row in df1.iterrows():
+  h = "hours" if(row["Hours"]>1) else "hour"
+  block = block + f"""
+## {row["urlHeader"]}
+
+Semester course. {row["Hours"]} {h}.
+
+**Restrictions:** {row["Restrictions"]}
+
+**Description:** {row["Isolated Description"]}
+
+
+"""
+
+filename = "qmds/listing.qmd"
+with open(filename, 'w',encoding="utf-8") as file:
+  file.write(f"""---
+title: "Full Listing of CMSC Courses and Titles"
+date: last-modified
+format:
+  html:
+    toc: False
+---
+""" )
+
+  file.write(block)
+  file.close()
+  
 ```
 
 

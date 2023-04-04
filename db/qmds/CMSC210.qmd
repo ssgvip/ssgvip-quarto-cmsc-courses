@@ -1,0 +1,22 @@
+---
+title: "CMSC 210 - Computers and Programming"
+date: last-modified
+format:
+  html:
+    toc: true
+---
+
+## Catalog Description
+
+Semester course; 3 lecture hours (delivered online). 3 credits. Introduction to object-oriented programming using Python. The course introduces students to structured programming logic and design techniques. The course content also includes instruction in critical thinking and problem-solving skills using contemporary tools. Specific topics include flowcharting, pseudocode and program control structures, including sequence, selection and repetition. This course is not applicable for credit toward the B.S. in Computer Science.
+
+
+## Restrictions
+ 
+(none)
+
+## Description
+
+Introduction to object-oriented programming using Python. The course introduces students to structured programming logic and design techniques. The course content also includes instruction in critical thinking and problem-solving skills using contemporary tools. Specific topics include flowcharting, pseudocode and program control structures, including sequence, selection and repetition. This course is not applicable for credit toward the BS in Computer Science.
+
+

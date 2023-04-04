@@ -1,0 +1,22 @@
+---
+title: "CMSC 403 - Programming Languages"
+date: last-modified
+format:
+  html:
+    toc: true
+---
+
+## Catalog Description
+
+Semester course; 3 lecture hours. 3 credits. Prerequisites: CMSC 256 and CMSC 303, both with a minimum grade of C. Survey of representative modern programming languages. Formal definition of programming languages including specifications of syntax and semantics. Precedence, infix, prefix and postfix notation. Global properties of algorithmic languages. Sub-routines, co-routines and tasks. List processing, string manipulation, data description and simulation languages. Run-time representation of program and data structures.
+
+
+## Restrictions
+ 
+CMSC 256 and CMSC 303, both with a minimum grade of C.
+
+## Description
+
+Survey of representative modern programming languages. Formal definition of programming languages including specifications of syntax and semantics. Precedence, infix, prefix and postfix notation. Global properties of algorithmic languages. Sub-routines, co-routines and tasks. List processing, string manipulation, data description and simulation languages. Run-time representation of program and data structures.
+
+

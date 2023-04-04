@@ -1,0 +1,22 @@
+---
+title: "CMSC 611 - Computer Multimedia"
+date: last-modified
+format:
+  html:
+    toc: true
+---
+
+## Catalog Description
+
+Semester course; 3 lecture hours. 3 credits. Prerequisite: permission of instructor. Study of computer multimedia techniques relating to images, sound, video and text. Emphasis on compression techniques and standard storage formats. This course is programming-intensive.
+
+
+## Restrictions
+ 
+permission of instructor.
+
+## Description
+
+Study of computer multimedia techniques relating to images, sound, video and text. Emphasis on compression techniques and standard storage formats. This course is programming-intensive.
+
+

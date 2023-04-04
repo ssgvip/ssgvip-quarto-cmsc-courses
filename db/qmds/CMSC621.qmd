@@ -1,0 +1,22 @@
+---
+title: "CMSC 621 - Theory of Computation"
+date: last-modified
+format:
+  html:
+    toc: true
+---
+
+## Catalog Description
+
+Semester course; 3 lecture hours. 3 credits. Prerequisite: graduate student standing and permission of instructor. Discussion of the complexity and computability of problems and programs. Topics will include unsolvability, universal programs and abstract complexity.
+
+
+## Restrictions
+ 
+graduate student standing and permission of instructor.
+
+## Description
+
+Discussion of the complexity and computability of problems and programs. Topics will include unsolvability, universal programs and abstract complexity.
+
+

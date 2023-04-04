@@ -1,0 +1,22 @@
+---
+title: "CMSC 526 - Theory of Programming Languages"
+date: last-modified
+format:
+  html:
+    toc: true
+---
+
+## Catalog Description
+
+Semester course; 3 lecture hours. 3 credits. Prerequisite: CMSC 403, graduate student standing or acceptance into the five-year accelerated B.S. and M.S. program in computer science. An introduction to the formal semantics of programming languages, logic programming and functional programming. Topics include denotational semantics, attribute grammars, Backus Formal Functional Programming, fixed point semantics, model-theoretic semantics and PROLOG.
+
+
+## Restrictions
+ 
+CMSC 403, graduate student standing or acceptance into the five-year accelerated BS and MS program in computer science.
+
+## Description
+
+An introduction to the formal semantics of programming languages, logic programming and functional programming. Topics include denotational semantics, attribute grammars, Backus Formal Functional Programming, fixed point semantics, model-theoretic semantics and PROLOG.
+
+

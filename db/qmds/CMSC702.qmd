@@ -1,0 +1,22 @@
+---
+title: "CMSC 702 - Computer Science Seminar"
+date: last-modified
+format:
+  html:
+    toc: true
+---
+
+## Catalog Description
+
+Semester course; 1 seminar hour. 1 credit. May be repeated for credit. Enrollment restricted to students in the doctoral program in computer science. Students will attend a weekly research seminar in which the topic and speaker will change each week in order to cover a broad range of subjects at the forefront of computer science research. Students will have to present and to write a report on at least one seminar presented by other speakers. The objective is to expose students to research topics and scholars in the field of computer science as well as to provide them experience in delivering and critiquing seminar talks. Graded as satisfactory/unsatisfactory.
+
+
+## Restrictions
+ 
+Enrollment restricted to students in the doctoral program in computer science. Students will attend a week
+
+## Description
+
+Students will attend a weekly research seminar in which the topic and speaker will change each week in order to cover a broad range of subjects at the forefront of computer science research. Students will have to present and to write a report on at least one seminar presented by other speakers. The objective is to expose students to research topics and scholars in the field of computer science as well as to provide them experience in delivering and critiquing seminar talks. Graded as satisfactory/unsatisfactory.
+
+

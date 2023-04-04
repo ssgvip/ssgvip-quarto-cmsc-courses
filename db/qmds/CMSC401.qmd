@@ -1,0 +1,22 @@
+---
+title: "CMSC 401 - Algorithm Analysis with Advanced Data Structures"
+date: last-modified
+format:
+  html:
+    toc: true
+---
+
+## Catalog Description
+
+Semester course; 3 lecture hours. 3 credits. Prerequisites: CMSC 256 with a grade of C or better and CMSC 302 with a grade of C or better. Introduction to algorithm analysis and complexity classes. Advanced data structures topics including multiple linked lists, height-balanced trees, B-trees, hashing and graph representation; incorporating data structures into object-oriented design. Analysis of various searching and sorting algorithms. Algorithm design topics include divide-and-conquer, dynamic programming and greedy methods.
+
+
+## Restrictions
+ 
+CMSC 256 with a grade of C or better and CMSC 302 with a grade of C or better.
+
+## Description
+
+Introduction to algorithm analysis and complexity classes. Advanced data structures topics including multiple linked lists, height-balanced trees, B-trees, hashing and graph representation; incorporating data structures into object-oriented design. Analysis of various searching and sorting algorithms. Algorithm design topics include divide-and-conquer, dynamic programming and greedy methods.
+
+

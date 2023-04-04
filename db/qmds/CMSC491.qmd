@@ -1,0 +1,22 @@
+---
+title: "CMSC 491 - Topics in Computer Science"
+date: last-modified
+format:
+  html:
+    toc: true
+---
+
+## Catalog Description
+
+Semester course; variable hours. 1-3 credits. May be repeated for credit with different content. Prerequisite: permission of instructor. This course will cover selected topics in computer science. See the Schedule of Classes for specific topics to be offered each semester.
+
+
+## Restrictions
+ 
+permission of instructor.
+
+## Description
+
+This course will cover selected topics in computer science. See the Schedule of Classes for specific topics to be offered each semester.
+
+

@@ -1,0 +1,22 @@
+---
+title: "CMSC 697 - Directed Research"
+date: last-modified
+format:
+  html:
+    toc: true
+---
+
+## Catalog Description
+
+Semester course; 1-15 research hours (to be arranged). 1-15 credits. May be repeated for credit. A total of three credits may be used to fulfill the M.S. in Computer Science thesis requirement. Independent research culminating in the writing of the required thesis or dissertation. The student must identify a faculty member willing to supervise the research and submit a proposal to the computer science graduate committee no later than the 10th week of the prior semester. This proposal must be approved before the student can register for the course. Graded as S/U/F.
+
+
+## Restrictions
+ 
+(none)
+
+## Description
+
+May be repeated for credit. A total of three credits may be used to fulfill the MS in Computer Science thesis requirement. Independent research culminating in the writing of the required thesis or dissertation. The student must identify a faculty member willing to supervise the research and submit a proposal to the computer science graduate committee no later than the 10th week of the prior semester. This proposal must be approved before the student can register for the course. Graded as S/U/F.
+
+

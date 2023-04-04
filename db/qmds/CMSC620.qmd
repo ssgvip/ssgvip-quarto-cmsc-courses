@@ -1,0 +1,22 @@
+---
+title: "CMSC 620 - Applied Cryptography"
+date: last-modified
+format:
+  html:
+    toc: true
+---
+
+## Catalog Description
+
+Semester course; 3 lecture hours. 3 credits. Provides a comprehensive survey of modern cryptography. Included are techniques of enciphering and deciphering messages using cryptographic algorithms, block ciphers and block cipher modes, hash functions and message authentication codes, public key cryptography and digital signatures, and steganography. Crosslisted as: CISS 624.
+
+
+## Restrictions
+ 
+(none)
+
+## Description
+
+Provides a comprehensive survey of modern cryptography. Included are techniques of enciphering and deciphering messages using cryptographic algorithms, block ciphers and block cipher modes, hash functions and message authentication codes, public key cryptography and digital signatures, and steganography. Crosslisted as: CISS 624.
+
+

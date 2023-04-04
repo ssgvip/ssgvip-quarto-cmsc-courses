@@ -1,0 +1,22 @@
+---
+title: "CMSC 615 - Cryptocurrency and Blockchain Techniques"
+date: last-modified
+format:
+  html:
+    toc: true
+---
+
+## Catalog Description
+
+Semester course; 3 lecture hours (delivered online, face-to-face or hybrid). 3 credits. Enrollment is restricted to students with graduate standing in computer science or a related discipline. The course will assume undergraduate-level background in algorithms, data structures and programming. Upon successful completion of this course, the student will be able to understand the major concepts about cryptocurrency and blockchain techniques; be familiar with major blockchain applications as well as real-world issues; understand the underlying consensus mechanisms in the Bitcoin system and other alternative cryptocurrency systems; analyze the security of Nakamoto consensus; understand, write and execute smart contracts using an Ethereum-like platform.
+
+
+## Restrictions
+ 
+Enrollment is restricted to students with graduate standing in computer science or a related discipline.
+
+## Description
+
+The course will assume undergraduate-level background in algorithms, data structures and programming. Upon successful completion of this course, the student will be able to understand the major concepts about cryptocurrency and blockchain techniques; be familiar with major blockchain applications as well as real-world issues; understand the underlying consensus mechanisms in the Bitcoin system and other alternative cryptocurrency systems; analyze the security of Nakamoto consensus; understand, write and execute smart contracts using an Ethereum-like platform.
+
+
