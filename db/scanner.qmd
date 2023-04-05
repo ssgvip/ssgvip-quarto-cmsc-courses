@@ -2,6 +2,7 @@
 title: "Processing the XLSX"
 format:
   html:
+    output-dir: ..\docs
     toc: true
     html-math-method: katex
     css: styles.css
