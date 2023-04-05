@@ -13,8 +13,9 @@ website:
       - text: "Listing"
         file: listing.qmd
   sidebar:
-    style: "docked"
-    search: true
+    style: "floating"
+    search: false
+    collapse-level: 1
     contents:
     - _contents.yml
 
