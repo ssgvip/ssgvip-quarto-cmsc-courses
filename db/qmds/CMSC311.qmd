@@ -11,13 +11,17 @@ format:
 Semester course; 3 lecture hours. 3 credits. Prerequisite: CMSC 302 with minimum grade of C; corequisite: CMSC 257. Introduction to the basic organization of computers including elementary digital logic design, processor and arithmetic/logic unit design, data paths, memory hierarchy, I/O devices, instruction set architecture and addressing modes.
 
 
-## Restrictions; any pre- or co-requisities
+## Restrictions including pre- or co-requisities
  
 CMSC 302 with minimum grade of C; corequisite: CMSC 257.
 
 ## Description
 
 Introduction to the basic organization of computers including elementary digital logic design, processor and arithmetic/logic unit design, data paths, memory hierarchy, I/O devices, instruction set architecture and addressing modes.
+
+## Topics
+
+addressing modes, architecture, assembly language, cache memories, computers, data, data paths, data types, digital logic structures, input/output, instruction set architecture, logic, machine language, memory hierarchy, organization, stacks, trap routines, trap subroutines, unit design, virtual memory, von neumann model
 
 ## Syllabus Statements
 

@@ -11,13 +11,17 @@ format:
 Semester course; variable hours. 1-3 credits. May be repeated for credit with different content. Prerequisite: permission of instructor. This course will cover selected topics in computer science. See the Schedule of Classes for specific topics to be offered each semester.
 
 
-## Restrictions; any pre- or co-requisities
+## Restrictions including pre- or co-requisities
  
 permission of instructor.
 
 ## Description
 
 This course will cover selected topics in computer science. See the Schedule of Classes for specific topics to be offered each semester.
+
+## Topics
+
+selected topics
 
 ## Syllabus Statements
 

@@ -11,13 +11,17 @@ format:
 Semester course; 3 lecture hours (delivered online, face-to-face or hybrid). 3 credits. Enrollment is restricted to students with graduate standing in engineering or science or by permission of the instructor. Introduces theoretical and practical aspects of computer vision for image processing and understanding. It provides a comprehensive walkthrough from basics of image preparation to using computational intelligence tools for knowledge discovery from images. The course will cover basics of image processing and computer vision, including image sampling and quantization, color, pixel-based operations, image filtering, morphological image processing, and image transforms; information extraction including segmentation and feature extraction; pattern recognition for computer vision: classification, novelty and object detection, image understanding, learning from video streams, and tensor-based methods. Examples will include medical image analysis, object recognition in ground and aerial photographs and hyperspectral imaging.
 
 
-## Restrictions; any pre- or co-requisities
+## Restrictions including pre- or co-requisities
  
 Enrollment is restricted to students with graduate standing in engineering or science or by permission of the instructor.
 
 ## Description
 
 Introduces theoretical and practical aspects of computer vision for image processing and understanding. It provides a comprehensive walkthrough from basics of image preparation to using computational intelligence tools for knowledge discovery from images. The course will cover basics of image processing and computer vision, including image sampling and quantization, color, pixel-based operations, image filtering, morphological image processing, and image transforms; information extraction including segmentation and feature extraction; pattern recognition for computer vision: classification, novelty and object detection, image understanding, learning from video streams, and tensor-based methods. Examples will include medical image analysis, object recognition in ground and aerial photographs and hyperspectral imaging.
+
+## Topics
+
+analysis, computers, feature extraction, feature selection, image, image analysis, image filtering, image processing, image segmentation, images, information extraction, machine learning, patterns, pixel-based operations, quantization, segmentation, tensor
 
 ## Syllabus Statements
 

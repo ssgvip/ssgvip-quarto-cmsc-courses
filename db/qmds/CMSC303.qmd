@@ -11,13 +11,17 @@ format:
 Semester course; 3 lecture hours. 3 credits. Prerequisite: CMSC 302 or the equivalent with a grade of C or better. Complexity classes, grammars, automata, formal languages, Turing machines, computability.
 
 
-## Restrictions; any pre- or co-requisities
+## Restrictions including pre- or co-requisities
  
 CMSC 302 or the equivalent with a grade of C or better.
 
 ## Description
 
 Complexity classes, grammars, automata, formal languages, Turing machines, computability.
+
+## Topics
+
+automata, complexity analysis, computability theory, context-free grammars, discrete math, finite automata, logic, pushdown automata, regular expressions, turing machines
 
 ## Syllabus Statements
 

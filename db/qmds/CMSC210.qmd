@@ -11,13 +11,17 @@ format:
 Semester course; 3 lecture hours (delivered online). 3 credits. Introduction to object-oriented programming using Python. The course introduces students to structured programming logic and design techniques. The course content also includes instruction in critical thinking and problem-solving skills using contemporary tools. Specific topics include flowcharting, pseudocode and program control structures, including sequence, selection and repetition. This course is not applicable for credit toward the B.S. in Computer Science.
 
 
-## Restrictions; any pre- or co-requisities
+## Restrictions including pre- or co-requisities
  
 (none)
 
 ## Description
 
 Introduction to object-oriented programming using Python. The course introduces students to structured programming logic and design techniques. The course content also includes instruction in critical thinking and problem-solving skills using contemporary tools. Specific topics include flowcharting, pseudocode and program control structures, including sequence, selection and repetition. This course is not applicable for credit toward the BS in Computer Science.
+
+## Topics
+
+calling functions, conditional execution, control structures, critical thinking, debugging, dictionaries, expressions, files, flow charting, lists, loops and iterations, network programming, problem solving, program design, programming logic, pseudocode, regular expressions, repetition, sequencing, statement, strings, structured programming, tuples, variables, writing functions
 
 ## Syllabus Statements
 

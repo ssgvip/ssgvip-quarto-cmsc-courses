@@ -11,13 +11,17 @@ format:
 Semester course; 3 lecture hours. 3 credits. Prerequisite: CMSC 525. Studies the concepts and techniques used in the analysis of software and the derivation of test data. Focuses on software metrics and reliability; construction of tools to aid software analysis and testing. Requires students to review seminal and current papers from the literature, and lead their discussion in class.
 
 
-## Restrictions; any pre- or co-requisities
+## Restrictions including pre- or co-requisities
  
 CMSC 525.
 
 ## Description
 
 Studies the concepts and techniques used in the analysis of software and the derivation of test data. Focuses on software metrics and reliability; construction of tools to aid software analysis and testing. Requires students to review seminal and current papers from the literature, and lead their discussion in class.
+
+## Topics
+
+analysis, current literature, metrics, software management, testing
 
 ## Syllabus Statements
 

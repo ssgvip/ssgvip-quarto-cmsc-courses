@@ -11,13 +11,17 @@ format:
 Semester course; 3 lecture hours. 3 credits. Prerequisites: CMSC 401 and 403. A first course in compiler theory and construction. Formal description of languages, underlying theory and design techniques for compilers, lexical analysis, syntax analysis, syntax-directed translation, intermediate languages, run-time system management, code generation, code optimization, compiler-building tools.
 
 
-## Restrictions; any pre- or co-requisities
+## Restrictions including pre- or co-requisities
  
 CMSC 401 and 403.
 
 ## Description
 
 A first course in compiler theory and construction. Formal description of languages, underlying theory and design techniques for compilers, lexical analysis, syntax analysis, syntax-directed translation, intermediate languages, run-time system management, code generation, code optimization, compiler-building tools.
+
+## Topics
+
+code management, compilers, intermediate languages, languages, lexical analysis, optimization, run-time system management, syntax
 
 ## Syllabus Statements
 

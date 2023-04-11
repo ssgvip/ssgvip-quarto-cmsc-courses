@@ -11,13 +11,17 @@ format:
 Semester course; 3 lecture hours (delivered online, face-to-face or hybrid). 3 credits. Prerequisite: CMSC 401 or equivalent. Enrollment is restricted to students with graduate standing or those accepted into the accelerated B.S. to M.S. program in computer science. Advanced graph algorithms, advanced data structures, applied numerical algorithms, optimization methods, approximation methods for hard graph and string problems and computational geometry algorithms.
 
 
-## Restrictions; any pre- or co-requisities
+## Restrictions including pre- or co-requisities
  
 CMSC 401 or equivalent. Enrollment is restricted to students with graduate standing or those accepted into the accelerated BS to MS program in computer science.
 
 ## Description
 
 Advanced graph algorithms, advanced data structures, applied numerical algorithms, optimization methods, approximation methods for hard graph and string problems and computational geometry algorithms.
+
+## Topics
+
+algorithms, approximation, computational geometry, data structures, graph algorithms, optimization, strings
 
 ## Syllabus Statements
 

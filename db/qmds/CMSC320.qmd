@@ -11,13 +11,17 @@ format:
 Semester course; 3 lecture hours (delivered online). 3 credits. Prerequisite: CMSC 210. Introduction to software engineering and web development. The course introduces students to the software development process, including design, development and testing principles. Students will apply these principles in the development of a web application. This course is not applicable for credit toward any College of Engineering degrees.
 
 
-## Restrictions; any pre- or co-requisities
+## Restrictions including pre- or co-requisities
  
 CMSC 210.
 
 ## Description
 
 Introduction to software engineering and web development. The course introduces students to the software development process, including design, development and testing principles. Students will apply these principles in the development of a web application. This course is not applicable for credit toward any College of Engineering degrees.
+
+## Topics
+
+design, development, documentation, gathering, software development, systems development, testing, testing functionality, web development
 
 ## Syllabus Statements
 

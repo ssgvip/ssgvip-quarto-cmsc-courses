@@ -189,13 +189,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a><span class="co"># Topics data: do a little data cleaning, converting strings into integers</span></span>
 <span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> col <span class="kw">in</span> [<span class="st">"Count"</span>,<span class="st">"Number"</span>,<span class="st">"Level"</span>]:</span>
-<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>  topics_df[col] <span class="op">=</span> topics_df[col].astype(<span class="st">"int"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>  topics_df[col] <span class="op">=</span> topics_df[col].astype(<span class="st">"int"</span>)</span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>topics_df[<span class="st">"CourseId"</span>] <span class="op">=</span> topics_df[<span class="st">"CourseId"</span>].<span class="bu">apply</span>( <span class="bu">str</span>.strip )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <section id="a-list-of-columns-in-the-cmsc-course-tab" class="level2">
 <h2 class="anchored" data-anchor-id="a-list-of-columns-in-the-cmsc-course-tab">a list of columns in the <em>CMSC-Course</em> tab</h2>
 <div class="cell" data-execution_count="4">
 <div class="cell-output cell-output-display">
-<p>Here is a list of columns:<br>‘Subject’, ‘Number’, ‘CourseId’, ‘Title’, ‘Hours’, ‘Catalog’, ‘Catalog Description’, ‘Restrictions’, ‘Isolated Description’.</p>
+<p>Here is a list of columns:<br>‘Subject’, ‘Number’, ‘CourseId’, ‘idx’, ‘Title’, ‘Hours’, ‘Catalog’, ‘Catalog Description’, ‘Restrictions’, ‘Isolated Description’.</p>
 </div>
 </div>
 </section>
@@ -555,48 +557,59 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h1>Generating individual course QMD files</h1>
 <p>Now for the tricky AND fun part. Using the data from the dataframe, let’s create a bunch of QMDs one for each course.</p>
 <div class="cell" data-execution_count="6">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>block <span class="op">=</span> <span class="st">""</span><span class="op">;</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> index, row <span class="kw">in</span> course_df.iterrows():</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  filename <span class="op">=</span> <span class="ss">f'./qmds/</span><span class="sc">{</span>row[<span class="st">"Subject"</span>]<span class="sc">}{</span>row[<span class="st">"Number"</span>]<span class="sc">}</span><span class="ss">.qmd'</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="cf">with</span> <span class="bu">open</span>(filename, <span class="st">'w'</span>,encoding<span class="op">=</span><span class="st">"utf-8"</span>) <span class="im">as</span> <span class="bu">file</span>:</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">file</span>.write(<span class="ss">f"""---</span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="ss">title: "</span><span class="sc">{</span>row[<span class="st">"CourseId"</span>]<span class="sc">}</span><span class="ss"> - </span><span class="sc">{</span>row[<span class="st">"Title"</span>]<span class="sc">}</span><span class="ss">"</span></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="ss">date: last-modified</span></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="ss">format:</span></span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="ss">  html:</span></span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="ss">    toc: true</span></span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="ss">---</span></span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="ss">## Catalog Description</span></span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="sc">{</span>row[<span class="st">"Catalog Description"</span>]<span class="sc">}</span></span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="ss">## Restrictions; any pre- or co-requisities</span></span>
-<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a><span class="ss"> </span></span>
-<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a><span class="sc">{</span>row[<span class="st">"Restrictions"</span>]<span class="sc">}</span></span>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> showTopics( courseId ):</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  topics <span class="op">=</span> topics_df[ topics_df[<span class="st">"CourseId"</span>].<span class="bu">str</span>.contains(courseId[<span class="dv">5</span>:]) <span class="op">&amp;</span> topics_df[<span class="st">"CourseId"</span>].<span class="bu">str</span>.contains(courseId[:<span class="dv">4</span>]) ]</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co">#  slist = courseId[:4]+"/"+courseId[5:]+": "+", ".join( topics["ADJTopic"] )</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  slist <span class="op">=</span> <span class="st">", "</span>.join( topics[<span class="st">"ADJTopic"</span>] )</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> slist</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>block <span class="op">=</span> <span class="st">""</span><span class="op">;</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> index, row <span class="kw">in</span> course_df.iterrows():</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>  filename <span class="op">=</span> <span class="ss">f'./qmds/</span><span class="sc">{</span>row[<span class="st">"Subject"</span>]<span class="sc">}{</span>row[<span class="st">"Number"</span>]<span class="sc">}</span><span class="ss">.qmd'</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>  <span class="cf">with</span> <span class="bu">open</span>(filename, <span class="st">'w'</span>,encoding<span class="op">=</span><span class="st">"utf-8"</span>) <span class="im">as</span> <span class="bu">file</span>:</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>    <span class="bu">file</span>.write(<span class="ss">f"""---</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="ss">title: "</span><span class="sc">{</span>row[<span class="st">"CourseId"</span>]<span class="sc">}</span><span class="ss"> - </span><span class="sc">{</span>row[<span class="st">"Title"</span>]<span class="sc">}</span><span class="ss">"</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="ss">date: last-modified</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="ss">format:</span></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="ss">  html:</span></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a><span class="ss">    toc: true</span></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="ss">---</span></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a><span class="ss">## Catalog Description</span></span>
 <span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a><span class="ss">## Description</span></span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a><span class="sc">{</span>row[<span class="st">"Catalog Description"</span>]<span class="sc">}</span></span>
 <span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a><span class="sc">{</span>row[<span class="st">"Isolated Description"</span>]<span class="sc">}</span></span>
-<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a><span class="ss">## Syllabus Statements</span></span>
-<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a><span class="ss">Students should visit the URL below and review all syllabus statement information. The full university syllabus statement includes information on safety, registration, the VCU Honor Code, student conduct, withdrawal and more.</span></span>
-<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a><span class="ss">*&lt;https://provost.vcu.edu/faculty/faculty-resources/syllabus/#statements&gt;*</span></span>
-<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a><span class="ss">## Restrictions; any pre- or co-requisities</span></span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a><span class="ss"> </span></span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a><span class="sc">{</span>row[<span class="st">"Restrictions"</span>]<span class="sc">}</span></span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a><span class="ss">## Description</span></span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a><span class="sc">{</span>row[<span class="st">"Isolated Description"</span>]<span class="sc">}</span></span>
 <span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a><span class="ss">"""</span></span>
-<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a>    <span class="bu">file</span>.close()</span>
+<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a><span class="ss">## Topics</span></span>
+<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a><span class="sc">{</span>showTopics( row[<span class="st">"CourseId"</span>] )<span class="sc">}</span></span>
 <span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a>  block <span class="op">=</span> block <span class="op">+</span> <span class="ss">f"""</span></span>
+<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a><span class="ss">## Syllabus Statements</span></span>
 <span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a><span class="sc">{</span>filename<span class="sc">}</span></span>
+<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a><span class="ss">Students should visit the URL below and review all syllabus statement information. The full university syllabus statement includes information on safety, registration, the VCU Honor Code, student conduct, withdrawal and more.</span></span>
 <span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a><span class="ss">"""</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a><span class="ss">*&lt;https://provost.vcu.edu/faculty/faculty-resources/syllabus/#statements&gt;*</span></span>
+<span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-43"><a href="#cb3-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-44"><a href="#cb3-44" aria-hidden="true" tabindex="-1"></a><span class="ss">"""</span></span>
+<span id="cb3-45"><a href="#cb3-45" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb3-46"><a href="#cb3-46" aria-hidden="true" tabindex="-1"></a>    <span class="bu">file</span>.close()</span>
+<span id="cb3-47"><a href="#cb3-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-48"><a href="#cb3-48" aria-hidden="true" tabindex="-1"></a>  block <span class="op">=</span> block <span class="op">+</span> <span class="ss">f"""</span></span>
+<span id="cb3-49"><a href="#cb3-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-50"><a href="#cb3-50" aria-hidden="true" tabindex="-1"></a><span class="sc">{</span>filename<span class="sc">}</span></span>
+<span id="cb3-51"><a href="#cb3-51" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-52"><a href="#cb3-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-53"><a href="#cb3-53" aria-hidden="true" tabindex="-1"></a><span class="ss">"""</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="autogenerating-left-menu-bar-in-contents.yml" class="level1">
@@ -660,36 +673,2000 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <section id="autogenerating-listing.qmd" class="level1">
 <h1>Autogenerating <em>listing.qmd</em></h1>
 <div class="cell" data-execution_count="9">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>course_df[<span class="st">'urlHeader'</span>] <span class="op">=</span> <span class="st">"["</span> <span class="op">+</span> course_df[<span class="st">"CourseId"</span>].astype(<span class="bu">str</span>) <span class="op">+</span> <span class="st">" - "</span> <span class="op">+</span>  course_df[<span class="st">"Title"</span>].astype(<span class="bu">str</span>) <span class="op">+</span> <span class="st">"]("</span> <span class="op">+</span> course_df[<span class="st">"Subject"</span>].astype(<span class="bu">str</span>) <span class="op">+</span> course_df[<span class="st">"Number"</span>].astype(<span class="bu">str</span>) <span class="op">+</span> <span class="st">'.qmd)'</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>block <span class="op">=</span> <span class="st">""</span><span class="op">;</span></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> index, row <span class="kw">in</span> course_df.iterrows():</span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  h <span class="op">=</span> <span class="st">"hours"</span> <span class="cf">if</span>(row[<span class="st">"Hours"</span>]<span class="op">&gt;</span><span class="dv">1</span>) <span class="cf">else</span> <span class="st">"hour"</span></span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>  block <span class="op">=</span> block <span class="op">+</span> <span class="ss">f"""</span></span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="ss">## </span><span class="sc">{</span>row[<span class="st">"urlHeader"</span>]<span class="sc">}</span></span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="ss">Semester course. </span><span class="sc">{</span>row[<span class="st">"Hours"</span>]<span class="sc">}</span><span class="ss"> </span><span class="sc">{</span>h<span class="sc">}</span><span class="ss">.</span></span>
-<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a><span class="ss">**Restrictions:** </span><span class="sc">{</span>row[<span class="st">"Restrictions"</span>]<span class="sc">}</span></span>
-<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a><span class="ss">**Description:** </span><span class="sc">{</span>row[<span class="st">"Isolated Description"</span>]<span class="sc">}</span></span>
-<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a></span>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> showTopics( courseId ):</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  topics <span class="op">=</span> topics_df[ topics_df[<span class="st">"CourseId"</span>].<span class="bu">str</span>.contains(courseId[<span class="dv">5</span>:]) <span class="op">&amp;</span> topics_df[<span class="st">"CourseId"</span>].<span class="bu">str</span>.contains(courseId[:<span class="dv">4</span>]) ]</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="co">#  slist = courseId[:4]+"/"+courseId[5:]+": "+", ".join( topics["ADJTopic"] )</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  slist <span class="op">=</span> <span class="st">", "</span>.join( topics[<span class="st">"ADJTopic"</span>] )</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> slist</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>course_df[<span class="st">'urlHeader'</span>] <span class="op">=</span> <span class="st">"["</span> <span class="op">+</span> course_df[<span class="st">"CourseId"</span>].astype(<span class="bu">str</span>) <span class="op">+</span> <span class="st">" - "</span> <span class="op">+</span>  course_df[<span class="st">"Title"</span>].astype(<span class="bu">str</span>) <span class="op">+</span> <span class="st">"]("</span> <span class="op">+</span> course_df[<span class="st">"Subject"</span>].astype(<span class="bu">str</span>) <span class="op">+</span> course_df[<span class="st">"Number"</span>].astype(<span class="bu">str</span>) <span class="op">+</span> <span class="st">'.qmd)'</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>block <span class="op">=</span> <span class="st">""</span><span class="op">;</span></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> index, row <span class="kw">in</span> course_df.iterrows():</span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>  h <span class="op">=</span> <span class="st">"hours"</span> <span class="cf">if</span>(row[<span class="st">"Hours"</span>]<span class="op">&gt;</span><span class="dv">1</span>) <span class="cf">else</span> <span class="st">"hour"</span></span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>  block <span class="op">=</span> block <span class="op">+</span> <span class="ss">f"""</span></span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a><span class="ss">## </span><span class="sc">{</span>row[<span class="st">"urlHeader"</span>]<span class="sc">}</span></span>
 <span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a><span class="ss">"""</span></span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a><span class="ss">Semester course. </span><span class="sc">{</span>row[<span class="st">"Hours"</span>]<span class="sc">}</span><span class="ss"> </span><span class="sc">{</span>h<span class="sc">}</span><span class="ss">.</span></span>
 <span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>filename <span class="op">=</span> <span class="st">"qmds/listing.qmd"</span></span>
-<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(filename, <span class="st">'w'</span>,encoding<span class="op">=</span><span class="st">"utf-8"</span>) <span class="im">as</span> <span class="bu">file</span>:</span>
-<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>  <span class="bu">file</span>.write(<span class="ss">f"""---</span></span>
-<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a><span class="ss">title: "Full Listing of CMSC Courses and Titles"</span></span>
-<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a><span class="ss">date: last-modified</span></span>
-<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a><span class="ss">format:</span></span>
-<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a><span class="ss">  html:</span></span>
-<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a><span class="ss">    toc: False</span></span>
-<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a><span class="ss">---</span></span>
-<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a><span class="ss">"""</span> )</span>
-<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a>  <span class="bu">file</span>.write(block)</span>
-<span id="cb6-30"><a href="#cb6-30" aria-hidden="true" tabindex="-1"></a>  <span class="bu">file</span>.close()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a><span class="ss">**Restrictions:** </span><span class="sc">{</span>row[<span class="st">"Restrictions"</span>]<span class="sc">}</span></span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a><span class="ss">**Description:** </span><span class="sc">{</span>row[<span class="st">"Isolated Description"</span>]<span class="sc">}</span></span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a><span class="ss">**Topics:** </span><span class="sc">{</span> showTopics( row[<span class="st">"CourseId"</span>] ) <span class="sc">}</span></span>
+<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a><span class="ss">"""</span></span>
+<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a>filename <span class="op">=</span> <span class="st">"qmds/listing.qmd"</span></span>
+<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(filename, <span class="st">'w'</span>,encoding<span class="op">=</span><span class="st">"utf-8"</span>) <span class="im">as</span> <span class="bu">file</span>:</span>
+<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a>  <span class="bu">file</span>.write(<span class="ss">f"""---</span></span>
+<span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a><span class="ss">title: "Full Listing of CMSC Courses and Titles"</span></span>
+<span id="cb6-30"><a href="#cb6-30" aria-hidden="true" tabindex="-1"></a><span class="ss">date: last-modified</span></span>
+<span id="cb6-31"><a href="#cb6-31" aria-hidden="true" tabindex="-1"></a><span class="ss">format:</span></span>
+<span id="cb6-32"><a href="#cb6-32" aria-hidden="true" tabindex="-1"></a><span class="ss">  html:</span></span>
+<span id="cb6-33"><a href="#cb6-33" aria-hidden="true" tabindex="-1"></a><span class="ss">    toc: False</span></span>
+<span id="cb6-34"><a href="#cb6-34" aria-hidden="true" tabindex="-1"></a><span class="ss">---</span></span>
+<span id="cb6-35"><a href="#cb6-35" aria-hidden="true" tabindex="-1"></a><span class="ss">"""</span> )</span>
+<span id="cb6-36"><a href="#cb6-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-37"><a href="#cb6-37" aria-hidden="true" tabindex="-1"></a>  <span class="bu">file</span>.write(block)</span>
+<span id="cb6-38"><a href="#cb6-38" aria-hidden="true" tabindex="-1"></a>  <span class="bu">file</span>.close()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="autogenerating-topics.qmd" class="level1">
+<h1>Autogenerating <em>topics.qmd</em></h1>
+<div class="cell" data-execution_count="10">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> textwrap <span class="im">import</span> wrap</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> expandURL( courseList ):</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  urls <span class="op">=</span> course_df[ course_df[<span class="st">"idx"</span>].isin( courseList) ].reset_index()</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>  urls[<span class="st">"url"</span>] <span class="op">=</span> <span class="st">"&lt;a href='"</span><span class="op">+</span>urls[<span class="st">"idx"</span>]<span class="op">+</span><span class="st">".qmd"</span><span class="op">+</span><span class="st">"'&gt;"</span><span class="op">+</span>urls[<span class="st">"CourseId"</span>]<span class="op">+</span><span class="st">"&lt;/a&gt;"</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>  returnValue <span class="op">=</span> <span class="st">""</span><span class="op">;</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> i,url <span class="kw">in</span> urls[<span class="st">"url"</span>].iteritems():</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> i<span class="op">==</span><span class="dv">0</span>:</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>      returnValue <span class="op">=</span> url</span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="co">#    elif i % 4 == 0:</span></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a><span class="co">#        returnValue = returnValue + ", &lt;br/&gt;\n" + url</span></span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>      returnValue <span class="op">=</span> returnValue <span class="op">+</span> <span class="st">", "</span> <span class="op">+</span> url</span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> returnValue</span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>filename <span class="op">=</span> <span class="st">"qmds/topics.qmd"</span></span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(filename, <span class="st">'w'</span>,encoding<span class="op">=</span><span class="st">"utf-8"</span>) <span class="im">as</span> <span class="bu">file</span>:</span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>  <span class="bu">file</span>.write(<span class="ss">f"""---</span></span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a><span class="ss">title: "CMSC topics and courses"</span></span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a><span class="ss">date: last-modified</span></span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a><span class="ss">---</span></span>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a><span class="ss">"""</span> )</span>
+<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a><span class="co">#  course_df['urlID'] = "[" + course_df["CourseId"].astype(str) + "](" + course_df["Subject"].astype(str) + course_df["Number"].astype(str) + '.html)'</span></span>
+<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a><span class="co">#  course_df['urlTitle'] = "[" + course_df["Title"].astype(str) + "](" + course_df["Subject"].astype(str) + course_df["Number"].astype(str) + '.html)'</span></span>
+<span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-28"><a href="#cb7-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-29"><a href="#cb7-29" aria-hidden="true" tabindex="-1"></a>  df_grouped <span class="op">=</span> topics_df.groupby(<span class="st">'ADJTopic'</span>)[<span class="st">'idx'</span>].unique().<span class="bu">apply</span>( expandURL ).reset_index()</span>
+<span id="cb7-30"><a href="#cb7-30" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb7-31"><a href="#cb7-31" aria-hidden="true" tabindex="-1"></a>  <span class="bu">file</span>.write(</span>
+<span id="cb7-32"><a href="#cb7-32" aria-hidden="true" tabindex="-1"></a>    tabulate(df_grouped, tablefmt<span class="op">=</span><span class="st">'fancy'</span>, showindex<span class="op">=</span><span class="va">False</span>, headers<span class="op">=</span>[<span class="st">"Adjusted Topic"</span>,<span class="st">"Course"</span>] )</span>
+<span id="cb7-33"><a href="#cb7-33" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb7-34"><a href="#cb7-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-35"><a href="#cb7-35" aria-hidden="true" tabindex="-1"></a>  <span class="bu">file</span>.close()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+iteritems is deprecated and will be removed in a future version. Use .items instead.
+</code></pre>
+</div>
 </div>
 </section>
 

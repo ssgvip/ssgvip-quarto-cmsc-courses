@@ -11,13 +11,17 @@ format:
 Semester course; 3 lecture hours (delivered online, face-to-face or hybrid). 3 credits. Enrollment is restricted to students with graduate standing in computer science or a related discipline, or those accepted into the accelerated B.S. to M.S. program in computer science. Upon successful completion of this course, the student will be able to understand recent advances in natural language processing and apply NLP algorithms and techniques for processing unstructured text. Word-level, syntactic and semantic processing will be considered. Specific topics include rule-based and statistical methods for creating computer programs that analyze, generate and understand human language. Regular expressions and automata, context-free grammars, probabilistic classifiers and machine learning. Applications to real-world problems such as spell-checking, Web search, automatic question answering, authorship identification and developing conversational interfaces.
 
 
-## Restrictions; any pre- or co-requisities
+## Restrictions including pre- or co-requisities
  
 Enrollment is restricted to students with graduate standing in computer science or a related discipline, or those accepted into the accelerated BS to MS program in computer science.
 
 ## Description
 
 Upon successful completion of this course, the student will be able to understand recent advances in natural language processing and apply NLP algorithms and techniques for processing unstructured text. Word-level, syntactic and semantic processing will be considered. Specific topics include rule-based and statistical methods for creating computer programs that analyze, generate and understand human language. Regular expressions and automata, context-free grammars, probabilistic classifiers and machine learning. Applications to real-world problems such as spell-checking, Web search, automatic question answering, authorship identification and developing conversational interfaces.
+
+## Topics
+
+automation, context-free grammars, machine learning, natural language, nlp algorithms, probabilistic classifiers, regular expressions, semantics, statistics, syntax
 
 ## Syllabus Statements
 

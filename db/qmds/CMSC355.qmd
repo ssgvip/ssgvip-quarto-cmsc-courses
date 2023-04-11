@@ -11,13 +11,17 @@ format:
 Semester course; 3 lecture hours. 3 credits. Prerequisite: CMSC 256 or EGRE 246, either with a minimum grade of C. Provides an overview of how to engineer software systems, including all stages of the software development process based on agile principles. Familiarizes students with modern software tooling and the principles of software quality and testing. Students will work in teams to gain experience in software development methodology, write specification and design documents, and develop a prototype.
 
 
-## Restrictions; any pre- or co-requisities
+## Restrictions including pre- or co-requisities
  
 CMSC 256 or EGRE 246, either with a minimum grade of C.
 
 ## Description
 
 Provides an overview of how to engineer software systems, including all stages of the software development process based on agile principles. Familiarizes students with modern software tooling and the principles of software quality and testing. Students will work in teams to gain experience in software development methodology, write specification and design documents, and develop a prototype.
+
+## Topics
+
+agile, ci/cd, code management, containerization, design, github, patterns, prototyping, requirement engineering, serverless coding, service oriented design techniques, software architecture, software design, software development, software lifecycle, software maintenance, software modeling, software quality, software validation, software verification, testing
 
 ## Syllabus Statements
 

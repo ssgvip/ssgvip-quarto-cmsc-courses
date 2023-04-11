@@ -11,13 +11,17 @@ format:
 Semester course; 1 lecture hour. 1 credit. Prerequisites: CMSC 441, CMSC 451 and CMSC 508, each with a minimum grade of C. Corequisite: CMSC 442. Enrollment is restricted to students with senior standing in the computer science department. This weekly seminar presents and discusses topics relevant to senior-level computer science students in support of the capstone project and upcoming graduation. A single course coordinator manages and administers the course and schedules the various faculty lectures and guest speakers. Topics include, but are not limited to, the following: proposal writing; project planning and management; scheduling resources and budgeting for software development projects; patents and intellectual property; entrepreneurship; ethical, legal and social issues in computing; and professional responsibilities of computer scientists. Each student will write and revise a research paper on a technical topic associated with his or her project or experience. Students must continue on the same project that was started in CMSC 451. A final project report and presentation, which will include a discussion of associated legal, social and/or ethical issues, are due at the conclusion of the two-semester project or experience. The courses in this sequence cannot be counted as upper-level CMSC electives for students graduating under bulletins prior to 2008-09.
 
 
-## Restrictions; any pre- or co-requisities
+## Restrictions including pre- or co-requisities
  
 CMSC 441, CMSC 451 and CMSC 508, each with a minimum grade of C. Corequisite: CMSC 442. Enrollment is restricted to students with senior standing in the computer science department.
 
 ## Description
 
 This weekly seminar presents and discusses topics relevant to senior-level computer science students in support of the capstone project and upcoming graduation. A single course coordinator manages and administers the course and schedules the various faculty lectures and guest speakers. Topics include, but are not limited to, the following: proposal writing; project planning and management; scheduling resources and budgeting for software development projects; patents and intellectual property; entrepreneurship; ethical, legal and social issues in computing; and professional responsibilities of computer scientists. Each student will write and revise a research paper on a technical topic associated with his or her project or experience. Students must continue on the same project that was started in CMSC 451. 
+
+## Topics
+
+agile, code management, ci/cd, entrepreneurship, final project, maintainability, project planning, scalability, security, social aspects of technology, software development, teamwork, testing
 
 ## Syllabus Statements
 

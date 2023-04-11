@@ -11,13 +11,17 @@ format:
 Semester course; 1-3 variable hours (to be arranged). 1-3 credits. Enrollment restricted to students with graduate standing and consent of instructor. Independent study done under the supervision of a faculty member. The student must identify a faculty member willing to supervise the research and submit a proposal for approval by the computer science graduate committee no later than the 10th week of the prior semester. A written report and an oral presentation are required upon completion of the research project. Graded as Pass/Fail.
 
 
-## Restrictions; any pre- or co-requisities
+## Restrictions including pre- or co-requisities
  
 Enrollment restricted to students with graduate standing and consent of instructor.
 
 ## Description
 
 Independent study done under the supervision of a faculty member. The student must identify a faculty member willing to supervise the research and submit a proposal for approval by the computer science graduate committee no later than the 10th week of the prior semester. A written report and an oral presentation are required upon completion of the research project. Graded as Pass/Fail.
+
+## Topics
+
+independent study
 
 ## Syllabus Statements
 

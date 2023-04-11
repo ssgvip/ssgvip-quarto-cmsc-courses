@@ -11,13 +11,17 @@ format:
 Semester course; 3 lecture hours (delivered online, face-to-face or hybrid). 3 credits. May be repeated for credit. Enrollment requires permission of the instructor. The course is open to students with graduate standing or those accepted into the accelerated B.S. to M.S. program in computer science. A study of selected topic(s) in computer science at the graduate level. See the Schedule of Classes for specific topics to be offered each semester.
 
 
-## Restrictions; any pre- or co-requisities
+## Restrictions including pre- or co-requisities
  
 (none)
 
 ## Description
 
 May be repeated for credit. Enrollment requires permission of the instructor. The course is open to students with graduate standing or those accepted into the accelerated BS to MS program in computer science. A study of selected topic(s) in computer science at the graduate level. See the Schedule of Classes for specific topics to be offered each semester.
+
+## Topics
+
+circuits, compact representations, complexity analysis, convex sets, limitations, linear algebra, loss function, machine learning, models, neural networks, optimization, quantum computation, quantum gates, quantum measurement, selected topics, tensor
 
 ## Syllabus Statements
 

@@ -11,13 +11,17 @@ format:
 Semester course; 3 lecture hours. 3 credits. Prerequisites: CMSC 355 and MATH 310. Presents mathematical techniques for graphic development and transformation, curve and surface approximation and projections, graphical languages and data structures and their implementation, graphic modeling.
 
 
-## Restrictions; any pre- or co-requisities
+## Restrictions including pre- or co-requisities
  
 CMSC 355 and MATH 310.
 
 ## Description
 
 Presents mathematical techniques for graphic development and transformation, curve and surface approximation and projections, graphical languages and data structures and their implementation, graphic modeling.
+
+## Topics
+
+curve and surface approximations, data structures, graphic development, projections, transformation
 
 ## Syllabus Statements
 

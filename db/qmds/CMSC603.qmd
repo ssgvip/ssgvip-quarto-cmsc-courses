@@ -11,13 +11,17 @@ format:
 Semester course; 3 lecture hours (delivered online, face-to-face or hybrid). 3 credits. Enrollment is restricted to students with graduate standing in computer science or related discipline or those accepted into the accelerated B.S. to M.S. program in computer science. The course will assume undergraduate-level background in algorithms, data structures and parallel programming. Upon successful completion of this course, the student will be able to understand the concepts underlying distributed systems; analyze problems to identify performance bottlenecks, parallelization opportunities and concurrency issues in a distributed environment; create distributed and scalable implementations using multiple hosts/GPUs; design and implement algorithms using Hadoop, Spark and CUDA.
 
 
-## Restrictions; any pre- or co-requisities
+## Restrictions including pre- or co-requisities
  
 Enrollment is restricted to students with graduate standing in computer science or related discipline or those accepted into the accelerated BS to MS program in computer science.
 
 ## Description
 
 The course will assume undergraduate-level background in algorithms, data structures and parallel programming. Upon successful completion of this course, the student will be able to understand the concepts underlying distributed systems; analyze problems to identify performance bottlenecks, parallelization opportunities and concurrency issues in a distributed environment; create distributed and scalable implementations using multiple hosts/GPUs; design and implement algorithms using Hadoop, Spark and CUDA.
+
+## Topics
+
+algorithms, concurrency, cuda, data structures, hadoop, parallel algorithms, performance bottlenecks, spark
 
 ## Syllabus Statements
 

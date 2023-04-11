@@ -89,6 +89,8 @@ topics_df = pd.DataFrame(data, columns=headers)
 # Topics data: do a little data cleaning, converting strings into integers
 for col in ["Count","Number","Level"]:
   topics_df[col] = topics_df[col].astype("int")
+
+topics_df["CourseId"] = topics_df["CourseId"].apply( str.strip )
 ```
 :::
 
@@ -97,8 +99,8 @@ for col in ["Count","Number","Level"]:
 ::: {.cell execution_count="4"}
 ::: {.cell-output .cell-output-display}
 Here is a list of columns:`<br/>`{=html}'Subject', 'Number', 'CourseId',
-'Title', 'Hours', 'Catalog', 'Catalog Description', 'Restrictions',
-'Isolated Description'.
+'idx', 'Title', 'Hours', 'Catalog', 'Catalog Description',
+'Restrictions', 'Isolated Description'.
 :::
 :::
 
@@ -209,6 +211,13 @@ let's create a bunch of QMDs one for each course.
 
 ::: {.cell execution_count="6"}
 ``` {.python .cell-code}
+def showTopics( courseId ):
+  topics = topics_df[ topics_df["CourseId"].str.contains(courseId[5:]) & topics_df["CourseId"].str.contains(courseId[:4]) ]
+#  slist = courseId[:4]+"/"+courseId[5:]+": "+", ".join( topics["ADJTopic"] )
+  slist = ", ".join( topics["ADJTopic"].unique() )
+  return slist
+
+
 block = "";
 for index, row in course_df.iterrows():
   filename = f'./qmds/{row["Subject"]}{row["Number"]}.qmd'
@@ -226,13 +235,17 @@ format:
 {row["Catalog Description"]}
 
 
-## Restrictions; any pre- or co-requisities
+## Restrictions including pre- or co-requisities
  
 {row["Restrictions"]}
 
 ## Description
 
 {row["Isolated Description"]}
+
+## Topics
+
+{showTopics( row["CourseId"] )}
 
 ## Syllabus Statements
 
@@ -320,6 +333,13 @@ date: last-modified
 
 ::: {.cell execution_count="9"}
 ``` {.python .cell-code}
+def showTopics( courseId ):
+  topics = topics_df[ topics_df["CourseId"].str.contains(courseId[5:]) & topics_df["CourseId"].str.contains(courseId[:4]) ]
+#  slist = courseId[:4]+"/"+courseId[5:]+": "+", ".join( topics["ADJTopic"] )
+  slist = ", ".join( topics["ADJTopic"] )
+  return slist
+
+
 course_df['urlHeader'] = "[" + course_df["CourseId"].astype(str) + " - " +  course_df["Title"].astype(str) + "](" + course_df["Subject"].astype(str) + course_df["Number"].astype(str) + '.qmd)'
 
 block = "";
@@ -334,6 +354,7 @@ Semester course. {row["Hours"]} {h}.
 
 **Description:** {row["Isolated Description"]}
 
+**Topics:** { showTopics( row["CourseId"] ) }
 
 """
 
@@ -351,4 +372,1964 @@ format:
   file.write(block)
   file.close()
 ```
+:::
+
+# Autogenerating *topics.qmd*
+
+::: {.cell execution_count="10"}
+``` {.python .cell-code}
+from textwrap import wrap
+
+def expandURL( courseList ):
+  urls = course_df[ course_df["idx"].isin( courseList) ].reset_index()
+  urls["url"] = "<a href='"+urls["idx"]+".qmd"+"'>"+urls["CourseId"]+"</a>"
+  returnValue = "";
+  for i,url in urls["url"].iteritems():
+    if i==0:
+      returnValue = url
+#    elif i % 4 == 0:
+#        returnValue = returnValue + ", <br/>\n" + url
+    else:
+      returnValue = returnValue + ", " + url
+  return returnValue
+ 
+
+filename = "qmds/topics.qmd"
+with open(filename, 'w',encoding="utf-8") as file:
+  file.write(f"""---
+title: "CMSC topics and courses"
+date: last-modified
+---
+""" )
+
+#  course_df['urlID'] = "[" + course_df["CourseId"].astype(str) + "](" + course_df["Subject"].astype(str) + course_df["Number"].astype(str) + '.html)'
+#  course_df['urlTitle'] = "[" + course_df["Title"].astype(str) + "](" + course_df["Subject"].astype(str) + course_df["Number"].astype(str) + '.html)'
+
+
+  df_grouped = topics_df.groupby('ADJTopic')['idx'].unique().apply( expandURL ).reset_index()
+  
+  file.write(
+    tabulate(df_grouped, tablefmt='fancy', showindex=False, headers=["Adjusted Topic","Course"] )
+  )
+
+  file.close()
+```
+
+::: {.cell-output .cell-output-stderr}
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+:::
+
+::: {.cell-output .cell-output-stderr}
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+:::
+
+::: {.cell-output .cell-output-stderr}
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+
+    C:\Users\jdleonard\AppData\Local\Temp\ipykernel_23060\3956891855.py:7: FutureWarning:
+
+    iteritems is deprecated and will be removed in a future version. Use .items instead.
+:::
 :::

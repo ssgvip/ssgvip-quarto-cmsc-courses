@@ -91,6 +91,8 @@ topics_df = pd.DataFrame(data, columns=headers)
 for col in ["Count","Number","Level"]:
   topics_df[col] = topics_df[col].astype("int")
 
+topics_df["CourseId"] = topics_df["CourseId"].apply( str.strip )
+
 ```
 
 ## a list of columns in the *CMSC-Course* tab
@@ -135,6 +137,13 @@ Now for the tricky AND fun part. Using the data from the dataframe, let's create
 ```{python}
 #| echo: true
 
+def showTopics( courseId ):
+  topics = topics_df[ topics_df["CourseId"].str.contains(courseId[5:]) & topics_df["CourseId"].str.contains(courseId[:4]) ]
+#  slist = courseId[:4]+"/"+courseId[5:]+": "+", ".join( topics["ADJTopic"] )
+  slist = ", ".join( topics["ADJTopic"].unique() )
+  return slist
+
+
 block = "";
 for index, row in course_df.iterrows():
   filename = f'./qmds/{row["Subject"]}{row["Number"]}.qmd'
@@ -152,13 +161,17 @@ format:
 {row["Catalog Description"]}
 
 
-## Restrictions; any pre- or co-requisities
+## Restrictions including pre- or co-requisities
  
 {row["Restrictions"]}
 
 ## Description
 
 {row["Isolated Description"]}
+
+## Topics
+
+{showTopics( row["CourseId"] )}
 
 ## Syllabus Statements
 
@@ -252,6 +265,13 @@ date: last-modified
 ```{python}
 #| echo: true
 
+def showTopics( courseId ):
+  topics = topics_df[ topics_df["CourseId"].str.contains(courseId[5:]) & topics_df["CourseId"].str.contains(courseId[:4]) ]
+#  slist = courseId[:4]+"/"+courseId[5:]+": "+", ".join( topics["ADJTopic"] )
+  slist = ", ".join( topics["ADJTopic"] )
+  return slist
+
+
 course_df['urlHeader'] = "[" + course_df["CourseId"].astype(str) + " - " +  course_df["Title"].astype(str) + "](" + course_df["Subject"].astype(str) + course_df["Number"].astype(str) + '.qmd)'
 
 block = "";
@@ -266,6 +286,7 @@ Semester course. {row["Hours"]} {h}.
 
 **Description:** {row["Isolated Description"]}
 
+**Topics:** { showTopics( row["CourseId"] ) }
 
 """
 
@@ -286,3 +307,45 @@ format:
 ```
 
 
+# Autogenerating *topics.qmd*
+
+```{python}
+#| echo: true
+
+from textwrap import wrap
+
+def expandURL( courseList ):
+  urls = course_df[ course_df["idx"].isin( courseList) ].reset_index()
+  urls["url"] = "<a href='"+urls["idx"]+".qmd"+"'>"+urls["CourseId"]+"</a>"
+  returnValue = "";
+  for i,url in urls["url"].iteritems():
+    if i==0:
+      returnValue = url
+#    elif i % 4 == 0:
+#        returnValue = returnValue + ", <br/>\n" + url
+    else:
+      returnValue = returnValue + ", " + url
+  return returnValue
+ 
+
+filename = "qmds/topics.qmd"
+with open(filename, 'w',encoding="utf-8") as file:
+  file.write(f"""---
+title: "CMSC topics and courses"
+date: last-modified
+---
+""" )
+
+#  course_df['urlID'] = "[" + course_df["CourseId"].astype(str) + "](" + course_df["Subject"].astype(str) + course_df["Number"].astype(str) + '.html)'
+#  course_df['urlTitle'] = "[" + course_df["Title"].astype(str) + "](" + course_df["Subject"].astype(str) + course_df["Number"].astype(str) + '.html)'
+
+
+  df_grouped = topics_df.groupby('ADJTopic')['idx'].unique().apply( expandURL ).reset_index()
+  
+  file.write(
+    tabulate(df_grouped, tablefmt='fancy', showindex=False, headers=["Adjusted Topic","Course"] )
+  )
+
+  file.close()
+
+```

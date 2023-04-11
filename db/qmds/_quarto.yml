@@ -11,8 +11,10 @@ website:
     left:
       - text: "Home"
         file: index.qmd
-      - text: "Listing"
+      - text: "Courses"
         file: listing.qmd
+      - text: "Topics"
+        file: topics.qmd
       - text: "Code"
         file: scanner.md
   sidebar:

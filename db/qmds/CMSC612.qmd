@@ -11,13 +11,17 @@ format:
 Semester course; 3 lecture hours (delivered online, face-to-face or hybrid). 3 credits. Prerequisite: CMSC 401. Enrollment is restricted to students with graduate standing in computer science or those accepted into the accelerated B.S. to M.S. program in computer science. The course will provide an introduction to game theory and mechanism design concepts. Lectures cover topics such as introduction of games, equilibrium concepts, computation of game-theoretic solution concepts, mechanism, and issues in game theory and mechanism design.
 
 
-## Restrictions; any pre- or co-requisities
+## Restrictions including pre- or co-requisities
  
 CMSC 401. Enrollment is restricted to students with graduate standing in computer science or those accepted into the accelerated BS to MS program in computer science.
 
 ## Description
 
 The course will provide an introduction to game theory and mechanism design concepts. Lectures cover topics such as introduction of games, equilibrium concepts, computation of game-theoretic solution concepts, mechanism, and issues in game theory and mechanism design.
+
+## Topics
+
+abstract complexity, design, equilibrium concepts, game theory, security, universal programs, unsolvability
 
 ## Syllabus Statements
 

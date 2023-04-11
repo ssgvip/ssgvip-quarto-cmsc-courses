@@ -11,13 +11,17 @@ format:
 Semester course; 3 lecture hours (delivered online, face-to-face or hybrid). 3 credits. Enrollment is restricted to students with graduate standing in computer science. The course will assume undergraduate-level background in programming, algorithms, linear algebra, calculus, statistics and probability. Topics ranging from fundamental learning rules, functional, cascade correlational, recurrent and gradient descent networks, to neocognitron, softmax, deep convolutional networks, autoencoders and pretrained deep learning (restricted Boltzmann machines). Students will be required to work in teams on a class paper.
 
 
-## Restrictions; any pre- or co-requisities
+## Restrictions including pre- or co-requisities
  
 Enrollment is restricted to students with graduate standing in computer science.
 
 ## Description
 
 The course will assume undergraduate-level background in programming, algorithms, linear algebra, calculus, statistics and probability. Topics ranging from fundamental learning rules, functional, cascade correlational, recurrent and gradient descent networks, to neocognitron, softmax, deep convolutional networks, autoencoders and pretrained deep learning (restricted Boltzmann machines). Students will be required to work in teams on a class paper.
+
+## Topics
+
+architecture, autoencoders, calculus, cascade correlational, chatgpt, convolutional neural networks, deep belief networks, deep convolutional networks, deep learning, deep neural networks, google, gradient descent, linear algebra, neocognitron, neural networks, probability, recurrences, restricted boltzmann machines, statistics
 
 ## Syllabus Statements
 

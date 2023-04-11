@@ -11,13 +11,17 @@ format:
 Semester course; 3 lecture hours. 3 credits. Theory and practice of database and software security focusing in particular on some common database software security risks and on the identification of potential threats and vulnerabilities. Crosslisted as: CISS 618.
 
 
-## Restrictions; any pre- or co-requisities
+## Restrictions including pre- or co-requisities
  
 (none)
 
 ## Description
 
 Theory and practice of database and software security focusing in particular on some common database software security risks and on the identification of potential threats and vulnerabilities. Crosslisted as: CISS 618.
+
+## Topics
+
+database, security, software management
 
 ## Syllabus Statements
 

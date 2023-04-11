@@ -11,13 +11,17 @@ format:
 Semester course; 3 lecture hours (delivered online, face-to-face or hybrid). 3 credits. Studies the principles of network security and system security. Included are topics relating to application layer security, TCP layer security, network layer security and link layer security and the use of access control, intrusion detection, intrusion prevention and other related tools.
 
 
-## Restrictions; any pre- or co-requisities
+## Restrictions including pre- or co-requisities
  
 (none)
 
 ## Description
 
 Studies the principles of network security and system security. Included are topics relating to application layer security, TCP layer security, network layer security and link layer security and the use of access control, intrusion detection, intrusion prevention and other related tools.
+
+## Topics
+
+access control, assumption, computer security, concepts, intrustion detection, network security, networks, presentation, security, security paper survey, system security, tcp layer security, technical paper reading, trust
 
 ## Syllabus Statements
 

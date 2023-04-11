@@ -11,13 +11,17 @@ format:
 Semester course; 2 laboratory hours. 1 credit. An introduction to computer programming in Python by teaching students to create hip hop beats. Teaches fundamental programming concepts including sequencing, syntax, variables, functions, parameters, lists, repetition and modularization. Teaches just enough music theory to ensure that student-made beats sound great, including fundamental concepts such as melody, rhythm, harmony, chord progression and orchestration. Students will complete in-class activities that reinforce class concepts and, if completed correctly, demonstrate a clear understanding of the material.
 
 
-## Restrictions; any pre- or co-requisities
+## Restrictions including pre- or co-requisities
  
 (none)
 
 ## Description
 
 An introduction to computer programming in Python by teaching students to create hip hop beats. Teaches fundamental programming concepts including sequencing, syntax, variables, functions, parameters, lists, repetition and modularization. Teaches just enough music theory to ensure that student-made beats sound great, including fundamental concepts such as melody, rhythm, harmony, chord progression and orchestration. Students will complete in-class activities that reinforce class concepts and, if completed correctly, demonstrate a clear understanding of the material.
+
+## Topics
+
+chord progression, functions, harmony, lists, melody, modularization, orchestration, parameters, repetition, rhytum, sequencing, syntax, variables
 
 ## Syllabus Statements
 

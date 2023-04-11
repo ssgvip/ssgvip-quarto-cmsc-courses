@@ -11,13 +11,17 @@ format:
 Semester course; 3 lecture hours (delivered online, face-to-face or hybrid). 3 credits. Prerequisites: CMSC 401 and 403. Enrollment is restricted to students with graduate standing or those accepted into the accelerated B.S. to M.S. program in computer science. An introduction to concepts and techniques used in the analysis of software for certain properties. Using analytic results to derive test data and verify the correct implementation of programs. Flow graphs, fault/failure model, theoretical and practical limitations. Control flow, data flow and error flow analyses. Testing strategies including random, structural, mutation and error flow. Software metrics.
 
 
-## Restrictions; any pre- or co-requisities
+## Restrictions including pre- or co-requisities
  
 CMSC 401 and 403. Enrollment is restricted to students with graduate standing or those accepted into the accelerated BS to MS program in computer science.
 
 ## Description
 
 An introduction to concepts and techniques used in the analysis of software for certain properties. Using analytic results to derive test data and verify the correct implementation of programs. Flow graphs, fault/failure model, theoretical and practical limitations. Control flow, data flow and error flow analyses. Testing strategies including random, structural, mutation and error flow. Software metrics.
+
+## Topics
+
+advanced testing strategies, analysis, concolic hybrid analysis, control flow, coverage-driven systematic software testing, data, data-flow, dynamic programming, flow control, graphs, limitations, program analysis-driven testing, software management, software validation, software verification, static programming, symbolic program analysis, test case coverage, testing
 
 ## Syllabus Statements
 

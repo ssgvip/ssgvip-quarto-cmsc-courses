@@ -11,13 +11,17 @@ format:
 Semester course; 3 lecture hours. 3 credits. Prerequisite: CMSC 401 with a minimum grade of C. Corequisite: CMSC 312. This course covers the best practices of computer systems and network security. Key topics include security architecture, cryptographic systems and security management tools.
 
 
-## Restrictions; any pre- or co-requisities
+## Restrictions including pre- or co-requisities
  
 CMSC 401 with a minimum grade of C. Corequisite: CMSC 312.
 
 ## Description
 
 This course covers the best practices of computer systems and network security. Key topics include security architecture, cryptographic systems and security management tools.
+
+## Topics
+
+application layer attacks, architecture, computer networks, computer security, computer systems design, cryptographic systems, firewalls, internet, link layer attacks, network penetration, networks, security
 
 ## Syllabus Statements
 

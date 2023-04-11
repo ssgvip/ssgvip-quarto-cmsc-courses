@@ -11,13 +11,17 @@ format:
 Semester course; 3 lecture hours. 3 credits. Prerequisites: CMSC 256 with a grade of C or better and CMSC 302 with a grade of C or better. Introduction to algorithm analysis and complexity classes. Advanced data structures topics including multiple linked lists, height-balanced trees, B-trees, hashing and graph representation; incorporating data structures into object-oriented design. Analysis of various searching and sorting algorithms. Algorithm design topics include divide-and-conquer, dynamic programming and greedy methods.
 
 
-## Restrictions; any pre- or co-requisities
+## Restrictions including pre- or co-requisities
  
 CMSC 256 with a grade of C or better and CMSC 302 with a grade of C or better.
 
 ## Description
 
 Introduction to algorithm analysis and complexity classes. Advanced data structures topics including multiple linked lists, height-balanced trees, B-trees, hashing and graph representation; incorporating data structures into object-oriented design. Analysis of various searching and sorting algorithms. Algorithm design topics include divide-and-conquer, dynamic programming and greedy methods.
+
+## Topics
+
+algorithms, analysis, b-trees, complexity analysis, data structures, design, divide and conquer approach, dynamic programming, graph algorithms, graphs, greedy approach, hashing, height-balanced trees, linked lists, objects, recurrences, sorting
 
 ## Syllabus Statements
 

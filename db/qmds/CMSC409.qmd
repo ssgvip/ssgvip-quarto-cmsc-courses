@@ -11,13 +11,17 @@ format:
 Semester course; 3 lecture hours. 3 credits. Prerequisites: CMSC 401 with a minimum grade of C and MATH 310. Covers problem spaces, problem-solving methods, game playing, knowledge representatives, expert systems, natural language understanding.
 
 
-## Restrictions; any pre- or co-requisities
+## Restrictions including pre- or co-requisities
  
 CMSC 401 with a minimum grade of C and MATH 310.
 
 ## Description
 
 Covers problem spaces, problem-solving methods, game playing, knowledge representatives, expert systems, natural language understanding.
+
+## Topics
+
+expert systems, game playing, knowledge representatives, machine learning, natural language, problem solving, problem spaces
 
 ## Syllabus Statements
 
