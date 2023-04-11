@@ -11,12 +11,18 @@ format:
 Semester course; 3 lecture hours. 3 credits. Prerequisite: CMSC 255 with minimum grade of C. Logic and proofs, sets, functions, sequences and sums, relations, graphs, trees, induction and recursion, advanced counting technique (recurrences).
 
 
-## Restrictions
+## Restrictions; any pre- or co-requisities
  
 CMSC 255 with minimum grade of C.
 
 ## Description
 
 Logic and proofs, sets, functions, sequences and sums, relations, graphs, trees, induction and recursion, advanced counting technique (recurrences).
+
+## Syllabus Statements
+
+Students should visit the URL below and review all syllabus statement information. The full university syllabus statement includes information on safety, registration, the VCU Honor Code, student conduct, withdrawal and more.
+
+*<https://provost.vcu.edu/faculty/faculty-resources/syllabus/#statements>*
 
 

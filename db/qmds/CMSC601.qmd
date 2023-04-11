@@ -11,12 +11,18 @@ format:
 Semester course; 3 lecture hours. 3 credits. Prerequisite: CMSC 501 or permission of instructor. Enrollment restricted to students with graduate standing in computer science or related discipline. A background in undergraduate-level linear algebra is assumed. Convex sets and functions. Convex optimization problems: Linear, quadratic, semi-definite and cone programs. Duality theory. Approximation algorithms for NP-complete integer optimization problems via semi-definite relaxations and rounding schemes. Algorithms for optimization, such as gradient descent, proximal descent, alternating directions method of multipliers, interior point methods.
 
 
-## Restrictions
+## Restrictions; any pre- or co-requisities
  
 CMSC 501 or permission of instructor. Enrollment restricted to students with graduate standing in computer science or related discipline.
 
 ## Description
 
 A background in undergraduate-level linear algebra is assumed. Convex sets and functions. Convex optimization problems: Linear, quadratic, semi-definite and cone programs. Duality theory. Approximation algorithms for NP-complete integer optimization problems via semi-definite relaxations and rounding schemes. Algorithms for optimization, such as gradient descent, proximal descent, alternating directions method of multipliers, interior point methods.
+
+## Syllabus Statements
+
+Students should visit the URL below and review all syllabus statement information. The full university syllabus statement includes information on safety, registration, the VCU Honor Code, student conduct, withdrawal and more.
+
+*<https://provost.vcu.edu/faculty/faculty-resources/syllabus/#statements>*
 
 

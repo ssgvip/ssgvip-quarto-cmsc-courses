@@ -11,12 +11,18 @@ format:
 Semester course; 3 lecture hours (delivered online, face-to-face or hybrid). 3 credits. Enrollment is restricted to students with graduate standing in computer science or a related discipline. The course will assume undergraduate-level background in algorithms, data structures, programming and networks. Upon successful completion of this course, the student will be able to understand the major concepts about mobile networks such as device-to-device communication technologies, mobility models and coverage; be familiar with various mobile network types (e.g., mobile social networks, delay tolerant networks, overlay networks, vehicular networks and cellular networks) and devices (e.g., smartphones, femtocells, WiFi), learn how to model mobile networks with stochastic processes and real datasets; be able to use different networking simulators; and understand various routing algorithms and analyze their behavior.
 
 
-## Restrictions
+## Restrictions; any pre- or co-requisities
  
 Enrollment is restricted to students with graduate standing in computer science or a related discipline.
 
 ## Description
 
 The course will assume undergraduate-level background in algorithms, data structures, programming and networks. Upon successful completion of this course, the student will be able to understand the major concepts about mobile networks such as device-to-device communication technologies, mobility models and coverage; be familiar with various mobile network types (e.g., mobile social networks, delay tolerant networks, overlay networks, vehicular networks and cellular networks) and devices (e.g., smartphones, femtocells, WiFi), learn how to model mobile networks with stochastic processes and real datasets; be able to use different networking simulators; and understand various routing algorithms and analyze their behavior.
+
+## Syllabus Statements
+
+Students should visit the URL below and review all syllabus statement information. The full university syllabus statement includes information on safety, registration, the VCU Honor Code, student conduct, withdrawal and more.
+
+*<https://provost.vcu.edu/faculty/faculty-resources/syllabus/#statements>*
 
 

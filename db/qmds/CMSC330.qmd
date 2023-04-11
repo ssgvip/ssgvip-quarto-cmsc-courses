@@ -11,12 +11,18 @@ format:
 Semester course; 3 lecture hours (delivered online). 3 credits. Prerequisite: CMSC 210. Introduction to data science skills. The course introduces students to the foundations of data science and the tools used to collect, analyze and represent data. Students will apply these principles in both analysis and visualization projects. This course is not applicable for credit toward any College of Engineering degrees.
 
 
-## Restrictions
+## Restrictions; any pre- or co-requisities
  
 CMSC 210.
 
 ## Description
 
 Introduction to data science skills. The course introduces students to the foundations of data science and the tools used to collect, analyze and represent data. Students will apply these principles in both analysis and visualization projects. This course is not applicable for credit toward any College of Engineering degrees.
+
+## Syllabus Statements
+
+Students should visit the URL below and review all syllabus statement information. The full university syllabus statement includes information on safety, registration, the VCU Honor Code, student conduct, withdrawal and more.
+
+*<https://provost.vcu.edu/faculty/faculty-resources/syllabus/#statements>*
 
 

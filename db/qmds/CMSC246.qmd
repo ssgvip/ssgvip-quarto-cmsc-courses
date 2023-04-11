@@ -11,12 +11,18 @@ format:
 Semester course; 3 lecture hours. 3 credits. Prerequisite: CMSC 245. Advanced programming in C++. Topics include program design, objects, classes, inheritance, files, strings, linked lists, stacks, queues, binary trees, recursion, and basic searching and sorting techniques. This course is intended for engineering majors.
 
 
-## Restrictions
+## Restrictions; any pre- or co-requisities
  
 CMSC 245.
 
 ## Description
 
 Advanced programming in C++. Topics include program design, objects, classes, inheritance, files, strings, linked lists, stacks, queues, binary trees, recursion, and basic searching and sorting techniques. This course is intended for engineering majors.
+
+## Syllabus Statements
+
+Students should visit the URL below and review all syllabus statement information. The full university syllabus statement includes information on safety, registration, the VCU Honor Code, student conduct, withdrawal and more.
+
+*<https://provost.vcu.edu/faculty/faculty-resources/syllabus/#statements>*
 
 

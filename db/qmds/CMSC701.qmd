@@ -11,12 +11,18 @@ format:
 Semester course; 3 lecture hours. 3 credits. Prerequisite: Ph.D. standing or permission of instructor. Covers the principles of conducting a research project, reporting the findings in the form of a journal paper and promoting the research through public presentations. Students learn to write grant proposals and practice reviewing research papers and grant proposals. The main emphasis of the course is writing a paper and a grant proposal in a format compliant with NSF, NIH or DoD guidelines.
 
 
-## Restrictions
+## Restrictions; any pre- or co-requisities
  
 PHD standing or permission of instructor.
 
 ## Description
 
 Covers the principles of conducting a research project, reporting the findings in the form of a journal paper and promoting the research through public presentations. Students learn to write grant proposals and practice reviewing research papers and grant proposals. The main emphasis of the course is writing a paper and a grant proposal in a format compliant with NSF, NIH or DoD guidelines.
+
+## Syllabus Statements
+
+Students should visit the URL below and review all syllabus statement information. The full university syllabus statement includes information on safety, registration, the VCU Honor Code, student conduct, withdrawal and more.
+
+*<https://provost.vcu.edu/faculty/faculty-resources/syllabus/#statements>*
 
 

@@ -11,12 +11,18 @@ format:
 Semester course; 3 lecture and 2 laboratory hours. 4 credits. Prerequisite: CMSC 256 with a minimum grade of C. Topics include UNIX essentials; system programming in C; machine-level representation and organization of programs/data, arrays and pointers; types, structs and unions; strings; bit/byte operations; memory management; shell programming; input/output, including file handling; debugging; signals; network programming using sockets; program concurrency using forks and threads; experiments on program performance and optimization techniques.
 
 
-## Restrictions
+## Restrictions; any pre- or co-requisities
  
 CMSC 256 with a minimum grade of C.
 
 ## Description
 
 Topics include UNIX essentials; system programming in C; machine-level representation and organization of programs/data, arrays and pointers; types, structs and unions; strings; bit/byte operations; memory management; shell programming; input/output, including file handling; debugging; signals; network programming using sockets; program concurrency using forks and threads; experiments on program performance and optimization techniques.
+
+## Syllabus Statements
+
+Students should visit the URL below and review all syllabus statement information. The full university syllabus statement includes information on safety, registration, the VCU Honor Code, student conduct, withdrawal and more.
+
+*<https://provost.vcu.edu/faculty/faculty-resources/syllabus/#statements>*
 
 

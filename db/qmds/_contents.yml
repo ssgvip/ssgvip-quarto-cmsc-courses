@@ -1,7 +1,8 @@
 website:
   sidebar:
     contents:
-    - section: "Undergrad"
+
+    - section: "100 level"
       contents:
         - href: CMSC101.qmd
           text: CMSC 101
@@ -9,6 +10,9 @@ website:
           text: CMSC 144
         - href: CMSC191.qmd
           text: CMSC 191
+
+    - section: "200 level"
+      contents:
         - href: CMSC210.qmd
           text: CMSC 210
         - href: CMSC245.qmd
@@ -23,6 +27,9 @@ website:
           text: CMSC 256
         - href: CMSC257.qmd
           text: CMSC 257
+
+    - section: "300 level"
+      contents:
         - href: CMSC302.qmd
           text: CMSC 302
         - href: CMSC303.qmd
@@ -41,6 +48,9 @@ website:
           text: CMSC 355
         - href: CMSC391.qmd
           text: CMSC 391
+
+    - section: "400 level"
+      contents:
         - href: CMSC401.qmd
           text: CMSC 401
         - href: CMSC403.qmd
@@ -89,6 +99,9 @@ website:
           text: CMSC 491
         - href: CMSC492.qmd
           text: CMSC 492
+
+    - section: "500 level"
+      contents:
         - href: CMSC501.qmd
           text: CMSC 501
         - href: CMSC502.qmd
@@ -112,7 +125,7 @@ website:
         - href: CMSC591.qmd
           text: CMSC 591
 
-    - section: "Graduate"
+    - section: "600 level"
       contents:
         - href: CMSC601.qmd
           text: CMSC 601
@@ -166,6 +179,9 @@ website:
           text: CMSC 692
         - href: CMSC697.qmd
           text: CMSC 697
+
+    - section: "700 level"
+      contents:
         - href: CMSC701.qmd
           text: CMSC 701
         - href: CMSC702.qmd

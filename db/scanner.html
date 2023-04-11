@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Processing the XLSX</title>
+<title>Building this web site</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -98,31 +98,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <link href="scanner_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 
 
-<link rel="stylesheet" href="styles.css">
 </head>
 
-<body>
+<body class="fullcontent">
 
 <div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
-<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-  <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
-   
-  <ul>
-  <li><a href="#cmsc-courses-in-the-bulletin" id="toc-cmsc-courses-in-the-bulletin" class="nav-link active" data-scroll-target="#cmsc-courses-in-the-bulletin">CMSC Courses in the Bulletin</a></li>
-  <li><a href="#course-descriptions-with-restrictions" id="toc-course-descriptions-with-restrictions" class="nav-link" data-scroll-target="#course-descriptions-with-restrictions">Course Descriptions with Restrictions</a></li>
-  <li><a href="#autogenerating-qmd-files" id="toc-autogenerating-qmd-files" class="nav-link" data-scroll-target="#autogenerating-qmd-files">Autogenerating QMD files</a></li>
-  <li><a href="#autogenerating-_contents.yml" id="toc-autogenerating-_contents.yml" class="nav-link" data-scroll-target="#autogenerating-_contents.yml">Autogenerating *_contents.yml*</a></li>
-  <li><a href="#autogenerating-index.qmd" id="toc-autogenerating-index.qmd" class="nav-link" data-scroll-target="#autogenerating-index.qmd">Autogenerating <em>index.qmd</em></a></li>
-  <li><a href="#autogenerating-listing.qmd" id="toc-autogenerating-listing.qmd" class="nav-link" data-scroll-target="#autogenerating-listing.qmd">Autogenerating <em>listing.qmd</em></a></li>
-  </ul>
-</nav>
-</div>
+
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Processing the XLSX</h1>
+<h1 class="title">Building this web site</h1>
 </div>
 
 
@@ -137,36 +123,95 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 </header>
 
-<p>A list of CMSC courses was downloaded from the <a href="http://bulletin.vcu.edu/azcourses/cmsc/">campus bulletin</a>.</p>
-<p>The list was loaded into XLSX and cleaned. The following sections provide a view of the CMSC courses from the Bulletin.</p>
-<p>The script below loads the cleaned XLSX.</p>
-<div class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> IPython.display <span class="im">import</span> Markdown</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> tabulate <span class="im">import</span> tabulate</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>filename <span class="op">=</span> <span class="st">"cmsc-bulletin-spring-2023.xlsx"</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>xlsx <span class="op">=</span> pd.ExcelFile( filename )</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>df1 <span class="op">=</span> pd.read_excel(xlsx,<span class="st">"CMSC-Courses"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><a href="https://quarto.org">Quarto</a> is used to build this web site.</p>
+<p>A list of CMSC courses was downloaded from the <a href="http://bulletin.vcu.edu/azcourses/cmsc/">campus bulletin</a>. The list was stored into a <a href="https://docs.google.com/spreadsheets/d/1qrN3L7eRLsM-aVMHYaLQN-FMYtrTJf0_h6dLKlUdPkk/edit#gid=107368023">google sheet</a> and signficantly cleaned.</p>
+<p>The code in the sections below below generates this website using the course data in the google sheet.</p>
+<section id="connecting-to-google-sheets" class="level1">
+<h1>Connecting to google sheets</h1>
+<div id="setting-credentials" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> json</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> gspread</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> oauth2client.service_account <span class="im">import</span> ServiceAccountCredentials</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> IPython.display <span class="im">import</span> Markdown</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> tabulate <span class="im">import</span> tabulate</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co"># define scope</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>scope <span class="op">=</span> [<span class="st">'https://spreadsheets.google.com/feeds'</span>, <span class="st">'https://www.googleapis.com/auth/drive'</span>]</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co"># create credentials object</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>credential_file <span class="op">=</span> os.path.join(os.path.expanduser(<span class="st">"~"</span>), <span class="st">".gsecrets"</span>, <span class="st">"gsheets-credentials.json"</span>)</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="kw">not</span> os.path.isfile( credential_file ):</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(<span class="st">"Missing credential file:"</span>,credential_file)</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>  sys.exit()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+</section>
+<section id="connection-details" class="level1">
+<h1>Connection details</h1>
 <div class="cell" data-execution_count="2">
 <div class="cell-output cell-output-display">
-<p>Here is a list of columns:<br>‘Subject’, ‘Number’, ‘ID’, ‘Title’, ‘Hours’, ‘Catalog’, ‘Catalog Description’, ‘Restrictions’, ‘Isolated Description’.</p>
+<p>The <em>secrets-file</em> is a service account JSON file created on the google console. By convention (for this program) we’re storing the credentials off the github repo in the <em>.gsecrets</em> folder under the user home directory.</p>
+<p>The <em>CLIENT_EMAIL</em> is set inside the secrets file. If the user encounters “PERMISSION DENIED” or other access errors, this email address should be added as a “share” to the file on the regular google sheets interface.</p>
+<ul>
+<li>secrets-file: <em>C:.gsecrets-credentials.json</em></li>
+<li>client_email: <em>jdleonard-egr-jl-rak1-srv@jdleonard.iam.gserviceaccount.com</em></li>
+</ul>
 </div>
 </div>
+</section>
+<section id="loading-the-course-and-topics-data" class="level1">
+<h1>Loading the course and topics data</h1>
+<div id="loading-google-sheet" class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># authorize the client</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>creds <span class="op">=</span> ServiceAccountCredentials.from_json_keyfile_name(credential_file, scope)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>client <span class="op">=</span> gspread.authorize(creds)</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Course data: open the google sheet and tab</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>spreadsheet_key <span class="op">=</span> <span class="st">"1qrN3L7eRLsM-aVMHYaLQN-FMYtrTJf0_h6dLKlUdPkk"</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>worksheet_name <span class="op">=</span> <span class="st">"CMSC-Courses"</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>sheet <span class="op">=</span> client.open_by_key(spreadsheet_key).worksheet(worksheet_name)</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Course data: Read the data into a Pandas DataFrame</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> sheet.get_all_values()</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>headers <span class="op">=</span> data.pop(<span class="dv">0</span>)</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>course_df <span class="op">=</span> pd.DataFrame(data, columns<span class="op">=</span>headers)</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Course data: do a little data cleaning, converting strings into integers</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> col <span class="kw">in</span> [<span class="st">"Number"</span>,<span class="st">"Hours"</span>]:</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>  course_df[col] <span class="op">=</span> course_df[col].astype(<span class="st">"int"</span>)</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Topics data: Read the data into a Pandas DataFrame</span></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>sheet2 <span class="op">=</span> client.open_by_key(spreadsheet_key).worksheet(<span class="st">"CMSC-course-topics"</span>)</span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> sheet2.get_all_values()</span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>headers <span class="op">=</span> data.pop(<span class="dv">0</span>)</span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>topics_df <span class="op">=</span> pd.DataFrame(data, columns<span class="op">=</span>headers)</span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a><span class="co"># Topics data: do a little data cleaning, converting strings into integers</span></span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> col <span class="kw">in</span> [<span class="st">"Count"</span>,<span class="st">"Number"</span>,<span class="st">"Level"</span>]:</span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>  topics_df[col] <span class="op">=</span> topics_df[col].astype(<span class="st">"int"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<section id="a-list-of-columns-in-the-cmsc-course-tab" class="level2">
+<h2 class="anchored" data-anchor-id="a-list-of-columns-in-the-cmsc-course-tab">a list of columns in the <em>CMSC-Course</em> tab</h2>
+<div class="cell" data-execution_count="4">
+<div class="cell-output cell-output-display">
+<p>Here is a list of columns:<br>‘Subject’, ‘Number’, ‘CourseId’, ‘Title’, ‘Hours’, ‘Catalog’, ‘Catalog Description’, ‘Restrictions’, ‘Isolated Description’.</p>
+</div>
+</div>
+</section>
 <section id="cmsc-courses-in-the-bulletin" class="level2">
 <h2 class="anchored" data-anchor-id="cmsc-courses-in-the-bulletin">CMSC Courses in the Bulletin</h2>
-<div class="cell" data-execution_count="3">
+<div class="cell" data-execution_count="5">
 <div class="cell-output cell-output-display">
 <p><a href="#tbl-table1">Table&nbsp;1</a> presents a list of CMSC courses in the bulletin. There are 82 courses in the bulletin.</p>
 </div>
-<div class="cell-output cell-output-display" data-execution_count="3">
+<div class="cell-output cell-output-display">
 <div id="tbl-table1" class="anchored">
 <table class="table table-sm table-striped">
 <caption>Table&nbsp;1: List of courses</caption>
 <thead>
 <tr class="header">
-<th style="text-align: left;">ID</th>
+<th style="text-align: left;">CourseId</th>
 <th style="text-align: left;">Title</th>
 </tr>
 </thead>
@@ -505,39 +550,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 </div>
 </section>
-<section id="course-descriptions-with-restrictions" class="level1">
-<h1>Course Descriptions with Restrictions</h1>
-<p>The section below uses the panda dataframe from above and lists out courses, restrictions, and descriptions.</p>
-<div class="cell" data-execution_count="4">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Display each course using markdown.</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co">## The entire block of markdown is created and rendered.</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co">## There can be only one "display(Markdown())" call per code block.</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co">## The spacing is expanded to accomodate the Markdown processor.</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>block <span class="op">=</span> <span class="st">""</span><span class="op">;</span></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> index, row <span class="kw">in</span> df1.iterrows():</span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>  block <span class="op">=</span> block <span class="op">+</span> <span class="ss">f"""</span></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="ss">## </span><span class="sc">{</span>row[<span class="st">"ID"</span>]<span class="sc">}</span><span class="ss"> - </span><span class="sc">{</span>row[<span class="st">"Title"</span>]<span class="sc">}</span></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="ss">   </span></span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="ss">**Restrictions:** </span><span class="sc">{</span>row[<span class="st">"Restrictions"</span>]<span class="sc">}</span></span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="ss">**Description:** </span><span class="sc">{</span>row[<span class="st">"Isolated Description"</span>]<span class="sc">}</span></span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="ss">"""</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
 </section>
-<section id="autogenerating-qmd-files" class="level1">
-<h1>Autogenerating QMD files</h1>
-<p>Now for the tricky AND fun part. Using the data from the XLSX file, let’s create a bunch of QMDs.</p>
-<div class="cell" data-execution_count="5">
+<section id="generating-individual-course-qmd-files" class="level1">
+<h1>Generating individual course QMD files</h1>
+<p>Now for the tricky AND fun part. Using the data from the dataframe, let’s create a bunch of QMDs one for each course.</p>
+<div class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>block <span class="op">=</span> <span class="st">""</span><span class="op">;</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> index, row <span class="kw">in</span> df1.iterrows():</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> index, row <span class="kw">in</span> course_df.iterrows():</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  filename <span class="op">=</span> <span class="ss">f'./qmds/</span><span class="sc">{</span>row[<span class="st">"Subject"</span>]<span class="sc">}{</span>row[<span class="st">"Number"</span>]<span class="sc">}</span><span class="ss">.qmd'</span></span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="cf">with</span> <span class="bu">open</span>(filename, <span class="st">'w'</span>,encoding<span class="op">=</span><span class="st">"utf-8"</span>) <span class="im">as</span> <span class="bu">file</span>:</span>
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">file</span>.write(<span class="ss">f"""---</span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="ss">title: "</span><span class="sc">{</span>row[<span class="st">"ID"</span>]<span class="sc">}</span><span class="ss"> - </span><span class="sc">{</span>row[<span class="st">"Title"</span>]<span class="sc">}</span><span class="ss">"</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="ss">title: "</span><span class="sc">{</span>row[<span class="st">"CourseId"</span>]<span class="sc">}</span><span class="ss"> - </span><span class="sc">{</span>row[<span class="st">"Title"</span>]<span class="sc">}</span><span class="ss">"</span></span>
 <span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="ss">date: last-modified</span></span>
 <span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="ss">format:</span></span>
 <span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="ss">  html:</span></span>
@@ -549,7 +572,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="sc">{</span>row[<span class="st">"Catalog Description"</span>]<span class="sc">}</span></span>
 <span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="ss">## Restrictions</span></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="ss">## Restrictions; any pre- or co-requisities</span></span>
 <span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a><span class="ss"> </span></span>
 <span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a><span class="sc">{</span>row[<span class="st">"Restrictions"</span>]<span class="sc">}</span></span>
 <span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a></span>
@@ -557,54 +580,60 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a><span class="sc">{</span>row[<span class="st">"Isolated Description"</span>]<span class="sc">}</span></span>
 <span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a><span class="ss">"""</span></span>
-<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>    <span class="bu">file</span>.close()</span>
-<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a>  block <span class="op">=</span> block <span class="op">+</span> <span class="ss">f"""</span></span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a><span class="ss">## Syllabus Statements</span></span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a><span class="ss">Students should visit the URL below and review all syllabus statement information. The full university syllabus statement includes information on safety, registration, the VCU Honor Code, student conduct, withdrawal and more.</span></span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a><span class="ss">*&lt;https://provost.vcu.edu/faculty/faculty-resources/syllabus/#statements&gt;*</span></span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a><span class="sc">{</span>filename<span class="sc">}</span></span>
-<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a><span class="ss">"""</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a><span class="ss">"""</span></span>
+<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a>    <span class="bu">file</span>.close()</span>
+<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a>  block <span class="op">=</span> block <span class="op">+</span> <span class="ss">f"""</span></span>
+<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a><span class="sc">{</span>filename<span class="sc">}</span></span>
+<span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a><span class="ss">"""</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="autogenerating-_contents.yml" class="level1">
-<h1>Autogenerating *_contents.yml*</h1>
-<div class="cell" data-execution_count="6">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>filename <span class="op">=</span> <span class="st">"qmds/_contents.yml"</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(filename, <span class="st">'w'</span>,encoding<span class="op">=</span><span class="st">"utf-8"</span>) <span class="im">as</span> <span class="bu">file</span>:</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="bu">file</span>.write(<span class="st">"""website:</span></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="st">  sidebar:</span></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="st">    contents:</span></span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="st">    - section: "Undergrad"</span></span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="st">      contents:</span></span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="st">"""</span></span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> index, row <span class="kw">in</span> df1.iterrows():</span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (row[<span class="st">"Number"</span>]<span class="op">&lt;</span><span class="dv">600</span>):</span>
-<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>      <span class="bu">file</span>.write(<span class="ss">f'        - href: </span><span class="sc">{</span>row[<span class="st">"Subject"</span>]<span class="sc">}{</span>row[<span class="st">"Number"</span>]<span class="sc">}</span><span class="ss">.qmd</span><span class="ch">\n</span><span class="ss">'</span>)</span>
-<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>      <span class="bu">file</span>.write(<span class="ss">f'          text: </span><span class="sc">{</span>row[<span class="st">"Subject"</span>]<span class="sc">}</span><span class="ss"> </span><span class="sc">{</span>row[<span class="st">"Number"</span>]<span class="sc">}</span><span class="ch">\n</span><span class="ss">'</span>)</span>
-<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>  <span class="bu">file</span>.write(<span class="st">"""</span></span>
-<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a><span class="st">    - section: "Graduate"</span></span>
-<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a><span class="st">      contents:</span></span>
-<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a><span class="st">"""</span></span>
-<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> index, row <span class="kw">in</span> df1.iterrows():</span>
-<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (row[<span class="st">"Number"</span>]<span class="op">&gt;=</span><span class="dv">600</span>):</span>
-<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>      <span class="bu">file</span>.write(<span class="ss">f'        - href: </span><span class="sc">{</span>row[<span class="st">"Subject"</span>]<span class="sc">}{</span>row[<span class="st">"Number"</span>]<span class="sc">}</span><span class="ss">.qmd</span><span class="ch">\n</span><span class="ss">'</span>)</span>
-<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>      <span class="bu">file</span>.write(<span class="ss">f'          text: </span><span class="sc">{</span>row[<span class="st">"Subject"</span>]<span class="sc">}</span><span class="ss"> </span><span class="sc">{</span>row[<span class="st">"Number"</span>]<span class="sc">}</span><span class="ch">\n</span><span class="ss">'</span>)</span>
+<section id="autogenerating-left-menu-bar-in-contents.yml" class="level1">
+<h1>Autogenerating left menu bar in <em>contents.yml</em></h1>
+<div class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> math <span class="im">import</span> floor</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> floor_to_nearest_100(number):</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> floor(number <span class="op">/</span> <span class="dv">100</span>) <span class="op">*</span> <span class="dv">100</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>filename <span class="op">=</span> <span class="st">"qmds/_contents.yml"</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(filename, <span class="st">'w'</span>,encoding<span class="op">=</span><span class="st">"utf-8"</span>) <span class="im">as</span> <span class="bu">file</span>:</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>  <span class="bu">file</span>.write(<span class="st">"""website:</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="st">  sidebar:</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="st">    contents:</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="st">"""</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>  oldBlockId <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> index, row <span class="kw">in</span> course_df.iterrows():</span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (oldBlockId <span class="op">!=</span> floor_to_nearest_100(row[<span class="st">"Number"</span>])):</span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>      oldBlockId <span class="op">=</span> floor_to_nearest_100(row[<span class="st">"Number"</span>])</span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>      <span class="bu">file</span>.write(<span class="ss">f"""</span></span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a><span class="ss">    - section: "</span><span class="sc">{</span>oldBlockId<span class="sc">}</span><span class="ss"> level"</span></span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a><span class="ss">      contents:</span></span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a><span class="ss">"""</span></span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>    <span class="bu">file</span>.write(<span class="ss">f'        - href: </span><span class="sc">{</span>row[<span class="st">"Subject"</span>]<span class="sc">}{</span>row[<span class="st">"Number"</span>]<span class="sc">}</span><span class="ss">.qmd</span><span class="ch">\n</span><span class="ss">'</span>)</span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>    <span class="bu">file</span>.write(<span class="ss">f'          text: </span><span class="sc">{</span>row[<span class="st">"Subject"</span>]<span class="sc">}</span><span class="ss"> </span><span class="sc">{</span>row[<span class="st">"Number"</span>]<span class="sc">}</span><span class="ch">\n</span><span class="ss">'</span>)</span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a>  <span class="bu">file</span>.write(<span class="st">"</span><span class="ch">\n</span><span class="st">"</span>)</span>
 <span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a>  <span class="bu">file</span>.close()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="autogenerating-index.qmd" class="level1">
 <h1>Autogenerating <em>index.qmd</em></h1>
-<div class="cell" data-execution_count="7">
+<div class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>filename <span class="op">=</span> <span class="st">"qmds/index.qmd"</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(filename, <span class="st">'w'</span>,encoding<span class="op">=</span><span class="st">"utf-8"</span>) <span class="im">as</span> <span class="bu">file</span>:</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="bu">file</span>.write(<span class="ss">f"""---</span></span>
@@ -613,13 +642,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="ss">---</span></span>
 <span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="ss">"""</span> )</span>
 <span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>  df1[<span class="st">'urlID'</span>] <span class="op">=</span> <span class="st">"["</span> <span class="op">+</span> df1[<span class="st">"ID"</span>].astype(<span class="bu">str</span>) <span class="op">+</span> <span class="st">"]("</span> <span class="op">+</span> df1[<span class="st">"Subject"</span>].astype(<span class="bu">str</span>) <span class="op">+</span> df1[<span class="st">"Number"</span>].astype(<span class="bu">str</span>) <span class="op">+</span> <span class="st">'.html)'</span></span>
-<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>  df1[<span class="st">'urlTitle'</span>] <span class="op">=</span> <span class="st">"["</span> <span class="op">+</span> df1[<span class="st">"Title"</span>].astype(<span class="bu">str</span>) <span class="op">+</span> <span class="st">"]("</span> <span class="op">+</span> df1[<span class="st">"Subject"</span>].astype(<span class="bu">str</span>) <span class="op">+</span> df1[<span class="st">"Number"</span>].astype(<span class="bu">str</span>) <span class="op">+</span> <span class="st">'.html)'</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>  course_df[<span class="st">'urlID'</span>] <span class="op">=</span> <span class="st">"["</span> <span class="op">+</span> course_df[<span class="st">"CourseId"</span>].astype(<span class="bu">str</span>) <span class="op">+</span> <span class="st">"]("</span> <span class="op">+</span> course_df[<span class="st">"Subject"</span>].astype(<span class="bu">str</span>) <span class="op">+</span> course_df[<span class="st">"Number"</span>].astype(<span class="bu">str</span>) <span class="op">+</span> <span class="st">'.html)'</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>  course_df[<span class="st">'urlTitle'</span>] <span class="op">=</span> <span class="st">"["</span> <span class="op">+</span> course_df[<span class="st">"Title"</span>].astype(<span class="bu">str</span>) <span class="op">+</span> <span class="st">"]("</span> <span class="op">+</span> course_df[<span class="st">"Subject"</span>].astype(<span class="bu">str</span>) <span class="op">+</span> course_df[<span class="st">"Number"</span>].astype(<span class="bu">str</span>) <span class="op">+</span> <span class="st">'.html)'</span></span>
 <span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>  cols <span class="op">=</span> [<span class="st">"urlID"</span>,<span class="st">"urlTitle"</span>]</span>
 <span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>  <span class="bu">file</span>.write(tabulate(</span>
-<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>  df1[ cols ],</span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>  course_df[ cols ],</span>
 <span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>  showindex<span class="op">=</span><span class="va">False</span>,</span>
 <span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>  headers<span class="op">=</span>[<span class="st">"Course"</span>,<span class="st">"Title"</span>],</span>
 <span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>  tablefmt<span class="op">=</span><span class="st">"fancy"</span></span>
@@ -630,11 +659,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </section>
 <section id="autogenerating-listing.qmd" class="level1">
 <h1>Autogenerating <em>listing.qmd</em></h1>
-<div class="cell" data-execution_count="8">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>df1[<span class="st">'urlHeader'</span>] <span class="op">=</span> <span class="st">"["</span> <span class="op">+</span> df1[<span class="st">"ID"</span>].astype(<span class="bu">str</span>) <span class="op">+</span> <span class="st">"-"</span> <span class="op">+</span>  df1[<span class="st">"Title"</span>].astype(<span class="bu">str</span>) <span class="op">+</span> <span class="st">"]("</span> <span class="op">+</span> df1[<span class="st">"Subject"</span>].astype(<span class="bu">str</span>) <span class="op">+</span> df1[<span class="st">"Number"</span>].astype(<span class="bu">str</span>) <span class="op">+</span> <span class="st">'.qmd)'</span></span>
+<div class="cell" data-execution_count="9">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>course_df[<span class="st">'urlHeader'</span>] <span class="op">=</span> <span class="st">"["</span> <span class="op">+</span> course_df[<span class="st">"CourseId"</span>].astype(<span class="bu">str</span>) <span class="op">+</span> <span class="st">" - "</span> <span class="op">+</span>  course_df[<span class="st">"Title"</span>].astype(<span class="bu">str</span>) <span class="op">+</span> <span class="st">"]("</span> <span class="op">+</span> course_df[<span class="st">"Subject"</span>].astype(<span class="bu">str</span>) <span class="op">+</span> course_df[<span class="st">"Number"</span>].astype(<span class="bu">str</span>) <span class="op">+</span> <span class="st">'.qmd)'</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>block <span class="op">=</span> <span class="st">""</span><span class="op">;</span></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> index, row <span class="kw">in</span> df1.iterrows():</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> index, row <span class="kw">in</span> course_df.iterrows():</span>
 <span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  h <span class="op">=</span> <span class="st">"hours"</span> <span class="cf">if</span>(row[<span class="st">"Hours"</span>]<span class="op">&gt;</span><span class="dv">1</span>) <span class="cf">else</span> <span class="st">"hour"</span></span>
 <span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>  block <span class="op">=</span> block <span class="op">+</span> <span class="ss">f"""</span></span>
 <span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="ss">## </span><span class="sc">{</span>row[<span class="st">"urlHeader"</span>]<span class="sc">}</span></span>

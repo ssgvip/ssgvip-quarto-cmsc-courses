@@ -11,12 +11,18 @@ format:
 Semester course; 3 lecture hours. 3 credits. Prerequisite: CMSC 355 with a minimum grade of C. Enrollment is restricted to majors in the computer science program. A practical introduction to testing complex software applications. An introduction to concepts and techniques used in the analysis of software, including basic and advanced control flow and data flow analyses. Using analytic results to derive test data and validate the correct implementation of programs. Advanced testing strategies including random, structural, mutation and fuzzing.
 
 
-## Restrictions
+## Restrictions; any pre- or co-requisities
  
 CMSC 355 with a minimum grade of C. Enrollment is restricted to majors in the computer science program.
 
 ## Description
 
 A practical introduction to testing complex software applications. An introduction to concepts and techniques used in the analysis of software, including basic and advanced control flow and data flow analyses. Using analytic results to derive test data and validate the correct implementation of programs. Advanced testing strategies including random, structural, mutation and fuzzing.
+
+## Syllabus Statements
+
+Students should visit the URL below and review all syllabus statement information. The full university syllabus statement includes information on safety, registration, the VCU Honor Code, student conduct, withdrawal and more.
+
+*<https://provost.vcu.edu/faculty/faculty-resources/syllabus/#statements>*
 
 

@@ -11,12 +11,18 @@ format:
 Semester course; 3 lecture hours (delivered online, face-to-face or hybrid). 3 credits. Prerequisite: CMSC 401 or equivalent. Enrollment is restricted to students with graduate standing or those accepted into the accelerated B.S. to M.S. program in computer science. Advanced graph algorithms, advanced data structures, applied numerical algorithms, optimization methods, approximation methods for hard graph and string problems and computational geometry algorithms.
 
 
-## Restrictions
+## Restrictions; any pre- or co-requisities
  
 CMSC 401 or equivalent. Enrollment is restricted to students with graduate standing or those accepted into the accelerated BS to MS program in computer science.
 
 ## Description
 
 Advanced graph algorithms, advanced data structures, applied numerical algorithms, optimization methods, approximation methods for hard graph and string problems and computational geometry algorithms.
+
+## Syllabus Statements
+
+Students should visit the URL below and review all syllabus statement information. The full university syllabus statement includes information on safety, registration, the VCU Honor Code, student conduct, withdrawal and more.
+
+*<https://provost.vcu.edu/faculty/faculty-resources/syllabus/#statements>*
 
 

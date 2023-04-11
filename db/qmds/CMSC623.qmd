@@ -11,12 +11,18 @@ format:
 Semester course; 3 lecture hours (delivered online, face-to-face or hybrid). 3 credits. Provides an introduction to cloud computing architecture and cloud computing security. The course covers the basic concepts of cloud computing, including memory virtualization, device virtualization and related security problems in cloud computing.
 
 
-## Restrictions
+## Restrictions; any pre- or co-requisities
  
 (none)
 
 ## Description
 
 Provides an introduction to cloud computing architecture and cloud computing security. The course covers the basic concepts of cloud computing, including memory virtualization, device virtualization and related security problems in cloud computing.
+
+## Syllabus Statements
+
+Students should visit the URL below and review all syllabus statement information. The full university syllabus statement includes information on safety, registration, the VCU Honor Code, student conduct, withdrawal and more.
+
+*<https://provost.vcu.edu/faculty/faculty-resources/syllabus/#statements>*
 
 

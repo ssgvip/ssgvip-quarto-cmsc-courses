@@ -11,12 +11,18 @@ format:
 Semester course; 3 lecture hours. 3 credits. Prerequisite: CMSC 302 with minimum grade of C; corequisite: CMSC 257. Introduction to the basic organization of computers including elementary digital logic design, processor and arithmetic/logic unit design, data paths, memory hierarchy, I/O devices, instruction set architecture and addressing modes.
 
 
-## Restrictions
+## Restrictions; any pre- or co-requisities
  
 CMSC 302 with minimum grade of C; corequisite: CMSC 257.
 
 ## Description
 
 Introduction to the basic organization of computers including elementary digital logic design, processor and arithmetic/logic unit design, data paths, memory hierarchy, I/O devices, instruction set architecture and addressing modes.
+
+## Syllabus Statements
+
+Students should visit the URL below and review all syllabus statement information. The full university syllabus statement includes information on safety, registration, the VCU Honor Code, student conduct, withdrawal and more.
+
+*<https://provost.vcu.edu/faculty/faculty-resources/syllabus/#statements>*
 
 

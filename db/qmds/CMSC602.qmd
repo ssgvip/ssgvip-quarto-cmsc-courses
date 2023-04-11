@@ -11,12 +11,18 @@ format:
 Semester course; 3 lecture hours. 3 credits. Prerequisite: CMSC 502. A study of operating systems including those in multiprocessor and distributed environments. I/O programming, resource management (including processor and memory management), security and system performance evaluation.
 
 
-## Restrictions
+## Restrictions; any pre- or co-requisities
  
 CMSC 502.
 
 ## Description
 
 A study of operating systems including those in multiprocessor and distributed environments. I/O programming, resource management (including processor and memory management), security and system performance evaluation.
+
+## Syllabus Statements
+
+Students should visit the URL below and review all syllabus statement information. The full university syllabus statement includes information on safety, registration, the VCU Honor Code, student conduct, withdrawal and more.
+
+*<https://provost.vcu.edu/faculty/faculty-resources/syllabus/#statements>*
 
 

@@ -11,12 +11,18 @@ format:
 Semester course; 3 lecture hours. 3 credits. Prerequisites: CMSC 401 and 403. A first course in compiler theory and construction. Formal description of languages, underlying theory and design techniques for compilers, lexical analysis, syntax analysis, syntax-directed translation, intermediate languages, run-time system management, code generation, code optimization, compiler-building tools.
 
 
-## Restrictions
+## Restrictions; any pre- or co-requisities
  
 CMSC 401 and 403.
 
 ## Description
 
 A first course in compiler theory and construction. Formal description of languages, underlying theory and design techniques for compilers, lexical analysis, syntax analysis, syntax-directed translation, intermediate languages, run-time system management, code generation, code optimization, compiler-building tools.
+
+## Syllabus Statements
+
+Students should visit the URL below and review all syllabus statement information. The full university syllabus statement includes information on safety, registration, the VCU Honor Code, student conduct, withdrawal and more.
+
+*<https://provost.vcu.edu/faculty/faculty-resources/syllabus/#statements>*
 
 

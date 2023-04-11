@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Processing the XLSX</title>
+<title>CMSC Courses - Building this web site</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -86,43 +86,603 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </style>
 
 
-<script src="scanner_files/libs/clipboard/clipboard.min.js"></script>
-<script src="scanner_files/libs/quarto-html/quarto.js"></script>
-<script src="scanner_files/libs/quarto-html/popper.min.js"></script>
-<script src="scanner_files/libs/quarto-html/tippy.umd.min.js"></script>
-<script src="scanner_files/libs/quarto-html/anchor.min.js"></script>
-<link href="scanner_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="scanner_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="scanner_files/libs/bootstrap/bootstrap.min.js"></script>
-<link href="scanner_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="scanner_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
 
 
 <link rel="stylesheet" href="styles.css">
 </head>
 
-<body>
+<body class="nav-sidebar docked nav-fixed">
 
-<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
-<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-  <nav id="TOC" role="doc-toc" class="toc-active">
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">CMSC Courses</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./listing.html">
+ <span class="menu-text">Listing</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./scanner.html" aria-current="page">
+ <span class="menu-text">Code</span></a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title">Building this web site</h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation docked overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false">100 level</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./CMSC101.html" class="sidebar-item-text sidebar-link">CMSC 101</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./CMSC144.html" class="sidebar-item-text sidebar-link">CMSC 144</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./CMSC191.html" class="sidebar-item-text sidebar-link">CMSC 191</a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">200 level</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./CMSC210.html" class="sidebar-item-text sidebar-link">CMSC 210</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./CMSC245.html" class="sidebar-item-text sidebar-link">CMSC 245</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./CMSC246.html" class="sidebar-item-text sidebar-link">CMSC 246</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./CMSC254.html" class="sidebar-item-text sidebar-link">CMSC 254</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./CMSC255.html" class="sidebar-item-text sidebar-link">CMSC 255</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./CMSC256.html" class="sidebar-item-text sidebar-link">CMSC 256</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./CMSC257.html" class="sidebar-item-text sidebar-link">CMSC 257</a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false">300 level</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./CMSC302.html" class="sidebar-item-text sidebar-link">CMSC 302</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./CMSC303.html" class="sidebar-item-text sidebar-link">CMSC 303</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./CMSC311.html" class="sidebar-item-text sidebar-link">CMSC 311</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./CMSC312.html" class="sidebar-item-text sidebar-link">CMSC 312</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./CMSC320.html" class="sidebar-item-text sidebar-link">CMSC 320</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./CMSC330.html" class="sidebar-item-text sidebar-link">CMSC 330</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./CMSC340.html" class="sidebar-item-text sidebar-link">CMSC 340</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./CMSC355.html" class="sidebar-item-text sidebar-link">CMSC 355</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./CMSC391.html" class="sidebar-item-text sidebar-link">CMSC 391</a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false">400 level</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./CMSC401.html" class="sidebar-item-text sidebar-link">CMSC 401</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./CMSC403.html" class="sidebar-item-text sidebar-link">CMSC 403</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./CMSC404.html" class="sidebar-item-text sidebar-link">CMSC 404</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./CMSC409.html" class="sidebar-item-text sidebar-link">CMSC 409</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./CMSC410.html" class="sidebar-item-text sidebar-link">CMSC 410</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./CMSC411.html" class="sidebar-item-text sidebar-link">CMSC 411</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./CMSC412.html" class="sidebar-item-text sidebar-link">CMSC 412</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./CMSC413.html" class="sidebar-item-text sidebar-link">CMSC 413</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./CMSC414.html" class="sidebar-item-text sidebar-link">CMSC 414</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./CMSC415.html" class="sidebar-item-text sidebar-link">CMSC 415</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./CMSC416.html" class="sidebar-item-text sidebar-link">CMSC 416</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./CMSC420.html" class="sidebar-item-text sidebar-link">CMSC 420</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./CMSC425.html" class="sidebar-item-text sidebar-link">CMSC 425</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./CMSC428.html" class="sidebar-item-text sidebar-link">CMSC 428</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./CMSC435.html" class="sidebar-item-text sidebar-link">CMSC 435</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./CMSC440.html" class="sidebar-item-text sidebar-link">CMSC 440</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./CMSC441.html" class="sidebar-item-text sidebar-link">CMSC 441</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./CMSC442.html" class="sidebar-item-text sidebar-link">CMSC 442</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./CMSC451.html" class="sidebar-item-text sidebar-link">CMSC 451</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./CMSC452.html" class="sidebar-item-text sidebar-link">CMSC 452</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./CMSC455.html" class="sidebar-item-text sidebar-link">CMSC 455</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./CMSC475.html" class="sidebar-item-text sidebar-link">CMSC 475</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./CMSC491.html" class="sidebar-item-text sidebar-link">CMSC 491</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./CMSC492.html" class="sidebar-item-text sidebar-link">CMSC 492</a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="false">500 level</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./CMSC501.html" class="sidebar-item-text sidebar-link">CMSC 501</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./CMSC502.html" class="sidebar-item-text sidebar-link">CMSC 502</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./CMSC506.html" class="sidebar-item-text sidebar-link">CMSC 506</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./CMSC508.html" class="sidebar-item-text sidebar-link">CMSC 508</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./CMSC510.html" class="sidebar-item-text sidebar-link">CMSC 510</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./CMSC512.html" class="sidebar-item-text sidebar-link">CMSC 512</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./CMSC516.html" class="sidebar-item-text sidebar-link">CMSC 516</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./CMSC525.html" class="sidebar-item-text sidebar-link">CMSC 525</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./CMSC526.html" class="sidebar-item-text sidebar-link">CMSC 526</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./CMSC531.html" class="sidebar-item-text sidebar-link">CMSC 531</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./CMSC591.html" class="sidebar-item-text sidebar-link">CMSC 591</a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="false">600 level</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./CMSC601.html" class="sidebar-item-text sidebar-link">CMSC 601</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./CMSC602.html" class="sidebar-item-text sidebar-link">CMSC 602</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./CMSC603.html" class="sidebar-item-text sidebar-link">CMSC 603</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./CMSC605.html" class="sidebar-item-text sidebar-link">CMSC 605</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./CMSC608.html" class="sidebar-item-text sidebar-link">CMSC 608</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./CMSC610.html" class="sidebar-item-text sidebar-link">CMSC 610</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./CMSC611.html" class="sidebar-item-text sidebar-link">CMSC 611</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./CMSC612.html" class="sidebar-item-text sidebar-link">CMSC 612</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./CMSC615.html" class="sidebar-item-text sidebar-link">CMSC 615</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./CMSC618.html" class="sidebar-item-text sidebar-link">CMSC 618</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./CMSC619.html" class="sidebar-item-text sidebar-link">CMSC 619</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./CMSC620.html" class="sidebar-item-text sidebar-link">CMSC 620</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./CMSC621.html" class="sidebar-item-text sidebar-link">CMSC 621</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./CMSC622.html" class="sidebar-item-text sidebar-link">CMSC 622</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./CMSC623.html" class="sidebar-item-text sidebar-link">CMSC 623</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./CMSC624.html" class="sidebar-item-text sidebar-link">CMSC 624</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./CMSC625.html" class="sidebar-item-text sidebar-link">CMSC 625</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./CMSC628.html" class="sidebar-item-text sidebar-link">CMSC 628</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./CMSC630.html" class="sidebar-item-text sidebar-link">CMSC 630</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./CMSC635.html" class="sidebar-item-text sidebar-link">CMSC 635</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./CMSC636.html" class="sidebar-item-text sidebar-link">CMSC 636</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./CMSC654.html" class="sidebar-item-text sidebar-link">CMSC 654</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./CMSC678.html" class="sidebar-item-text sidebar-link">CMSC 678</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./CMSC691.html" class="sidebar-item-text sidebar-link">CMSC 691</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./CMSC692.html" class="sidebar-item-text sidebar-link">CMSC 692</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./CMSC697.html" class="sidebar-item-text sidebar-link">CMSC 697</a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-expanded="false">700 level</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./CMSC701.html" class="sidebar-item-text sidebar-link">CMSC 701</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./CMSC702.html" class="sidebar-item-text sidebar-link">CMSC 702</a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#cmsc-courses-in-the-bulletin" id="toc-cmsc-courses-in-the-bulletin" class="nav-link active" data-scroll-target="#cmsc-courses-in-the-bulletin">CMSC Courses in the Bulletin</a></li>
-  <li><a href="#course-descriptions-with-restrictions" id="toc-course-descriptions-with-restrictions" class="nav-link" data-scroll-target="#course-descriptions-with-restrictions">Course Descriptions with Restrictions</a></li>
-  <li><a href="#autogenerating-qmd-files" id="toc-autogenerating-qmd-files" class="nav-link" data-scroll-target="#autogenerating-qmd-files">Autogenerating QMD files</a></li>
-  <li><a href="#autogenerating-_contents.yml" id="toc-autogenerating-_contents.yml" class="nav-link" data-scroll-target="#autogenerating-_contents.yml">Autogenerating *_contents.yml*</a></li>
+  <li><a href="#connecting-to-google-sheets" id="toc-connecting-to-google-sheets" class="nav-link active" data-scroll-target="#connecting-to-google-sheets">Connecting to google sheets</a></li>
+  <li><a href="#connection-details" id="toc-connection-details" class="nav-link" data-scroll-target="#connection-details">Connection details</a></li>
+  <li><a href="#loading-the-course-and-topics-data" id="toc-loading-the-course-and-topics-data" class="nav-link" data-scroll-target="#loading-the-course-and-topics-data">Loading the course and topics data</a>
+  <ul class="collapse">
+  <li><a href="#a-list-of-columns-in-the-cmsc-course-tab" id="toc-a-list-of-columns-in-the-cmsc-course-tab" class="nav-link" data-scroll-target="#a-list-of-columns-in-the-cmsc-course-tab">a list of columns in the <em>CMSC-Course</em> tab</a></li>
+  <li><a href="#cmsc-courses-in-the-bulletin" id="toc-cmsc-courses-in-the-bulletin" class="nav-link" data-scroll-target="#cmsc-courses-in-the-bulletin">CMSC Courses in the Bulletin</a></li>
+  </ul></li>
+  <li><a href="#generating-individual-course-qmd-files" id="toc-generating-individual-course-qmd-files" class="nav-link" data-scroll-target="#generating-individual-course-qmd-files">Generating individual course QMD files</a></li>
+  <li><a href="#autogenerating-left-menu-bar-in-contents.yml" id="toc-autogenerating-left-menu-bar-in-contents.yml" class="nav-link" data-scroll-target="#autogenerating-left-menu-bar-in-contents.yml">Autogenerating left menu bar in <em>contents.yml</em></a></li>
   <li><a href="#autogenerating-index.qmd" id="toc-autogenerating-index.qmd" class="nav-link" data-scroll-target="#autogenerating-index.qmd">Autogenerating <em>index.qmd</em></a></li>
   <li><a href="#autogenerating-listing.qmd" id="toc-autogenerating-listing.qmd" class="nav-link" data-scroll-target="#autogenerating-listing.qmd">Autogenerating <em>listing.qmd</em></a></li>
   </ul>
 </nav>
-</div>
+    </div>
+<!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Processing the XLSX</h1>
+<h1 class="title d-none d-lg-block">Building this web site</h1>
 </div>
 
 
@@ -137,36 +697,100 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 </header>
 
-<p>A list of CMSC courses was downloaded from the <a href="http://bulletin.vcu.edu/azcourses/cmsc/">campus bulletin</a>.</p>
-<p>The list was loaded into XLSX and cleaned. The following sections provide a view of the CMSC courses from the Bulletin.</p>
-<p>The script below loads the cleaned XLSX.</p>
-<div class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> IPython.display <span class="im">import</span> Markdown</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> tabulate <span class="im">import</span> tabulate</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>filename <span class="op">=</span> <span class="st">"cmsc-bulletin-spring-2023.xlsx"</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>xlsx <span class="op">=</span> pd.ExcelFile( filename )</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>df1 <span class="op">=</span> pd.read_excel(xlsx,<span class="st">"CMSC-Courses"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><a href="https://quarto.org">Quarto</a> is used to build this web site.</p>
+<p>A list of CMSC courses was downloaded from the <a href="http://bulletin.vcu.edu/azcourses/cmsc/">campus bulletin</a>. The list was stored into a <a href="https://docs.google.com/spreadsheets/d/1qrN3L7eRLsM-aVMHYaLQN-FMYtrTJf0_h6dLKlUdPkk/edit#gid=107368023">google sheet</a> and signficantly cleaned.</p>
+<p>The code in the sections below below generates this website using the course data in the google sheet.</p>
+<section id="connecting-to-google-sheets" class="level1">
+<h1>Connecting to google sheets</h1>
+<div id="setting-credentials" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> json</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> gspread</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> oauth2client.service_account <span class="im">import</span> ServiceAccountCredentials</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> IPython.display <span class="im">import</span> Markdown</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> tabulate <span class="im">import</span> tabulate</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co"># define scope</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>scope <span class="op">=</span> [<span class="st">'https://spreadsheets.google.com/feeds'</span>, <span class="st">'https://www.googleapis.com/auth/drive'</span>]</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co"># create credentials object</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>credential_file <span class="op">=</span> os.path.join(os.path.expanduser(<span class="st">"~"</span>), <span class="st">".gsecrets"</span>, <span class="st">"gsheets-credentials.json"</span>)</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="kw">not</span> os.path.isfile( credential_file ):</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(<span class="st">"Missing credential file:"</span>,credential_file)</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>  sys.exit()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+</section>
+<section id="connection-details" class="level1">
+<h1>Connection details</h1>
 <div class="cell" data-execution_count="2">
 <div class="cell-output cell-output-display">
-<p>Here is a list of columns:<br>‘Subject’, ‘Number’, ‘ID’, ‘Title’, ‘Hours’, ‘Catalog’, ‘Catalog Description’, ‘Restrictions’, ‘Isolated Description’.</p>
+<p>The <em>secrets-file</em> is a service account JSON file created on the google console. By convention (for this program) we’re storing the credentials off the github repo in the <em>.gsecrets</em> folder under the user home directory.</p>
+<p>The <em>CLIENT_EMAIL</em> is set inside the secrets file. If the user encounters “PERMISSION DENIED” or other access errors, this email address should be added as a “share” to the file on the regular google sheets interface.</p>
+<ul>
+<li>secrets-file: <em>C:.gsecrets-credentials.json</em></li>
+<li>client_email: <em>jdleonard-egr-jl-rak1-srv@jdleonard.iam.gserviceaccount.com</em></li>
+</ul>
 </div>
 </div>
+</section>
+<section id="loading-the-course-and-topics-data" class="level1">
+<h1>Loading the course and topics data</h1>
+<div id="loading-google-sheet" class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># authorize the client</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>creds <span class="op">=</span> ServiceAccountCredentials.from_json_keyfile_name(credential_file, scope)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>client <span class="op">=</span> gspread.authorize(creds)</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Course data: open the google sheet and tab</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>spreadsheet_key <span class="op">=</span> <span class="st">"1qrN3L7eRLsM-aVMHYaLQN-FMYtrTJf0_h6dLKlUdPkk"</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>worksheet_name <span class="op">=</span> <span class="st">"CMSC-Courses"</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>sheet <span class="op">=</span> client.open_by_key(spreadsheet_key).worksheet(worksheet_name)</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Course data: Read the data into a Pandas DataFrame</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> sheet.get_all_values()</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>headers <span class="op">=</span> data.pop(<span class="dv">0</span>)</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>course_df <span class="op">=</span> pd.DataFrame(data, columns<span class="op">=</span>headers)</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Course data: do a little data cleaning, converting strings into integers</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> col <span class="kw">in</span> [<span class="st">"Number"</span>,<span class="st">"Hours"</span>]:</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>  course_df[col] <span class="op">=</span> course_df[col].astype(<span class="st">"int"</span>)</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Topics data: Read the data into a Pandas DataFrame</span></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>sheet2 <span class="op">=</span> client.open_by_key(spreadsheet_key).worksheet(<span class="st">"CMSC-course-topics"</span>)</span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> sheet2.get_all_values()</span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>headers <span class="op">=</span> data.pop(<span class="dv">0</span>)</span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>topics_df <span class="op">=</span> pd.DataFrame(data, columns<span class="op">=</span>headers)</span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a><span class="co"># Topics data: do a little data cleaning, converting strings into integers</span></span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> col <span class="kw">in</span> [<span class="st">"Count"</span>,<span class="st">"Number"</span>,<span class="st">"Level"</span>]:</span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>  topics_df[col] <span class="op">=</span> topics_df[col].astype(<span class="st">"int"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<section id="a-list-of-columns-in-the-cmsc-course-tab" class="level2">
+<h2 class="anchored" data-anchor-id="a-list-of-columns-in-the-cmsc-course-tab">a list of columns in the <em>CMSC-Course</em> tab</h2>
+<div class="cell" data-execution_count="4">
+<div class="cell-output cell-output-display">
+<p>Here is a list of columns:<br>‘Subject’, ‘Number’, ‘CourseId’, ‘Title’, ‘Hours’, ‘Catalog’, ‘Catalog Description’, ‘Restrictions’, ‘Isolated Description’.</p>
+</div>
+</div>
+</section>
 <section id="cmsc-courses-in-the-bulletin" class="level2">
 <h2 class="anchored" data-anchor-id="cmsc-courses-in-the-bulletin">CMSC Courses in the Bulletin</h2>
-<div class="cell" data-execution_count="3">
+<div class="cell" data-execution_count="5">
 <div class="cell-output cell-output-display">
 <p><a href="#tbl-table1">Table&nbsp;1</a> presents a list of CMSC courses in the bulletin. There are 82 courses in the bulletin.</p>
 </div>
-<div class="cell-output cell-output-display" data-execution_count="3">
-<div id="tbl-table1" class="anchored">
+<div class="cell-output cell-output-display">
+<div id="tbl-table1" class="tbl-parent quarto-layout-panel anchored">
+<div class="panel-caption table-caption">
+<p>Table&nbsp;1: <strong>?(caption)</strong></p>
+</div>
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div id="tbl-table1-1" class="quarto-layout-cell quarto-layout-cell-subref anchored" data-ref-parent="tbl-table1" style="flex-basis: 100.0%;justify-content: center;">
 <table class="table table-sm table-striped">
-<caption>Table&nbsp;1: List of courses</caption>
+<caption>(a) Table&nbsp;1: List of courses</caption>
 <thead>
 <tr class="header">
-<th style="text-align: left;">ID</th>
+<th style="text-align: left;">CourseId</th>
 <th style="text-align: left;">Title</th>
 </tr>
 </thead>
@@ -504,40 +1128,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 </div>
 </div>
-</section>
-<section id="course-descriptions-with-restrictions" class="level1">
-<h1>Course Descriptions with Restrictions</h1>
-<p>The section below uses the panda dataframe from above and lists out courses, restrictions, and descriptions.</p>
-<div class="cell" data-execution_count="4">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Display each course using markdown.</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co">## The entire block of markdown is created and rendered.</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co">## There can be only one "display(Markdown())" call per code block.</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co">## The spacing is expanded to accomodate the Markdown processor.</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>block <span class="op">=</span> <span class="st">""</span><span class="op">;</span></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> index, row <span class="kw">in</span> df1.iterrows():</span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>  block <span class="op">=</span> block <span class="op">+</span> <span class="ss">f"""</span></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="ss">## </span><span class="sc">{</span>row[<span class="st">"ID"</span>]<span class="sc">}</span><span class="ss"> - </span><span class="sc">{</span>row[<span class="st">"Title"</span>]<span class="sc">}</span></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="ss">   </span></span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="ss">**Restrictions:** </span><span class="sc">{</span>row[<span class="st">"Restrictions"</span>]<span class="sc">}</span></span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="ss">**Description:** </span><span class="sc">{</span>row[<span class="st">"Isolated Description"</span>]<span class="sc">}</span></span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="ss">"""</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </div>
 </section>
-<section id="autogenerating-qmd-files" class="level1">
-<h1>Autogenerating QMD files</h1>
-<p>Now for the tricky AND fun part. Using the data from the XLSX file, let’s create a bunch of QMDs.</p>
-<div class="cell" data-execution_count="5">
+</section>
+<section id="generating-individual-course-qmd-files" class="level1">
+<h1>Generating individual course QMD files</h1>
+<p>Now for the tricky AND fun part. Using the data from the dataframe, let’s create a bunch of QMDs one for each course.</p>
+<div class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>block <span class="op">=</span> <span class="st">""</span><span class="op">;</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> index, row <span class="kw">in</span> df1.iterrows():</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> index, row <span class="kw">in</span> course_df.iterrows():</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  filename <span class="op">=</span> <span class="ss">f'./qmds/</span><span class="sc">{</span>row[<span class="st">"Subject"</span>]<span class="sc">}{</span>row[<span class="st">"Number"</span>]<span class="sc">}</span><span class="ss">.qmd'</span></span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="cf">with</span> <span class="bu">open</span>(filename, <span class="st">'w'</span>,encoding<span class="op">=</span><span class="st">"utf-8"</span>) <span class="im">as</span> <span class="bu">file</span>:</span>
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">file</span>.write(<span class="ss">f"""---</span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="ss">title: "</span><span class="sc">{</span>row[<span class="st">"ID"</span>]<span class="sc">}</span><span class="ss"> - </span><span class="sc">{</span>row[<span class="st">"Title"</span>]<span class="sc">}</span><span class="ss">"</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="ss">title: "</span><span class="sc">{</span>row[<span class="st">"CourseId"</span>]<span class="sc">}</span><span class="ss"> - </span><span class="sc">{</span>row[<span class="st">"Title"</span>]<span class="sc">}</span><span class="ss">"</span></span>
 <span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="ss">date: last-modified</span></span>
 <span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="ss">format:</span></span>
 <span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="ss">  html:</span></span>
@@ -549,7 +1153,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="sc">{</span>row[<span class="st">"Catalog Description"</span>]<span class="sc">}</span></span>
 <span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="ss">## Restrictions</span></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="ss">## Restrictions; any pre- or co-requisities</span></span>
 <span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a><span class="ss"> </span></span>
 <span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a><span class="sc">{</span>row[<span class="st">"Restrictions"</span>]<span class="sc">}</span></span>
 <span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a></span>
@@ -557,54 +1161,60 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a><span class="sc">{</span>row[<span class="st">"Isolated Description"</span>]<span class="sc">}</span></span>
 <span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a><span class="ss">"""</span></span>
-<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>    <span class="bu">file</span>.close()</span>
-<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a>  block <span class="op">=</span> block <span class="op">+</span> <span class="ss">f"""</span></span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a><span class="ss">## Syllabus Statements</span></span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a><span class="ss">Students should visit the URL below and review all syllabus statement information. The full university syllabus statement includes information on safety, registration, the VCU Honor Code, student conduct, withdrawal and more.</span></span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a><span class="ss">*&lt;https://provost.vcu.edu/faculty/faculty-resources/syllabus/#statements&gt;*</span></span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a><span class="sc">{</span>filename<span class="sc">}</span></span>
-<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a><span class="ss">"""</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a><span class="ss">"""</span></span>
+<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a>    <span class="bu">file</span>.close()</span>
+<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a>  block <span class="op">=</span> block <span class="op">+</span> <span class="ss">f"""</span></span>
+<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a><span class="sc">{</span>filename<span class="sc">}</span></span>
+<span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a><span class="ss">"""</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="autogenerating-_contents.yml" class="level1">
-<h1>Autogenerating *_contents.yml*</h1>
-<div class="cell" data-execution_count="6">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>filename <span class="op">=</span> <span class="st">"qmds/_contents.yml"</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(filename, <span class="st">'w'</span>,encoding<span class="op">=</span><span class="st">"utf-8"</span>) <span class="im">as</span> <span class="bu">file</span>:</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="bu">file</span>.write(<span class="st">"""website:</span></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="st">  sidebar:</span></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="st">    contents:</span></span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="st">    - section: "Undergrad"</span></span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="st">      contents:</span></span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="st">"""</span></span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> index, row <span class="kw">in</span> df1.iterrows():</span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (row[<span class="st">"Number"</span>]<span class="op">&lt;</span><span class="dv">600</span>):</span>
-<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>      <span class="bu">file</span>.write(<span class="ss">f'        - href: </span><span class="sc">{</span>row[<span class="st">"Subject"</span>]<span class="sc">}{</span>row[<span class="st">"Number"</span>]<span class="sc">}</span><span class="ss">.qmd</span><span class="ch">\n</span><span class="ss">'</span>)</span>
-<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>      <span class="bu">file</span>.write(<span class="ss">f'          text: </span><span class="sc">{</span>row[<span class="st">"Subject"</span>]<span class="sc">}</span><span class="ss"> </span><span class="sc">{</span>row[<span class="st">"Number"</span>]<span class="sc">}</span><span class="ch">\n</span><span class="ss">'</span>)</span>
-<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>  <span class="bu">file</span>.write(<span class="st">"""</span></span>
-<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a><span class="st">    - section: "Graduate"</span></span>
-<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a><span class="st">      contents:</span></span>
-<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a><span class="st">"""</span></span>
-<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> index, row <span class="kw">in</span> df1.iterrows():</span>
-<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (row[<span class="st">"Number"</span>]<span class="op">&gt;=</span><span class="dv">600</span>):</span>
-<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>      <span class="bu">file</span>.write(<span class="ss">f'        - href: </span><span class="sc">{</span>row[<span class="st">"Subject"</span>]<span class="sc">}{</span>row[<span class="st">"Number"</span>]<span class="sc">}</span><span class="ss">.qmd</span><span class="ch">\n</span><span class="ss">'</span>)</span>
-<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>      <span class="bu">file</span>.write(<span class="ss">f'          text: </span><span class="sc">{</span>row[<span class="st">"Subject"</span>]<span class="sc">}</span><span class="ss"> </span><span class="sc">{</span>row[<span class="st">"Number"</span>]<span class="sc">}</span><span class="ch">\n</span><span class="ss">'</span>)</span>
+<section id="autogenerating-left-menu-bar-in-contents.yml" class="level1">
+<h1>Autogenerating left menu bar in <em>contents.yml</em></h1>
+<div class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> math <span class="im">import</span> floor</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> floor_to_nearest_100(number):</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> floor(number <span class="op">/</span> <span class="dv">100</span>) <span class="op">*</span> <span class="dv">100</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>filename <span class="op">=</span> <span class="st">"qmds/_contents.yml"</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(filename, <span class="st">'w'</span>,encoding<span class="op">=</span><span class="st">"utf-8"</span>) <span class="im">as</span> <span class="bu">file</span>:</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>  <span class="bu">file</span>.write(<span class="st">"""website:</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="st">  sidebar:</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="st">    contents:</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="st">"""</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>  oldBlockId <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> index, row <span class="kw">in</span> course_df.iterrows():</span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (oldBlockId <span class="op">!=</span> floor_to_nearest_100(row[<span class="st">"Number"</span>])):</span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>      oldBlockId <span class="op">=</span> floor_to_nearest_100(row[<span class="st">"Number"</span>])</span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>      <span class="bu">file</span>.write(<span class="ss">f"""</span></span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a><span class="ss">    - section: "</span><span class="sc">{</span>oldBlockId<span class="sc">}</span><span class="ss"> level"</span></span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a><span class="ss">      contents:</span></span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a><span class="ss">"""</span></span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>    <span class="bu">file</span>.write(<span class="ss">f'        - href: </span><span class="sc">{</span>row[<span class="st">"Subject"</span>]<span class="sc">}{</span>row[<span class="st">"Number"</span>]<span class="sc">}</span><span class="ss">.qmd</span><span class="ch">\n</span><span class="ss">'</span>)</span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>    <span class="bu">file</span>.write(<span class="ss">f'          text: </span><span class="sc">{</span>row[<span class="st">"Subject"</span>]<span class="sc">}</span><span class="ss"> </span><span class="sc">{</span>row[<span class="st">"Number"</span>]<span class="sc">}</span><span class="ch">\n</span><span class="ss">'</span>)</span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a>  <span class="bu">file</span>.write(<span class="st">"</span><span class="ch">\n</span><span class="st">"</span>)</span>
 <span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a>  <span class="bu">file</span>.close()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="autogenerating-index.qmd" class="level1">
 <h1>Autogenerating <em>index.qmd</em></h1>
-<div class="cell" data-execution_count="7">
+<div class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>filename <span class="op">=</span> <span class="st">"qmds/index.qmd"</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(filename, <span class="st">'w'</span>,encoding<span class="op">=</span><span class="st">"utf-8"</span>) <span class="im">as</span> <span class="bu">file</span>:</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="bu">file</span>.write(<span class="ss">f"""---</span></span>
@@ -613,13 +1223,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="ss">---</span></span>
 <span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="ss">"""</span> )</span>
 <span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>  df1[<span class="st">'urlID'</span>] <span class="op">=</span> <span class="st">"["</span> <span class="op">+</span> df1[<span class="st">"ID"</span>].astype(<span class="bu">str</span>) <span class="op">+</span> <span class="st">"]("</span> <span class="op">+</span> df1[<span class="st">"Subject"</span>].astype(<span class="bu">str</span>) <span class="op">+</span> df1[<span class="st">"Number"</span>].astype(<span class="bu">str</span>) <span class="op">+</span> <span class="st">'.html)'</span></span>
-<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>  df1[<span class="st">'urlTitle'</span>] <span class="op">=</span> <span class="st">"["</span> <span class="op">+</span> df1[<span class="st">"Title"</span>].astype(<span class="bu">str</span>) <span class="op">+</span> <span class="st">"]("</span> <span class="op">+</span> df1[<span class="st">"Subject"</span>].astype(<span class="bu">str</span>) <span class="op">+</span> df1[<span class="st">"Number"</span>].astype(<span class="bu">str</span>) <span class="op">+</span> <span class="st">'.html)'</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>  course_df[<span class="st">'urlID'</span>] <span class="op">=</span> <span class="st">"["</span> <span class="op">+</span> course_df[<span class="st">"CourseId"</span>].astype(<span class="bu">str</span>) <span class="op">+</span> <span class="st">"]("</span> <span class="op">+</span> course_df[<span class="st">"Subject"</span>].astype(<span class="bu">str</span>) <span class="op">+</span> course_df[<span class="st">"Number"</span>].astype(<span class="bu">str</span>) <span class="op">+</span> <span class="st">'.html)'</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>  course_df[<span class="st">'urlTitle'</span>] <span class="op">=</span> <span class="st">"["</span> <span class="op">+</span> course_df[<span class="st">"Title"</span>].astype(<span class="bu">str</span>) <span class="op">+</span> <span class="st">"]("</span> <span class="op">+</span> course_df[<span class="st">"Subject"</span>].astype(<span class="bu">str</span>) <span class="op">+</span> course_df[<span class="st">"Number"</span>].astype(<span class="bu">str</span>) <span class="op">+</span> <span class="st">'.html)'</span></span>
 <span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>  cols <span class="op">=</span> [<span class="st">"urlID"</span>,<span class="st">"urlTitle"</span>]</span>
 <span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>  <span class="bu">file</span>.write(tabulate(</span>
-<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>  df1[ cols ],</span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>  course_df[ cols ],</span>
 <span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>  showindex<span class="op">=</span><span class="va">False</span>,</span>
 <span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>  headers<span class="op">=</span>[<span class="st">"Course"</span>,<span class="st">"Title"</span>],</span>
 <span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>  tablefmt<span class="op">=</span><span class="st">"fancy"</span></span>
@@ -630,11 +1240,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </section>
 <section id="autogenerating-listing.qmd" class="level1">
 <h1>Autogenerating <em>listing.qmd</em></h1>
-<div class="cell" data-execution_count="8">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>df1[<span class="st">'urlHeader'</span>] <span class="op">=</span> <span class="st">"["</span> <span class="op">+</span> df1[<span class="st">"ID"</span>].astype(<span class="bu">str</span>) <span class="op">+</span> <span class="st">"-"</span> <span class="op">+</span>  df1[<span class="st">"Title"</span>].astype(<span class="bu">str</span>) <span class="op">+</span> <span class="st">"]("</span> <span class="op">+</span> df1[<span class="st">"Subject"</span>].astype(<span class="bu">str</span>) <span class="op">+</span> df1[<span class="st">"Number"</span>].astype(<span class="bu">str</span>) <span class="op">+</span> <span class="st">'.qmd)'</span></span>
+<div class="cell" data-execution_count="9">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>course_df[<span class="st">'urlHeader'</span>] <span class="op">=</span> <span class="st">"["</span> <span class="op">+</span> course_df[<span class="st">"CourseId"</span>].astype(<span class="bu">str</span>) <span class="op">+</span> <span class="st">" - "</span> <span class="op">+</span>  course_df[<span class="st">"Title"</span>].astype(<span class="bu">str</span>) <span class="op">+</span> <span class="st">"]("</span> <span class="op">+</span> course_df[<span class="st">"Subject"</span>].astype(<span class="bu">str</span>) <span class="op">+</span> course_df[<span class="st">"Number"</span>].astype(<span class="bu">str</span>) <span class="op">+</span> <span class="st">'.qmd)'</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>block <span class="op">=</span> <span class="st">""</span><span class="op">;</span></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> index, row <span class="kw">in</span> df1.iterrows():</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> index, row <span class="kw">in</span> course_df.iterrows():</span>
 <span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  h <span class="op">=</span> <span class="st">"hours"</span> <span class="cf">if</span>(row[<span class="st">"Hours"</span>]<span class="op">&gt;</span><span class="dv">1</span>) <span class="cf">else</span> <span class="st">"hour"</span></span>
 <span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>  block <span class="op">=</span> block <span class="op">+</span> <span class="ss">f"""</span></span>
 <span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="ss">## </span><span class="sc">{</span>row[<span class="st">"urlHeader"</span>]<span class="sc">}</span></span>
@@ -662,10 +1272,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a>  <span class="bu">file</span>.write(block)</span>
 <span id="cb6-30"><a href="#cb6-30" aria-hidden="true" tabindex="-1"></a>  <span class="bu">file</span>.close()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+
+
 </section>
 
-</main>
-<!-- /main column -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

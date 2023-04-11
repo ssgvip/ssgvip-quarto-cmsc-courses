@@ -11,12 +11,18 @@ format:
 Semester course; 3 lecture hours. 3 credits. Prerequisite: CMSC 303 with a minimum grade of C. Design and implementation of relational database systems. Emphasis is placed on entity-relationship diagrams, relational algebra, normal forms and normalization. Introduction to SQL. Discussion of physical level issues. Students will be required to complete a design project and give an oral presentation of the project. Not applicable toward the M.S. in Computer Science or the Ph.D. in Engineering, computer science concentration.
 
 
-## Restrictions
+## Restrictions; any pre- or co-requisities
  
 CMSC 303 with a minimum grade of C.
 
 ## Description
 
 Design and implementation of relational database systems. Emphasis is placed on entity-relationship diagrams, relational algebra, normal forms and normalization. Introduction to SQL. Discussion of physical level issues. Students will be required to complete a design project and give an oral presentation of the project. Not applicable toward the MS in Computer Science or the PHD in Engineering, computer science concentration.
+
+## Syllabus Statements
+
+Students should visit the URL below and review all syllabus statement information. The full university syllabus statement includes information on safety, registration, the VCU Honor Code, student conduct, withdrawal and more.
+
+*<https://provost.vcu.edu/faculty/faculty-resources/syllabus/#statements>*
 
 

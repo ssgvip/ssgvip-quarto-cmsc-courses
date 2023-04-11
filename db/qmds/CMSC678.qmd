@@ -11,12 +11,18 @@ format:
 Semester course; 3 lecture hours (delivered online, face-to-face or hybrid). 3 credits. Prerequisite: MATH/STAT 309 or MATH 310. The course considers two central problems in modern science and engineering: i) the problem of statistical learning from examples (empirical data) and ii) the problem of embedding existing human knowledge into workable mathematics. Topics include: examples of multivariate functional mapping, basics of classic classification and regression, support vector machines as a learning paradigm based on structural risk minimization, fuzzy logic algorithms, basics of multi-class classification over high dimensional spaces, curve and surface fittings, multivariate function approximation and nonlinear optimization; fuzzy logic systems; crisp and fuzzy sets, linguistic variables, fuzzy set theory; if-then rules, fuzzy interference, fuzzification and defuzzification, neuro-fuzzy paradigms.
 
 
-## Restrictions
+## Restrictions; any pre- or co-requisities
  
 MATH/STAT 309 or MATH 310.
 
 ## Description
 
 The course considers two central problems in modern science and engineering: i) the problem of statistical learning from examples (empirical data) and ii) the problem of embedding existing human knowledge into workable mathematics. Topics include: examples of multivariate functional mapping, basics of classic classification and regression, support vector machines as a learning paradigm based on structural risk minimization, fuzzy logic algorithms, basics of multi-class classification over high dimensional spaces, curve and surface fittings, multivariate function approximation and nonlinear optimization; fuzzy logic systems; crisp and fuzzy sets, linguistic variables, fuzzy set theory; if-then rules, fuzzy interference, fuzzification and defuzzification, neuro-fuzzy paradigms.
+
+## Syllabus Statements
+
+Students should visit the URL below and review all syllabus statement information. The full university syllabus statement includes information on safety, registration, the VCU Honor Code, student conduct, withdrawal and more.
+
+*<https://provost.vcu.edu/faculty/faculty-resources/syllabus/#statements>*
 
 

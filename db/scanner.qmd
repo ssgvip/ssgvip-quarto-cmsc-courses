@@ -1,35 +1,104 @@
 ---
-title: "Processing the XLSX"
+title: "Building this web site"
 format:
-  html:
-    output-dir: ..\docs
-    toc: true
-    html-math-method: katex
-    css: styles.css
+  html: default
+#  markdown: default
 ---
 
-A list of CMSC courses was downloaded from the [campus bulletin](http://bulletin.vcu.edu/azcourses/cmsc/).
+[Quarto](https://quarto.org) is used to build this web site.
 
-The list was loaded into XLSX and cleaned. The following sections
-provide a view of the CMSC courses from the Bulletin.
+A list of CMSC courses was downloaded from the [campus bulletin](http://bulletin.vcu.edu/azcourses/cmsc/). The list was stored into a [google sheet](https://docs.google.com/spreadsheets/d/1qrN3L7eRLsM-aVMHYaLQN-FMYtrTJf0_h6dLKlUdPkk/edit#gid=107368023) and signficantly cleaned.
 
-The script below loads the cleaned XLSX.
+The code in the sections below below generates this website using the course data in the google sheet.
+
+# Connecting to google sheets
 
 ```{python}
-
+#| label: Setting credentials
+import os
+import json
+import gspread
+from oauth2client.service_account import ServiceAccountCredentials
 import pandas as pd
 from IPython.display import Markdown
 from tabulate import tabulate
 
-filename = "cmsc-bulletin-spring-2023.xlsx"
-xlsx = pd.ExcelFile( filename )
-df1 = pd.read_excel(xlsx,"CMSC-Courses")
+# define scope
+scope = ['https://spreadsheets.google.com/feeds', 'https://www.googleapis.com/auth/drive']
+
+# create credentials object
+credential_file = os.path.join(os.path.expanduser("~"), ".gsecrets", "gsheets-credentials.json")
+if not os.path.isfile( credential_file ):
+  print("Missing credential file:",credential_file)
+  sys.exit()
 ```
+
+# Connection details
 
 ```{python}
 #| echo: false
 
-collist = "', '".join(df1.columns)
+with open(credential_file, 'r') as f:
+  # Load the JSON data from the file into a Python object
+  data = json.load(f)
+  #@s = json.dumps(data)
+  # 
+display(Markdown(f"""
+The *secrets-file* is a service account JSON file created on the google console. By convention (for this program) we're storing the credentials
+off the github repo in the *.gsecrets* folder under the user home directory.
+
+The *CLIENT_EMAIL* is set inside the secrets file. If the user encounters "PERMISSION DENIED" or other access errors,
+this email address should be added as a "share" to the file on the regular google sheets interface.
+
+* secrets-file: *{r''+credential_file}*
+* client_email: *{data["client_email"]}*
+
+"""
+))
+
+```
+
+# Loading the course and topics data
+
+```{python}
+#| label: Loading google sheet
+
+# authorize the client
+creds = ServiceAccountCredentials.from_json_keyfile_name(credential_file, scope)
+client = gspread.authorize(creds)
+
+# Course data: open the google sheet and tab
+spreadsheet_key = "1qrN3L7eRLsM-aVMHYaLQN-FMYtrTJf0_h6dLKlUdPkk"
+worksheet_name = "CMSC-Courses"
+sheet = client.open_by_key(spreadsheet_key).worksheet(worksheet_name)
+
+# Course data: Read the data into a Pandas DataFrame
+data = sheet.get_all_values()
+headers = data.pop(0)
+course_df = pd.DataFrame(data, columns=headers)
+
+# Course data: do a little data cleaning, converting strings into integers
+for col in ["Number","Hours"]:
+  course_df[col] = course_df[col].astype("int")
+
+# Topics data: Read the data into a Pandas DataFrame
+sheet2 = client.open_by_key(spreadsheet_key).worksheet("CMSC-course-topics")
+data = sheet2.get_all_values()
+headers = data.pop(0)
+topics_df = pd.DataFrame(data, columns=headers)
+
+# Topics data: do a little data cleaning, converting strings into integers
+for col in ["Count","Number","Level"]:
+  topics_df[col] = topics_df[col].astype("int")
+
+```
+
+## a list of columns in the *CMSC-Course* tab
+
+```{python}
+#| echo: false
+
+collist = "', '".join(course_df.columns)
 display(Markdown(f"Here is a list of columns:<br/>'{collist}'."))
 ```
 
@@ -40,65 +109,38 @@ display(Markdown(f"Here is a list of columns:<br/>'{collist}'."))
 #| label: tbl-table1
 #| tbl-cap: List of courses
 
-cols = ["ID","Title"]
+cols = ["CourseId","Title"]
 
 display(Markdown(f"""
 @tbl-table1 presents a list of CMSC courses in the bulletin.
-There are {len(df1.index)} courses in the bulletin.
+There are {len(course_df.index)} courses in the bulletin.
 
 """
 ))
 
-Markdown(tabulate(
-  df1[ cols ],
+display(Markdown(tabulate(
+  course_df[ cols ],
   showindex=False,
   headers=cols
-))
+)))
 
 
-```
-
-# Course Descriptions with Restrictions
-
-The section below uses the panda dataframe from above and lists
-out courses, restrictions, and descriptions.
-
-```{python}
-#| echo: true
-# Display each course using markdown.
-
-## The entire block of markdown is created and rendered.
-## There can be only one "display(Markdown())" call per code block.
-## The spacing is expanded to accomodate the Markdown processor.
-
-block = "";
-for index, row in df1.iterrows():
-  block = block + f"""
-## {row["ID"]} - {row["Title"]}
-   
-**Restrictions:** {row["Restrictions"]}
-
-**Description:** {row["Isolated Description"]}
-
-
-"""
 
 ```
 
+# Generating individual course QMD files
 
-# Autogenerating QMD files
-
-Now for the tricky AND fun part. Using the data from the XLSX file, let's create a bunch of QMDs.
+Now for the tricky AND fun part. Using the data from the dataframe, let's create a bunch of QMDs one for each course.
 
 ```{python}
 #| echo: true
 
 block = "";
-for index, row in df1.iterrows():
+for index, row in course_df.iterrows():
   filename = f'./qmds/{row["Subject"]}{row["Number"]}.qmd'
   with open(filename, 'w',encoding="utf-8") as file:
     file.write(f"""---
-title: "{row["ID"]} - {row["Title"]}"
+title: "{row["CourseId"]} - {row["Title"]}"
 date: last-modified
 format:
   html:
@@ -110,13 +152,19 @@ format:
 {row["Catalog Description"]}
 
 
-## Restrictions
+## Restrictions; any pre- or co-requisities
  
 {row["Restrictions"]}
 
 ## Description
 
 {row["Isolated Description"]}
+
+## Syllabus Statements
+
+Students should visit the URL below and review all syllabus statement information. The full university syllabus statement includes information on safety, registration, the VCU Honor Code, student conduct, withdrawal and more.
+
+*<https://provost.vcu.edu/faculty/faculty-resources/syllabus/#statements>*
 
 
 """
@@ -131,37 +179,37 @@ format:
 """
 ```
 
-# Autogenerating *_contents.yml* 
+# Autogenerating left menu bar in *contents.yml* 
 
 
 ```{python}
 #| echo: true
+
+from math import floor
+
+def floor_to_nearest_100(number):
+    return floor(number / 100) * 100
 
 filename = "qmds/_contents.yml"
 with open(filename, 'w',encoding="utf-8") as file:
   file.write("""website:
   sidebar:
     contents:
-    - section: "Undergrad"
+"""
+  )
+
+  oldBlockId = 0
+  for index, row in course_df.iterrows():
+    if (oldBlockId != floor_to_nearest_100(row["Number"])):
+      oldBlockId = floor_to_nearest_100(row["Number"])
+      file.write(f"""
+    - section: "{oldBlockId} level"
       contents:
 """
 )
+    file.write(f'        - href: {row["Subject"]}{row["Number"]}.qmd\n')
+    file.write(f'          text: {row["Subject"]} {row["Number"]}\n')
 
-  for index, row in df1.iterrows():
-    if (row["Number"]<600):
-      file.write(f'        - href: {row["Subject"]}{row["Number"]}.qmd\n')
-      file.write(f'          text: {row["Subject"]} {row["Number"]}\n')
-
-  file.write("""
-    - section: "Graduate"
-      contents:
-"""
-)
-
-  for index, row in df1.iterrows():
-    if (row["Number"]>=600):
-      file.write(f'        - href: {row["Subject"]}{row["Number"]}.qmd\n')
-      file.write(f'          text: {row["Subject"]} {row["Number"]}\n')
   file.write("\n")
   file.close()
 
@@ -182,13 +230,13 @@ date: last-modified
 ---
 """ )
 
-  df1['urlID'] = "[" + df1["ID"].astype(str) + "](" + df1["Subject"].astype(str) + df1["Number"].astype(str) + '.html)'
-  df1['urlTitle'] = "[" + df1["Title"].astype(str) + "](" + df1["Subject"].astype(str) + df1["Number"].astype(str) + '.html)'
+  course_df['urlID'] = "[" + course_df["CourseId"].astype(str) + "](" + course_df["Subject"].astype(str) + course_df["Number"].astype(str) + '.html)'
+  course_df['urlTitle'] = "[" + course_df["Title"].astype(str) + "](" + course_df["Subject"].astype(str) + course_df["Number"].astype(str) + '.html)'
 
 
   cols = ["urlID","urlTitle"]
   file.write(tabulate(
-  df1[ cols ],
+  course_df[ cols ],
   showindex=False,
   headers=["Course","Title"],
   tablefmt="fancy"
@@ -201,14 +249,13 @@ date: last-modified
 
 # Autogenerating *listing.qmd* 
 
-
 ```{python}
 #| echo: true
 
-df1['urlHeader'] = "[" + df1["ID"].astype(str) + "-" +  df1["Title"].astype(str) + "](" + df1["Subject"].astype(str) + df1["Number"].astype(str) + '.qmd)'
+course_df['urlHeader'] = "[" + course_df["CourseId"].astype(str) + " - " +  course_df["Title"].astype(str) + "](" + course_df["Subject"].astype(str) + course_df["Number"].astype(str) + '.qmd)'
 
 block = "";
-for index, row in df1.iterrows():
+for index, row in course_df.iterrows():
   h = "hours" if(row["Hours"]>1) else "hour"
   block = block + f"""
 ## {row["urlHeader"]}

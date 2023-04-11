@@ -11,12 +11,18 @@ format:
 Semester course; 3 lecture hours (delivered online). 3 credits. Prerequisite: CMSC 210. Introduction to cybersecurity skills. The course introduces students to cybersecurity terminology, standards and best practices. Students will apply these practices as part of a cybersecurity-focused project. This course is not applicable for credit toward any College of Engineering degrees.
 
 
-## Restrictions
+## Restrictions; any pre- or co-requisities
  
 CMSC 210.
 
 ## Description
 
 Introduction to cybersecurity skills. The course introduces students to cybersecurity terminology, standards and best practices. Students will apply these practices as part of a cybersecurity-focused project. This course is not applicable for credit toward any College of Engineering degrees.
+
+## Syllabus Statements
+
+Students should visit the URL below and review all syllabus statement information. The full university syllabus statement includes information on safety, registration, the VCU Honor Code, student conduct, withdrawal and more.
+
+*<https://provost.vcu.edu/faculty/faculty-resources/syllabus/#statements>*
 
 

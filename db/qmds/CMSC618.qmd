@@ -11,12 +11,18 @@ format:
 Semester course; 3 lecture hours. 3 credits. Theory and practice of database and software security focusing in particular on some common database software security risks and on the identification of potential threats and vulnerabilities. Crosslisted as: CISS 618.
 
 
-## Restrictions
+## Restrictions; any pre- or co-requisities
  
 (none)
 
 ## Description
 
 Theory and practice of database and software security focusing in particular on some common database software security risks and on the identification of potential threats and vulnerabilities. Crosslisted as: CISS 618.
+
+## Syllabus Statements
+
+Students should visit the URL below and review all syllabus statement information. The full university syllabus statement includes information on safety, registration, the VCU Honor Code, student conduct, withdrawal and more.
+
+*<https://provost.vcu.edu/faculty/faculty-resources/syllabus/#statements>*
 
 

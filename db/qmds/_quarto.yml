@@ -4,6 +4,7 @@ project:
 
 website:
   title: "CMSC Courses"
+  search: true
   navbar:
     background: primary
     search: true
@@ -12,8 +13,10 @@ website:
         file: index.qmd
       - text: "Listing"
         file: listing.qmd
+      - text: "Code"
+        file: scanner.md
   sidebar:
-    style: "floating"
+    style: "docked"
     search: false
     collapse-level: 1
     contents:

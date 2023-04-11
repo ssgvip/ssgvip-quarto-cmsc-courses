@@ -11,12 +11,18 @@ format:
 Semester course; 3 lecture hours. 3 credits. Prerequisites: a course in software engineering and graduate standing in computer science, or permission of instructor. A study of issues that affect the quality of software and of methodology to assure that software products are of the desired quality. This also includes issues in assessing product quality as well as the process by which the software is produced. Topics include various methodologies, standards, metrics and tools.
 
 
-## Restrictions
+## Restrictions; any pre- or co-requisities
  
 a course in software engineering and graduate standing in computer science, or permission of instructor.
 
 ## Description
 
 A study of issues that affect the quality of software and of methodology to assure that software products are of the desired quality. This also includes issues in assessing product quality as well as the process by which the software is produced. Topics include various methodologies, standards, metrics and tools.
+
+## Syllabus Statements
+
+Students should visit the URL below and review all syllabus statement information. The full university syllabus statement includes information on safety, registration, the VCU Honor Code, student conduct, withdrawal and more.
+
+*<https://provost.vcu.edu/faculty/faculty-resources/syllabus/#statements>*
 
 

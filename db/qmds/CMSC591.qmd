@@ -11,12 +11,18 @@ format:
 Semester course; 3 lecture hours (delivered online, face-to-face or hybrid). 3 credits. May be repeated for credit. Enrollment requires permission of the instructor. The course is open to students with graduate standing or those accepted into the accelerated B.S. to M.S. program in computer science. A study of selected topic(s) in computer science at the graduate level. See the Schedule of Classes for specific topics to be offered each semester.
 
 
-## Restrictions
+## Restrictions; any pre- or co-requisities
  
 (none)
 
 ## Description
 
 May be repeated for credit. Enrollment requires permission of the instructor. The course is open to students with graduate standing or those accepted into the accelerated BS to MS program in computer science. A study of selected topic(s) in computer science at the graduate level. See the Schedule of Classes for specific topics to be offered each semester.
+
+## Syllabus Statements
+
+Students should visit the URL below and review all syllabus statement information. The full university syllabus statement includes information on safety, registration, the VCU Honor Code, student conduct, withdrawal and more.
+
+*<https://provost.vcu.edu/faculty/faculty-resources/syllabus/#statements>*
 
 

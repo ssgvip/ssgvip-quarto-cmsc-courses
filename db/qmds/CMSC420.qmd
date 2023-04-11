@@ -11,12 +11,18 @@ format:
 Semester course; 3 lecture hours. 3 credits. Prerequisite: CMSC 355 with a minimum grade of C. Study of the logistics of team software development. Students work in teams to gain experience in software management and develop the components of a larger software product. Topics include risk management, project planning, quality management, configuration management and software testing.
 
 
-## Restrictions
+## Restrictions; any pre- or co-requisities
  
 CMSC 355 with a minimum grade of C.
 
 ## Description
 
 Study of the logistics of team software development. Students work in teams to gain experience in software management and develop the components of a larger software product. Topics include risk management, project planning, quality management, configuration management and software testing.
+
+## Syllabus Statements
+
+Students should visit the URL below and review all syllabus statement information. The full university syllabus statement includes information on safety, registration, the VCU Honor Code, student conduct, withdrawal and more.
+
+*<https://provost.vcu.edu/faculty/faculty-resources/syllabus/#statements>*
 
 

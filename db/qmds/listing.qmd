@@ -6,7 +6,7 @@ format:
     toc: False
 ---
 
-## [CMSC 101-Introduction to Computer Science](CMSC101.qmd)
+## [CMSC 101 - Introduction to Computer Science](CMSC101.qmd)
 
 Semester course. 3 hours.
 
@@ -16,7 +16,7 @@ Semester course. 3 hours.
 
 
 
-## [CMSC 144-Code Beats With Python](CMSC144.qmd)
+## [CMSC 144 - Code Beats With Python](CMSC144.qmd)
 
 Semester course. 1 hour.
 
@@ -26,7 +26,7 @@ Semester course. 1 hour.
 
 
 
-## [CMSC 191-Topics in Computer Science](CMSC191.qmd)
+## [CMSC 191 - Topics in Computer Science](CMSC191.qmd)
 
 Semester course. 3 hours.
 
@@ -36,7 +36,7 @@ Semester course. 3 hours.
 
 
 
-## [CMSC 210-Computers and Programming](CMSC210.qmd)
+## [CMSC 210 - Computers and Programming](CMSC210.qmd)
 
 Semester course. 3 hours.
 
@@ -46,7 +46,7 @@ Semester course. 3 hours.
 
 
 
-## [CMSC 245-Introduction to Programming Using C++](CMSC245.qmd)
+## [CMSC 245 - Introduction to Programming Using C++](CMSC245.qmd)
 
 Semester course. 3 hours.
 
@@ -56,7 +56,7 @@ Semester course. 3 hours.
 
 
 
-## [CMSC 246-Advanced Programming Using C++](CMSC246.qmd)
+## [CMSC 246 - Advanced Programming Using C++](CMSC246.qmd)
 
 Semester course. 3 hours.
 
@@ -66,7 +66,7 @@ Semester course. 3 hours.
 
 
 
-## [CMSC 254-Introduction to Problem-solving](CMSC254.qmd)
+## [CMSC 254 - Introduction to Problem-solving](CMSC254.qmd)
 
 Semester course. 4 hours.
 
@@ -76,7 +76,7 @@ Semester course. 4 hours.
 
 
 
-## [CMSC 255-Introduction to Programming](CMSC255.qmd)
+## [CMSC 255 - Introduction to Programming](CMSC255.qmd)
 
 Semester course. 4 hours.
 
@@ -86,7 +86,7 @@ Semester course. 4 hours.
 
 
 
-## [CMSC 256-Data Structures and Object Oriented Programming](CMSC256.qmd)
+## [CMSC 256 - Data Structures and Object Oriented Programming](CMSC256.qmd)
 
 Semester course. 4 hours.
 
@@ -96,7 +96,7 @@ Semester course. 4 hours.
 
 
 
-## [CMSC 257-Computer Systems](CMSC257.qmd)
+## [CMSC 257 - Computer Systems](CMSC257.qmd)
 
 Semester course. 4 hours.
 
@@ -106,7 +106,7 @@ Semester course. 4 hours.
 
 
 
-## [CMSC 302-Introduction to Discrete Structures](CMSC302.qmd)
+## [CMSC 302 - Introduction to Discrete Structures](CMSC302.qmd)
 
 Semester course. 3 hours.
 
@@ -116,7 +116,7 @@ Semester course. 3 hours.
 
 
 
-## [CMSC 303-Introduction to the Theory of Computation](CMSC303.qmd)
+## [CMSC 303 - Introduction to the Theory of Computation](CMSC303.qmd)
 
 Semester course. 3 hours.
 
@@ -126,7 +126,7 @@ Semester course. 3 hours.
 
 
 
-## [CMSC 311-Computer Organization](CMSC311.qmd)
+## [CMSC 311 - Computer Organization](CMSC311.qmd)
 
 Semester course. 3 hours.
 
@@ -136,7 +136,7 @@ Semester course. 3 hours.
 
 
 
-## [CMSC 312-Introduction to Operating Systems](CMSC312.qmd)
+## [CMSC 312 - Introduction to Operating Systems](CMSC312.qmd)
 
 Semester course. 3 hours.
 
@@ -146,7 +146,7 @@ Semester course. 3 hours.
 
 
 
-## [CMSC 320-Software Engineering and Web Development](CMSC320.qmd)
+## [CMSC 320 - Software Engineering and Web Development](CMSC320.qmd)
 
 Semester course. 3 hours.
 
@@ -156,7 +156,7 @@ Semester course. 3 hours.
 
 
 
-## [CMSC 330-Data Science Skills](CMSC330.qmd)
+## [CMSC 330 - Data Science Skills](CMSC330.qmd)
 
 Semester course. 3 hours.
 
@@ -166,7 +166,7 @@ Semester course. 3 hours.
 
 
 
-## [CMSC 340-Cybersecurity Skills](CMSC340.qmd)
+## [CMSC 340 - Cybersecurity Skills](CMSC340.qmd)
 
 Semester course. 3 hours.
 
@@ -176,7 +176,7 @@ Semester course. 3 hours.
 
 
 
-## [CMSC 355-Fundamentals of Software Engineering](CMSC355.qmd)
+## [CMSC 355 - Fundamentals of Software Engineering](CMSC355.qmd)
 
 Semester course. 3 hours.
 
@@ -186,7 +186,7 @@ Semester course. 3 hours.
 
 
 
-## [CMSC 391-Topics in Computer Science](CMSC391.qmd)
+## [CMSC 391 - Topics in Computer Science](CMSC391.qmd)
 
 Semester course. 3 hours.
 
@@ -196,7 +196,7 @@ Semester course. 3 hours.
 
 
 
-## [CMSC 401-Algorithm Analysis with Advanced Data Structures](CMSC401.qmd)
+## [CMSC 401 - Algorithm Analysis with Advanced Data Structures](CMSC401.qmd)
 
 Semester course. 3 hours.
 
@@ -206,7 +206,7 @@ Semester course. 3 hours.
 
 
 
-## [CMSC 403-Programming Languages](CMSC403.qmd)
+## [CMSC 403 - Programming Languages](CMSC403.qmd)
 
 Semester course. 3 hours.
 
@@ -216,7 +216,7 @@ Semester course. 3 hours.
 
 
 
-## [CMSC 404-Compiler Construction](CMSC404.qmd)
+## [CMSC 404 - Compiler Construction](CMSC404.qmd)
 
 Semester course. 3 hours.
 
@@ -226,7 +226,7 @@ Semester course. 3 hours.
 
 
 
-## [CMSC 409-Artificial Intelligence](CMSC409.qmd)
+## [CMSC 409 - Artificial Intelligence](CMSC409.qmd)
 
 Semester course. 3 hours.
 
@@ -236,7 +236,7 @@ Semester course. 3 hours.
 
 
 
-## [CMSC 410-Introduction to Quantum Computing](CMSC410.qmd)
+## [CMSC 410 - Introduction to Quantum Computing](CMSC410.qmd)
 
 Semester course. 3 hours.
 
@@ -246,7 +246,7 @@ Semester course. 3 hours.
 
 
 
-## [CMSC 411-Computer Graphics](CMSC411.qmd)
+## [CMSC 411 - Computer Graphics](CMSC411.qmd)
 
 Semester course. 3 hours.
 
@@ -256,7 +256,7 @@ Semester course. 3 hours.
 
 
 
-## [CMSC 412-Social Network Analysis and Cybersecurity Risks](CMSC412.qmd)
+## [CMSC 412 - Social Network Analysis and Cybersecurity Risks](CMSC412.qmd)
 
 Semester course. 3 hours.
 
@@ -266,7 +266,7 @@ Semester course. 3 hours.
 
 
 
-## [CMSC 413-Introduction to Cybersecurity](CMSC413.qmd)
+## [CMSC 413 - Introduction to Cybersecurity](CMSC413.qmd)
 
 Semester course. 3 hours.
 
@@ -276,7 +276,7 @@ Semester course. 3 hours.
 
 
 
-## [CMSC 414-Computer and Network Security](CMSC414.qmd)
+## [CMSC 414 - Computer and Network Security](CMSC414.qmd)
 
 Semester course. 3 hours.
 
@@ -286,7 +286,7 @@ Semester course. 3 hours.
 
 
 
-## [CMSC 415-Introduction to Cryptography](CMSC415.qmd)
+## [CMSC 415 - Introduction to Cryptography](CMSC415.qmd)
 
 Semester course. 3 hours.
 
@@ -296,7 +296,7 @@ Semester course. 3 hours.
 
 
 
-## [CMSC 416-Introduction to Natural Language Processing](CMSC416.qmd)
+## [CMSC 416 - Introduction to Natural Language Processing](CMSC416.qmd)
 
 Semester course. 3 hours.
 
@@ -306,7 +306,7 @@ Semester course. 3 hours.
 
 
 
-## [CMSC 420-Software Project Management](CMSC420.qmd)
+## [CMSC 420 - Software Project Management](CMSC420.qmd)
 
 Semester course. 3 hours.
 
@@ -316,7 +316,7 @@ Semester course. 3 hours.
 
 
 
-## [CMSC 425-Introduction to Software Analysis and Testing](CMSC425.qmd)
+## [CMSC 425 - Introduction to Software Analysis and Testing](CMSC425.qmd)
 
 Semester course. 3 hours.
 
@@ -326,7 +326,7 @@ Semester course. 3 hours.
 
 
 
-## [CMSC 428-Mobile Programming: iOS](CMSC428.qmd)
+## [CMSC 428 - Mobile Programming: iOS](CMSC428.qmd)
 
 Semester course. 3 hours.
 
@@ -336,7 +336,7 @@ Semester course. 3 hours.
 
 
 
-## [CMSC 435-Introduction to Data Science](CMSC435.qmd)
+## [CMSC 435 - Introduction to Data Science](CMSC435.qmd)
 
 Semester course. 3 hours.
 
@@ -346,7 +346,7 @@ Semester course. 3 hours.
 
 
 
-## [CMSC 440-Data Communication and Networking](CMSC440.qmd)
+## [CMSC 440 - Data Communication and Networking](CMSC440.qmd)
 
 Semester course. 3 hours.
 
@@ -356,7 +356,7 @@ Semester course. 3 hours.
 
 
 
-## [CMSC 441-Senior Design Studio I (Laboratory/Project Time)](CMSC441.qmd)
+## [CMSC 441 - Senior Design Studio I (Laboratory/Project Time)](CMSC441.qmd)
 
 Semester course. 2 hours.
 
@@ -366,7 +366,7 @@ Semester course. 2 hours.
 
 
 
-## [CMSC 442-Senior Design Studio II (Laboratory/Project Time)](CMSC442.qmd)
+## [CMSC 442 - Senior Design Studio II (Laboratory/Project Time)](CMSC442.qmd)
 
 Semester course. 2 hours.
 
@@ -376,7 +376,7 @@ Semester course. 2 hours.
 
 
 
-## [CMSC 451-Senior Project I](CMSC451.qmd)
+## [CMSC 451 - Senior Project I](CMSC451.qmd)
 
 Semester course. 1 hour.
 
@@ -386,7 +386,7 @@ Semester course. 1 hour.
 
 
 
-## [CMSC 452-Senior Project II](CMSC452.qmd)
+## [CMSC 452 - Senior Project II](CMSC452.qmd)
 
 Semester course. 1 hour.
 
@@ -396,7 +396,7 @@ Semester course. 1 hour.
 
 
 
-## [CMSC 455-Software as a Service](CMSC455.qmd)
+## [CMSC 455 - Software as a Service](CMSC455.qmd)
 
 Semester course. 3 hours.
 
@@ -406,7 +406,7 @@ Semester course. 3 hours.
 
 
 
-## [CMSC 475-Design and Implementation of User Interfaces](CMSC475.qmd)
+## [CMSC 475 - Design and Implementation of User Interfaces](CMSC475.qmd)
 
 Semester course. 3 hours.
 
@@ -416,7 +416,7 @@ Semester course. 3 hours.
 
 
 
-## [CMSC 491-Topics in Computer Science](CMSC491.qmd)
+## [CMSC 491 - Topics in Computer Science](CMSC491.qmd)
 
 Semester course. 3 hours.
 
@@ -426,7 +426,7 @@ Semester course. 3 hours.
 
 
 
-## [CMSC 492-Independent Study](CMSC492.qmd)
+## [CMSC 492 - Independent Study](CMSC492.qmd)
 
 Semester course. 4 hours.
 
@@ -436,7 +436,7 @@ Semester course. 4 hours.
 
 
 
-## [CMSC 501-Advanced Algorithms](CMSC501.qmd)
+## [CMSC 501 - Advanced Algorithms](CMSC501.qmd)
 
 Semester course. 3 hours.
 
@@ -446,7 +446,7 @@ Semester course. 3 hours.
 
 
 
-## [CMSC 502-Parallel Algorithms](CMSC502.qmd)
+## [CMSC 502 - Parallel Algorithms](CMSC502.qmd)
 
 Semester course. 3 hours.
 
@@ -456,7 +456,7 @@ Semester course. 3 hours.
 
 
 
-## [CMSC 506-Computer Networks and Communications](CMSC506.qmd)
+## [CMSC 506 - Computer Networks and Communications](CMSC506.qmd)
 
 Semester course. 3 hours.
 
@@ -466,7 +466,7 @@ Semester course. 3 hours.
 
 
 
-## [CMSC 508-Database Theory](CMSC508.qmd)
+## [CMSC 508 - Database Theory](CMSC508.qmd)
 
 Semester course. 3 hours.
 
@@ -476,7 +476,7 @@ Semester course. 3 hours.
 
 
 
-## [CMSC 510-Regularization Methods for Machine Learning](CMSC510.qmd)
+## [CMSC 510 - Regularization Methods for Machine Learning](CMSC510.qmd)
 
 Semester course. 3 hours.
 
@@ -486,7 +486,7 @@ Semester course. 3 hours.
 
 
 
-## [CMSC 512-Advanced Social Network Analysis and Security](CMSC512.qmd)
+## [CMSC 512 - Advanced Social Network Analysis and Security](CMSC512.qmd)
 
 Semester course. 3 hours.
 
@@ -496,7 +496,7 @@ Semester course. 3 hours.
 
 
 
-## [CMSC 516-Advanced Natural Language Processing](CMSC516.qmd)
+## [CMSC 516 - Advanced Natural Language Processing](CMSC516.qmd)
 
 Semester course. 3 hours.
 
@@ -506,7 +506,7 @@ Semester course. 3 hours.
 
 
 
-## [CMSC 525-Introduction to Software Analysis, Testing and Verification](CMSC525.qmd)
+## [CMSC 525 - Introduction to Software Analysis, Testing and Verification](CMSC525.qmd)
 
 Semester course. 3 hours.
 
@@ -516,7 +516,7 @@ Semester course. 3 hours.
 
 
 
-## [CMSC 526-Theory of Programming Languages](CMSC526.qmd)
+## [CMSC 526 - Theory of Programming Languages](CMSC526.qmd)
 
 Semester course. 3 hours.
 
@@ -526,7 +526,7 @@ Semester course. 3 hours.
 
 
 
-## [CMSC 531-3D Computer Vision for Robot Navigation](CMSC531.qmd)
+## [CMSC 531 - 3D Computer Vision for Robot Navigation](CMSC531.qmd)
 
 Semester course. 3 hours.
 
@@ -536,7 +536,7 @@ Semester course. 3 hours.
 
 
 
-## [CMSC 591-Topics in Computer Science](CMSC591.qmd)
+## [CMSC 591 - Topics in Computer Science](CMSC591.qmd)
 
 Semester course. 3 hours.
 
@@ -546,7 +546,7 @@ Semester course. 3 hours.
 
 
 
-## [CMSC 601-Convex Optimization](CMSC601.qmd)
+## [CMSC 601 - Convex Optimization](CMSC601.qmd)
 
 Semester course. 3 hours.
 
@@ -556,7 +556,7 @@ Semester course. 3 hours.
 
 
 
-## [CMSC 602-Operating Systems](CMSC602.qmd)
+## [CMSC 602 - Operating Systems](CMSC602.qmd)
 
 Semester course. 3 hours.
 
@@ -566,7 +566,7 @@ Semester course. 3 hours.
 
 
 
-## [CMSC 603-High Performance Distributed Systems](CMSC603.qmd)
+## [CMSC 603 - High Performance Distributed Systems](CMSC603.qmd)
 
 Semester course. 3 hours.
 
@@ -576,7 +576,7 @@ Semester course. 3 hours.
 
 
 
-## [CMSC 605-Advanced Computer Architecture](CMSC605.qmd)
+## [CMSC 605 - Advanced Computer Architecture](CMSC605.qmd)
 
 Semester course. 3 hours.
 
@@ -586,7 +586,7 @@ Semester course. 3 hours.
 
 
 
-## [CMSC 608-Advanced Database](CMSC608.qmd)
+## [CMSC 608 - Advanced Database](CMSC608.qmd)
 
 Semester course. 3 hours.
 
@@ -596,7 +596,7 @@ Semester course. 3 hours.
 
 
 
-## [CMSC 610-Algorithmic Foundations of Bioinformatics](CMSC610.qmd)
+## [CMSC 610 - Algorithmic Foundations of Bioinformatics](CMSC610.qmd)
 
 Semester course. 3 hours.
 
@@ -606,7 +606,7 @@ Semester course. 3 hours.
 
 
 
-## [CMSC 611-Computer Multimedia](CMSC611.qmd)
+## [CMSC 611 - Computer Multimedia](CMSC611.qmd)
 
 Semester course. 3 hours.
 
@@ -616,7 +616,7 @@ Semester course. 3 hours.
 
 
 
-## [CMSC 612-Game Theory and Security](CMSC612.qmd)
+## [CMSC 612 - Game Theory and Security](CMSC612.qmd)
 
 Semester course. 3 hours.
 
@@ -626,7 +626,7 @@ Semester course. 3 hours.
 
 
 
-## [CMSC 615-Cryptocurrency and Blockchain Techniques](CMSC615.qmd)
+## [CMSC 615 - Cryptocurrency and Blockchain Techniques](CMSC615.qmd)
 
 Semester course. 3 hours.
 
@@ -636,7 +636,7 @@ Semester course. 3 hours.
 
 
 
-## [CMSC 618-Database and Application Security](CMSC618.qmd)
+## [CMSC 618 - Database and Application Security](CMSC618.qmd)
 
 Semester course. 3 hours.
 
@@ -646,7 +646,7 @@ Semester course. 3 hours.
 
 
 
-## [CMSC 619-The Design and Specifications of User Interfaces](CMSC619.qmd)
+## [CMSC 619 - The Design and Specifications of User Interfaces](CMSC619.qmd)
 
 Semester course. 3 hours.
 
@@ -656,7 +656,7 @@ Semester course. 3 hours.
 
 
 
-## [CMSC 620-Applied Cryptography](CMSC620.qmd)
+## [CMSC 620 - Applied Cryptography](CMSC620.qmd)
 
 Semester course. 3 hours.
 
@@ -666,7 +666,7 @@ Semester course. 3 hours.
 
 
 
-## [CMSC 621-Theory of Computation](CMSC621.qmd)
+## [CMSC 621 - Theory of Computation](CMSC621.qmd)
 
 Semester course. 3 hours.
 
@@ -676,7 +676,7 @@ Semester course. 3 hours.
 
 
 
-## [CMSC 622-Network and System Security](CMSC622.qmd)
+## [CMSC 622 - Network and System Security](CMSC622.qmd)
 
 Semester course. 3 hours.
 
@@ -686,7 +686,7 @@ Semester course. 3 hours.
 
 
 
-## [CMSC 623-Cloud Computing](CMSC623.qmd)
+## [CMSC 623 - Cloud Computing](CMSC623.qmd)
 
 Semester course. 3 hours.
 
@@ -696,7 +696,7 @@ Semester course. 3 hours.
 
 
 
-## [CMSC 624-Software Quality Assurance](CMSC624.qmd)
+## [CMSC 624 - Software Quality Assurance](CMSC624.qmd)
 
 Semester course. 3 hours.
 
@@ -706,7 +706,7 @@ Semester course. 3 hours.
 
 
 
-## [CMSC 625-Advanced Software Analysis, Testing and Verification](CMSC625.qmd)
+## [CMSC 625 - Advanced Software Analysis, Testing and Verification](CMSC625.qmd)
 
 Semester course. 3 hours.
 
@@ -716,7 +716,7 @@ Semester course. 3 hours.
 
 
 
-## [CMSC 628-Mobile Networks: Applications, Modeling and Analysis](CMSC628.qmd)
+## [CMSC 628 - Mobile Networks: Applications, Modeling and Analysis](CMSC628.qmd)
 
 Semester course. 3 hours.
 
@@ -726,7 +726,7 @@ Semester course. 3 hours.
 
 
 
-## [CMSC 630-Image Analysis](CMSC630.qmd)
+## [CMSC 630 - Image Analysis](CMSC630.qmd)
 
 Semester course. 3 hours.
 
@@ -736,7 +736,7 @@ Semester course. 3 hours.
 
 
 
-## [CMSC 635-Knowledge Discovery and Data Mining](CMSC635.qmd)
+## [CMSC 635 - Knowledge Discovery and Data Mining](CMSC635.qmd)
 
 Semester course. 3 hours.
 
@@ -746,7 +746,7 @@ Semester course. 3 hours.
 
 
 
-## [CMSC 636-Artificial Neural Networks and Deep Learning](CMSC636.qmd)
+## [CMSC 636 - Artificial Neural Networks and Deep Learning](CMSC636.qmd)
 
 Semester course. 3 hours.
 
@@ -756,7 +756,7 @@ Semester course. 3 hours.
 
 
 
-## [CMSC 654-Memory and Malware Forensics](CMSC654.qmd)
+## [CMSC 654 - Memory and Malware Forensics](CMSC654.qmd)
 
 Semester course. 3 hours.
 
@@ -766,7 +766,7 @@ Semester course. 3 hours.
 
 
 
-## [CMSC 678-Statistical Learning and Fuzzy Logic Algorithms](CMSC678.qmd)
+## [CMSC 678 - Statistical Learning and Fuzzy Logic Algorithms](CMSC678.qmd)
 
 Semester course. 3 hours.
 
@@ -776,7 +776,7 @@ Semester course. 3 hours.
 
 
 
-## [CMSC 691-Special Topics in Computer Science](CMSC691.qmd)
+## [CMSC 691 - Special Topics in Computer Science](CMSC691.qmd)
 
 Semester course. 3 hours.
 
@@ -786,7 +786,7 @@ Semester course. 3 hours.
 
 
 
-## [CMSC 692-Independent Study](CMSC692.qmd)
+## [CMSC 692 - Independent Study](CMSC692.qmd)
 
 Semester course. 3 hours.
 
@@ -796,7 +796,7 @@ Semester course. 3 hours.
 
 
 
-## [CMSC 697-Directed Research](CMSC697.qmd)
+## [CMSC 697 - Directed Research](CMSC697.qmd)
 
 Semester course. 5 hours.
 
@@ -806,7 +806,7 @@ Semester course. 5 hours.
 
 
 
-## [CMSC 701-Research Methods](CMSC701.qmd)
+## [CMSC 701 - Research Methods](CMSC701.qmd)
 
 Semester course. 3 hours.
 
@@ -816,7 +816,7 @@ Semester course. 3 hours.
 
 
 
-## [CMSC 702-Computer Science Seminar](CMSC702.qmd)
+## [CMSC 702 - Computer Science Seminar](CMSC702.qmd)
 
 Semester course. 1 hour.
 

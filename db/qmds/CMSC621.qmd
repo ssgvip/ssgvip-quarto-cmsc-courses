@@ -11,12 +11,18 @@ format:
 Semester course; 3 lecture hours. 3 credits. Prerequisite: graduate student standing and permission of instructor. Discussion of the complexity and computability of problems and programs. Topics will include unsolvability, universal programs and abstract complexity.
 
 
-## Restrictions
+## Restrictions; any pre- or co-requisities
  
 graduate student standing and permission of instructor.
 
 ## Description
 
 Discussion of the complexity and computability of problems and programs. Topics will include unsolvability, universal programs and abstract complexity.
+
+## Syllabus Statements
+
+Students should visit the URL below and review all syllabus statement information. The full university syllabus statement includes information on safety, registration, the VCU Honor Code, student conduct, withdrawal and more.
+
+*<https://provost.vcu.edu/faculty/faculty-resources/syllabus/#statements>*
 
 

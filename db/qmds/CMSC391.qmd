@@ -11,12 +11,18 @@ format:
 Semester course; 3 lecture hours. 3 credits. May be repeated for credit. Prerequisite: permission of the instructor. This course will teach selected topics in computer science. See the Schedule of Classes for specific topics to be offered each semester and prerequisites.
 
 
-## Restrictions
+## Restrictions; any pre- or co-requisities
  
 permission of the instructor.
 
 ## Description
 
 This course will teach selected topics in computer science. See the Schedule of Classes for specific topics to be offered each semester and prerequisites.
+
+## Syllabus Statements
+
+Students should visit the URL below and review all syllabus statement information. The full university syllabus statement includes information on safety, registration, the VCU Honor Code, student conduct, withdrawal and more.
+
+*<https://provost.vcu.edu/faculty/faculty-resources/syllabus/#statements>*
 
 

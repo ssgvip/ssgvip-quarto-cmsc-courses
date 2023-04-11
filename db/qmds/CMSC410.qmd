@@ -11,12 +11,18 @@ format:
 Semester course; 3 lecture hours. 3 credits. Prerequisites: CMSC 401 and MATH 310, both with a minimum grade of B. Introduction to quantum information processing: state vectors and density operators, tensor product space, unitary evolution, no-go theorems, measurement, qubit, gate model of quantum computing, quantum complexity theory, quantum error correction, quantum algorithms, and quantum machine learning.
 
 
-## Restrictions
+## Restrictions; any pre- or co-requisities
  
 CMSC 401 and MATH 310, both with a minimum grade of B.
 
 ## Description
 
 Introduction to quantum information processing: state vectors and density operators, tensor product space, unitary evolution, no-go theorems, measurement, qubit, gate model of quantum computing, quantum complexity theory, quantum error correction, quantum algorithms, and quantum machine learning.
+
+## Syllabus Statements
+
+Students should visit the URL below and review all syllabus statement information. The full university syllabus statement includes information on safety, registration, the VCU Honor Code, student conduct, withdrawal and more.
+
+*<https://provost.vcu.edu/faculty/faculty-resources/syllabus/#statements>*
 
 
