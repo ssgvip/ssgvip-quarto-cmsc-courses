@@ -11,7 +11,8 @@ into a [google
 sheet](https://docs.google.com/spreadsheets/d/1qrN3L7eRLsM-aVMHYaLQN-FMYtrTJf0_h6dLKlUdPkk/edit#gid=107368023)
 and signficantly cleaned.
 
-Two tabs are significant in the google sheet:
+Two tabs are significant in the [google
+sheet](https://docs.google.com/spreadsheets/d/1qrN3L7eRLsM-aVMHYaLQN-FMYtrTJf0_h6dLKlUdPkk/edit#gid=107368023):
 
 1.  [CMSC-course-data](https://docs.google.com/spreadsheets/d/1qrN3L7eRLsM-aVMHYaLQN-FMYtrTJf0_h6dLKlUdPkk/edit#gid=107368023):
     This tab contains one record per course found in the [VCU
@@ -30,7 +31,7 @@ Two tabs are significant in the google sheet:
     -   from the course topic outline found in their Spring 2023 course
         syllabus.
 
-Not every instructure included a custom course description or topical
+Not every instructor included a custom course description or topical
 outline in their Spring 2023 syllabus. In general the topics are all
 treated as comparable, but they are distinquishable using the *Source*
 column in the topics tab, so we can analysis their differences.

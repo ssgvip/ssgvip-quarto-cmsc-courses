@@ -704,7 +704,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <p><a href="https://quarto.org">Quarto</a> is used to build this web site.</p>
 <p>A list of CMSC courses was downloaded from the <a href="http://bulletin.vcu.edu/azcourses/cmsc/">campus bulletin</a>. The list was stored into a <a href="https://docs.google.com/spreadsheets/d/1qrN3L7eRLsM-aVMHYaLQN-FMYtrTJf0_h6dLKlUdPkk/edit#gid=107368023">google sheet</a> and signficantly cleaned.</p>
-<p>Two tabs are significant in the google sheet:</p>
+<p>Two tabs are significant in the <a href="https://docs.google.com/spreadsheets/d/1qrN3L7eRLsM-aVMHYaLQN-FMYtrTJf0_h6dLKlUdPkk/edit#gid=107368023">google sheet</a>:</p>
 <ol type="1">
 <li><p><a href="https://docs.google.com/spreadsheets/d/1qrN3L7eRLsM-aVMHYaLQN-FMYtrTJf0_h6dLKlUdPkk/edit#gid=107368023">CMSC-course-data</a>: This tab contains one record per course found in the <a href="http://bulletin.vcu.edu/azcourses/cmsc/">VCU Bulletin/online catalog</a>. These are CMSC classes <em>on the books</em> and not necessarily taught regularly, or even taught at all.</p></li>
 <li><p><a href="https://docs.google.com/spreadsheets/d/1qrN3L7eRLsM-aVMHYaLQN-FMYtrTJf0_h6dLKlUdPkk/edit#gid=338318647">CMSC-course-topics</a>: This tab contains one record per topic per course. The first column is the CourseID and then there are one or more topics on successive rows. Topics were pulled from several different sources:</p>
@@ -714,7 +714,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>from the course topic outline found in their Spring 2023 course syllabus.</li>
 </ul></li>
 </ol>
-<p>Not every instructure included a custom course description or topical outline in their Spring 2023 syllabus. In general the topics are all treated as comparable, but they are distinquishable using the <em>Source</em> column in the topics tab, so we can analysis their differences.</p>
+<p>Not every instructor included a custom course description or topical outline in their Spring 2023 syllabus. In general the topics are all treated as comparable, but they are distinquishable using the <em>Source</em> column in the topics tab, so we can analysis their differences.</p>
 <p>The code in the sections below below generates this website using the course data in the google sheet. The construction of the web site is a 2-step process:</p>
 <ol type="1">
 <li><p>Build a quarto website template using data stored in the database. This includes building:</p>

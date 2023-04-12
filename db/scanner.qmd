@@ -9,7 +9,7 @@ format:
 
 A list of CMSC courses was downloaded from the [campus bulletin](http://bulletin.vcu.edu/azcourses/cmsc/). The list was stored into a [google sheet](https://docs.google.com/spreadsheets/d/1qrN3L7eRLsM-aVMHYaLQN-FMYtrTJf0_h6dLKlUdPkk/edit#gid=107368023) and signficantly cleaned.
 
-Two tabs are significant in the google sheet:
+Two tabs are significant in the [google sheet](https://docs.google.com/spreadsheets/d/1qrN3L7eRLsM-aVMHYaLQN-FMYtrTJf0_h6dLKlUdPkk/edit#gid=107368023):
 
 1. [CMSC-course-data](https://docs.google.com/spreadsheets/d/1qrN3L7eRLsM-aVMHYaLQN-FMYtrTJf0_h6dLKlUdPkk/edit#gid=107368023): This tab contains one record per course found in the [VCU Bulletin/online catalog](http://bulletin.vcu.edu/azcourses/cmsc/). These are CMSC classes *on the books* and not necessarily taught regularly, or even taught at all.
 
@@ -19,7 +19,7 @@ Two tabs are significant in the google sheet:
     * From the instructors course description in their Spring 2023 syllabus, and
     * from the course topic outline found in their Spring 2023 course syllabus.
 
-Not every instructure included a custom course description or topical outline in their Spring 2023 syllabus. In general the topics are all treated as comparable, but they are distinquishable using the *Source* column in the topics tab, so we can analysis their differences.
+Not every instructor included a custom course description or topical outline in their Spring 2023 syllabus. In general the topics are all treated as comparable, but they are distinquishable using the *Source* column in the topics tab, so we can analysis their differences.
 
 The code in the sections below below generates this website using the course data in the google sheet. The construction of the web site is a 2-step process:
 
