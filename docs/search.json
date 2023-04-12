@@ -3455,14 +3455,14 @@
     "href": "scanner.html",
     "title": "Building this web site",
     "section": "",
-    "text": "Quarto is used to build this web site.\nA list of CMSC courses was downloaded from the campus bulletin. The list was stored into a google sheet and signficantly cleaned.\nThe code in the sections below below generates this website using the course data in the google sheet."
+    "text": "Quarto is used to build this web site.\nA list of CMSC courses was downloaded from the campus bulletin. The list was stored into a google sheet and signficantly cleaned.\nTwo tabs are significant in the google sheet:\nNot every instructure included a custom course description or topical outline in their Spring 2023 syllabus. In general the topics are all treated as comparable, but they are distinquishable using the Source column in the topics tab, so we can analysis their differences.\nThe code in the sections below below generates this website using the course data in the google sheet. The construction of the web site is a 2-step process:\nThis website is posted using github pages. The site is rendered to the /docs folder within the github repo. GITHUB create a corresponding web site on github.io.\nThe code sections below demonstrate how quarto can leverage google sheets to generate and publish a static website."
   },
   {
-    "objectID": "scanner.html#a-list-of-columns-in-the-cmsc-course-tab",
-    "href": "scanner.html#a-list-of-columns-in-the-cmsc-course-tab",
+    "objectID": "scanner.html#a-list-of-columns-in-the-cmsc-course-data-tab",
+    "href": "scanner.html#a-list-of-columns-in-the-cmsc-course-data-tab",
     "title": "Building this web site",
-    "section": "a list of columns in the CMSC-Course tab",
-    "text": "a list of columns in the CMSC-Course tab\n\n\nHere is a list of columns:‘Subject’, ‘Number’, ‘CourseId’, ‘idx’, ‘Title’, ‘Hours’, ‘Catalog’, ‘Catalog Description’, ‘Restrictions’, ‘Isolated Description’."
+    "section": "a list of columns in the CMSC-course-data tab",
+    "text": "a list of columns in the CMSC-course-data tab\n\n\nHere is a list of columns:‘Subject’, ‘Number’, ‘CourseId’, ‘idx’, ‘Title’, ‘Hours’, ‘foc’, ‘bscs’, ‘bscs-cyber’, ‘bscs-data’, ‘bscs-sftengr’, ‘Catalog’, ‘Catalog Description’, ‘Restrictions’, ‘Isolated Description’."
   },
   {
     "objectID": "scanner.html#cmsc-courses-in-the-bulletin",
