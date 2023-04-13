@@ -53,6 +53,17 @@ Semester course. 3 hours.
 **Topics:** calling functions, conditional execution, control structures, critical thinking, debugging, dictionaries, expressions, files, flow charting, lists, loops and iterations, network programming, problem solving, program design, programming logic, pseudocode, regular expressions, repetition, sequencing, statement, strings, structured programming, tuples, variables, writing functions
 
 
+## [CMSC 235 - Computing and Data Ethics](CMSC235.qmd)
+
+Semester course. 3 hours.
+
+**Restrictions:** (none)
+
+**Description:** Introduction to ethical considerations for computing and working with data, legal implications surrounding data and computational systems, and sociotechnical responsibilities.
+
+**Topics:** ethics, Legal implications, sociotechnical responsibilities
+
+
 ## [CMSC 245 - Introduction to Programming Using C++](CMSC245.qmd)
 
 Semester course. 3 hours.

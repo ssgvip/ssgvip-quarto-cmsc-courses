@@ -1,0 +1,32 @@
+---
+title: "CMSC 235 - Computing and Data Ethics"
+date: last-modified
+format:
+  html:
+    toc: true
+---
+
+## Catalog Description
+
+Semester course; 3 lecture hours. 3 credits. Introduction to ethical considerations for computing and working with data, legal implications surrounding data and computational systems, and sociotechnical responsibilities.
+
+
+## Restrictions including pre- or co-requisities
+ 
+(none)
+
+## Description
+
+Introduction to ethical considerations for computing and working with data, legal implications surrounding data and computational systems, and sociotechnical responsibilities.
+
+## Topics
+
+ethics, Legal implications, sociotechnical responsibilities
+
+## Syllabus Statements
+
+Students should visit the URL below and review all syllabus statement information. The full university syllabus statement includes information on safety, registration, the VCU Honor Code, student conduct, withdrawal and more.
+
+*<https://provost.vcu.edu/faculty/faculty-resources/syllabus/#statements>*
+
+

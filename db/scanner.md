@@ -150,8 +150,8 @@ topics_df["CourseId"] = topics_df["CourseId"].apply( str.strip )
 ::: {.cell-output .cell-output-display}
 Here is a list of columns:`<br/>`{=html}'Subject', 'Number', 'CourseId',
 'idx', 'Title', 'Hours', 'foc', 'bscs', 'bscs-cyber', 'bscs-data',
-'bscs-sftengr', 'Catalog', 'Catalog Description', 'Restrictions',
-'Isolated Description'.
+'bscs-sftengr', 'postbac', 'Catalog', 'Catalog Description',
+'Restrictions', 'Isolated Description'.
 :::
 :::
 
@@ -160,7 +160,7 @@ Here is a list of columns:`<br/>`{=html}'Subject', 'Number', 'CourseId',
 ::: {.cell execution_count="5"}
 ::: {.cell-output .cell-output-display}
 [Table 1](#tbl-table1) presents a list of CMSC courses in the bulletin.
-There are 82 courses in the bulletin.
+There are 83 courses in the bulletin.
 :::
 
 ::: {.cell-output .cell-output-display}
@@ -171,6 +171,7 @@ There are 82 courses in the bulletin.
   CMSC 144   Code Beats With Python
   CMSC 191   Topics in Computer Science
   CMSC 210   Computers and Programming
+  CMSC 235   Computing and Data Ethics
   CMSC 245   Introduction to Programming Using C++
   CMSC 246   Advanced Programming Using C++
   CMSC 254   Introduction to Problem-solving

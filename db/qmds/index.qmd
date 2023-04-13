@@ -8,6 +8,7 @@ Course                    Title
 [CMSC 144](CMSC144.html)  [Code Beats With Python](CMSC144.html)
 [CMSC 191](CMSC191.html)  [Topics in Computer Science](CMSC191.html)
 [CMSC 210](CMSC210.html)  [Computers and Programming](CMSC210.html)
+[CMSC 235](CMSC235.html)  [Computing and Data Ethics](CMSC235.html)
 [CMSC 245](CMSC245.html)  [Introduction to Programming Using C++](CMSC245.html)
 [CMSC 246](CMSC246.html)  [Advanced Programming Using C++](CMSC246.html)
 [CMSC 254](CMSC254.html)  [Introduction to Problem-solving](CMSC254.html)

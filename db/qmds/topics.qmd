@@ -5,6 +5,7 @@ date: last-modified
 Adjusted Topic                               Course
 -------------------------------------------  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 3d robotic vision                            <a href='CMSC531.qmd'>CMSC 531</a>
+Legal implications                           <a href='CMSC235.qmd'>CMSC 235</a>
 abstract complexity                          <a href='CMSC256.qmd'>CMSC 256</a>, <a href='CMSC612.qmd'>CMSC 612</a>
 access control                               <a href='CMSC622.qmd'>CMSC 622</a>
 addressing modes                             <a href='CMSC311.qmd'>CMSC 311</a>
@@ -156,7 +157,7 @@ equilibrium concepts                         <a href='CMSC612.qmd'>CMSC 612</a>
 error control                                <a href='CMSC506.qmd'>CMSC 506</a>
 etherum                                      <a href='CMSC615.qmd'>CMSC 615</a>
 ethical aspects of technology                <a href='CMSC101.qmd'>CMSC 101</a>
-ethics                                       <a href='CMSC340.qmd'>CMSC 340</a>, <a href='CMSC451.qmd'>CMSC 451</a>
+ethics                                       <a href='CMSC235.qmd'>CMSC 235</a>, <a href='CMSC340.qmd'>CMSC 340</a>, <a href='CMSC451.qmd'>CMSC 451</a>
 evaluation                                   <a href='CMSC628.qmd'>CMSC 628</a>
 exceptions                                   <a href='CMSC256.qmd'>CMSC 256</a>
 expert systems                               <a href='CMSC409.qmd'>CMSC 409</a>
@@ -401,6 +402,7 @@ simple data types                            <a href='CMSC255.qmd'>CMSC 255</a>
 small world phenomenon                       <a href='CMSC412.qmd'>CMSC 412</a>
 social aspects of technology                 <a href='CMSC101.qmd'>CMSC 101</a>, <a href='CMSC451.qmd'>CMSC 451</a>, <a href='CMSC452.qmd'>CMSC 452</a>
 social network                               <a href='CMSC512.qmd'>CMSC 512</a>
+sociotechnical responsibilities              <a href='CMSC235.qmd'>CMSC 235</a>
 socket programming                           <a href='CMSC440.qmd'>CMSC 440</a>
 software architecture                        <a href='CMSC355.qmd'>CMSC 355</a>
 software design                              <a href='CMSC355.qmd'>CMSC 355</a>

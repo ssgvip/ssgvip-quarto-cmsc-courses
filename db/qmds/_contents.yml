@@ -15,6 +15,8 @@ website:
       contents:
         - href: CMSC210.qmd
           text: CMSC 210
+        - href: CMSC235.qmd
+          text: CMSC 235
         - href: CMSC245.qmd
           text: CMSC 245
         - href: CMSC246.qmd
