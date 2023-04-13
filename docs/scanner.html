@@ -6,6 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2023-04-12">
 
 <title>CMSC Courses - Building this web site</title>
 <style>
@@ -147,8 +148,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
  <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./listing.html">
- <span class="menu-text">Courses</span></a>
+    <a class="nav-link" href="./catalog.html">
+ <span class="menu-text">Catalog</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./topics.html">
@@ -677,7 +678,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <li><a href="#generating-individual-course-qmd-files" id="toc-generating-individual-course-qmd-files" class="nav-link" data-scroll-target="#generating-individual-course-qmd-files">Generating individual course QMD files</a></li>
   <li><a href="#autogenerating-left-menu-bar-in-contents.yml" id="toc-autogenerating-left-menu-bar-in-contents.yml" class="nav-link" data-scroll-target="#autogenerating-left-menu-bar-in-contents.yml">Autogenerating left menu bar in <em>contents.yml</em></a></li>
   <li><a href="#autogenerating-index.qmd" id="toc-autogenerating-index.qmd" class="nav-link" data-scroll-target="#autogenerating-index.qmd">Autogenerating <em>index.qmd</em></a></li>
-  <li><a href="#autogenerating-listing.qmd" id="toc-autogenerating-listing.qmd" class="nav-link" data-scroll-target="#autogenerating-listing.qmd">Autogenerating <em>listing.qmd</em></a></li>
+  <li><a href="#autogenerating-catalog.qmd" id="toc-autogenerating-catalog.qmd" class="nav-link" data-scroll-target="#autogenerating-catalog.qmd">Autogenerating <em>catalog.qmd</em></a></li>
   <li><a href="#autogenerating-topics.qmd" id="toc-autogenerating-topics.qmd" class="nav-link" data-scroll-target="#autogenerating-topics.qmd">Autogenerating <em>topics.qmd</em></a></li>
   </ul>
 </nav>
@@ -695,6 +696,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="quarto-title-meta">
 
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">April 12, 2023</p>
+    </div>
+  </div>
   
     
   </div>
@@ -1280,8 +1287,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>  <span class="bu">file</span>.close()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="autogenerating-listing.qmd" class="level1">
-<h1>Autogenerating <em>listing.qmd</em></h1>
+<section id="autogenerating-catalog.qmd" class="level1">
+<h1>Autogenerating <em>catalog.qmd</em></h1>
 <div class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> showTopics( courseId ):</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  topics <span class="op">=</span> topics_df[ topics_df[<span class="st">"CourseId"</span>].<span class="bu">str</span>.contains(courseId[<span class="dv">5</span>:]) <span class="op">&amp;</span> topics_df[<span class="st">"CourseId"</span>].<span class="bu">str</span>.contains(courseId[:<span class="dv">4</span>]) ]</span>
@@ -1308,19 +1315,22 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a><span class="ss">"""</span></span>
 <span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a>filename <span class="op">=</span> <span class="st">"qmds/listing.qmd"</span></span>
+<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a>filename <span class="op">=</span> <span class="st">"qmds/catalog.qmd"</span></span>
 <span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(filename, <span class="st">'w'</span>,encoding<span class="op">=</span><span class="st">"utf-8"</span>) <span class="im">as</span> <span class="bu">file</span>:</span>
 <span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a>  <span class="bu">file</span>.write(<span class="ss">f"""---</span></span>
-<span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a><span class="ss">title: "Full Listing of CMSC Courses and Titles"</span></span>
+<span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a><span class="ss">title: "Catalog of CMSC Courses and Titles"</span></span>
 <span id="cb6-30"><a href="#cb6-30" aria-hidden="true" tabindex="-1"></a><span class="ss">date: last-modified</span></span>
 <span id="cb6-31"><a href="#cb6-31" aria-hidden="true" tabindex="-1"></a><span class="ss">format:</span></span>
 <span id="cb6-32"><a href="#cb6-32" aria-hidden="true" tabindex="-1"></a><span class="ss">  html:</span></span>
 <span id="cb6-33"><a href="#cb6-33" aria-hidden="true" tabindex="-1"></a><span class="ss">    toc: False</span></span>
 <span id="cb6-34"><a href="#cb6-34" aria-hidden="true" tabindex="-1"></a><span class="ss">---</span></span>
-<span id="cb6-35"><a href="#cb6-35" aria-hidden="true" tabindex="-1"></a><span class="ss">"""</span> )</span>
-<span id="cb6-36"><a href="#cb6-36" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-37"><a href="#cb6-37" aria-hidden="true" tabindex="-1"></a>  <span class="bu">file</span>.write(block)</span>
-<span id="cb6-38"><a href="#cb6-38" aria-hidden="true" tabindex="-1"></a>  <span class="bu">file</span>.close()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb6-35"><a href="#cb6-35" aria-hidden="true" tabindex="-1"></a><span class="ss">The following a complete catalog of CMSC courses listed in the VCU 2022-2023 Catalog. Not all courses</span></span>
+<span id="cb6-36"><a href="#cb6-36" aria-hidden="true" tabindex="-1"></a><span class="ss">are offered on a regular basis.</span></span>
+<span id="cb6-37"><a href="#cb6-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-38"><a href="#cb6-38" aria-hidden="true" tabindex="-1"></a><span class="ss">"""</span> )</span>
+<span id="cb6-39"><a href="#cb6-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-40"><a href="#cb6-40" aria-hidden="true" tabindex="-1"></a>  <span class="bu">file</span>.write(block)</span>
+<span id="cb6-41"><a href="#cb6-41" aria-hidden="true" tabindex="-1"></a>  <span class="bu">file</span>.close()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="autogenerating-topics.qmd" class="level1">

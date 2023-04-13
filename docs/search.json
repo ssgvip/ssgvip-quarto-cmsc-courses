@@ -1,5 +1,586 @@
 [
   {
+    "objectID": "catalog.html",
+    "href": "catalog.html",
+    "title": "Catalog of CMSC Courses and Titles",
+    "section": "",
+    "text": "The following a complete catalog of CMSC courses listed in the VCU 2022-2023 Catalog. Not all courses are offered on a regular basis."
+  },
+  {
+    "objectID": "catalog.html#cmsc-101---introduction-to-computer-science",
+    "href": "catalog.html#cmsc-101---introduction-to-computer-science",
+    "title": "Catalog of CMSC Courses and Titles",
+    "section": "CMSC 101 - Introduction to Computer Science",
+    "text": "CMSC 101 - Introduction to Computer Science\nSemester course. 3 hours.\nRestrictions: MATH 139 or MATH 141 with a minimum grade of C.\nDescription: An introduction to the work of computer scientists, including an overview of current research and application areas as well as career opportunities. Topics include problem-solving, the basics of computer organization, the software engineering life cycle, research resources and social and ethical aspects of technology. Additional topics also include binary, hexadecimal, two’s complement, floating point representation, ASCII and Unicode.\nTopics: ascii, basics of computer organiation, ethical aspects of technology, numeric representation, problem solving, research resources, social aspects of technology, software engineering life cycle, unicode"
+  },
+  {
+    "objectID": "catalog.html#cmsc-144---code-beats-with-python",
+    "href": "catalog.html#cmsc-144---code-beats-with-python",
+    "title": "Catalog of CMSC Courses and Titles",
+    "section": "CMSC 144 - Code Beats With Python",
+    "text": "CMSC 144 - Code Beats With Python\nSemester course. 1 hour.\nRestrictions: (none)\nDescription: An introduction to computer programming in Python by teaching students to create hip hop beats. Teaches fundamental programming concepts including sequencing, syntax, variables, functions, parameters, lists, repetition and modularization. Teaches just enough music theory to ensure that student-made beats sound great, including fundamental concepts such as melody, rhythm, harmony, chord progression and orchestration. Students will complete in-class activities that reinforce class concepts and, if completed correctly, demonstrate a clear understanding of the material.\nTopics: chord progression, functions, harmony, lists, melody, modularization, orchestration, parameters, repetition, rhytum, sequencing, syntax, variables"
+  },
+  {
+    "objectID": "catalog.html#cmsc-191---topics-in-computer-science",
+    "href": "catalog.html#cmsc-191---topics-in-computer-science",
+    "title": "Catalog of CMSC Courses and Titles",
+    "section": "CMSC 191 - Topics in Computer Science",
+    "text": "CMSC 191 - Topics in Computer Science\nSemester course. 3 hours.\nRestrictions: permission of the instructor.\nDescription: This course will teach selected topics in computer science. See the Schedule of Classes for specific topics to be offered each semester and prerequisites.\nTopics: selected topics"
+  },
+  {
+    "objectID": "catalog.html#cmsc-210---computers-and-programming",
+    "href": "catalog.html#cmsc-210---computers-and-programming",
+    "title": "Catalog of CMSC Courses and Titles",
+    "section": "CMSC 210 - Computers and Programming",
+    "text": "CMSC 210 - Computers and Programming\nSemester course. 3 hours.\nRestrictions: (none)\nDescription: Introduction to object-oriented programming using Python. The course introduces students to structured programming logic and design techniques. The course content also includes instruction in critical thinking and problem-solving skills using contemporary tools. Specific topics include flowcharting, pseudocode and program control structures, including sequence, selection and repetition. This course is not applicable for credit toward the BS in Computer Science.\nTopics: calling functions, conditional execution, control structures, critical thinking, debugging, dictionaries, expressions, files, flow charting, lists, loops and iterations, network programming, problem solving, program design, programming logic, pseudocode, regular expressions, repetition, sequencing, statement, strings, structured programming, tuples, variables, writing functions"
+  },
+  {
+    "objectID": "catalog.html#cmsc-245---introduction-to-programming-using-c",
+    "href": "catalog.html#cmsc-245---introduction-to-programming-using-c",
+    "title": "Catalog of CMSC Courses and Titles",
+    "section": "CMSC 245 - Introduction to Programming Using C++",
+    "text": "CMSC 245 - Introduction to Programming Using C++\nSemester course. 3 hours.\nRestrictions: MATH 151 or satisfactory score on the Mathematical Placement Test. Students registering for CMSC 245 must have taken the VCU Mathematics Placement Test within the one-year period immediately preceding the beginning of the course. An exception to this policy is made in the case in which the stated alternative prerequisite course has been completed at VCU. Students are expected to have fundamental computer skills.\nDescription: Introduction to the concepts and practice of structured programming using C++. Problem-solving, top-down design of algorithms, objects, basic C++ syntax, control structures, functions and arrays. This course is intended for engineering majors.\nTopics: arrays, c++ syntax, control structures, functions, problem solving, top down design"
+  },
+  {
+    "objectID": "catalog.html#cmsc-246---advanced-programming-using-c",
+    "href": "catalog.html#cmsc-246---advanced-programming-using-c",
+    "title": "Catalog of CMSC Courses and Titles",
+    "section": "CMSC 246 - Advanced Programming Using C++",
+    "text": "CMSC 246 - Advanced Programming Using C++\nSemester course. 3 hours.\nRestrictions: CMSC 245.\nDescription: Advanced programming in C++. Topics include program design, objects, classes, inheritance, files, strings, linked lists, stacks, queues, binary trees, recursion, and basic searching and sorting techniques. This course is intended for engineering majors.\nTopics: basic searching, basic sorting, binary trees, classes, files, inheritance, linked lists, objects, program design, queues, recursion, stacks, strings"
+  },
+  {
+    "objectID": "catalog.html#cmsc-254---introduction-to-problem-solving",
+    "href": "catalog.html#cmsc-254---introduction-to-problem-solving",
+    "title": "Catalog of CMSC Courses and Titles",
+    "section": "CMSC 254 - Introduction to Problem-solving",
+    "text": "CMSC 254 - Introduction to Problem-solving\nSemester course. 4 hours.\nRestrictions: (none)\nDescription: Introduction to problem solving and implementation of solutions using Python. The course introduces students to concepts and practice of structured programming, problem-solving, top-down design of algorithms, a Python language syntax, control structures and arrays. The course content also includes instruction in critical-thinking and problem-solving skills using contemporary tools. Specific topics include flowcharting, pseudocode and program control structures, including sequence, selection, repetition and modularization.\nTopics: analysis, arrays, basic concepts of computer systems, control structures, critical thinking, data, decision structures, dictionaries, flow charting, functions, lists, modeling, modularization, problem solving, processing code, programming, pseudocode, python syntax, repetition, repetition structures, selection, sequencing, sequential data structures, structured programming, structures, top down design, tuples"
+  },
+  {
+    "objectID": "catalog.html#cmsc-255---introduction-to-programming",
+    "href": "catalog.html#cmsc-255---introduction-to-programming",
+    "title": "Catalog of CMSC Courses and Titles",
+    "section": "CMSC 255 - Introduction to Programming",
+    "text": "CMSC 255 - Introduction to Programming\nSemester course. 4 hours.\nRestrictions: calculus-level placement on the VCU Mathematics Placement Test within the one-year period immediately preceding enrollment in the course, or MATH 151 or equivalent. Students are expected to have fundamental computer skills.\nDescription: Introduction to object-oriented programming using Java. Topics include problem-solving, top-down design of algorithms using control structures, methods, arrays, basic I/O, basic concepts of objects and classes in Java, Java classes for manipulating strings, and introduction to program testing, UML notation and integrated development environments. Students may not receive credit for both CMSC 255 and INFO 250.\nTopics: algorithms, arrays, arrays, input/output, classes, computers, computers, control structures, control structures, ide, java, methods, objects, problem solving, problem solving, program testing, simple data types, strings, syntax, top down design, uml"
+  },
+  {
+    "objectID": "catalog.html#cmsc-256---data-structures-and-object-oriented-programming",
+    "href": "catalog.html#cmsc-256---data-structures-and-object-oriented-programming",
+    "title": "Catalog of CMSC Courses and Titles",
+    "section": "CMSC 256 - Data Structures and Object Oriented Programming",
+    "text": "CMSC 256 - Data Structures and Object Oriented Programming\nSemester course. 4 hours.\nRestrictions: CMSC 255 with a minimum grade of C; corequisite: CMSC 302.\nDescription: Advanced programming using Java. Topics include introduction to object-oriented design, inheritance, polymorphism, exceptions, interfaces, linked lists, stacks, queues, binary trees, recursion, and basic searching and sorting techniques. Continued focus on program testing and UML notation. Students may not receive credit for both CMSC 256 and INFO 350.\nTopics: abstract complexity, algorithms, algorithms, basic searching, binary trees, classes, data structures, deques, exceptions, generics, graphs, hash functions, inheritance, interfaces, interfaces, iterators, linked lists, linked lists, lists, object oriented programming, objects, polymorphism, queues, queues, recursion, recursion, sorting, sorting, stacks, stacks, trees, uml"
+  },
+  {
+    "objectID": "catalog.html#cmsc-257---computer-systems",
+    "href": "catalog.html#cmsc-257---computer-systems",
+    "title": "Catalog of CMSC Courses and Titles",
+    "section": "CMSC 257 - Computer Systems",
+    "text": "CMSC 257 - Computer Systems\nSemester course. 4 hours.\nRestrictions: CMSC 256 with a minimum grade of C.\nDescription: Topics include UNIX essentials; system programming in C; machine-level representation and organization of programs/data, arrays and pointers; types, structs and unions; strings; bit/byte operations; memory management; shell programming; input/output, including file handling; debugging; signals; network programming using sockets; program concurrency using forks and threads; experiments on program performance and optimization techniques.\nTopics: arrays, bit/bye operations, debugging, files, forks and threads, input/output, machine-level representation, memory management, network programming using sockets, optimization, pointers, program performance, programming in c, shell programming, signals, types, structs, and unions"
+  },
+  {
+    "objectID": "catalog.html#cmsc-302---introduction-to-discrete-structures",
+    "href": "catalog.html#cmsc-302---introduction-to-discrete-structures",
+    "title": "Catalog of CMSC Courses and Titles",
+    "section": "CMSC 302 - Introduction to Discrete Structures",
+    "text": "CMSC 302 - Introduction to Discrete Structures\nSemester course. 3 hours.\nRestrictions: CMSC 255 with minimum grade of C.\nDescription: Logic and proofs, sets, functions, sequences and sums, relations, graphs, trees, induction and recursion, advanced counting technique (recurrences).\nTopics: algebra, counting, functions, functions, graphs, graphs, induction, logic, logic, matrices, probability, proofs, proofs, recurrences, recurrences, recursion, relations, relations, sequences, sequencing, set theory, sets, summations, sums, trees, trees"
+  },
+  {
+    "objectID": "catalog.html#cmsc-303---introduction-to-the-theory-of-computation",
+    "href": "catalog.html#cmsc-303---introduction-to-the-theory-of-computation",
+    "title": "Catalog of CMSC Courses and Titles",
+    "section": "CMSC 303 - Introduction to the Theory of Computation",
+    "text": "CMSC 303 - Introduction to the Theory of Computation\nSemester course. 3 hours.\nRestrictions: CMSC 302 or the equivalent with a grade of C or better.\nDescription: Complexity classes, grammars, automata, formal languages, Turing machines, computability.\nTopics: automata, complexity analysis, computability theory, context-free grammars, discrete math, finite automata, logic, pushdown automata, regular expressions, turing machines"
+  },
+  {
+    "objectID": "catalog.html#cmsc-311---computer-organization",
+    "href": "catalog.html#cmsc-311---computer-organization",
+    "title": "Catalog of CMSC Courses and Titles",
+    "section": "CMSC 311 - Computer Organization",
+    "text": "CMSC 311 - Computer Organization\nSemester course. 3 hours.\nRestrictions: CMSC 302 with minimum grade of C; corequisite: CMSC 257.\nDescription: Introduction to the basic organization of computers including elementary digital logic design, processor and arithmetic/logic unit design, data paths, memory hierarchy, I/O devices, instruction set architecture and addressing modes.\nTopics: addressing modes, architecture, assembly language, cache memories, computers, data, data paths, data types, digital logic structures, input/output, input/output, instruction set architecture, instruction set architecture, logic, machine language, memory hierarchy, memory hierarchy, organization, stacks, trap routines, trap subroutines, unit design, virtual memory, von neumann model"
+  },
+  {
+    "objectID": "catalog.html#cmsc-312---introduction-to-operating-systems",
+    "href": "catalog.html#cmsc-312---introduction-to-operating-systems",
+    "title": "Catalog of CMSC Courses and Titles",
+    "section": "CMSC 312 - Introduction to Operating Systems",
+    "text": "CMSC 312 - Introduction to Operating Systems\nSemester course. 3 hours.\nRestrictions: CMSC 311 or EGRE 364.\nDescription: Computer systems design, I/O processing, secondary memory organization, command languages, memory management and job scheduling. Students will work in teams to design and implement an operating system simulation.\nTopics: command languages, computer systems design, concurrency, debugging, distributed systems, file management, input/output, job scheduling, memory management, memory management, operating systems, process scheduling, secondary memory"
+  },
+  {
+    "objectID": "catalog.html#cmsc-320---software-engineering-and-web-development",
+    "href": "catalog.html#cmsc-320---software-engineering-and-web-development",
+    "title": "Catalog of CMSC Courses and Titles",
+    "section": "CMSC 320 - Software Engineering and Web Development",
+    "text": "CMSC 320 - Software Engineering and Web Development\nSemester course. 3 hours.\nRestrictions: CMSC 210.\nDescription: Introduction to software engineering and web development. The course introduces students to the software development process, including design, development and testing principles. Students will apply these principles in the development of a web application. This course is not applicable for credit toward any College of Engineering degrees.\nTopics: design, development, documentation, gathering, software development, systems development, testing, testing functionality, web development, web development"
+  },
+  {
+    "objectID": "catalog.html#cmsc-330---data-science-skills",
+    "href": "catalog.html#cmsc-330---data-science-skills",
+    "title": "Catalog of CMSC Courses and Titles",
+    "section": "CMSC 330 - Data Science Skills",
+    "text": "CMSC 330 - Data Science Skills\nSemester course. 3 hours.\nRestrictions: CMSC 210.\nDescription: Introduction to data science skills. The course introduces students to the foundations of data science and the tools used to collect, analyze and represent data. Students will apply these principles in both analysis and visualization projects. This course is not applicable for credit toward any College of Engineering degrees.\nTopics: analysis, analysis, data, data, data management, data manipulation, data quality, security, visualization, visualization"
+  },
+  {
+    "objectID": "catalog.html#cmsc-340---cybersecurity-skills",
+    "href": "catalog.html#cmsc-340---cybersecurity-skills",
+    "title": "Catalog of CMSC Courses and Titles",
+    "section": "CMSC 340 - Cybersecurity Skills",
+    "text": "CMSC 340 - Cybersecurity Skills\nSemester course. 3 hours.\nRestrictions: CMSC 210.\nDescription: Introduction to cybersecurity skills. The course introduces students to cybersecurity terminology, standards and best practices. Students will apply these practices as part of a cybersecurity-focused project. This course is not applicable for credit toward any College of Engineering degrees.\nTopics: cryptographic systems, cybersecurity, ethics, firewalls, information security, logic, physical security, risk management, security, security maintenance, security technology, vpns"
+  },
+  {
+    "objectID": "catalog.html#cmsc-355---fundamentals-of-software-engineering",
+    "href": "catalog.html#cmsc-355---fundamentals-of-software-engineering",
+    "title": "Catalog of CMSC Courses and Titles",
+    "section": "CMSC 355 - Fundamentals of Software Engineering",
+    "text": "CMSC 355 - Fundamentals of Software Engineering\nSemester course. 3 hours.\nRestrictions: CMSC 256 or EGRE 246, either with a minimum grade of C.\nDescription: Provides an overview of how to engineer software systems, including all stages of the software development process based on agile principles. Familiarizes students with modern software tooling and the principles of software quality and testing. Students will work in teams to gain experience in software development methodology, write specification and design documents, and develop a prototype.\nTopics: agile, agile, ci/cd, code management, containerization, ci/cd, design, github, patterns, prototyping, requirement engineering, serverless coding, service oriented design techniques, software architecture, software design, software development, software development, software lifecycle, software maintenance, software modeling, software quality, software validation, software verification, testing"
+  },
+  {
+    "objectID": "catalog.html#cmsc-391---topics-in-computer-science",
+    "href": "catalog.html#cmsc-391---topics-in-computer-science",
+    "title": "Catalog of CMSC Courses and Titles",
+    "section": "CMSC 391 - Topics in Computer Science",
+    "text": "CMSC 391 - Topics in Computer Science\nSemester course. 3 hours.\nRestrictions: permission of the instructor.\nDescription: This course will teach selected topics in computer science. See the Schedule of Classes for specific topics to be offered each semester and prerequisites.\nTopics: selected topics"
+  },
+  {
+    "objectID": "catalog.html#cmsc-401---algorithm-analysis-with-advanced-data-structures",
+    "href": "catalog.html#cmsc-401---algorithm-analysis-with-advanced-data-structures",
+    "title": "Catalog of CMSC Courses and Titles",
+    "section": "CMSC 401 - Algorithm Analysis with Advanced Data Structures",
+    "text": "CMSC 401 - Algorithm Analysis with Advanced Data Structures\nSemester course. 3 hours.\nRestrictions: CMSC 256 with a grade of C or better and CMSC 302 with a grade of C or better.\nDescription: Introduction to algorithm analysis and complexity classes. Advanced data structures topics including multiple linked lists, height-balanced trees, B-trees, hashing and graph representation; incorporating data structures into object-oriented design. Analysis of various searching and sorting algorithms. Algorithm design topics include divide-and-conquer, dynamic programming and greedy methods.\nTopics: algorithms, algorithms, analysis, b-trees, complexity analysis, data structures, data structures, data structures, design, divide and conquer approach, dynamic programming, graph algorithms, graphs, greedy approach, hashing, height-balanced trees, linked lists, objects, recurrences, sorting, sorting"
+  },
+  {
+    "objectID": "catalog.html#cmsc-403---programming-languages",
+    "href": "catalog.html#cmsc-403---programming-languages",
+    "title": "Catalog of CMSC Courses and Titles",
+    "section": "CMSC 403 - Programming Languages",
+    "text": "CMSC 403 - Programming Languages\nSemester course. 3 hours.\nRestrictions: CMSC 256 and CMSC 303, both with a minimum grade of C.\nDescription: Survey of representative modern programming languages. Formal definition of programming languages including specifications of syntax and semantics. Precedence, infix, prefix and postfix notation. Global properties of algorithmic languages. Sub-routines, co-routines and tasks. List processing, string manipulation, data description and simulation languages. Run-time representation of program and data structures.\nTopics: algorithms, co-routines, data, data structures, design, functional programming, infix, languages, lists, object oriented programming, parsing, postfix, precendence, prefix, semantics, semantics, strings, sub-routines, symbol table, syntax, syntax"
+  },
+  {
+    "objectID": "catalog.html#cmsc-404---compiler-construction",
+    "href": "catalog.html#cmsc-404---compiler-construction",
+    "title": "Catalog of CMSC Courses and Titles",
+    "section": "CMSC 404 - Compiler Construction",
+    "text": "CMSC 404 - Compiler Construction\nSemester course. 3 hours.\nRestrictions: CMSC 401 and 403.\nDescription: A first course in compiler theory and construction. Formal description of languages, underlying theory and design techniques for compilers, lexical analysis, syntax analysis, syntax-directed translation, intermediate languages, run-time system management, code generation, code optimization, compiler-building tools.\nTopics: code management, compilers, intermediate languages, languages, lexical analysis, optimization, run-time system management, syntax"
+  },
+  {
+    "objectID": "catalog.html#cmsc-409---artificial-intelligence",
+    "href": "catalog.html#cmsc-409---artificial-intelligence",
+    "title": "Catalog of CMSC Courses and Titles",
+    "section": "CMSC 409 - Artificial Intelligence",
+    "text": "CMSC 409 - Artificial Intelligence\nSemester course. 3 hours.\nRestrictions: CMSC 401 with a minimum grade of C and MATH 310.\nDescription: Covers problem spaces, problem-solving methods, game playing, knowledge representatives, expert systems, natural language understanding.\nTopics: expert systems, game playing, knowledge representatives, machine learning, natural language, problem solving, problem spaces"
+  },
+  {
+    "objectID": "catalog.html#cmsc-410---introduction-to-quantum-computing",
+    "href": "catalog.html#cmsc-410---introduction-to-quantum-computing",
+    "title": "Catalog of CMSC Courses and Titles",
+    "section": "CMSC 410 - Introduction to Quantum Computing",
+    "text": "CMSC 410 - Introduction to Quantum Computing\nSemester course. 3 hours.\nRestrictions: CMSC 401 and MATH 310, both with a minimum grade of B.\nDescription: Introduction to quantum information processing: state vectors and density operators, tensor product space, unitary evolution, no-go theorems, measurement, qubit, gate model of quantum computing, quantum complexity theory, quantum error correction, quantum algorithms, and quantum machine learning.\nTopics: density operators, measurement, no-go theorems, quantum algorithms, quantum complexity, quantum computing, quantum error correction, quantum machine learning, qubit, state vectors, tensor, unitary evolution"
+  },
+  {
+    "objectID": "catalog.html#cmsc-411---computer-graphics",
+    "href": "catalog.html#cmsc-411---computer-graphics",
+    "title": "Catalog of CMSC Courses and Titles",
+    "section": "CMSC 411 - Computer Graphics",
+    "text": "CMSC 411 - Computer Graphics\nSemester course. 3 hours.\nRestrictions: CMSC 355 and MATH 310.\nDescription: Presents mathematical techniques for graphic development and transformation, curve and surface approximation and projections, graphical languages and data structures and their implementation, graphic modeling.\nTopics: curve and surface approximations, data structures, graphic development, graphic development, projections, transformation"
+  },
+  {
+    "objectID": "catalog.html#cmsc-412---social-network-analysis-and-cybersecurity-risks",
+    "href": "catalog.html#cmsc-412---social-network-analysis-and-cybersecurity-risks",
+    "title": "Catalog of CMSC Courses and Titles",
+    "section": "CMSC 412 - Social Network Analysis and Cybersecurity Risks",
+    "text": "CMSC 412 - Social Network Analysis and Cybersecurity Risks\nSemester course. 3 hours.\nRestrictions: CMSC 401 with a minimum grade of C.\nDescription: Covers network models, link prediction and analysis, centrality measures, random networks, power-laws and preferential attachment, small world phenomenon and decentralized search, community structure, information propagation in networks, and security and privacy issues in OSNs.\nTopics: centrality, community structure, decentralized search, information propagation, link analysis, network models, networks, osns, power-laws, preferential attachment, random networks, security, small world phenomenon"
+  },
+  {
+    "objectID": "catalog.html#cmsc-413---introduction-to-cybersecurity",
+    "href": "catalog.html#cmsc-413---introduction-to-cybersecurity",
+    "title": "Catalog of CMSC Courses and Titles",
+    "section": "CMSC 413 - Introduction to Cybersecurity",
+    "text": "CMSC 413 - Introduction to Cybersecurity\nSemester course. 3 hours.\nRestrictions: CMSC 401 with a minimum grade of C.\nDescription: This course provides introduction and basic concepts of computer security, cyber attacks, cyber defense, cyber forensics and cyber ethics.\nTopics: cyber defense, cyber ethics, cyber forensics, cybersecurity, security"
+  },
+  {
+    "objectID": "catalog.html#cmsc-414---computer-and-network-security",
+    "href": "catalog.html#cmsc-414---computer-and-network-security",
+    "title": "Catalog of CMSC Courses and Titles",
+    "section": "CMSC 414 - Computer and Network Security",
+    "text": "CMSC 414 - Computer and Network Security\nSemester course. 3 hours.\nRestrictions: CMSC 401 with a minimum grade of C. Corequisite: CMSC 312.\nDescription: This course covers the best practices of computer systems and network security. Key topics include security architecture, cryptographic systems and security management tools.\nTopics: application layer attacks, architecture, computer networks, computer security, computer systems design, cryptographic systems, cryptographic systems, firewalls, internet, link layer attacks, network penetration, networks, networks, security, security"
+  },
+  {
+    "objectID": "catalog.html#cmsc-415---introduction-to-cryptography",
+    "href": "catalog.html#cmsc-415---introduction-to-cryptography",
+    "title": "Catalog of CMSC Courses and Titles",
+    "section": "CMSC 415 - Introduction to Cryptography",
+    "text": "CMSC 415 - Introduction to Cryptography\nSemester course. 3 hours.\nRestrictions: CMSC 401 with a minimum grade of C.\nDescription: This course provides a rigorous and theoretical introduction to modern cryptography. Key topics include symmetric key encryption and authentication, public key encryption, and digital signatures.\nTopics: authentication, cryptographic systems, digital signatures, public key encryption, symmetric key encryption"
+  },
+  {
+    "objectID": "catalog.html#cmsc-416---introduction-to-natural-language-processing",
+    "href": "catalog.html#cmsc-416---introduction-to-natural-language-processing",
+    "title": "Catalog of CMSC Courses and Titles",
+    "section": "CMSC 416 - Introduction to Natural Language Processing",
+    "text": "CMSC 416 - Introduction to Natural Language Processing\nSemester course. 3 hours.\nRestrictions: CMSC 401 with a minimum grade of C.\nDescription: Covers rule-based and statistical methods for creating computer programs that analyze, generate and understand human language. Topics include regular expressions and automata, context-free grammars, probabilistic classifiers, and machine learning. Word-level, syntactic and semantic processing are all considered. Application to real-world problems such as spell-checking, Web search, automatic question answering, authorship identification and developing conversational interfaces.\nTopics: automation, computer systems design, context-free grammars, machine learning, natural language, probabilistic classifiers, real-world applications, regular expressions, semantics, spell-checking, statistics, syntax, web search"
+  },
+  {
+    "objectID": "catalog.html#cmsc-420---software-project-management",
+    "href": "catalog.html#cmsc-420---software-project-management",
+    "title": "Catalog of CMSC Courses and Titles",
+    "section": "CMSC 420 - Software Project Management",
+    "text": "CMSC 420 - Software Project Management\nSemester course. 3 hours.\nRestrictions: CMSC 355 with a minimum grade of C.\nDescription: Study of the logistics of team software development. Students work in teams to gain experience in software management and develop the components of a larger software product. Topics include risk management, project planning, quality management, configuration management and software testing.\nTopics: project planning, quality management, risk management, software development, software management, software quality"
+  },
+  {
+    "objectID": "catalog.html#cmsc-425---introduction-to-software-analysis-and-testing",
+    "href": "catalog.html#cmsc-425---introduction-to-software-analysis-and-testing",
+    "title": "Catalog of CMSC Courses and Titles",
+    "section": "CMSC 425 - Introduction to Software Analysis and Testing",
+    "text": "CMSC 425 - Introduction to Software Analysis and Testing\nSemester course. 3 hours.\nRestrictions: CMSC 355 with a minimum grade of C. Enrollment is restricted to majors in the computer science program.\nDescription: A practical introduction to testing complex software applications. An introduction to concepts and techniques used in the analysis of software, including basic and advanced control flow and data flow analyses. Using analytic results to derive test data and validate the correct implementation of programs. Advanced testing strategies including random, structural, mutation and fuzzing.\nTopics: advanced testing strategies, analysis, concolic hybrid analysis, control flow, control flow, coverage-driven systematic software testing, data flow, data-flow, dynamic programming, limitations, program analysis-driven testing, software development, software management, software validation, software verification, static programming, symbolic program analysis, test case coverage, testing, testing"
+  },
+  {
+    "objectID": "catalog.html#cmsc-428---mobile-programming-ios",
+    "href": "catalog.html#cmsc-428---mobile-programming-ios",
+    "title": "Catalog of CMSC Courses and Titles",
+    "section": "CMSC 428 - Mobile Programming: iOS",
+    "text": "CMSC 428 - Mobile Programming: iOS\nSemester course. 3 hours.\nRestrictions: CMSC 355, with a minimum grade of C.\nDescription: This course covers the fundamentals of Swift, Xcode and iOS for programming and design of iOS applications. Background in object-oriented programming and access to a computer with Xcode platform is required.\nTopics: ios, objects, swift, xcode"
+  },
+  {
+    "objectID": "catalog.html#cmsc-435---introduction-to-data-science",
+    "href": "catalog.html#cmsc-435---introduction-to-data-science",
+    "title": "Catalog of CMSC Courses and Titles",
+    "section": "CMSC 435 - Introduction to Data Science",
+    "text": "CMSC 435 - Introduction to Data Science\nSemester course. 3 hours.\nRestrictions: CMSC 401 with a minimum grade of C.\nDescription: This course covers understanding, representation, storage, retrieval, preprocessing and analysis of data. Specific topics include data quality and preprocessing, database management systems, data warehouses, selected methods for scalable unsupervised and supervised data analysis, and assessment of results generated by these methods. Students will be engaged in analysis of real-life data from data preprocessing, through data analysis, to the assessment of a knowledge product.\nTopics: analysis, data, data analysis, data quality, data structures, database"
+  },
+  {
+    "objectID": "catalog.html#cmsc-440---data-communication-and-networking",
+    "href": "catalog.html#cmsc-440---data-communication-and-networking",
+    "title": "Catalog of CMSC Courses and Titles",
+    "section": "CMSC 440 - Data Communication and Networking",
+    "text": "CMSC 440 - Data Communication and Networking\nSemester course. 3 hours.\nRestrictions: CMSC 257 with a minimum grade of C. Enrollment is restricted to majors in the College of Engineering.\nDescription: This course explores computer networking, focusing on the applications and protocols that run on the Internet. Students will take a top-down approach to the layered network architecture, studying applications first and then proceeding down the network “stack” toward the physical link. Students will examine the operation of applications such as the web, FTP, e-mail and DNS. At the transport layer, students will study both connectionless UDP and connection-oriented TCP, with an in-depth study of TCP operation, specifically flow control and congestion control. Data communications are explored through various data routing protocols. Additional topics include network security and wireless/mobile networking.\nTopics: architecture, architecture, client-server model, computer networks, data, dns, dns , e-mail, flow control, http application, internet, mail applications, network edge, network models, networks, networks, networks vulnerability, pipelining, protocol layers, reliable transmission, socket programming, tcp, udp, web development"
+  },
+  {
+    "objectID": "catalog.html#cmsc-441---senior-design-studio-i-laboratoryproject-time",
+    "href": "catalog.html#cmsc-441---senior-design-studio-i-laboratoryproject-time",
+    "title": "Catalog of CMSC Courses and Titles",
+    "section": "CMSC 441 - Senior Design Studio I (Laboratory/Project Time)",
+    "text": "CMSC 441 - Senior Design Studio I (Laboratory/Project Time)\nSemester course. 2 hours.\nRestrictions: CMSC 355; and UNIV 200 or HONR 200 or equivalent, both with minimum grades of C. Corequisite: CMSC 451. Enrollment is restricted to computer science majors with senior standing who have 24 credits in computer science courses.\nDescription: A minimum of six laboratory hours per week dedicated to the execution phase of the senior design (capstone) project for the computer science major. Tasks include team meetings, brainstorming, sponsor advising, researching, designing, implementing, reviewing, testing and validating projects. Each student will participate, either individually or as part of a team, in a project or other experience approved by the course coordinator or sponsored by another computer science faculty member. Students will submit a detailed written description of their proposed project or experience and will present orally some aspect of what they have learned and/or done during the semester. This course cannot be counted as upper-level CMSC electives for students graduating under bullet\nTopics: brainstorming, capstone, design, final project, project planning, research, teamwork, testing"
+  },
+  {
+    "objectID": "catalog.html#cmsc-442---senior-design-studio-ii-laboratoryproject-time",
+    "href": "catalog.html#cmsc-442---senior-design-studio-ii-laboratoryproject-time",
+    "title": "Catalog of CMSC Courses and Titles",
+    "section": "CMSC 442 - Senior Design Studio II (Laboratory/Project Time)",
+    "text": "CMSC 442 - Senior Design Studio II (Laboratory/Project Time)\nSemester course. 2 hours.\nRestrictions: CMSC 441, CMSC 451 and CMSC 508, each with a minimum grade of C. Corequisite: CMSC 452. Enrollment is restricted to computer science majors with senior standing who have 24 credits in computer science courses.\nDescription: A minimum of six laboratory hours per week dedicated to the execution phase of the senior design (capstone) project for the computer science major. Tasks include team meetings, brainstorming, sponsor advising, researching, designing, implementing, reviewing, testing and validating projects. Each student will participate, either individually or as part of a team, in a project or other experience approved by the course coordinator or sponsored by another computer science faculty member. Students must continue on the same project that was started in CMSC 441 and CMSC 451. A final project report and presentation are due at the conclusion of the two-semester project or experience. This course cannot be counted as upper-level CMSC electives for students graduating under bulletins prio\nTopics: brainstorming, final project, project planning, researching, teamwork, testing"
+  },
+  {
+    "objectID": "catalog.html#cmsc-451---senior-project-i",
+    "href": "catalog.html#cmsc-451---senior-project-i",
+    "title": "Catalog of CMSC Courses and Titles",
+    "section": "CMSC 451 - Senior Project I",
+    "text": "CMSC 451 - Senior Project I\nSemester course. 1 hour.\nRestrictions: CMSC 355 with minimum grade of C; and UNIV 200 or HONR 200 or equivalent. Corequisite: CMSC 441. Enrollment is restricted to computer science majors with senior standing who have 24 credits in computer science courses.\nDescription: This weekly seminar presents and discusses topics relevant to senior-level computer science students in support of the capstone project and upcoming graduation. A single course coordinator manages and administers the course and schedules the various faculty lectures and guest speakers. Topics include, but are not limited to, the following: proposal writing; project planning and management; scheduling resources and budgeting for software development projects; patents and intellectual property; entrepreneurship; ethical, legal and social issues in computing; and professional responsibilities of computer scientists. Each student will write and revise a research paper on a technical topic associated with his or her project or experience. A final project report and presentat\nTopics: capstone, entrepreneurship, ethics, final project, project planning, social aspects of technology, software development"
+  },
+  {
+    "objectID": "catalog.html#cmsc-452---senior-project-ii",
+    "href": "catalog.html#cmsc-452---senior-project-ii",
+    "title": "Catalog of CMSC Courses and Titles",
+    "section": "CMSC 452 - Senior Project II",
+    "text": "CMSC 452 - Senior Project II\nSemester course. 1 hour.\nRestrictions: CMSC 441, CMSC 451 and CMSC 508, each with a minimum grade of C. Corequisite: CMSC 442. Enrollment is restricted to students with senior standing in the computer science department.\nDescription: This weekly seminar presents and discusses topics relevant to senior-level computer science students in support of the capstone project and upcoming graduation. A single course coordinator manages and administers the course and schedules the various faculty lectures and guest speakers. Topics include, but are not limited to, the following: proposal writing; project planning and management; scheduling resources and budgeting for software development projects; patents and intellectual property; entrepreneurship; ethical, legal and social issues in computing; and professional responsibilities of computer scientists. Each student will write and revise a research paper on a technical topic associated with his or her project or experience. Students must continue on the same project that was started in CMSC 451.\nTopics: agile, code management, code management, ci/cd, entrepreneurship, final project, maintainability, project planning, scalability, security, social aspects of technology, social aspects of technology, software development, teamwork, testing"
+  },
+  {
+    "objectID": "catalog.html#cmsc-455---software-as-a-service",
+    "href": "catalog.html#cmsc-455---software-as-a-service",
+    "title": "Catalog of CMSC Courses and Titles",
+    "section": "CMSC 455 - Software as a Service",
+    "text": "CMSC 455 - Software as a Service\nSemester course. 3 hours.\nRestrictions: CMSC 355 with a minimum grade of C. Enrollment is restricted to majors in the computer science program.\nDescription: Students will examine the challenges, opportunities and open problems of software-as-a-service deployed on commodity cloud computing platforms. Covers relevant software architectures and API design principles. Includes concepts of modern software frameworks for software development, cloud computing for software deployment and software operations. Students participate in projects that use modern tooling to develop, deploy and monitor a software application.\nTopics: api, applications, cloud computing, software development, software management"
+  },
+  {
+    "objectID": "catalog.html#cmsc-475---design-and-implementation-of-user-interfaces",
+    "href": "catalog.html#cmsc-475---design-and-implementation-of-user-interfaces",
+    "title": "Catalog of CMSC Courses and Titles",
+    "section": "CMSC 475 - Design and Implementation of User Interfaces",
+    "text": "CMSC 475 - Design and Implementation of User Interfaces\nSemester course. 3 hours.\nRestrictions: CMSC 355 with a minimum grade of C. Enrollment is restricted to majors in the computer science program.\nDescription: This course investigates the design and implementation of user interfaces and the evaluation of user experiences. Particular emphasis is placed on creating professional-quality designs and implementations and on evaluating these implementations with end-users. Students will create their own UIs as well as critique others to develop a deep understanding of what works in practice.\nTopics: design, end-users, interfaces, user interface"
+  },
+  {
+    "objectID": "catalog.html#cmsc-491---topics-in-computer-science",
+    "href": "catalog.html#cmsc-491---topics-in-computer-science",
+    "title": "Catalog of CMSC Courses and Titles",
+    "section": "CMSC 491 - Topics in Computer Science",
+    "text": "CMSC 491 - Topics in Computer Science\nSemester course. 3 hours.\nRestrictions: permission of instructor.\nDescription: This course will cover selected topics in computer science. See the Schedule of Classes for specific topics to be offered each semester.\nTopics: selected topics"
+  },
+  {
+    "objectID": "catalog.html#cmsc-492---independent-study",
+    "href": "catalog.html#cmsc-492---independent-study",
+    "title": "Catalog of CMSC Courses and Titles",
+    "section": "CMSC 492 - Independent Study",
+    "text": "CMSC 492 - Independent Study\nSemester course. 4 hours.\nRestrictions: (none)\nDescription: Maximum 4 credits per semester; maximum total of 6 credits. Generally open only to students of junior or senior standing who have acquired at least 12 credits in the departmental discipline. Determination of the amount of credit and permission of instructor and department chair must be procured prior to registration of the course. The student must submit a proposal for investigating some area or problem not contained in the regular curriculum. The results of the student’s study will be presented in a report.\nTopics: independent study"
+  },
+  {
+    "objectID": "catalog.html#cmsc-501---advanced-algorithms",
+    "href": "catalog.html#cmsc-501---advanced-algorithms",
+    "title": "Catalog of CMSC Courses and Titles",
+    "section": "CMSC 501 - Advanced Algorithms",
+    "text": "CMSC 501 - Advanced Algorithms\nSemester course. 3 hours.\nRestrictions: CMSC 401 or equivalent. Enrollment is restricted to students with graduate standing or those accepted into the accelerated BS to MS program in computer science.\nDescription: Advanced graph algorithms, advanced data structures, applied numerical algorithms, optimization methods, approximation methods for hard graph and string problems and computational geometry algorithms.\nTopics: algorithms, approximation, computational geometry, data structures, graph algorithms, optimization, strings"
+  },
+  {
+    "objectID": "catalog.html#cmsc-502---parallel-algorithms",
+    "href": "catalog.html#cmsc-502---parallel-algorithms",
+    "title": "Catalog of CMSC Courses and Titles",
+    "section": "CMSC 502 - Parallel Algorithms",
+    "text": "CMSC 502 - Parallel Algorithms\nSemester course. 3 hours.\nRestrictions: CMSC 312 and CMSC 401. Enrollment is restricted to students with graduate standing or those accepted into the accelerated BS to MS program in computer science.\nDescription: Software and hardware mechanisms for providing mutual exclusion in uniprocessor and multiprocessor environments. Architectural issues including pipeline design, superscalar computers, multiprocessors, memory systems, peripherals, interfacing techniques, networks, performance and software issues. Design and uses of parallel algorithms to solve concurrency problems in a distributed environment including message passing and remote procedure calls. Students will work in teams (as well as on individual projects) to design and implement parallel algorithms.\nTopics: concurrency, interfaces, networks, parallel algorithms, software quality"
+  },
+  {
+    "objectID": "catalog.html#cmsc-506---computer-networks-and-communications",
+    "href": "catalog.html#cmsc-506---computer-networks-and-communications",
+    "title": "Catalog of CMSC Courses and Titles",
+    "section": "CMSC 506 - Computer Networks and Communications",
+    "text": "CMSC 506 - Computer Networks and Communications\nSemester course. 3 hours.\nRestrictions: CMSC 312.\nDescription: Theoretical and applied analysis of basic data communication systems; design of networks in the framework of the OSI reference model; Local and Wide Area Networks; performance analysis of networks; error control and security. Students will work in teams to design and implement a small computer network. Crosslisted as: EGRE 526.\nTopics: analysis, communication systems, computer networks, design, error control, local and wide area networks, osi reference model, security"
+  },
+  {
+    "objectID": "catalog.html#cmsc-508---database-theory",
+    "href": "catalog.html#cmsc-508---database-theory",
+    "title": "Catalog of CMSC Courses and Titles",
+    "section": "CMSC 508 - Database Theory",
+    "text": "CMSC 508 - Database Theory\nSemester course. 3 hours.\nRestrictions: CMSC 303 with a minimum grade of C.\nDescription: Design and implementation of relational database systems. Emphasis is placed on entity-relationship diagrams, relational algebra, normal forms and normalization. Introduction to SQL. Discussion of physical level issues. Students will be required to complete a design project and give an oral presentation of the project. Not applicable toward the MS in Computer Science or the PHD in Engineering, computer science concentration.\nTopics: administration, ajax, configuration, cursors, data , data storage, database, database installation, design, design, entities, entity-relationship diagrams, entity-relationship diagrams, functional programming, functions, functions, indexes, mysql, normalization, php, physical level issues, procedures, queries, relational algebra, relational algebra, relational design, relations, sql, sql, subqueries, triggers, views"
+  },
+  {
+    "objectID": "catalog.html#cmsc-510---regularization-methods-for-machine-learning",
+    "href": "catalog.html#cmsc-510---regularization-methods-for-machine-learning",
+    "title": "Catalog of CMSC Courses and Titles",
+    "section": "CMSC 510 - Regularization Methods for Machine Learning",
+    "text": "CMSC 510 - Regularization Methods for Machine Learning\nSemester course. 3 hours.\nRestrictions: Enrollment is restricted to students with graduate standing in computer science or related discipline such as bioinformatics or acceptance into the accelerated BS to MS program in computer science.\nDescription: The course will assume undergraduate-level background in algorithms, linear algebra, calculus, statistics and probability. Upon successful completion of this course, the student will be able to understand recent advances in machine learning and apply machine-learning tools that go beyond learning from data, as well as have the ability to incorporate additional knowledge about the learning problem. Topics covered will include optimization-based view of supervised machine learning; classical regularization approaches including weight decay and Lasso; regularization terms incorporating additional knowledge about structures in the feature space, including group lasso and graph-based regularization terms; semi-supervised learning using graphs linking unlabeled and labeled samples.\nTopics: algorithms, calculus, data analysis, graph algorithms, linear algebra, machine learning, natural language, optimization, probability, regularization, statistics"
+  },
+  {
+    "objectID": "catalog.html#cmsc-512---advanced-social-network-analysis-and-security",
+    "href": "catalog.html#cmsc-512---advanced-social-network-analysis-and-security",
+    "title": "Catalog of CMSC Courses and Titles",
+    "section": "CMSC 512 - Advanced Social Network Analysis and Security",
+    "text": "CMSC 512 - Advanced Social Network Analysis and Security\nSemester course. 3 hours.\nRestrictions: CMSC 412 and CMSC 501. Enrollment is restricted to students with graduate standing in computer science or a related discipline such as bioinformatics or acceptance into the accelerated BS to MS program in computer science.\nDescription: The purpose of the course is to teach algorithms for analyzing social networks and complex systems. The focus will be on understanding the inner workings of algorithms using in-network analysis and security threats in online social network sites. Topic covered will include modeling social and technological networks, methods for analyzing structure and dynamical processes on the network, and security and privacy issues in online social networks such as inference attacks, network anonymization, sybil attacks and defense, social bots.\nTopics: algorithms, analysis, networks, networks, security, social network"
+  },
+  {
+    "objectID": "catalog.html#cmsc-516---advanced-natural-language-processing",
+    "href": "catalog.html#cmsc-516---advanced-natural-language-processing",
+    "title": "Catalog of CMSC Courses and Titles",
+    "section": "CMSC 516 - Advanced Natural Language Processing",
+    "text": "CMSC 516 - Advanced Natural Language Processing\nSemester course. 3 hours.\nRestrictions: Enrollment is restricted to students with graduate standing in computer science or a related discipline, or those accepted into the accelerated BS to MS program in computer science.\nDescription: Upon successful completion of this course, the student will be able to understand recent advances in natural language processing and apply NLP algorithms and techniques for processing unstructured text. Word-level, syntactic and semantic processing will be considered. Specific topics include rule-based and statistical methods for creating computer programs that analyze, generate and understand human language. Regular expressions and automata, context-free grammars, probabilistic classifiers and machine learning. Applications to real-world problems such as spell-checking, Web search, automatic question answering, authorship identification and developing conversational interfaces.\nTopics: automation, context-free grammars, machine learning, natural language, nlp algorithms, probabilistic classifiers, regular expressions, semantics, statistics, syntax"
+  },
+  {
+    "objectID": "catalog.html#cmsc-525---introduction-to-software-analysis-testing-and-verification",
+    "href": "catalog.html#cmsc-525---introduction-to-software-analysis-testing-and-verification",
+    "title": "Catalog of CMSC Courses and Titles",
+    "section": "CMSC 525 - Introduction to Software Analysis, Testing and Verification",
+    "text": "CMSC 525 - Introduction to Software Analysis, Testing and Verification\nSemester course. 3 hours.\nRestrictions: CMSC 401 and 403. Enrollment is restricted to students with graduate standing or those accepted into the accelerated BS to MS program in computer science.\nDescription: An introduction to concepts and techniques used in the analysis of software for certain properties. Using analytic results to derive test data and verify the correct implementation of programs. Flow graphs, fault/failure model, theoretical and practical limitations. Control flow, data flow and error flow analyses. Testing strategies including random, structural, mutation and error flow. Software metrics.\nTopics: advanced testing strategies, analysis, analysis, concolic hybrid analysis, control flow, coverage-driven systematic software testing, data, data-flow, dynamic programming, flow control, graphs, limitations, program analysis-driven testing, software management, software validation, software verification, static programming, symbolic program analysis, test case coverage, testing, testing"
+  },
+  {
+    "objectID": "catalog.html#cmsc-526---theory-of-programming-languages",
+    "href": "catalog.html#cmsc-526---theory-of-programming-languages",
+    "title": "Catalog of CMSC Courses and Titles",
+    "section": "CMSC 526 - Theory of Programming Languages",
+    "text": "CMSC 526 - Theory of Programming Languages\nSemester course. 3 hours.\nRestrictions: CMSC 403, graduate student standing or acceptance into the five-year accelerated BS and MS program in computer science.\nDescription: An introduction to the formal semantics of programming languages, logic programming and functional programming. Topics include denotational semantics, attribute grammars, Backus Formal Functional Programming, fixed point semantics, model-theoretic semantics and PROLOG.\nTopics: languages, logic, model-theoretic semtances, semantics"
+  },
+  {
+    "objectID": "catalog.html#cmsc-531---3d-computer-vision-for-robot-navigation",
+    "href": "catalog.html#cmsc-531---3d-computer-vision-for-robot-navigation",
+    "title": "Catalog of CMSC Courses and Titles",
+    "section": "CMSC 531 - 3D Computer Vision for Robot Navigation",
+    "text": "CMSC 531 - 3D Computer Vision for Robot Navigation\nSemester course. 3 hours.\nRestrictions: Enrollment is restricted to graduate students in computer science or related discipline or to students accepted into the five-year accelerated program in computer science.\nDescription: The course focuses on recent advancements in 3D robotic vision. It covers basic concepts and computational models of 3D sensing, robotic mapping, visual odometry, simultaneous localization and mapping, as well as 3D point data processing for robotic navigation. Students will acquire in-depth knowledge in robotic vision by completing a course project.\nTopics: 3d robotic vision, localization, mapping, robotic mapping, robotic navigation, visual odometry"
+  },
+  {
+    "objectID": "catalog.html#cmsc-591---topics-in-computer-science",
+    "href": "catalog.html#cmsc-591---topics-in-computer-science",
+    "title": "Catalog of CMSC Courses and Titles",
+    "section": "CMSC 591 - Topics in Computer Science",
+    "text": "CMSC 591 - Topics in Computer Science\nSemester course. 3 hours.\nRestrictions: (none)\nDescription: May be repeated for credit. Enrollment requires permission of the instructor. The course is open to students with graduate standing or those accepted into the accelerated BS to MS program in computer science. A study of selected topic(s) in computer science at the graduate level. See the Schedule of Classes for specific topics to be offered each semester.\nTopics: circuits, compact representations, complexity analysis, convex sets, limitations, linear algebra, loss function, machine learning, models, neural networks, optimization, quantum computation, quantum gates, quantum measurement, selected topics, tensor"
+  },
+  {
+    "objectID": "catalog.html#cmsc-601---convex-optimization",
+    "href": "catalog.html#cmsc-601---convex-optimization",
+    "title": "Catalog of CMSC Courses and Titles",
+    "section": "CMSC 601 - Convex Optimization",
+    "text": "CMSC 601 - Convex Optimization\nSemester course. 3 hours.\nRestrictions: CMSC 501 or permission of instructor. Enrollment restricted to students with graduate standing in computer science or related discipline.\nDescription: A background in undergraduate-level linear algebra is assumed. Convex sets and functions. Convex optimization problems: Linear, quadratic, semi-definite and cone programs. Duality theory. Approximation algorithms for NP-complete integer optimization problems via semi-definite relaxations and rounding schemes. Algorithms for optimization, such as gradient descent, proximal descent, alternating directions method of multipliers, interior point methods.\nTopics: approximation, convex sets, duality theory, gradient descent, interior point methods, linear algebra, multipliers, optimization, proximal descent"
+  },
+  {
+    "objectID": "catalog.html#cmsc-602---operating-systems",
+    "href": "catalog.html#cmsc-602---operating-systems",
+    "title": "Catalog of CMSC Courses and Titles",
+    "section": "CMSC 602 - Operating Systems",
+    "text": "CMSC 602 - Operating Systems\nSemester course. 3 hours.\nRestrictions: CMSC 502.\nDescription: A study of operating systems including those in multiprocessor and distributed environments. I/O programming, resource management (including processor and memory management), security and system performance evaluation.\nTopics: input/output, multiprocessor environments, operating systems, resources management, security, system performance"
+  },
+  {
+    "objectID": "catalog.html#cmsc-603---high-performance-distributed-systems",
+    "href": "catalog.html#cmsc-603---high-performance-distributed-systems",
+    "title": "Catalog of CMSC Courses and Titles",
+    "section": "CMSC 603 - High Performance Distributed Systems",
+    "text": "CMSC 603 - High Performance Distributed Systems\nSemester course. 3 hours.\nRestrictions: Enrollment is restricted to students with graduate standing in computer science or related discipline or those accepted into the accelerated BS to MS program in computer science.\nDescription: The course will assume undergraduate-level background in algorithms, data structures and parallel programming. Upon successful completion of this course, the student will be able to understand the concepts underlying distributed systems; analyze problems to identify performance bottlenecks, parallelization opportunities and concurrency issues in a distributed environment; create distributed and scalable implementations using multiple hosts/GPUs; design and implement algorithms using Hadoop, Spark and CUDA.\nTopics: algorithms, algorithms, concurrency, cuda, data structures, hadoop, parallel algorithms, performance bottlenecks, spark"
+  },
+  {
+    "objectID": "catalog.html#cmsc-605---advanced-computer-architecture",
+    "href": "catalog.html#cmsc-605---advanced-computer-architecture",
+    "title": "Catalog of CMSC Courses and Titles",
+    "section": "CMSC 605 - Advanced Computer Architecture",
+    "text": "CMSC 605 - Advanced Computer Architecture\nSemester course. 3 hours.\nRestrictions: EGRE 426 or with permission of instructor.\nDescription: This course will focus on the design and analysis of high performance computer architectures. Topics investigated include pipeline design, superscalar computers, multiprocessors, memory systems, peripherals, interfacing techniques, networks, performance and software issues. Crosslisted as: EGRE 635.\nTopics: architecture, interfaces, memory systems, multiprocessor environments, networks, peripherals, pipeline design, software management, software quality, superscalar computers"
+  },
+  {
+    "objectID": "catalog.html#cmsc-608---advanced-database",
+    "href": "catalog.html#cmsc-608---advanced-database",
+    "title": "Catalog of CMSC Courses and Titles",
+    "section": "CMSC 608 - Advanced Database",
+    "text": "CMSC 608 - Advanced Database\nSemester course. 3 hours.\nRestrictions: CMSC 508.\nDescription: Topics discussed include: handling of missing information; the relationship between relational calculus, relational algebra and SQL; logic databases; distributed databases; outer joins; and transaction processing. Emphasis is placed on theoretical issues involved in these topics. In addition students will work in teams to develop a working database application.\nTopics: calculus, logic, relational algebra, sql, teamwork"
+  },
+  {
+    "objectID": "catalog.html#cmsc-610---algorithmic-foundations-of-bioinformatics",
+    "href": "catalog.html#cmsc-610---algorithmic-foundations-of-bioinformatics",
+    "title": "Catalog of CMSC Courses and Titles",
+    "section": "CMSC 610 - Algorithmic Foundations of Bioinformatics",
+    "text": "CMSC 610 - Algorithmic Foundations of Bioinformatics\nSemester course. 3 hours.\nRestrictions: Graduate student standing or acceptance into five-year accelerated program in computer science or related discipline such as bioinformatics.\nDescription: The purpose of the course is to teach algorithms for analyzing biological and medical data. The focus will be on understanding the inner workings of algorithms used in bioinformatics tools. Topic covered will include algorithms for assembling and searching biological sequences, finding patterns associated with disease, and exploring biological networks.\nTopics: algorithms, bioinformatics, biological sequences, data, networks, patterns"
+  },
+  {
+    "objectID": "catalog.html#cmsc-611---computer-multimedia",
+    "href": "catalog.html#cmsc-611---computer-multimedia",
+    "title": "Catalog of CMSC Courses and Titles",
+    "section": "CMSC 611 - Computer Multimedia",
+    "text": "CMSC 611 - Computer Multimedia\nSemester course. 3 hours.\nRestrictions: permission of instructor.\nDescription: Study of computer multimedia techniques relating to images, sound, video and text. Emphasis on compression techniques and standard storage formats. This course is programming-intensive.\nTopics: compression, multimedia , storage formats"
+  },
+  {
+    "objectID": "catalog.html#cmsc-612---game-theory-and-security",
+    "href": "catalog.html#cmsc-612---game-theory-and-security",
+    "title": "Catalog of CMSC Courses and Titles",
+    "section": "CMSC 612 - Game Theory and Security",
+    "text": "CMSC 612 - Game Theory and Security\nSemester course. 3 hours.\nRestrictions: CMSC 401. Enrollment is restricted to students with graduate standing in computer science or those accepted into the accelerated BS to MS program in computer science.\nDescription: The course will provide an introduction to game theory and mechanism design concepts. Lectures cover topics such as introduction of games, equilibrium concepts, computation of game-theoretic solution concepts, mechanism, and issues in game theory and mechanism design.\nTopics: abstract complexity, design, equilibrium concepts, game theory, security, universal programs, unsolvability"
+  },
+  {
+    "objectID": "catalog.html#cmsc-615---cryptocurrency-and-blockchain-techniques",
+    "href": "catalog.html#cmsc-615---cryptocurrency-and-blockchain-techniques",
+    "title": "Catalog of CMSC Courses and Titles",
+    "section": "CMSC 615 - Cryptocurrency and Blockchain Techniques",
+    "text": "CMSC 615 - Cryptocurrency and Blockchain Techniques\nSemester course. 3 hours.\nRestrictions: Enrollment is restricted to students with graduate standing in computer science or a related discipline.\nDescription: The course will assume undergraduate-level background in algorithms, data structures and programming. Upon successful completion of this course, the student will be able to understand the major concepts about cryptocurrency and blockchain techniques; be familiar with major blockchain applications as well as real-world issues; understand the underlying consensus mechanisms in the Bitcoin system and other alternative cryptocurrency systems; analyze the security of Nakamoto consensus; understand, write and execute smart contracts using an Ethereum-like platform.\nTopics: algorithms, altcoins, analysis, anonymity, bitcoin, bitcoin, blockchain, blockchain, consensus protocols, cryptocurrency, cryptocurrency, data structures, distributed systems, etherum, legal, nakamoto consensus, nakamoto’s blockchain, programming, real-world applications, security, security, sidechains"
+  },
+  {
+    "objectID": "catalog.html#cmsc-618---database-and-application-security",
+    "href": "catalog.html#cmsc-618---database-and-application-security",
+    "title": "Catalog of CMSC Courses and Titles",
+    "section": "CMSC 618 - Database and Application Security",
+    "text": "CMSC 618 - Database and Application Security\nSemester course. 3 hours.\nRestrictions: (none)\nDescription: Theory and practice of database and software security focusing in particular on some common database software security risks and on the identification of potential threats and vulnerabilities. Crosslisted as: CISS 618.\nTopics: database, security, software management"
+  },
+  {
+    "objectID": "catalog.html#cmsc-619---the-design-and-specifications-of-user-interfaces",
+    "href": "catalog.html#cmsc-619---the-design-and-specifications-of-user-interfaces",
+    "title": "Catalog of CMSC Courses and Titles",
+    "section": "CMSC 619 - The Design and Specifications of User Interfaces",
+    "text": "CMSC 619 - The Design and Specifications of User Interfaces\nSemester course. 3 hours.\nRestrictions: Graduate standing and permission of instructor.\nDescription: Requires knowledge of first order predicate calculus and context-free languages. Focuses on human-computer interface design principles and methodology and formal specifications of user interfaces.\nTopics: calculus, design, interfaces, languages, user interface"
+  },
+  {
+    "objectID": "catalog.html#cmsc-620---applied-cryptography",
+    "href": "catalog.html#cmsc-620---applied-cryptography",
+    "title": "Catalog of CMSC Courses and Titles",
+    "section": "CMSC 620 - Applied Cryptography",
+    "text": "CMSC 620 - Applied Cryptography\nSemester course. 3 hours.\nRestrictions: (none)\nDescription: Provides a comprehensive survey of modern cryptography. Included are techniques of enciphering and deciphering messages using cryptographic algorithms, block ciphers and block cipher modes, hash functions and message authentication codes, public key cryptography and digital signatures, and steganography. Crosslisted as: CISS 624.\nTopics: authentication, block cipher, cryptographic systems, deciphering, digital signatures, enciphering, hash functions, public key encryption, steganography"
+  },
+  {
+    "objectID": "catalog.html#cmsc-621---theory-of-computation",
+    "href": "catalog.html#cmsc-621---theory-of-computation",
+    "title": "Catalog of CMSC Courses and Titles",
+    "section": "CMSC 621 - Theory of Computation",
+    "text": "CMSC 621 - Theory of Computation\nSemester course. 3 hours.\nRestrictions: graduate student standing and permission of instructor.\nDescription: Discussion of the complexity and computability of problems and programs. Topics will include unsolvability, universal programs and abstract complexity.\nTopics:"
+  },
+  {
+    "objectID": "catalog.html#cmsc-622---network-and-system-security",
+    "href": "catalog.html#cmsc-622---network-and-system-security",
+    "title": "Catalog of CMSC Courses and Titles",
+    "section": "CMSC 622 - Network and System Security",
+    "text": "CMSC 622 - Network and System Security\nSemester course. 3 hours.\nRestrictions: (none)\nDescription: Studies the principles of network security and system security. Included are topics relating to application layer security, TCP layer security, network layer security and link layer security and the use of access control, intrusion detection, intrusion prevention and other related tools.\nTopics: access control, assumption, computer security, concepts, intrustion detection, network security, networks, networks, presentation, security, security, security paper survey, system security, tcp layer security, technical paper reading, trust"
+  },
+  {
+    "objectID": "catalog.html#cmsc-623---cloud-computing",
+    "href": "catalog.html#cmsc-623---cloud-computing",
+    "title": "Catalog of CMSC Courses and Titles",
+    "section": "CMSC 623 - Cloud Computing",
+    "text": "CMSC 623 - Cloud Computing\nSemester course. 3 hours.\nRestrictions: (none)\nDescription: Provides an introduction to cloud computing architecture and cloud computing security. The course covers the basic concepts of cloud computing, including memory virtualization, device virtualization and related security problems in cloud computing.\nTopics: cloud computing, device virtualization, memory virtualization, security"
+  },
+  {
+    "objectID": "catalog.html#cmsc-624---software-quality-assurance",
+    "href": "catalog.html#cmsc-624---software-quality-assurance",
+    "title": "Catalog of CMSC Courses and Titles",
+    "section": "CMSC 624 - Software Quality Assurance",
+    "text": "CMSC 624 - Software Quality Assurance\nSemester course. 3 hours.\nRestrictions: a course in software engineering and graduate standing in computer science, or permission of instructor.\nDescription: A study of issues that affect the quality of software and of methodology to assure that software products are of the desired quality. This also includes issues in assessing product quality as well as the process by which the software is produced. Topics include various methodologies, standards, metrics and tools.\nTopics: metrics, software quality"
+  },
+  {
+    "objectID": "catalog.html#cmsc-625---advanced-software-analysis-testing-and-verification",
+    "href": "catalog.html#cmsc-625---advanced-software-analysis-testing-and-verification",
+    "title": "Catalog of CMSC Courses and Titles",
+    "section": "CMSC 625 - Advanced Software Analysis, Testing and Verification",
+    "text": "CMSC 625 - Advanced Software Analysis, Testing and Verification\nSemester course. 3 hours.\nRestrictions: CMSC 525.\nDescription: Studies the concepts and techniques used in the analysis of software and the derivation of test data. Focuses on software metrics and reliability; construction of tools to aid software analysis and testing. Requires students to review seminal and current papers from the literature, and lead their discussion in class.\nTopics: analysis, current literature, metrics, software management, testing"
+  },
+  {
+    "objectID": "catalog.html#cmsc-628---mobile-networks-applications-modeling-and-analysis",
+    "href": "catalog.html#cmsc-628---mobile-networks-applications-modeling-and-analysis",
+    "title": "Catalog of CMSC Courses and Titles",
+    "section": "CMSC 628 - Mobile Networks: Applications, Modeling and Analysis",
+    "text": "CMSC 628 - Mobile Networks: Applications, Modeling and Analysis\nSemester course. 3 hours.\nRestrictions: Enrollment is restricted to students with graduate standing in computer science or a related discipline.\nDescription: The course will assume undergraduate-level background in algorithms, data structures, programming and networks. Upon successful completion of this course, the student will be able to understand the major concepts about mobile networks such as device-to-device communication technologies, mobility models and coverage; be familiar with various mobile network types (e.g., mobile social networks, delay tolerant networks, overlay networks, vehicular networks and cellular networks) and devices (e.g., smartphones, femtocells, WiFi), learn how to model mobile networks with stochastic processes and real datasets; be able to use different networking simulators; and understand various routing algorithms and analyze their behavior.\nTopics: algorithms, analysis, analysis, communication systems, communication systems, data, data driven stimulations, data structures, evaluation, mobile networks, mobile networks, mobility models, modeling, network simulators, networks, networks, programming, routing"
+  },
+  {
+    "objectID": "catalog.html#cmsc-630---image-analysis",
+    "href": "catalog.html#cmsc-630---image-analysis",
+    "title": "Catalog of CMSC Courses and Titles",
+    "section": "CMSC 630 - Image Analysis",
+    "text": "CMSC 630 - Image Analysis\nSemester course. 3 hours.\nRestrictions: Enrollment is restricted to students with graduate standing in engineering or science or by permission of the instructor.\nDescription: Introduces theoretical and practical aspects of computer vision for image processing and understanding. It provides a comprehensive walkthrough from basics of image preparation to using computational intelligence tools for knowledge discovery from images. The course will cover basics of image processing and computer vision, including image sampling and quantization, color, pixel-based operations, image filtering, morphological image processing, and image transforms; information extraction including segmentation and feature extraction; pattern recognition for computer vision: classification, novelty and object detection, image understanding, learning from video streams, and tensor-based methods. Examples will include medical image analysis, object recognition in ground and aerial photographs and hyperspectral imaging.\nTopics: analysis, computers, feature extraction, feature selection, image, image, image analysis, image filtering, image processing, image processing, image segmentation, images, information extraction, machine learning, patterns, pixel-based operations, quantization, segmentation, segmentation, tensor"
+  },
+  {
+    "objectID": "catalog.html#cmsc-635---knowledge-discovery-and-data-mining",
+    "href": "catalog.html#cmsc-635---knowledge-discovery-and-data-mining",
+    "title": "Catalog of CMSC Courses and Titles",
+    "section": "CMSC 635 - Knowledge Discovery and Data Mining",
+    "text": "CMSC 635 - Knowledge Discovery and Data Mining\nSemester course. 3 hours.\nRestrictions: CMSC 401 or corequisite: CMSC 501. Enrollment is restricted to students with graduate standing in computer science or a related discipline such as bioinformatics, or those accepted into the accelerated BS to MS program in computer science.\nDescription: Covers knowledge discovery and data mining concepts, tools and methods; provides hands-on experience based on a project involving analysis of large real-life data. Topics include the knowledge discovery process, data storage and representation, preprocessing algorithms for missing data imputation, feature selection and discretization; unsupervised learning algorithms for clustering and association mining; supervised learning algorithms including decision trees, Bayesian models and introduction to support vector machines and neural networks; ensemble learning; protocols and measures for validation of predictive models; and data security and privacy issues.\nTopics: algorithms, analysis, bayesian models, data, data, data imputation, data mining, data preprocessing, data security, data storage, decision trees, discovery process, discretization, ensemble learning, feature selection, neural networks, real-world applications, security, supervised data analysis, support vector machines, unsupervised data analysis"
+  },
+  {
+    "objectID": "catalog.html#cmsc-636---artificial-neural-networks-and-deep-learning",
+    "href": "catalog.html#cmsc-636---artificial-neural-networks-and-deep-learning",
+    "title": "Catalog of CMSC Courses and Titles",
+    "section": "CMSC 636 - Artificial Neural Networks and Deep Learning",
+    "text": "CMSC 636 - Artificial Neural Networks and Deep Learning\nSemester course. 3 hours.\nRestrictions: Enrollment is restricted to students with graduate standing in computer science.\nDescription: The course will assume undergraduate-level background in programming, algorithms, linear algebra, calculus, statistics and probability. Topics ranging from fundamental learning rules, functional, cascade correlational, recurrent and gradient descent networks, to neocognitron, softmax, deep convolutional networks, autoencoders and pretrained deep learning (restricted Boltzmann machines). Students will be required to work in teams on a class paper.\nTopics: architecture, autoencoders, calculus, cascade correlational, chatgpt, convolutional neural networks, deep belief networks, deep convolutional networks, deep learning, deep neural networks, google, gradient descent, linear algebra, neocognitron, neural networks, neural networks, probability, recurrences, recurrences, restricted boltzmann machines, statistics"
+  },
+  {
+    "objectID": "catalog.html#cmsc-654---memory-and-malware-forensics",
+    "href": "catalog.html#cmsc-654---memory-and-malware-forensics",
+    "title": "Catalog of CMSC Courses and Titles",
+    "section": "CMSC 654 - Memory and Malware Forensics",
+    "text": "CMSC 654 - Memory and Malware Forensics\nSemester course. 3 hours.\nRestrictions: CMSC 312. Enrollment is restricted to students with graduate standing in computer science or a related discipline, or those accepted into the accelerated BS to MS program in computer science.\nDescription: Students should have significant programming experience. This course provides foundation for memory and malware forensics, using the Volatility memory forensics framework, an open source toolkit written in Python. It is focused on investigation of the contents of volatile computer memory (RAM), to reveal hidden malware processes, network connections, clipboard contents, evidence of malware and other malicious evidence. The course will teach skills for analyzing internals of operating systems, such as Mac, Windows and Linux, by concentrating on data structures used by these operating systems.\nTopics: malicious evidence, malware forensics, memory, networks, operating systems, python, volatility memory forensics"
+  },
+  {
+    "objectID": "catalog.html#cmsc-678---statistical-learning-and-fuzzy-logic-algorithms",
+    "href": "catalog.html#cmsc-678---statistical-learning-and-fuzzy-logic-algorithms",
+    "title": "Catalog of CMSC Courses and Titles",
+    "section": "CMSC 678 - Statistical Learning and Fuzzy Logic Algorithms",
+    "text": "CMSC 678 - Statistical Learning and Fuzzy Logic Algorithms\nSemester course. 3 hours.\nRestrictions: MATH/STAT 309 or MATH 310.\nDescription: The course considers two central problems in modern science and engineering: i) the problem of statistical learning from examples (empirical data) and ii) the problem of embedding existing human knowledge into workable mathematics. Topics include: examples of multivariate functional mapping, basics of classic classification and regression, support vector machines as a learning paradigm based on structural risk minimization, fuzzy logic algorithms, basics of multi-class classification over high dimensional spaces, curve and surface fittings, multivariate function approximation and nonlinear optimization; fuzzy logic systems; crisp and fuzzy sets, linguistic variables, fuzzy set theory; if-then rules, fuzzy interference, fuzzification and defuzzification, neuro-fuzzy paradigms.\nTopics: classification, functional mapping, functions, fuzzification, fuzzy logic algorithms, linguistic variables, multi-class classification, neuro-fuzzy paradigms, nonlinear optimization, optimization, regression, statistical learning, statistics, support vector machines"
+  },
+  {
+    "objectID": "catalog.html#cmsc-691---special-topics-in-computer-science",
+    "href": "catalog.html#cmsc-691---special-topics-in-computer-science",
+    "title": "Catalog of CMSC Courses and Titles",
+    "section": "CMSC 691 - Special Topics in Computer Science",
+    "text": "CMSC 691 - Special Topics in Computer Science\nSemester course. 3 hours.\nRestrictions: at least one graduate-level computer science course pertaining to the topic area and permission of instructor.\nDescription: An advanced study of selected topic(s) in computer science at the graduate level. See the Schedule of Classes for specific topics to be offered each semester.\nTopics: selected topics"
+  },
+  {
+    "objectID": "catalog.html#cmsc-692---independent-study",
+    "href": "catalog.html#cmsc-692---independent-study",
+    "title": "Catalog of CMSC Courses and Titles",
+    "section": "CMSC 692 - Independent Study",
+    "text": "CMSC 692 - Independent Study\nSemester course. 3 hours.\nRestrictions: Enrollment restricted to students with graduate standing and consent of instructor.\nDescription: Independent study done under the supervision of a faculty member. The student must identify a faculty member willing to supervise the research and submit a proposal for approval by the computer science graduate committee no later than the 10th week of the prior semester. A written report and an oral presentation are required upon completion of the research project. Graded as Pass/Fail.\nTopics: independent study"
+  },
+  {
+    "objectID": "catalog.html#cmsc-697---directed-research",
+    "href": "catalog.html#cmsc-697---directed-research",
+    "title": "Catalog of CMSC Courses and Titles",
+    "section": "CMSC 697 - Directed Research",
+    "text": "CMSC 697 - Directed Research\nSemester course. 5 hours.\nRestrictions: (none)\nDescription: May be repeated for credit. A total of three credits may be used to fulfill the MS in Computer Science thesis requirement. Independent research culminating in the writing of the required thesis or dissertation. The student must identify a faculty member willing to supervise the research and submit a proposal to the computer science graduate committee no later than the 10th week of the prior semester. This proposal must be approved before the student can register for the course. Graded as S/U/F.\nTopics: research"
+  },
+  {
+    "objectID": "catalog.html#cmsc-701---research-methods",
+    "href": "catalog.html#cmsc-701---research-methods",
+    "title": "Catalog of CMSC Courses and Titles",
+    "section": "CMSC 701 - Research Methods",
+    "text": "CMSC 701 - Research Methods\nSemester course. 3 hours.\nRestrictions: PHD standing or permission of instructor.\nDescription: Covers the principles of conducting a research project, reporting the findings in the form of a journal paper and promoting the research through public presentations. Students learn to write grant proposals and practice reviewing research papers and grant proposals. The main emphasis of the course is writing a paper and a grant proposal in a format compliant with NSF, NIH or DoD guidelines.\nTopics: grant proposal, research"
+  },
+  {
+    "objectID": "catalog.html#cmsc-702---computer-science-seminar",
+    "href": "catalog.html#cmsc-702---computer-science-seminar",
+    "title": "Catalog of CMSC Courses and Titles",
+    "section": "CMSC 702 - Computer Science Seminar",
+    "text": "CMSC 702 - Computer Science Seminar\nSemester course. 1 hour.\nRestrictions: Enrollment restricted to students in the doctoral program in computer science. Students will attend a week\nDescription: Students will attend a weekly research seminar in which the topic and speaker will change each week in order to cover a broad range of subjects at the forefront of computer science research. Students will have to present and to write a report on at least one seminar presented by other speakers. The objective is to expose students to research topics and scholars in the field of computer science as well as to provide them experience in delivering and critiquing seminar talks. Graded as satisfactory/unsatisfactory.\nTopics: research, seminar"
+  },
+  {
     "objectID": "CMSC101.html",
     "href": "CMSC101.html",
     "title": "CMSC 101 - Introduction to Computer Science",

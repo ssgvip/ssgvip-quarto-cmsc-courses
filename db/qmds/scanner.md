@@ -1,4 +1,5 @@
 ---
+date: 4/12/23
 title: Building this web site
 toc-title: Table of contents
 ---
@@ -379,7 +380,7 @@ date: last-modified
 ```
 :::
 
-# Autogenerating *listing.qmd*
+# Autogenerating *catalog.qmd*
 
 ::: {.cell execution_count="9"}
 ``` {.python .cell-code}
@@ -408,15 +409,18 @@ Semester course. {row["Hours"]} {h}.
 
 """
 
-filename = "qmds/listing.qmd"
+filename = "qmds/catalog.qmd"
 with open(filename, 'w',encoding="utf-8") as file:
   file.write(f"""---
-title: "Full Listing of CMSC Courses and Titles"
+title: "Catalog of CMSC Courses and Titles"
 date: last-modified
 format:
   html:
     toc: False
 ---
+The following a complete catalog of CMSC courses listed in the VCU 2022-2023 Catalog. Not all courses
+are offered on a regular basis.
+
 """ )
 
   file.write(block)
