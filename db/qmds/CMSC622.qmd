@@ -19,9 +19,39 @@ Semester course; 3 lecture hours (delivered online, face-to-face or hybrid). 3 c
 
 Studies the principles of network security and system security. Included are topics relating to application layer security, TCP layer security, network layer security and link layer security and the use of access control, intrusion detection, intrusion prevention and other related tools.
 
+## Past Syllabii
+
+<a href='./202210/CMSC_622_Syllabus_Fall_2021.pdf'>Fall 2021</a>, <a href='./202320/CMSC_622_Syllabus_Spring_2023.pdf'>Spring 2023</a>
+
 ## Topics
 
 access control, assumption, computer security, concepts, intrustion detection, network security, networks, presentation, security, security paper survey, system security, tcp layer security, technical paper reading, trust
+
+## ABET Coverage
+
+security and privacy, concepts of programming languages, networking and communication
+
+## Coverage and Topics Map
+
+Note that topics without associated ABET category assignments are excluded from this map.  See the [mapping](https://docs.google.com/spreadsheets/d/1qrN3L7eRLsM-aVMHYaLQN-FMYtrTJf0_h6dLKlUdPkk/edit#gid=338318647) for more details.
+
+ABET coverage                      Adjusted Topic           Course
+---------------------------------  -----------------------  ----------------------------------
+concepts of programming languages  concepts                 <a href='CMSC622.qmd'>CMSC 622</a>
+concepts of programming languages  trust                    <a href='CMSC622.qmd'>CMSC 622</a>
+networking and communication       network security         <a href='CMSC622.qmd'>CMSC 622</a>
+networking and communication       networks                 <a href='CMSC622.qmd'>CMSC 622</a>
+networking and communication       presentation             <a href='CMSC622.qmd'>CMSC 622</a>
+security and privacy               access control           <a href='CMSC622.qmd'>CMSC 622</a>
+security and privacy               assumption               <a href='CMSC622.qmd'>CMSC 622</a>
+security and privacy               computer security        <a href='CMSC622.qmd'>CMSC 622</a>
+security and privacy               intrustion detection     <a href='CMSC622.qmd'>CMSC 622</a>
+security and privacy               security                 <a href='CMSC622.qmd'>CMSC 622</a>
+security and privacy               security paper survey    <a href='CMSC622.qmd'>CMSC 622</a>
+security and privacy               system security          <a href='CMSC622.qmd'>CMSC 622</a>
+security and privacy               tcp layer security       <a href='CMSC622.qmd'>CMSC 622</a>
+security and privacy               technical paper reading  <a href='CMSC622.qmd'>CMSC 622</a>
+
 
 ## Syllabus Statements
 

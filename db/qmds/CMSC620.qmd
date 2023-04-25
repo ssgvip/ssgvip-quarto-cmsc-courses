@@ -19,9 +19,34 @@ Semester course; 3 lecture hours. 3 credits. Provides a comprehensive survey of 
 
 Provides a comprehensive survey of modern cryptography. Included are techniques of enciphering and deciphering messages using cryptographic algorithms, block ciphers and block cipher modes, hash functions and message authentication codes, public key cryptography and digital signatures, and steganography. Crosslisted as: CISS 624.
 
+## Past Syllabii
+
+(none since Spring 2021)
+
 ## Topics
 
 authentication, block cipher, cryptographic systems, deciphering, digital signatures, enciphering, hash functions, public key encryption, steganography
+
+## ABET Coverage
+
+security and privacy, algorithms and complexity
+
+## Coverage and Topics Map
+
+Note that topics without associated ABET category assignments are excluded from this map.  See the [mapping](https://docs.google.com/spreadsheets/d/1qrN3L7eRLsM-aVMHYaLQN-FMYtrTJf0_h6dLKlUdPkk/edit#gid=338318647) for more details.
+
+ABET coverage              Adjusted Topic         Course
+-------------------------  ---------------------  ----------------------------------
+algorithms and complexity  hash functions         <a href='CMSC620.qmd'>CMSC 620</a>
+security and privacy       authentication         <a href='CMSC620.qmd'>CMSC 620</a>
+security and privacy       block cipher           <a href='CMSC620.qmd'>CMSC 620</a>
+security and privacy       cryptographic systems  <a href='CMSC620.qmd'>CMSC 620</a>
+security and privacy       deciphering            <a href='CMSC620.qmd'>CMSC 620</a>
+security and privacy       digital signatures     <a href='CMSC620.qmd'>CMSC 620</a>
+security and privacy       enciphering            <a href='CMSC620.qmd'>CMSC 620</a>
+security and privacy       public key encryption  <a href='CMSC620.qmd'>CMSC 620</a>
+security and privacy       steganography          <a href='CMSC620.qmd'>CMSC 620</a>
+
 
 ## Syllabus Statements
 

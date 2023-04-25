@@ -19,9 +19,30 @@ Graduate standing and permission of instructor.
 
 Requires knowledge of first order predicate calculus and context-free languages. Focuses on human-computer interface design principles and methodology and formal specifications of user interfaces.
 
+## Past Syllabii
+
+(none since Spring 2021)
+
 ## Topics
 
 calculus, design, interfaces, languages, user interface
+
+## ABET Coverage
+
+discrete mathematics, concepts of programming languages
+
+## Coverage and Topics Map
+
+Note that topics without associated ABET category assignments are excluded from this map.  See the [mapping](https://docs.google.com/spreadsheets/d/1qrN3L7eRLsM-aVMHYaLQN-FMYtrTJf0_h6dLKlUdPkk/edit#gid=338318647) for more details.
+
+ABET coverage                      Adjusted Topic    Course
+---------------------------------  ----------------  ----------------------------------
+concepts of programming languages  design            <a href='CMSC619.qmd'>CMSC 619</a>
+concepts of programming languages  interfaces        <a href='CMSC619.qmd'>CMSC 619</a>
+concepts of programming languages  languages         <a href='CMSC619.qmd'>CMSC 619</a>
+concepts of programming languages  user interface    <a href='CMSC619.qmd'>CMSC 619</a>
+discrete mathematics               calculus          <a href='CMSC619.qmd'>CMSC 619</a>
+
 
 ## Syllabus Statements
 

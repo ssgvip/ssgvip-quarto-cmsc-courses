@@ -19,9 +19,32 @@ CMSC 355 with minimum grade of C; and UNIV 200 or HONR 200 or equivalent
 
 This weekly seminar presents and discusses topics relevant to senior-level computer science students in support of the capstone project and upcoming graduation. A single course coordinator manages and administers the course and schedules the various faculty lectures and guest speakers. Topics include, but are not limited to, the following: proposal writing; project planning and management; scheduling resources and budgeting for software development projects; patents and intellectual property; entrepreneurship; ethical, legal and social issues in computing; and professional responsibilities of computer scientists. Each student will write and revise a research paper on a technical topic associated with his or her project or experience. A final project report and presentat
 
+## Past Syllabii
+
+<a href='./202210/CMSC_451_Syllabus_Fall_2021.pdf'>Fall 2021</a>, <a href='./202310/CMSC_451_Syllabus_Fall_2022.pdf'>Fall 2022</a>
+
 ## Topics
 
 capstone, entrepreneurship, ethics, final project, project planning, social aspects of technology, software development
+
+## ABET Coverage
+
+techniques, skills, and tools, local and global impacts, software development
+
+## Coverage and Topics Map
+
+Note that topics without associated ABET category assignments are excluded from this map.  See the [mapping](https://docs.google.com/spreadsheets/d/1qrN3L7eRLsM-aVMHYaLQN-FMYtrTJf0_h6dLKlUdPkk/edit#gid=338318647) for more details.
+
+ABET coverage                  Adjusted Topic                Course
+-----------------------------  ----------------------------  ----------------------------------
+local and global impacts       final project                 <a href='CMSC451.qmd'>CMSC 451</a>
+local and global impacts       social aspects of technology  <a href='CMSC451.qmd'>CMSC 451</a>
+software development           software development          <a href='CMSC451.qmd'>CMSC 451</a>
+techniques, skills, and tools  capstone                      <a href='CMSC451.qmd'>CMSC 451</a>
+techniques, skills, and tools  entrepreneurship              <a href='CMSC451.qmd'>CMSC 451</a>
+techniques, skills, and tools  ethics                        <a href='CMSC451.qmd'>CMSC 451</a>
+techniques, skills, and tools  project planning              <a href='CMSC451.qmd'>CMSC 451</a>
+
 
 ## Syllabus Statements
 

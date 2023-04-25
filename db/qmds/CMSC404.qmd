@@ -19,9 +19,33 @@ CMSC 401 and 403.
 
 A first course in compiler theory and construction. Formal description of languages, underlying theory and design techniques for compilers, lexical analysis, syntax analysis, syntax-directed translation, intermediate languages, run-time system management, code generation, code optimization, compiler-building tools.
 
+## Past Syllabii
+
+(none since Spring 2021)
+
 ## Topics
 
 code management, compilers, intermediate languages, languages, lexical analysis, optimization, run-time system management, syntax
+
+## ABET Coverage
+
+computer science theory, concepts of programming languages, general purpose programming language, algorithms and complexity, operating systems
+
+## Coverage and Topics Map
+
+Note that topics without associated ABET category assignments are excluded from this map.  See the [mapping](https://docs.google.com/spreadsheets/d/1qrN3L7eRLsM-aVMHYaLQN-FMYtrTJf0_h6dLKlUdPkk/edit#gid=338318647) for more details.
+
+ABET coverage                         Adjusted Topic              Course
+------------------------------------  --------------------------  ----------------------------------
+algorithms and complexity             lexical analysis            <a href='CMSC404.qmd'>CMSC 404</a>
+algorithms and complexity             optimization                <a href='CMSC404.qmd'>CMSC 404</a>
+computer science theory               code management             <a href='CMSC404.qmd'>CMSC 404</a>
+concepts of programming languages     compilers                   <a href='CMSC404.qmd'>CMSC 404</a>
+concepts of programming languages     syntax                      <a href='CMSC404.qmd'>CMSC 404</a>
+general purpose programming language  intermediate languages      <a href='CMSC404.qmd'>CMSC 404</a>
+general purpose programming language  languages                   <a href='CMSC404.qmd'>CMSC 404</a>
+operating systems                     run-time system management  <a href='CMSC404.qmd'>CMSC 404</a>
+
 
 ## Syllabus Statements
 

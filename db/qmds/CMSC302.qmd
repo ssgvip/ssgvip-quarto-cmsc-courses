@@ -19,9 +19,44 @@ CMSC 255 with minimum grade of C.
 
 Logic and proofs, sets, functions, sequences and sums, relations, graphs, trees, induction and recursion, advanced counting technique (recurrences).
 
+## Past Syllabii
+
+<a href='./202120/CMSC_302_Syllabus_Spring_2021.pdf'>Spring 2021</a>, <a href='./202210/CMSC_302_Syllabus_Fall_2021.pdf'>Fall 2021</a>, <a href='./202220/CMSC_302_Syllabus_Spring_2022.pdf'>Spring 2022</a>, <a href='./202310/CMSC_302_Syllabus_Fall_2022.pdf'>Fall 2022</a>, <a href='./202320/CMSC_302_Syllabus_Spring_2023.pdf'>Spring 2023</a>
+
 ## Topics
 
 algebra, counting, functions, graphs, induction, logic, matrices, probability, proofs, recurrences, recursion, relations, sequences, sequencing, set theory, sets, summations, sums, trees
+
+## ABET Coverage
+
+discrete mathematics, concepts of programming languages, techniques, skills, and tools, probability, computer science theory
+
+## Coverage and Topics Map
+
+Note that topics without associated ABET category assignments are excluded from this map.  See the [mapping](https://docs.google.com/spreadsheets/d/1qrN3L7eRLsM-aVMHYaLQN-FMYtrTJf0_h6dLKlUdPkk/edit#gid=338318647) for more details.
+
+ABET coverage                      Adjusted Topic    Course
+---------------------------------  ----------------  ----------------------------------
+computer science theory            set theory        <a href='CMSC302.qmd'>CMSC 302</a>
+concepts of programming languages  functions         <a href='CMSC302.qmd'>CMSC 302</a>
+concepts of programming languages  graphs            <a href='CMSC302.qmd'>CMSC 302</a>
+concepts of programming languages  induction         <a href='CMSC302.qmd'>CMSC 302</a>
+concepts of programming languages  matrices          <a href='CMSC302.qmd'>CMSC 302</a>
+concepts of programming languages  proofs            <a href='CMSC302.qmd'>CMSC 302</a>
+concepts of programming languages  recurrences       <a href='CMSC302.qmd'>CMSC 302</a>
+concepts of programming languages  recursion         <a href='CMSC302.qmd'>CMSC 302</a>
+concepts of programming languages  relations         <a href='CMSC302.qmd'>CMSC 302</a>
+concepts of programming languages  sequences         <a href='CMSC302.qmd'>CMSC 302</a>
+concepts of programming languages  sequencing        <a href='CMSC302.qmd'>CMSC 302</a>
+concepts of programming languages  sets              <a href='CMSC302.qmd'>CMSC 302</a>
+concepts of programming languages  summations        <a href='CMSC302.qmd'>CMSC 302</a>
+concepts of programming languages  sums              <a href='CMSC302.qmd'>CMSC 302</a>
+concepts of programming languages  trees             <a href='CMSC302.qmd'>CMSC 302</a>
+discrete mathematics               algebra           <a href='CMSC302.qmd'>CMSC 302</a>
+discrete mathematics               counting          <a href='CMSC302.qmd'>CMSC 302</a>
+probability                        probability       <a href='CMSC302.qmd'>CMSC 302</a>
+techniques, skills, and tools      logic             <a href='CMSC302.qmd'>CMSC 302</a>
+
 
 ## Syllabus Statements
 

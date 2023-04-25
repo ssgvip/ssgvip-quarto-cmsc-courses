@@ -19,9 +19,46 @@ CMSC 256 or EGRE 246, either with a minimum grade of C.
 
 Provides an overview of how to engineer software systems, including all stages of the software development process based on agile principles. Familiarizes students with modern software tooling and the principles of software quality and testing. Students will work in teams to gain experience in software development methodology, write specification and design documents, and develop a prototype.
 
+## Past Syllabii
+
+<a href='./202120/CMSC_355_Syllabus_Spring_2021.pdf'>Spring 2021</a>, <a href='./202210/CMSC_355_Syllabus_Fall_2021.pdf'>Fall 2021</a>, <a href='./202220/CMSC_355_Syllabus_Spring_2022.pdf'>Spring 2022</a>, <a href='./202310/CMSC_355_Syllabus_Fall_2022.pdf'>Fall 2022</a>, <a href='./202320/CMSC_355_Syllabus_Spring_2023.pdf'>Spring 2023</a>
+
 ## Topics
 
 agile, ci/cd, code management, containerization, design, github, patterns, prototyping, requirement engineering, serverless coding, service oriented design techniques, software architecture, software design, software development, software lifecycle, software maintenance, software modeling, software quality, software validation, software verification, testing
+
+## ABET Coverage
+
+software development, concepts of programming languages, information management, techniques, skills, and tools, computer architecture and organization
+
+## Coverage and Topics Map
+
+Note that topics without associated ABET category assignments are excluded from this map.  See the [mapping](https://docs.google.com/spreadsheets/d/1qrN3L7eRLsM-aVMHYaLQN-FMYtrTJf0_h6dLKlUdPkk/edit#gid=338318647) for more details.
+
+ABET coverage                           Adjusted Topic                      Course
+--------------------------------------  ----------------------------------  ----------------------------------
+computer architecture and organization  software architecture               <a href='CMSC355.qmd'>CMSC 355</a>
+concepts of programming languages       ci/cd                               <a href='CMSC355.qmd'>CMSC 355</a>
+concepts of programming languages       design                              <a href='CMSC355.qmd'>CMSC 355</a>
+information management                  code management                     <a href='CMSC355.qmd'>CMSC 355</a>
+information management                  containerization                    <a href='CMSC355.qmd'>CMSC 355</a>
+software development                    agile                               <a href='CMSC355.qmd'>CMSC 355</a>
+software development                    requirement engineering             <a href='CMSC355.qmd'>CMSC 355</a>
+software development                    serverless coding                   <a href='CMSC355.qmd'>CMSC 355</a>
+software development                    service oriented design techniques  <a href='CMSC355.qmd'>CMSC 355</a>
+software development                    software design                     <a href='CMSC355.qmd'>CMSC 355</a>
+software development                    software development                <a href='CMSC355.qmd'>CMSC 355</a>
+software development                    software lifecycle                  <a href='CMSC355.qmd'>CMSC 355</a>
+software development                    software maintenance                <a href='CMSC355.qmd'>CMSC 355</a>
+software development                    software modeling                   <a href='CMSC355.qmd'>CMSC 355</a>
+software development                    software quality                    <a href='CMSC355.qmd'>CMSC 355</a>
+software development                    software validation                 <a href='CMSC355.qmd'>CMSC 355</a>
+software development                    software verification               <a href='CMSC355.qmd'>CMSC 355</a>
+techniques, skills, and tools           github                              <a href='CMSC355.qmd'>CMSC 355</a>
+techniques, skills, and tools           patterns                            <a href='CMSC355.qmd'>CMSC 355</a>
+techniques, skills, and tools           prototyping                         <a href='CMSC355.qmd'>CMSC 355</a>
+techniques, skills, and tools           testing                             <a href='CMSC355.qmd'>CMSC 355</a>
+
 
 ## Syllabus Statements
 

@@ -19,9 +19,32 @@ CMSC 210.
 
 Introduction to data science skills. The course introduces students to the foundations of data science and the tools used to collect, analyze and represent data. Students will apply these principles in both analysis and visualization projects. This course is not applicable for credit toward any College of Engineering degrees.
 
+## Past Syllabii
+
+<a href='./202120/CMSC_330_Syllabus_Spring_2021.pdf'>Spring 2021</a>, <a href='./202210/CMSC_330_Syllabus_Fall_2021.pdf'>Fall 2021</a>, <a href='./202220/CMSC_330_Syllabus_Spring_2022.pdf'>Spring 2022</a>, <a href='./202310/CMSC_330_Syllabus_Fall_2022.pdf'>Fall 2022</a>, <a href='./202320/CMSC_330_Syllabus_Spring_2023.pdf'>Spring 2023</a>
+
 ## Topics
 
 analysis, data, data management, data manipulation, data quality, security, visualization
+
+## ABET Coverage
+
+algorithms and complexity, information management, security and privacy, computing-based systems
+
+## Coverage and Topics Map
+
+Note that topics without associated ABET category assignments are excluded from this map.  See the [mapping](https://docs.google.com/spreadsheets/d/1qrN3L7eRLsM-aVMHYaLQN-FMYtrTJf0_h6dLKlUdPkk/edit#gid=338318647) for more details.
+
+ABET coverage              Adjusted Topic     Course
+-------------------------  -----------------  ----------------------------------
+algorithms and complexity  analysis           <a href='CMSC330.qmd'>CMSC 330</a>
+computing-based systems    visualization      <a href='CMSC330.qmd'>CMSC 330</a>
+information management     data               <a href='CMSC330.qmd'>CMSC 330</a>
+information management     data management    <a href='CMSC330.qmd'>CMSC 330</a>
+information management     data manipulation  <a href='CMSC330.qmd'>CMSC 330</a>
+information management     data quality       <a href='CMSC330.qmd'>CMSC 330</a>
+security and privacy       security           <a href='CMSC330.qmd'>CMSC 330</a>
+
 
 ## Syllabus Statements
 

@@ -19,9 +19,34 @@ CMSC 501 or permission of instructor. Enrollment restricted to students with g
 
 A background in undergraduate-level linear algebra is assumed. Convex sets and functions. Convex optimization problems: Linear, quadratic, semi-definite and cone programs. Duality theory. Approximation algorithms for NP-complete integer optimization problems via semi-definite relaxations and rounding schemes. Algorithms for optimization, such as gradient descent, proximal descent, alternating directions method of multipliers, interior point methods.
 
+## Past Syllabii
+
+(none since Spring 2021)
+
 ## Topics
 
 approximation, convex sets, duality theory, gradient descent, interior point methods, linear algebra, multipliers, optimization, proximal descent
+
+## ABET Coverage
+
+discrete mathematics, concepts of programming languages, computer science theory
+
+## Coverage and Topics Map
+
+Note that topics without associated ABET category assignments are excluded from this map.  See the [mapping](https://docs.google.com/spreadsheets/d/1qrN3L7eRLsM-aVMHYaLQN-FMYtrTJf0_h6dLKlUdPkk/edit#gid=338318647) for more details.
+
+ABET coverage                      Adjusted Topic          Course
+---------------------------------  ----------------------  ----------------------------------
+computer science theory            duality theory          <a href='CMSC601.qmd'>CMSC 601</a>
+concepts of programming languages  convex sets             <a href='CMSC601.qmd'>CMSC 601</a>
+concepts of programming languages  gradient descent        <a href='CMSC601.qmd'>CMSC 601</a>
+concepts of programming languages  interior point methods  <a href='CMSC601.qmd'>CMSC 601</a>
+concepts of programming languages  multipliers             <a href='CMSC601.qmd'>CMSC 601</a>
+concepts of programming languages  optimization            <a href='CMSC601.qmd'>CMSC 601</a>
+concepts of programming languages  proximal descent        <a href='CMSC601.qmd'>CMSC 601</a>
+discrete mathematics               approximation           <a href='CMSC601.qmd'>CMSC 601</a>
+discrete mathematics               linear algebra          <a href='CMSC601.qmd'>CMSC 601</a>
+
 
 ## Syllabus Statements
 

@@ -19,9 +19,38 @@ CMSC 401 with a minimum grade of C.
 
 Covers network models, link prediction and analysis, centrality measures, random networks, power-laws and preferential attachment, small world phenomenon and decentralized search, community structure, information propagation in networks, and security and privacy issues in OSNs.
 
+## Past Syllabii
+
+(none since Spring 2021)
+
 ## Topics
 
 centrality, community structure, decentralized search, information propagation, link analysis, network models, networks, osns, power-laws, preferential attachment, random networks, security, small world phenomenon
+
+## ABET Coverage
+
+concepts of programming languages, networking and communication, information management, algorithms and complexity, techniques, skills, and tools, security and privacy, computer science theory
+
+## Coverage and Topics Map
+
+Note that topics without associated ABET category assignments are excluded from this map.  See the [mapping](https://docs.google.com/spreadsheets/d/1qrN3L7eRLsM-aVMHYaLQN-FMYtrTJf0_h6dLKlUdPkk/edit#gid=338318647) for more details.
+
+ABET coverage                      Adjusted Topic           Course
+---------------------------------  -----------------------  ----------------------------------
+algorithms and complexity          link analysis            <a href='CMSC412.qmd'>CMSC 412</a>
+computer science theory            small world phenomenon   <a href='CMSC412.qmd'>CMSC 412</a>
+concepts of programming languages  centrality               <a href='CMSC412.qmd'>CMSC 412</a>
+information management             information propagation  <a href='CMSC412.qmd'>CMSC 412</a>
+networking and communication       community structure      <a href='CMSC412.qmd'>CMSC 412</a>
+networking and communication       decentralized search     <a href='CMSC412.qmd'>CMSC 412</a>
+networking and communication       network models           <a href='CMSC412.qmd'>CMSC 412</a>
+networking and communication       networks                 <a href='CMSC412.qmd'>CMSC 412</a>
+networking and communication       osns                     <a href='CMSC412.qmd'>CMSC 412</a>
+networking and communication       random networks          <a href='CMSC412.qmd'>CMSC 412</a>
+security and privacy               security                 <a href='CMSC412.qmd'>CMSC 412</a>
+techniques, skills, and tools      power-laws               <a href='CMSC412.qmd'>CMSC 412</a>
+techniques, skills, and tools      preferential attachment  <a href='CMSC412.qmd'>CMSC 412</a>
+
 
 ## Syllabus Statements
 

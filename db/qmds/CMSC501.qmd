@@ -19,9 +19,32 @@ CMSC 401 or equivalent. Enrollment is restricted to students with graduate sta
 
 Advanced graph algorithms, advanced data structures, applied numerical algorithms, optimization methods, approximation methods for hard graph and string problems and computational geometry algorithms.
 
+## Past Syllabii
+
+<a href='./202210/CMSC_501_Syllabus_Fall_2021.pdf'>Fall 2021</a>, <a href='./202310/CMSC_501_Syllabus_Fall_2022.pdf'>Fall 2022</a>
+
 ## Topics
 
 algorithms, approximation, computational geometry, data structures, graph algorithms, optimization, strings
+
+## ABET Coverage
+
+algorithms and complexity, discrete mathematics, information management, concepts of programming languages
+
+## Coverage and Topics Map
+
+Note that topics without associated ABET category assignments are excluded from this map.  See the [mapping](https://docs.google.com/spreadsheets/d/1qrN3L7eRLsM-aVMHYaLQN-FMYtrTJf0_h6dLKlUdPkk/edit#gid=338318647) for more details.
+
+ABET coverage                      Adjusted Topic          Course
+---------------------------------  ----------------------  ----------------------------------
+algorithms and complexity          algorithms              <a href='CMSC501.qmd'>CMSC 501</a>
+algorithms and complexity          graph algorithms        <a href='CMSC501.qmd'>CMSC 501</a>
+algorithms and complexity          optimization            <a href='CMSC501.qmd'>CMSC 501</a>
+concepts of programming languages  strings                 <a href='CMSC501.qmd'>CMSC 501</a>
+discrete mathematics               approximation           <a href='CMSC501.qmd'>CMSC 501</a>
+discrete mathematics               computational geometry  <a href='CMSC501.qmd'>CMSC 501</a>
+information management             data structures         <a href='CMSC501.qmd'>CMSC 501</a>
+
 
 ## Syllabus Statements
 

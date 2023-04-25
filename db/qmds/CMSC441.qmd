@@ -19,9 +19,33 @@ CMSC 355; and UNIV 200 or HONR 200 or equivalent, both with minimum grade
 
 A minimum of six laboratory hours per week dedicated to the execution phase of the senior design (capstone) project for the computer science major. Tasks include team meetings, brainstorming, sponsor advising, researching, designing, implementing, reviewing, testing and validating projects. Each student will participate, either individually or as part of a team, in a project or other experience approved by the course coordinator or sponsored by another computer science faculty member. Students will submit a detailed written description of their proposed project or experience and will present orally some aspect of what they have learned and/or done during the semester. This course cannot be counted as upper-level CMSC electives for students graduating under bullet
 
+## Past Syllabii
+
+(none since Spring 2021)
+
 ## Topics
 
 brainstorming, capstone, design, final project, project planning, research, teamwork, testing
+
+## ABET Coverage
+
+networking and communication, general purpose programming language, techniques, skills, and tools
+
+## Coverage and Topics Map
+
+Note that topics without associated ABET category assignments are excluded from this map.  See the [mapping](https://docs.google.com/spreadsheets/d/1qrN3L7eRLsM-aVMHYaLQN-FMYtrTJf0_h6dLKlUdPkk/edit#gid=338318647) for more details.
+
+ABET coverage                         Adjusted Topic    Course
+------------------------------------  ----------------  ----------------------------------
+general purpose programming language  capstone          <a href='CMSC441.qmd'>CMSC 441</a>
+general purpose programming language  design            <a href='CMSC441.qmd'>CMSC 441</a>
+general purpose programming language  final project     <a href='CMSC441.qmd'>CMSC 441</a>
+networking and communication          brainstorming     <a href='CMSC441.qmd'>CMSC 441</a>
+techniques, skills, and tools         project planning  <a href='CMSC441.qmd'>CMSC 441</a>
+techniques, skills, and tools         research          <a href='CMSC441.qmd'>CMSC 441</a>
+techniques, skills, and tools         teamwork          <a href='CMSC441.qmd'>CMSC 441</a>
+techniques, skills, and tools         testing           <a href='CMSC441.qmd'>CMSC 441</a>
+
 
 ## Syllabus Statements
 

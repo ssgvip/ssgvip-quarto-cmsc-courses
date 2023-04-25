@@ -19,9 +19,43 @@ CMSC 355 with a minimum grade of C. Enrollment is restricted to majors in the 
 
 A practical introduction to testing complex software applications. An introduction to concepts and techniques used in the analysis of software, including basic and advanced control flow and data flow analyses. Using analytic results to derive test data and validate the correct implementation of programs. Advanced testing strategies including random, structural, mutation and fuzzing.
 
+## Past Syllabii
+
+<a href='./202120/CMSC_425_Syllabus_Spring_2021.pdf'>Spring 2021</a>, <a href='./202220/CMSC_425_Syllabus_Spring_2022.pdf'>Spring 2022</a>, <a href='./202320/CMSC_425_Syllabus_Spring_2023.pdf'>Spring 2023</a>
+
 ## Topics
 
 advanced testing strategies, analysis, concolic hybrid analysis, control flow, coverage-driven systematic software testing, data flow, data-flow, dynamic programming, limitations, program analysis-driven testing, software development, software management, software validation, software verification, static programming, symbolic program analysis, test case coverage, testing
+
+## ABET Coverage
+
+software development, algorithms and complexity, concepts of programming languages, operating systems, information management, general purpose programming language, computer science theory, techniques, skills, and tools
+
+## Coverage and Topics Map
+
+Note that topics without associated ABET category assignments are excluded from this map.  See the [mapping](https://docs.google.com/spreadsheets/d/1qrN3L7eRLsM-aVMHYaLQN-FMYtrTJf0_h6dLKlUdPkk/edit#gid=338318647) for more details.
+
+ABET coverage                         Adjusted Topic                               Course
+------------------------------------  -------------------------------------------  ----------------------------------
+algorithms and complexity             analysis                                     <a href='CMSC425.qmd'>CMSC 425</a>
+algorithms and complexity             symbolic program analysis                    <a href='CMSC425.qmd'>CMSC 425</a>
+computer science theory               program analysis-driven testing              <a href='CMSC425.qmd'>CMSC 425</a>
+concepts of programming languages     concolic hybrid analysis                     <a href='CMSC425.qmd'>CMSC 425</a>
+concepts of programming languages     control flow                                 <a href='CMSC425.qmd'>CMSC 425</a>
+concepts of programming languages     test case coverage                           <a href='CMSC425.qmd'>CMSC 425</a>
+general purpose programming language  dynamic programming                          <a href='CMSC425.qmd'>CMSC 425</a>
+general purpose programming language  limitations                                  <a href='CMSC425.qmd'>CMSC 425</a>
+information management                data flow                                    <a href='CMSC425.qmd'>CMSC 425</a>
+information management                data-flow                                    <a href='CMSC425.qmd'>CMSC 425</a>
+operating systems                     coverage-driven systematic software testing  <a href='CMSC425.qmd'>CMSC 425</a>
+software development                  advanced testing strategies                  <a href='CMSC425.qmd'>CMSC 425</a>
+software development                  software development                         <a href='CMSC425.qmd'>CMSC 425</a>
+software development                  software management                          <a href='CMSC425.qmd'>CMSC 425</a>
+software development                  software validation                          <a href='CMSC425.qmd'>CMSC 425</a>
+software development                  software verification                        <a href='CMSC425.qmd'>CMSC 425</a>
+software development                  static programming                           <a href='CMSC425.qmd'>CMSC 425</a>
+techniques, skills, and tools         testing                                      <a href='CMSC425.qmd'>CMSC 425</a>
+
 
 ## Syllabus Statements
 

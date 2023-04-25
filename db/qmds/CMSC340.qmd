@@ -19,9 +19,37 @@ CMSC 210.
 
 Introduction to cybersecurity skills. The course introduces students to cybersecurity terminology, standards and best practices. Students will apply these practices as part of a cybersecurity-focused project. This course is not applicable for credit toward any College of Engineering degrees.
 
+## Past Syllabii
+
+<a href='./202120/CMSC_340_Syllabus_Spring_2021.pdf'>Spring 2021</a>, <a href='./202210/CMSC_340_Syllabus_Fall_2021.pdf'>Fall 2021</a>, <a href='./202220/CMSC_340_Syllabus_Spring_2022.pdf'>Spring 2022</a>, <a href='./202310/CMSC_340_Syllabus_Fall_2022.pdf'>Fall 2022</a>, <a href='./202320/CMSC_340_Syllabus_Spring_2023.pdf'>Spring 2023</a>
+
 ## Topics
 
 cryptographic systems, cybersecurity, ethics, firewalls, information security, logic, physical security, risk management, security, security maintenance, security technology, vpns
+
+## ABET Coverage
+
+software development, concepts of programming languages, local and global impacts, information management, techniques, skills, and tools, security and privacy
+
+## Coverage and Topics Map
+
+Note that topics without associated ABET category assignments are excluded from this map.  See the [mapping](https://docs.google.com/spreadsheets/d/1qrN3L7eRLsM-aVMHYaLQN-FMYtrTJf0_h6dLKlUdPkk/edit#gid=338318647) for more details.
+
+ABET coverage                      Adjusted Topic         Course
+---------------------------------  ---------------------  ----------------------------------
+concepts of programming languages  cybersecurity          <a href='CMSC340.qmd'>CMSC 340</a>
+information management             information security   <a href='CMSC340.qmd'>CMSC 340</a>
+local and global impacts           ethics                 <a href='CMSC340.qmd'>CMSC 340</a>
+local and global impacts           firewalls              <a href='CMSC340.qmd'>CMSC 340</a>
+security and privacy               physical security      <a href='CMSC340.qmd'>CMSC 340</a>
+security and privacy               risk management        <a href='CMSC340.qmd'>CMSC 340</a>
+security and privacy               security               <a href='CMSC340.qmd'>CMSC 340</a>
+security and privacy               security maintenance   <a href='CMSC340.qmd'>CMSC 340</a>
+security and privacy               security technology    <a href='CMSC340.qmd'>CMSC 340</a>
+security and privacy               vpns                   <a href='CMSC340.qmd'>CMSC 340</a>
+software development               cryptographic systems  <a href='CMSC340.qmd'>CMSC 340</a>
+techniques, skills, and tools      logic                  <a href='CMSC340.qmd'>CMSC 340</a>
+
 
 ## Syllabus Statements
 

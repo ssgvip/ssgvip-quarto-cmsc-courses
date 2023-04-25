@@ -19,9 +19,26 @@ Enrollment restricted to students with graduate standing and consent of instruct
 
 Independent study done under the supervision of a faculty member. The student must identify a faculty member willing to supervise the research and submit a proposal for approval by the computer science graduate committee no later than the 10th week of the prior semester. A written report and an oral presentation are required upon completion of the research project. Graded as Pass/Fail.
 
+## Past Syllabii
+
+(none since Spring 2021)
+
 ## Topics
 
 independent study
+
+## ABET Coverage
+
+concepts of programming languages
+
+## Coverage and Topics Map
+
+Note that topics without associated ABET category assignments are excluded from this map.  See the [mapping](https://docs.google.com/spreadsheets/d/1qrN3L7eRLsM-aVMHYaLQN-FMYtrTJf0_h6dLKlUdPkk/edit#gid=338318647) for more details.
+
+ABET coverage                      Adjusted Topic     Course
+---------------------------------  -----------------  ----------------------------------
+concepts of programming languages  independent study  <a href='CMSC692.qmd'>CMSC 692</a>
+
 
 ## Syllabus Statements
 

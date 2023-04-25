@@ -13,8 +13,12 @@ website:
         file: index.qmd
       - text: "Catalog"
         file: catalog.qmd
+      - text: "Syllabii"
+        file: syllabii.qmd
       - text: "Topics"
         file: topics.qmd
+      - text: "Coverage"
+        file: coverage.qmd
       - text: "Code"
         file: scanner.md
   sidebar:

@@ -19,9 +19,29 @@ Semester course; 3 lecture hours (delivered online, face-to-face or hybrid). 3 c
 
 Provides an introduction to cloud computing architecture and cloud computing security. The course covers the basic concepts of cloud computing, including memory virtualization, device virtualization and related security problems in cloud computing.
 
+## Past Syllabii
+
+(none since Spring 2021)
+
 ## Topics
 
 cloud computing, device virtualization, memory virtualization, security
+
+## ABET Coverage
+
+computing-based systems, concepts of programming languages, security and privacy
+
+## Coverage and Topics Map
+
+Note that topics without associated ABET category assignments are excluded from this map.  See the [mapping](https://docs.google.com/spreadsheets/d/1qrN3L7eRLsM-aVMHYaLQN-FMYtrTJf0_h6dLKlUdPkk/edit#gid=338318647) for more details.
+
+ABET coverage                      Adjusted Topic         Course
+---------------------------------  ---------------------  ----------------------------------
+computing-based systems            cloud computing        <a href='CMSC623.qmd'>CMSC 623</a>
+concepts of programming languages  device virtualization  <a href='CMSC623.qmd'>CMSC 623</a>
+concepts of programming languages  memory virtualization  <a href='CMSC623.qmd'>CMSC 623</a>
+security and privacy               security               <a href='CMSC623.qmd'>CMSC 623</a>
+
 
 ## Syllabus Statements
 

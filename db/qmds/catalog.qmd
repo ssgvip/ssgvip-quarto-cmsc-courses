@@ -17,7 +17,11 @@ Semester course. 3 hours.
 
 **Description:** An introduction to the work of computer scientists, including an overview of current research and application areas as well as career opportunities. Topics include problem-solving, the basics of computer organization, the software engineering life cycle, research resources and social and ethical aspects of technology. Additional topics also include binary, hexadecimal, two’s complement, floating point representation, ASCII and Unicode.
 
-**Topics:** ascii, basics of computer organiation, ethical aspects of technology, numeric representation, problem solving, research resources, social aspects of technology, software engineering life cycle, unicode
+**Syllabii:** (none since Spring 2021)
+
+**Topics:** ascii, basics of computer organization, ethical aspects of technology, numeric representation, problem solving, research resources, social aspects of technology, software engineering life cycle, unicode
+
+**ABET coverage:** computer architecture and organization, security and privacy, statistics, techniques, skills, and tools, networking and communication, software development, computer science theory, local and global impacts, computing-based systems
 
 
 ## [CMSC 144 - Code Beats With Python](CMSC144.qmd)
@@ -28,7 +32,11 @@ Semester course. 1 hour.
 
 **Description:** An introduction to computer programming in Python by teaching students to create hip hop beats. Teaches fundamental programming concepts including sequencing, syntax, variables, functions, parameters, lists, repetition and modularization. Teaches just enough music theory to ensure that student-made beats sound great, including fundamental concepts such as melody, rhythm, harmony, chord progression and orchestration. Students will complete in-class activities that reinforce class concepts and, if completed correctly, demonstrate a clear understanding of the material.
 
-**Topics:** chord progression, functions, harmony, lists, melody, modularization, orchestration, parameters, repetition, rhytum, sequencing, syntax, variables
+**Syllabii:** <a href='./202310/CMSC_144_Syllabus_Fall_2022.pdf'>Fall 2022</a>
+
+**Topics:** functions, lists, modularization, music, parameters, repetition, sequencing, syntax, variables
+
+**ABET coverage:** concepts of programming languages
 
 
 ## [CMSC 191 - Topics in Computer Science](CMSC191.qmd)
@@ -39,7 +47,11 @@ Semester course. 3 hours.
 
 **Description:** This course will teach selected topics in computer science. See the Schedule of Classes for specific topics to be offered each semester and prerequisites.
 
+**Syllabii:** <a href='./202220/CMSC_191_Syllabus_Spring_2022.pdf'>Spring 2022</a>
+
 **Topics:** selected topics
+
+**ABET coverage:** 
 
 
 ## [CMSC 210 - Computers and Programming](CMSC210.qmd)
@@ -50,7 +62,11 @@ Semester course. 3 hours.
 
 **Description:** Introduction to object-oriented programming using Python. The course introduces students to structured programming logic and design techniques. The course content also includes instruction in critical thinking and problem-solving skills using contemporary tools. Specific topics include flowcharting, pseudocode and program control structures, including sequence, selection and repetition. This course is not applicable for credit toward the BS in Computer Science.
 
+**Syllabii:** <a href='./202120/CMSC_210_Syllabus_Spring_2021.pdf'>Spring 2021</a>, <a href='./202210/CMSC_210_Syllabus_Fall_2021.pdf'>Fall 2021</a>, <a href='./202220/CMSC_210_Syllabus_Spring_2022.pdf'>Spring 2022</a>, <a href='./202310/CMSC_210_Syllabus_Fall_2022.pdf'>Fall 2022</a>, <a href='./202320/CMSC_210_Syllabus_Spring_2023.pdf'>Spring 2023</a>
+
 **Topics:** calling functions, conditional execution, control structures, critical thinking, debugging, dictionaries, expressions, files, flow charting, lists, loops and iterations, network programming, problem solving, program design, programming logic, pseudocode, regular expressions, repetition, sequencing, statement, strings, structured programming, tuples, variables, writing functions
+
+**ABET coverage:** concepts of programming languages, techniques, skills, and tools, software development, networking and communication
 
 
 ## [CMSC 235 - Computing and Data Ethics](CMSC235.qmd)
@@ -61,7 +77,11 @@ Semester course. 3 hours.
 
 **Description:** Introduction to ethical considerations for computing and working with data, legal implications surrounding data and computational systems, and sociotechnical responsibilities.
 
+**Syllabii:** (none since Spring 2021)
+
 **Topics:** ethics, Legal implications, sociotechnical responsibilities
+
+**ABET coverage:** local and global impacts
 
 
 ## [CMSC 245 - Introduction to Programming Using C++](CMSC245.qmd)
@@ -72,7 +92,11 @@ Semester course. 3 hours.
 
 **Description:** Introduction to the concepts and practice of structured programming using C++. Problem-solving, top-down design of algorithms, objects, basic C++ syntax, control structures, functions and arrays. This course is intended for engineering majors.
 
+**Syllabii:** (none since Spring 2021)
+
 **Topics:** arrays, c++ syntax, control structures, functions, problem solving, top down design
+
+**ABET coverage:** concepts of programming languages, algorithms and complexity, computer science theory, software development
 
 
 ## [CMSC 246 - Advanced Programming Using C++](CMSC246.qmd)
@@ -83,7 +107,11 @@ Semester course. 3 hours.
 
 **Description:** Advanced programming in C++. Topics include program design, objects, classes, inheritance, files, strings, linked lists, stacks, queues, binary trees, recursion, and basic searching and sorting techniques. This course is intended for engineering majors.
 
+**Syllabii:** (none since Spring 2021)
+
 **Topics:** basic searching, basic sorting, binary trees, classes, files, inheritance, linked lists, objects, program design, queues, recursion, stacks, strings
+
+**ABET coverage:** algorithms and complexity, software development, information management, concepts of programming languages
 
 
 ## [CMSC 254 - Introduction to Problem-solving](CMSC254.qmd)
@@ -94,7 +122,11 @@ Semester course. 4 hours.
 
 **Description:** Introduction to problem solving and implementation of solutions using Python. The course introduces students to concepts and practice of structured programming, problem-solving, top-down design of algorithms, a Python language syntax, control structures and arrays. The course content also includes instruction in critical-thinking and problem-solving skills using contemporary tools. Specific topics include flowcharting, pseudocode and program control structures, including sequence, selection, repetition and modularization.
 
-**Topics:** analysis, arrays, basic concepts of computer systems, control structures, critical thinking, data, decision structures, dictionaries, flow charting, functions, lists, modeling, modularization, problem solving, processing code, programming, pseudocode, python syntax, repetition, repetition structures, selection, sequencing, sequential data structures, structured programming, structures, top down design, tuples
+**Syllabii:** <a href='./202310/CMSC_254_Syllabus_Fall_2022.pdf'>Fall 2022</a>, <a href='./202320/CMSC_254_Syllabus_Spring_2023.pdf'>Spring 2023</a>
+
+**Topics:** analysis, arrays, basic concepts of computer systems, control structures, critical thinking, data, decision structures, dictionaries, flow charting, functions, lists, modeling, modularization, problem solving, processing code, programming, pseudocode, python syntax, repetition, selection, sequencing, sequential data structures, structured programming, structures, top down design, tuples
+
+**ABET coverage:** algorithms and complexity, concepts of programming languages, computer architecture and organization, software development, techniques, skills, and tools, information management, computer science theory, general purpose programming language
 
 
 ## [CMSC 255 - Introduction to Programming](CMSC255.qmd)
@@ -105,7 +137,11 @@ Semester course. 4 hours.
 
 **Description:** Introduction to object-oriented programming using Java. Topics include problem-solving, top-down design of algorithms using control structures, methods, arrays, basic I/O, basic concepts of objects and classes in Java, Java classes for manipulating strings, and introduction to program testing, UML notation and integrated development environments. Students may not receive credit for both CMSC 255 and INFO 250.
 
-**Topics:** algorithms, arrays, arrays, input/output, classes, computers, computers, control structures, control structures, ide, java, methods, objects, problem solving, problem solving, program testing, simple data types, strings, syntax, top down design, uml
+**Syllabii:** <a href='./202120/CMSC_255_Syllabus_Spring_2021.pdf'>Spring 2021</a>, <a href='./202210/CMSC_255_Syllabus_Fall_2021.pdf'>Fall 2021</a>, <a href='./202220/CMSC_255_Syllabus_Spring_2022.pdf'>Spring 2022</a>, <a href='./202310/CMSC_255_Syllabus_Fall_2022.pdf'>Fall 2022</a>, <a href='./202320/CMSC_255_Syllabus_Spring_2023.pdf'>Spring 2023</a>
+
+**Topics:** algorithms, arrays, classes, computers, control structures, ide, input/output, java, methods, objects, problem solving, program testing, simple data types, strings, syntax, top down design, uml
+
+**ABET coverage:** algorithms and complexity, concepts of programming languages, operating systems, techniques, skills, and tools, computer science theory, general purpose programming language, software development
 
 
 ## [CMSC 256 - Data Structures and Object Oriented Programming](CMSC256.qmd)
@@ -116,7 +152,11 @@ Semester course. 4 hours.
 
 **Description:** Advanced programming using Java. Topics include introduction to object-oriented design, inheritance, polymorphism, exceptions, interfaces, linked lists, stacks, queues, binary trees, recursion, and basic searching and sorting techniques. Continued focus on program testing and UML notation. Students may not receive credit for both CMSC 256 and INFO 350.
 
-**Topics:** abstract complexity, algorithms, algorithms, basic searching, binary trees, classes, data structures, deques, exceptions, generics, graphs, hash functions, inheritance, interfaces, interfaces, iterators, linked lists, linked lists, lists, object oriented programming, objects, polymorphism, queues, queues, recursion, recursion, sorting, sorting, stacks, stacks, trees, uml
+**Syllabii:** <a href='./202120/CMSC_256_Syllabus_Spring_2021.pdf'>Spring 2021</a>, <a href='./202210/CMSC_256_Syllabus_Fall_2021.pdf'>Fall 2021</a>, <a href='./202220/CMSC_256_Syllabus_Spring_2022.pdf'>Spring 2022</a>, <a href='./202310/CMSC_256_Syllabus_Fall_2022.pdf'>Fall 2022</a>, <a href='./202320/CMSC_256_Syllabus_Spring_2023.pdf'>Spring 2023</a>
+
+**Topics:** abstract complexity, algorithms, basic searching, binary trees, classes, data structures, deques, exceptions, generics, graphs, hash functions, inheritance, interfaces, iterators, linked lists, lists, object oriented programming, objects, polymorphism, queues, recursion, sorting, stacks, trees, uml
+
+**ABET coverage:** algorithms and complexity, concepts of programming languages, computer science theory, computer architecture and organization, computing-based systems, general purpose programming language
 
 
 ## [CMSC 257 - Computer Systems](CMSC257.qmd)
@@ -127,7 +167,11 @@ Semester course. 4 hours.
 
 **Description:** Topics include UNIX essentials; system programming in C; machine-level representation and organization of programs/data, arrays and pointers; types, structs and unions; strings; bit/byte operations; memory management; shell programming; input/output, including file handling; debugging; signals; network programming using sockets; program concurrency using forks and threads; experiments on program performance and optimization techniques.
 
+**Syllabii:** <a href='./202120/CMSC_257_Syllabus_Spring_2021.pdf'>Spring 2021</a>, <a href='./202210/CMSC_257_Syllabus_Fall_2021.pdf'>Fall 2021</a>, <a href='./202220/CMSC_257_Syllabus_Spring_2022.pdf'>Spring 2022</a>, <a href='./202310/CMSC_257_Syllabus_Fall_2022.pdf'>Fall 2022</a>, <a href='./202320/CMSC_257_Syllabus_Spring_2023.pdf'>Spring 2023</a>
+
 **Topics:** arrays, bit/bye operations, debugging, files, forks and threads, input/output, machine-level representation, memory management, network programming using sockets, optimization, pointers, program performance, programming in c, shell programming, signals, types, structs, and unions
+
+**ABET coverage:** concepts of programming languages, computer architecture and organization, techniques, skills, and tools, information management, general purpose programming language, algorithms and complexity
 
 
 ## [CMSC 302 - Introduction to Discrete Structures](CMSC302.qmd)
@@ -138,7 +182,11 @@ Semester course. 3 hours.
 
 **Description:** Logic and proofs, sets, functions, sequences and sums, relations, graphs, trees, induction and recursion, advanced counting technique (recurrences).
 
-**Topics:** algebra, counting, functions, functions, graphs, graphs, induction, logic, logic, matrices, probability, proofs, proofs, recurrences, recurrences, recursion, relations, relations, sequences, sequencing, set theory, sets, summations, sums, trees, trees
+**Syllabii:** <a href='./202120/CMSC_302_Syllabus_Spring_2021.pdf'>Spring 2021</a>, <a href='./202210/CMSC_302_Syllabus_Fall_2021.pdf'>Fall 2021</a>, <a href='./202220/CMSC_302_Syllabus_Spring_2022.pdf'>Spring 2022</a>, <a href='./202310/CMSC_302_Syllabus_Fall_2022.pdf'>Fall 2022</a>, <a href='./202320/CMSC_302_Syllabus_Spring_2023.pdf'>Spring 2023</a>
+
+**Topics:** algebra, counting, functions, graphs, induction, logic, matrices, probability, proofs, recurrences, recursion, relations, sequences, sequencing, set theory, sets, summations, sums, trees
+
+**ABET coverage:** discrete mathematics, concepts of programming languages, techniques, skills, and tools, probability, computer science theory
 
 
 ## [CMSC 303 - Introduction to the Theory of Computation](CMSC303.qmd)
@@ -149,7 +197,11 @@ Semester course. 3 hours.
 
 **Description:** Complexity classes, grammars, automata, formal languages, Turing machines, computability.
 
+**Syllabii:** <a href='./202120/CMSC_303_Syllabus_Spring_2021.pdf'>Spring 2021</a>, <a href='./202210/CMSC_303_Syllabus_Fall_2021.pdf'>Fall 2021</a>, <a href='./202220/CMSC_303_Syllabus_Spring_2022.pdf'>Spring 2022</a>, <a href='./202310/CMSC_303_Syllabus_Fall_2022.pdf'>Fall 2022</a>, <a href='./202320/CMSC_303_Syllabus_Spring_2023.pdf'>Spring 2023</a>
+
 **Topics:** automata, complexity analysis, computability theory, context-free grammars, discrete math, finite automata, logic, pushdown automata, regular expressions, turing machines
+
+**ABET coverage:** computer science theory, algorithms and complexity, concepts of programming languages, discrete mathematics, general purpose programming language, techniques, skills, and tools, operating systems
 
 
 ## [CMSC 311 - Computer Organization](CMSC311.qmd)
@@ -160,7 +212,11 @@ Semester course. 3 hours.
 
 **Description:** Introduction to the basic organization of computers including elementary digital logic design, processor and arithmetic/logic unit design, data paths, memory hierarchy, I/O devices, instruction set architecture and addressing modes.
 
-**Topics:** addressing modes, architecture, assembly language, cache memories, computers, data, data paths, data types, digital logic structures, input/output, input/output, instruction set architecture, instruction set architecture, logic, machine language, memory hierarchy, memory hierarchy, organization, stacks, trap routines, trap subroutines, unit design, virtual memory, von neumann model
+**Syllabii:** <a href='./202120/CMSC_311_Syllabus_Spring_2021.pdf'>Spring 2021</a>, <a href='./202210/CMSC_311_Syllabus_Fall_2021.pdf'>Fall 2021</a>, <a href='./202220/CMSC_311_Syllabus_Spring_2022.pdf'>Spring 2022</a>, <a href='./202310/CMSC_311_Syllabus_Fall_2022.pdf'>Fall 2022</a>, <a href='./202320/CMSC_311_Syllabus_Spring_2023.pdf'>Spring 2023</a>
+
+**Topics:** addressing modes, architecture, assembly language, cache memories, computers, data, data paths, data types, digital logic structures, input/output, instruction set architecture, logic, machine language, memory hierarchy, organization, stacks, trap routines, trap subroutines, unit design, virtual memory, von neumann model
+
+**ABET coverage:** concepts of programming languages, computer architecture and organization, general purpose programming language, information management, operating systems, techniques, skills, and tools, computing-based systems
 
 
 ## [CMSC 312 - Introduction to Operating Systems](CMSC312.qmd)
@@ -171,7 +227,11 @@ Semester course. 3 hours.
 
 **Description:** Computer systems design, I/O processing, secondary memory organization, command languages, memory management and job scheduling. Students will work in teams to design and implement an operating system simulation.
 
-**Topics:** command languages, computer systems design, concurrency, debugging, distributed systems, file management, input/output, job scheduling, memory management, memory management, operating systems, process scheduling, secondary memory
+**Syllabii:** <a href='./202120/CMSC_312_Syllabus_Spring_2021.pdf'>Spring 2021</a>, <a href='./202210/CMSC_312_Syllabus_Fall_2021.pdf'>Fall 2021</a>, <a href='./202220/CMSC_312_Syllabus_Spring_2022.pdf'>Spring 2022</a>, <a href='./202310/CMSC_312_Syllabus_Fall_2022.pdf'>Fall 2022</a>, <a href='./202320/CMSC_312_Syllabus_Spring_2023.pdf'>Spring 2023</a>
+
+**Topics:** command languages, computer systems design, concurrency, debugging, distributed systems, file management, input/output, job scheduling, memory management, operating systems, process scheduling, secondary memory
+
+**ABET coverage:** general purpose programming language, concepts of programming languages, parallel and distributed computing, information management, networking and communication, operating systems
 
 
 ## [CMSC 320 - Software Engineering and Web Development](CMSC320.qmd)
@@ -182,7 +242,11 @@ Semester course. 3 hours.
 
 **Description:** Introduction to software engineering and web development. The course introduces students to the software development process, including design, development and testing principles. Students will apply these principles in the development of a web application. This course is not applicable for credit toward any College of Engineering degrees.
 
-**Topics:** design, development, documentation, gathering, software development, systems development, testing, testing functionality, web development, web development
+**Syllabii:** <a href='./202120/CMSC_320_Syllabus_Spring_2021.pdf'>Spring 2021</a>, <a href='./202210/CMSC_320_Syllabus_Fall_2021.pdf'>Fall 2021</a>, <a href='./202220/CMSC_320_Syllabus_Spring_2022.pdf'>Spring 2022</a>, <a href='./202310/CMSC_320_Syllabus_Fall_2022.pdf'>Fall 2022</a>, <a href='./202320/CMSC_320_Syllabus_Spring_2023.pdf'>Spring 2023</a>
+
+**Topics:** design, development, documentation, gathering, software development, systems development, testing, testing functionality, web development
+
+**ABET coverage:** techniques, skills, and tools, software development, concepts of programming languages
 
 
 ## [CMSC 330 - Data Science Skills](CMSC330.qmd)
@@ -193,7 +257,11 @@ Semester course. 3 hours.
 
 **Description:** Introduction to data science skills. The course introduces students to the foundations of data science and the tools used to collect, analyze and represent data. Students will apply these principles in both analysis and visualization projects. This course is not applicable for credit toward any College of Engineering degrees.
 
-**Topics:** analysis, analysis, data, data, data management, data manipulation, data quality, security, visualization, visualization
+**Syllabii:** <a href='./202120/CMSC_330_Syllabus_Spring_2021.pdf'>Spring 2021</a>, <a href='./202210/CMSC_330_Syllabus_Fall_2021.pdf'>Fall 2021</a>, <a href='./202220/CMSC_330_Syllabus_Spring_2022.pdf'>Spring 2022</a>, <a href='./202310/CMSC_330_Syllabus_Fall_2022.pdf'>Fall 2022</a>, <a href='./202320/CMSC_330_Syllabus_Spring_2023.pdf'>Spring 2023</a>
+
+**Topics:** analysis, data, data management, data manipulation, data quality, security, visualization
+
+**ABET coverage:** algorithms and complexity, information management, security and privacy, computing-based systems
 
 
 ## [CMSC 340 - Cybersecurity Skills](CMSC340.qmd)
@@ -204,7 +272,11 @@ Semester course. 3 hours.
 
 **Description:** Introduction to cybersecurity skills. The course introduces students to cybersecurity terminology, standards and best practices. Students will apply these practices as part of a cybersecurity-focused project. This course is not applicable for credit toward any College of Engineering degrees.
 
+**Syllabii:** <a href='./202120/CMSC_340_Syllabus_Spring_2021.pdf'>Spring 2021</a>, <a href='./202210/CMSC_340_Syllabus_Fall_2021.pdf'>Fall 2021</a>, <a href='./202220/CMSC_340_Syllabus_Spring_2022.pdf'>Spring 2022</a>, <a href='./202310/CMSC_340_Syllabus_Fall_2022.pdf'>Fall 2022</a>, <a href='./202320/CMSC_340_Syllabus_Spring_2023.pdf'>Spring 2023</a>
+
 **Topics:** cryptographic systems, cybersecurity, ethics, firewalls, information security, logic, physical security, risk management, security, security maintenance, security technology, vpns
+
+**ABET coverage:** software development, concepts of programming languages, local and global impacts, information management, techniques, skills, and tools, security and privacy
 
 
 ## [CMSC 355 - Fundamentals of Software Engineering](CMSC355.qmd)
@@ -215,7 +287,11 @@ Semester course. 3 hours.
 
 **Description:** Provides an overview of how to engineer software systems, including all stages of the software development process based on agile principles. Familiarizes students with modern software tooling and the principles of software quality and testing. Students will work in teams to gain experience in software development methodology, write specification and design documents, and develop a prototype.
 
-**Topics:** agile, agile, ci/cd, code management, containerization, ci/cd, design, github, patterns, prototyping, requirement engineering, serverless coding, service oriented design techniques, software architecture, software design, software development, software development, software lifecycle, software maintenance, software modeling, software quality, software validation, software verification, testing
+**Syllabii:** <a href='./202120/CMSC_355_Syllabus_Spring_2021.pdf'>Spring 2021</a>, <a href='./202210/CMSC_355_Syllabus_Fall_2021.pdf'>Fall 2021</a>, <a href='./202220/CMSC_355_Syllabus_Spring_2022.pdf'>Spring 2022</a>, <a href='./202310/CMSC_355_Syllabus_Fall_2022.pdf'>Fall 2022</a>, <a href='./202320/CMSC_355_Syllabus_Spring_2023.pdf'>Spring 2023</a>
+
+**Topics:** agile, ci/cd, code management, containerization, design, github, patterns, prototyping, requirement engineering, serverless coding, service oriented design techniques, software architecture, software design, software development, software lifecycle, software maintenance, software modeling, software quality, software validation, software verification, testing
+
+**ABET coverage:** software development, concepts of programming languages, information management, techniques, skills, and tools, computer architecture and organization
 
 
 ## [CMSC 391 - Topics in Computer Science](CMSC391.qmd)
@@ -226,7 +302,11 @@ Semester course. 3 hours.
 
 **Description:** This course will teach selected topics in computer science. See the Schedule of Classes for specific topics to be offered each semester and prerequisites.
 
+**Syllabii:** <a href='./202310/CMSC_391_Syllabus_Fall_2022.pdf'>Fall 2022</a>
+
 **Topics:** selected topics
+
+**ABET coverage:** 
 
 
 ## [CMSC 401 - Algorithm Analysis with Advanced Data Structures](CMSC401.qmd)
@@ -237,7 +317,11 @@ Semester course. 3 hours.
 
 **Description:** Introduction to algorithm analysis and complexity classes. Advanced data structures topics including multiple linked lists, height-balanced trees, B-trees, hashing and graph representation; incorporating data structures into object-oriented design. Analysis of various searching and sorting algorithms. Algorithm design topics include divide-and-conquer, dynamic programming and greedy methods.
 
-**Topics:** algorithms, algorithms, analysis, b-trees, complexity analysis, data structures, data structures, data structures, design, divide and conquer approach, dynamic programming, graph algorithms, graphs, greedy approach, hashing, height-balanced trees, linked lists, objects, recurrences, sorting, sorting
+**Syllabii:** <a href='./202120/CMSC_401_Syllabus_Spring_2021.pdf'>Spring 2021</a>, <a href='./202210/CMSC_401_Syllabus_Fall_2021.pdf'>Fall 2021</a>, <a href='./202220/CMSC_401_Syllabus_Spring_2022.pdf'>Spring 2022</a>, <a href='./202310/CMSC_401_Syllabus_Fall_2022.pdf'>Fall 2022</a>, <a href='./202320/CMSC_401_Syllabus_Spring_2023.pdf'>Spring 2023</a>
+
+**Topics:** algorithms, analysis, b-trees, complexity analysis, data structures, design, divide and conquer approach, dynamic programming, graph algorithms, graphs, greedy approach, hashing, height-balanced trees, linked lists, objects, recurrences, sorting
+
+**ABET coverage:** algorithms and complexity, computer science theory, information management, techniques, skills, and tools, general purpose programming language, concepts of programming languages
 
 
 ## [CMSC 403 - Programming Languages](CMSC403.qmd)
@@ -248,7 +332,11 @@ Semester course. 3 hours.
 
 **Description:** Survey of representative modern programming languages. Formal definition of programming languages including specifications of syntax and semantics. Precedence, infix, prefix and postfix notation. Global properties of algorithmic languages. Sub-routines, co-routines and tasks. List processing, string manipulation, data description and simulation languages. Run-time representation of program and data structures.
 
-**Topics:** algorithms, co-routines, data, data structures, design, functional programming, infix, languages, lists, object oriented programming, parsing, postfix, precendence, prefix, semantics, semantics, strings, sub-routines, symbol table, syntax, syntax
+**Syllabii:** <a href='./202120/CMSC_403_Syllabus_Spring_2021.pdf'>Spring 2021</a>, <a href='./202210/CMSC_403_Syllabus_Fall_2021.pdf'>Fall 2021</a>, <a href='./202220/CMSC_403_Syllabus_Spring_2022.pdf'>Spring 2022</a>, <a href='./202310/CMSC_403_Syllabus_Fall_2022.pdf'>Fall 2022</a>, <a href='./202320/CMSC_403_Syllabus_Spring_2023.pdf'>Spring 2023</a>
+
+**Topics:** algorithms, co-routines, data, data structures, design, functional programming, infix, languages, lists, object oriented programming, parsing, postfix, precendence, prefix, semantics, strings, sub-routines, symbol table, syntax
+
+**ABET coverage:** algorithms and complexity, concepts of programming languages, information management, general purpose programming language, techniques, skills, and tools
 
 
 ## [CMSC 404 - Compiler Construction](CMSC404.qmd)
@@ -259,7 +347,11 @@ Semester course. 3 hours.
 
 **Description:** A first course in compiler theory and construction. Formal description of languages, underlying theory and design techniques for compilers, lexical analysis, syntax analysis, syntax-directed translation, intermediate languages, run-time system management, code generation, code optimization, compiler-building tools.
 
+**Syllabii:** (none since Spring 2021)
+
 **Topics:** code management, compilers, intermediate languages, languages, lexical analysis, optimization, run-time system management, syntax
+
+**ABET coverage:** computer science theory, concepts of programming languages, general purpose programming language, algorithms and complexity, operating systems
 
 
 ## [CMSC 409 - Artificial Intelligence](CMSC409.qmd)
@@ -270,7 +362,11 @@ Semester course. 3 hours.
 
 **Description:** Covers problem spaces, problem-solving methods, game playing, knowledge representatives, expert systems, natural language understanding.
 
+**Syllabii:** <a href='./202210/CMSC_409_Syllabus_Fall_2021.pdf'>Fall 2021</a>, <a href='./202310/CMSC_409_Syllabus_Fall_2022.pdf'>Fall 2022</a>
+
 **Topics:** expert systems, game playing, knowledge representatives, machine learning, natural language, problem solving, problem spaces
+
+**ABET coverage:** concepts of programming languages, general purpose programming language, techniques, skills, and tools
 
 
 ## [CMSC 410 - Introduction to Quantum Computing](CMSC410.qmd)
@@ -281,7 +377,11 @@ Semester course. 3 hours.
 
 **Description:** Introduction to quantum information processing: state vectors and density operators, tensor product space, unitary evolution, no-go theorems, measurement, qubit, gate model of quantum computing, quantum complexity theory, quantum error correction, quantum algorithms, and quantum machine learning.
 
+**Syllabii:** (none since Spring 2021)
+
 **Topics:** density operators, measurement, no-go theorems, quantum algorithms, quantum complexity, quantum computing, quantum error correction, quantum machine learning, qubit, state vectors, tensor, unitary evolution
+
+**ABET coverage:** concepts of programming languages, computer science theory, algorithms and complexity, probability
 
 
 ## [CMSC 411 - Computer Graphics](CMSC411.qmd)
@@ -292,7 +392,11 @@ Semester course. 3 hours.
 
 **Description:** Presents mathematical techniques for graphic development and transformation, curve and surface approximation and projections, graphical languages and data structures and their implementation, graphic modeling.
 
-**Topics:** curve and surface approximations, data structures, graphic development, graphic development, projections, transformation
+**Syllabii:** (none since Spring 2021)
+
+**Topics:** curve and surface approximations, data structures, graphic development, projections, transformation
+
+**ABET coverage:** discrete mathematics, information management, networking and communication
 
 
 ## [CMSC 412 - Social Network Analysis and Cybersecurity Risks](CMSC412.qmd)
@@ -303,7 +407,11 @@ Semester course. 3 hours.
 
 **Description:** Covers network models, link prediction and analysis, centrality measures, random networks, power-laws and preferential attachment, small world phenomenon and decentralized search, community structure, information propagation in networks, and security and privacy issues in OSNs.
 
+**Syllabii:** (none since Spring 2021)
+
 **Topics:** centrality, community structure, decentralized search, information propagation, link analysis, network models, networks, osns, power-laws, preferential attachment, random networks, security, small world phenomenon
+
+**ABET coverage:** concepts of programming languages, networking and communication, information management, algorithms and complexity, techniques, skills, and tools, security and privacy, computer science theory
 
 
 ## [CMSC 413 - Introduction to Cybersecurity](CMSC413.qmd)
@@ -314,7 +422,11 @@ Semester course. 3 hours.
 
 **Description:** This course provides introduction and basic concepts of computer security, cyber attacks, cyber defense, cyber forensics and cyber ethics.
 
+**Syllabii:** <a href='./202210/CMSC_413_Syllabus_Fall_2021.pdf'>Fall 2021</a>, <a href='./202310/CMSC_413_syllabus_Fall_2022.pdf'>Fall 2022</a>
+
 **Topics:** cyber defense, cyber ethics, cyber forensics, cybersecurity, security
+
+**ABET coverage:** security and privacy
 
 
 ## [CMSC 414 - Computer and Network Security](CMSC414.qmd)
@@ -325,7 +437,11 @@ Semester course. 3 hours.
 
 **Description:** This course covers the best practices of computer systems and network security. Key topics include security architecture, cryptographic systems and security management tools.
 
-**Topics:** application layer attacks, architecture, computer networks, computer security, computer systems design, cryptographic systems, cryptographic systems, firewalls, internet, link layer attacks, network penetration, networks, networks, security, security
+**Syllabii:** <a href='./202120/CMSC_414_Syllabus_Spring_2021.pdf'>Spring 2021</a>, <a href='./202220/CMSC_414_Syllabus_Spring_2022.pdf'>Spring 2022</a>, <a href='./202320/CMSC_414_Syllabus_Spring_2023.pdf'>Spring 2023</a>
+
+**Topics:** application layer attacks, architecture, computer networks, computer security, computer systems design, cryptographic systems, firewalls, internet, link layer attacks, network penetration, networks, security
+
+**ABET coverage:** security and privacy, computer architecture and organization, software development, networking and communication
 
 
 ## [CMSC 415 - Introduction to Cryptography](CMSC415.qmd)
@@ -336,7 +452,11 @@ Semester course. 3 hours.
 
 **Description:** This course provides a rigorous and theoretical introduction to modern cryptography. Key topics include symmetric key encryption and authentication, public key encryption, and digital signatures.
 
+**Syllabii:** <a href='./202210/CMSC_415_Syllabus_Fall_2021.pdf'>Fall 2021</a>, <a href='./202310/CMSC_415_Syllabus_Fall_2022.pdf'>Fall 2022</a>
+
 **Topics:** authentication, cryptographic systems, digital signatures, public key encryption, symmetric key encryption
+
+**ABET coverage:** security and privacy
 
 
 ## [CMSC 416 - Introduction to Natural Language Processing](CMSC416.qmd)
@@ -347,7 +467,11 @@ Semester course. 3 hours.
 
 **Description:** Covers rule-based and statistical methods for creating computer programs that analyze, generate and understand human language. Topics include regular expressions and automata, context-free grammars, probabilistic classifiers, and machine learning. Word-level, syntactic and semantic processing are all considered. Application to real-world problems such as spell-checking, Web search, automatic question answering, authorship identification and developing conversational interfaces.
 
+**Syllabii:** <a href='./202120/CMSC_416_Syllabus_Spring_2021.pdf'>Spring 2021</a>, <a href='./202220/CMSC_416_Syllabus_Spring_2022.pdf'>Spring 2022</a>, <a href='./202320/CMSC_416_Syllabus_Spring_2023.pdf'>Spring 2023</a>
+
 **Topics:** automation, computer systems design, context-free grammars, machine learning, natural language, probabilistic classifiers, real-world applications, regular expressions, semantics, spell-checking, statistics, syntax, web search
+
+**ABET coverage:** techniques, skills, and tools, software development, general purpose programming language, probability, local and global impacts, concepts of programming languages, statistics, networking and communication
 
 
 ## [CMSC 420 - Software Project Management](CMSC420.qmd)
@@ -358,7 +482,11 @@ Semester course. 3 hours.
 
 **Description:** Study of the logistics of team software development. Students work in teams to gain experience in software management and develop the components of a larger software product. Topics include risk management, project planning, quality management, configuration management and software testing.
 
+**Syllabii:** (none since Spring 2021)
+
 **Topics:** project planning, quality management, risk management, software development, software management, software quality
+
+**ABET coverage:** techniques, skills, and tools, security and privacy, software development
 
 
 ## [CMSC 425 - Introduction to Software Analysis and Testing](CMSC425.qmd)
@@ -369,7 +497,11 @@ Semester course. 3 hours.
 
 **Description:** A practical introduction to testing complex software applications. An introduction to concepts and techniques used in the analysis of software, including basic and advanced control flow and data flow analyses. Using analytic results to derive test data and validate the correct implementation of programs. Advanced testing strategies including random, structural, mutation and fuzzing.
 
-**Topics:** advanced testing strategies, analysis, concolic hybrid analysis, control flow, control flow, coverage-driven systematic software testing, data flow, data-flow, dynamic programming, limitations, program analysis-driven testing, software development, software management, software validation, software verification, static programming, symbolic program analysis, test case coverage, testing, testing
+**Syllabii:** <a href='./202120/CMSC_425_Syllabus_Spring_2021.pdf'>Spring 2021</a>, <a href='./202220/CMSC_425_Syllabus_Spring_2022.pdf'>Spring 2022</a>, <a href='./202320/CMSC_425_Syllabus_Spring_2023.pdf'>Spring 2023</a>
+
+**Topics:** advanced testing strategies, analysis, concolic hybrid analysis, control flow, coverage-driven systematic software testing, data flow, data-flow, dynamic programming, limitations, program analysis-driven testing, software development, software management, software validation, software verification, static programming, symbolic program analysis, test case coverage, testing
+
+**ABET coverage:** software development, algorithms and complexity, concepts of programming languages, operating systems, information management, general purpose programming language, computer science theory, techniques, skills, and tools
 
 
 ## [CMSC 428 - Mobile Programming: iOS](CMSC428.qmd)
@@ -380,7 +512,11 @@ Semester course. 3 hours.
 
 **Description:** This course covers the fundamentals of Swift, Xcode and iOS for programming and design of iOS applications. Background in object-oriented programming and access to a computer with Xcode platform is required.
 
+**Syllabii:** <a href='./202220/CMSC_428_Syllabus_Spring_2022.pdf'>Spring 2022</a>
+
 **Topics:** ios, objects, swift, xcode
+
+**ABET coverage:** operating systems, concepts of programming languages, techniques, skills, and tools
 
 
 ## [CMSC 435 - Introduction to Data Science](CMSC435.qmd)
@@ -391,7 +527,11 @@ Semester course. 3 hours.
 
 **Description:** This course covers understanding, representation, storage, retrieval, preprocessing and analysis of data. Specific topics include data quality and preprocessing, database management systems, data warehouses, selected methods for scalable unsupervised and supervised data analysis, and assessment of results generated by these methods. Students will be engaged in analysis of real-life data from data preprocessing, through data analysis, to the assessment of a knowledge product.
 
+**Syllabii:** <a href='./202210/CMSC_435_Syllabus_Fall_2021.pdf'>Fall 2021</a>, <a href='./202310/CMSC_435_Syllabus_Fall_2022.pdf'>Fall 2022</a>
+
 **Topics:** analysis, data, data analysis, data quality, data structures, database
+
+**ABET coverage:** algorithms and complexity, information management
 
 
 ## [CMSC 440 - Data Communication and Networking](CMSC440.qmd)
@@ -402,7 +542,11 @@ Semester course. 3 hours.
 
 **Description:** This course explores computer networking, focusing on the applications and protocols that run on the Internet. Students will take a top-down approach to the layered network architecture, studying applications first and then proceeding down the network “stack” toward the physical link. Students will examine the operation of applications such as the web, FTP, e-mail and DNS. At the transport layer, students will study both connectionless UDP and connection-oriented TCP, with an in-depth study of TCP operation, specifically flow control and congestion control. Data communications are explored through various data routing protocols. Additional topics include network security and wireless/mobile networking.
 
-**Topics:** architecture, architecture, client-server model, computer networks, data, dns, dns , e-mail, flow control, http application, internet, mail applications, network edge, network models, networks, networks, networks vulnerability, pipelining, protocol layers, reliable transmission, socket programming, tcp, udp, web development
+**Syllabii:** <a href='./202120/CMSC_440_Syllabus_Spring_2021.pdf'>Spring 2021</a>, <a href='./202220/CMSC_440_Syllabus_Spring_2022.pdf'>Spring 2022</a>, <a href='./202310/CMSC_440_Syllabus_Fall_2022.pdf'>Fall 2022</a>, <a href='./202320/CMSC_440_Syllabus_Spring_2023.pdf'>Spring 2023</a>
+
+**Topics:** architecture, client-server model, computer networks, data, dns, dns , e-mail, flow control, http application, internet, mail applications, network edge, network models, networks, networks vulnerability, pipelining, protocol layers, reliable transmission, socket programming, tcp, udp, web development
+
+**ABET coverage:** computer architecture and organization, networking and communication, information management, concepts of programming languages, techniques, skills, and tools
 
 
 ## [CMSC 441 - Senior Design Studio I (Laboratory/Project Time)](CMSC441.qmd)
@@ -413,7 +557,11 @@ Semester course. 2 hours.
 
 **Description:** A minimum of six laboratory hours per week dedicated to the execution phase of the senior design (capstone) project for the computer science major. Tasks include team meetings, brainstorming, sponsor advising, researching, designing, implementing, reviewing, testing and validating projects. Each student will participate, either individually or as part of a team, in a project or other experience approved by the course coordinator or sponsored by another computer science faculty member. Students will submit a detailed written description of their proposed project or experience and will present orally some aspect of what they have learned and/or done during the semester. This course cannot be counted as upper-level CMSC electives for students graduating under bullet
 
+**Syllabii:** (none since Spring 2021)
+
 **Topics:** brainstorming, capstone, design, final project, project planning, research, teamwork, testing
+
+**ABET coverage:** networking and communication, general purpose programming language, techniques, skills, and tools
 
 
 ## [CMSC 442 - Senior Design Studio II (Laboratory/Project Time)](CMSC442.qmd)
@@ -424,7 +572,11 @@ Semester course. 2 hours.
 
 **Description:** A minimum of six laboratory hours per week dedicated to the execution phase of the senior design (capstone) project for the computer science major. Tasks include team meetings, brainstorming, sponsor advising, researching, designing, implementing, reviewing, testing and validating projects. Each student will participate, either individually or as part of a team, in a project or other experience approved by the course coordinator or sponsored by another computer science faculty member. Students must continue on the same project that was started in CMSC 441 and CMSC 451. A final project report and presentation are due at the conclusion of the two-semester project or experience. This course cannot be counted as upper-level CMSC electives for students graduating under bulletins prio
 
+**Syllabii:** (none since Spring 2021)
+
 **Topics:** brainstorming, final project, project planning, researching, teamwork, testing
+
+**ABET coverage:** techniques, skills, and tools
 
 
 ## [CMSC 451 - Senior Project I](CMSC451.qmd)
@@ -435,7 +587,11 @@ Semester course. 1 hour.
 
 **Description:** This weekly seminar presents and discusses topics relevant to senior-level computer science students in support of the capstone project and upcoming graduation. A single course coordinator manages and administers the course and schedules the various faculty lectures and guest speakers. Topics include, but are not limited to, the following: proposal writing; project planning and management; scheduling resources and budgeting for software development projects; patents and intellectual property; entrepreneurship; ethical, legal and social issues in computing; and professional responsibilities of computer scientists. Each student will write and revise a research paper on a technical topic associated with his or her project or experience. A final project report and presentat
 
+**Syllabii:** <a href='./202210/CMSC_451_Syllabus_Fall_2021.pdf'>Fall 2021</a>, <a href='./202310/CMSC_451_Syllabus_Fall_2022.pdf'>Fall 2022</a>
+
 **Topics:** capstone, entrepreneurship, ethics, final project, project planning, social aspects of technology, software development
+
+**ABET coverage:** techniques, skills, and tools, local and global impacts, software development
 
 
 ## [CMSC 452 - Senior Project II](CMSC452.qmd)
@@ -446,7 +602,11 @@ Semester course. 1 hour.
 
 **Description:** This weekly seminar presents and discusses topics relevant to senior-level computer science students in support of the capstone project and upcoming graduation. A single course coordinator manages and administers the course and schedules the various faculty lectures and guest speakers. Topics include, but are not limited to, the following: proposal writing; project planning and management; scheduling resources and budgeting for software development projects; patents and intellectual property; entrepreneurship; ethical, legal and social issues in computing; and professional responsibilities of computer scientists. Each student will write and revise a research paper on a technical topic associated with his or her project or experience. Students must continue on the same project that was started in CMSC 451. 
 
-**Topics:** agile, code management, code management, ci/cd, entrepreneurship, final project, maintainability, project planning, scalability, security, social aspects of technology, social aspects of technology, software development, teamwork, testing
+**Syllabii:** <a href='./202120/CMSC_452_Syllabus_Spring_2021.pdf'>Spring 2021</a>, <a href='./202220/CMSC_452_Syllabus_Spring_2022.pdf'>Spring 2022</a>, <a href='./202320/CMSC_452_Syllabus_Spring_2023.pdf'>Spring 2023</a>
+
+**Topics:** agile, ci/cd, code management, entrepreneurship, final project, maintainability, project planning, scalability, security, social aspects of technology, software development, teamwork, testing
+
+**ABET coverage:** software development, concepts of programming languages, general purpose programming language, security and privacy, local and global impacts
 
 
 ## [CMSC 455 - Software as a Service](CMSC455.qmd)
@@ -457,7 +617,11 @@ Semester course. 3 hours.
 
 **Description:** Students will examine the challenges, opportunities and open problems of software-as-a-service deployed on commodity cloud computing platforms. Covers relevant software architectures and API design principles. Includes concepts of modern software frameworks for software development, cloud computing for software deployment and software operations. Students participate in projects that use modern tooling to develop, deploy and monitor a software application.
 
+**Syllabii:** <a href='./202210/CMSC_455_Syllabus_Fall_2021.pdf'>Fall 2021</a>, <a href='./202310/CMSC_455_Syllabus_Fall_2022.pdf'>Fall 2022</a>
+
 **Topics:** api, applications, cloud computing, software development, software management
+
+**ABET coverage:** concepts of programming languages, software development
 
 
 ## [CMSC 475 - Design and Implementation of User Interfaces](CMSC475.qmd)
@@ -468,7 +632,11 @@ Semester course. 3 hours.
 
 **Description:** This course investigates the design and implementation of user interfaces and the evaluation of user experiences. Particular emphasis is placed on creating professional-quality designs and implementations and on evaluating these implementations with end-users. Students will create their own UIs as well as critique others to develop a deep understanding of what works in practice.
 
+**Syllabii:** <a href='./202120/CMSC_475_Syllabus_Spring_2021.pdf'>Spring 2021</a>, <a href='./202220/CMSC_475_Syllabus_Spring_2022.pdf'>Spring 2022</a>, <a href='./202320/CMSC_475_Syllabus_Spring_2023.pdf'>Spring 2023</a>
+
 **Topics:** design, end-users, interfaces, user interface
+
+**ABET coverage:** concepts of programming languages
 
 
 ## [CMSC 491 - Topics in Computer Science](CMSC491.qmd)
@@ -479,7 +647,11 @@ Semester course. 3 hours.
 
 **Description:** This course will cover selected topics in computer science. See the Schedule of Classes for specific topics to be offered each semester.
 
+**Syllabii:** <a href='./202210/CMSC_491_Syllabus_Fall_2021.pdf'>Fall 2021</a>
+
 **Topics:** selected topics
+
+**ABET coverage:** 
 
 
 ## [CMSC 492 - Independent Study](CMSC492.qmd)
@@ -490,7 +662,11 @@ Semester course. 4 hours.
 
 **Description:** Maximum 4 credits per semester; maximum total of 6 credits. Generally open only to students of junior or senior standing who have acquired at least 12 credits in the departmental discipline. Determination of the amount of credit and permission of instructor and department chair must be procured prior to registration of the course. The student must submit a proposal for investigating some area or problem not contained in the regular curriculum. The results of the student's study will be presented in a report.
 
+**Syllabii:** (none since Spring 2021)
+
 **Topics:** independent study
+
+**ABET coverage:** concepts of programming languages
 
 
 ## [CMSC 501 - Advanced Algorithms](CMSC501.qmd)
@@ -501,7 +677,11 @@ Semester course. 3 hours.
 
 **Description:** Advanced graph algorithms, advanced data structures, applied numerical algorithms, optimization methods, approximation methods for hard graph and string problems and computational geometry algorithms.
 
+**Syllabii:** <a href='./202210/CMSC_501_Syllabus_Fall_2021.pdf'>Fall 2021</a>, <a href='./202310/CMSC_501_Syllabus_Fall_2022.pdf'>Fall 2022</a>
+
 **Topics:** algorithms, approximation, computational geometry, data structures, graph algorithms, optimization, strings
+
+**ABET coverage:** algorithms and complexity, discrete mathematics, information management, concepts of programming languages
 
 
 ## [CMSC 502 - Parallel Algorithms](CMSC502.qmd)
@@ -512,7 +692,11 @@ Semester course. 3 hours.
 
 **Description:** Software and hardware mechanisms for providing mutual exclusion in uniprocessor and multiprocessor environments. Architectural issues including pipeline design, superscalar computers, multiprocessors, memory systems, peripherals, interfacing techniques, networks, performance and software issues. Design and uses of parallel algorithms to solve concurrency problems in a distributed environment including message passing and remote procedure calls. Students will work in teams (as well as on individual projects) to design and implement parallel algorithms.
 
+**Syllabii:** <a href='./202210/CMSC_502_Syllabus_Fall_2021.pdf'>Fall 2021</a>, <a href='./202310/CMSC_502_Syllabus_Fall_2022.pdf'>Fall 2022</a>
+
 **Topics:** concurrency, interfaces, networks, parallel algorithms, software quality
+
+**ABET coverage:** concepts of programming languages, networking and communication, parallel and distributed computing, software development
 
 
 ## [CMSC 506 - Computer Networks and Communications](CMSC506.qmd)
@@ -523,7 +707,11 @@ Semester course. 3 hours.
 
 **Description:** Theoretical and applied analysis of basic data communication systems; design of networks in the framework of the OSI reference model; Local and Wide Area Networks; performance analysis of networks; error control and security. Students will work in teams to design and implement a small computer network. Crosslisted as: EGRE 526.
 
+**Syllabii:** (none since Spring 2021)
+
 **Topics:** analysis, communication systems, computer networks, design, error control, local and wide area networks, osi reference model, security
+
+**ABET coverage:** algorithms and complexity, networking and communication, security and privacy
 
 
 ## [CMSC 508 - Database Theory](CMSC508.qmd)
@@ -534,7 +722,11 @@ Semester course. 3 hours.
 
 **Description:** Design and implementation of relational database systems. Emphasis is placed on entity-relationship diagrams, relational algebra, normal forms and normalization. Introduction to SQL. Discussion of physical level issues. Students will be required to complete a design project and give an oral presentation of the project. Not applicable toward the MS in Computer Science or the PHD in Engineering, computer science concentration.
 
-**Topics:** administration, ajax, configuration, cursors, data , data storage, database, database installation, design, design, entities, entity-relationship diagrams, entity-relationship diagrams, functional programming, functions, functions, indexes, mysql, normalization, php, physical level issues, procedures, queries, relational algebra, relational algebra, relational design, relations, sql, sql, subqueries, triggers, views
+**Syllabii:** <a href='./202120/CMSC_508_Syllabus_Spring_2021.pdf'>Spring 2021</a>, <a href='./202210/CMSC_508_Syllabus_Fall_2021.pdf'>Fall 2021</a>, <a href='./202220/CMSC_508_Syllabus_Spring_2022.pdf'>Spring 2022</a>, <a href='./202310/CMSC_508_Syllabus_Fall_2022.pdf'>Fall 2022</a>, <a href='./202320/CMSC_508_Syllabus_Spring_2023.pdf'>Spring 2023</a>
+
+**Topics:** administration, ajax, configuration, cursors, data , data storage, database, database installation, design, entities, entity-relationship diagrams, functional programming, functions, indexes, mysql, normalization, php, physical level issues, procedures, queries, relational algebra, relational design, relations, sql, subqueries, triggers, views
+
+**ABET coverage:** concepts of programming languages, general purpose programming language, information management, discrete mathematics
 
 
 ## [CMSC 510 - Regularization Methods for Machine Learning](CMSC510.qmd)
@@ -545,7 +737,11 @@ Semester course. 3 hours.
 
 **Description:** The course will assume undergraduate-level background in algorithms, linear algebra, calculus, statistics and probability. Upon successful completion of this course, the student will be able to understand recent advances in machine learning and apply machine-learning tools that go beyond learning from data, as well as have the ability to incorporate additional knowledge about the learning problem. Topics covered will include optimization-based view of supervised machine learning; classical regularization approaches including weight decay and Lasso; regularization terms incorporating additional knowledge about structures in the feature space, including group lasso and graph-based regularization terms; semi-supervised learning using graphs linking unlabeled and labeled samples.
 
+**Syllabii:** <a href='./202210/CMSC_510_Syllabus_Fall_2021.pdf'>Fall 2021</a>, <a href='./202310/CMSC_510_Syllabus_Fall_2022.pdf'>Fall 2022</a>
+
 **Topics:** algorithms, calculus, data analysis, graph algorithms, linear algebra, machine learning, natural language, optimization, probability, regularization, statistics
+
+**ABET coverage:** algorithms and complexity, discrete mathematics, general purpose programming language, concepts of programming languages, probability, statistics
 
 
 ## [CMSC 512 - Advanced Social Network Analysis and Security](CMSC512.qmd)
@@ -556,7 +752,11 @@ Semester course. 3 hours.
 
 **Description:** The purpose of the course is to teach algorithms for analyzing social networks and complex systems. The focus will be on understanding the inner workings of algorithms using in-network analysis and security threats in online social network sites. Topic covered will include modeling social and technological networks, methods for analyzing structure and dynamical processes on the network, and security and privacy issues in online social networks such as inference attacks, network anonymization, sybil attacks and defense, social bots.
 
-**Topics:** algorithms, analysis, networks, networks, security, social network
+**Syllabii:** <a href='./202120/CMSC_512_Syllabus_Spring_2021.pdf'>Spring 2021</a>, <a href='./202220/CMSC_512_Syllabus_Spring_2022.pdf'>Spring 2022</a>, <a href='./202320/CMSC_512_Syllabus_Spring_2023.pdf'>Spring 2023</a>
+
+**Topics:** algorithms, analysis, networks, security, social network
+
+**ABET coverage:** algorithms and complexity, networking and communication, security and privacy
 
 
 ## [CMSC 516 - Advanced Natural Language Processing](CMSC516.qmd)
@@ -567,7 +767,11 @@ Semester course. 3 hours.
 
 **Description:** Upon successful completion of this course, the student will be able to understand recent advances in natural language processing and apply NLP algorithms and techniques for processing unstructured text. Word-level, syntactic and semantic processing will be considered. Specific topics include rule-based and statistical methods for creating computer programs that analyze, generate and understand human language. Regular expressions and automata, context-free grammars, probabilistic classifiers and machine learning. Applications to real-world problems such as spell-checking, Web search, automatic question answering, authorship identification and developing conversational interfaces.
 
+**Syllabii:** <a href='./202210/CMSC_516_Syllabus_Fall_2021.pdf'>Fall 2021</a>, <a href='./202310/CMSC_516_Syllabus_Fall_2022.pdf'>Fall 2022</a>, <a href='./202320/CMSC_516_Syllabus_Spring_2023.pdf'>Spring 2023</a>
+
 **Topics:** automation, context-free grammars, machine learning, natural language, nlp algorithms, probabilistic classifiers, regular expressions, semantics, statistics, syntax
+
+**ABET coverage:** techniques, skills, and tools, concepts of programming languages, general purpose programming language, algorithms and complexity, probability, statistics
 
 
 ## [CMSC 525 - Introduction to Software Analysis, Testing and Verification](CMSC525.qmd)
@@ -578,7 +782,11 @@ Semester course. 3 hours.
 
 **Description:** An introduction to concepts and techniques used in the analysis of software for certain properties. Using analytic results to derive test data and verify the correct implementation of programs. Flow graphs, fault/failure model, theoretical and practical limitations. Control flow, data flow and error flow analyses. Testing strategies including random, structural, mutation and error flow. Software metrics.
 
-**Topics:** advanced testing strategies, analysis, analysis, concolic hybrid analysis, control flow, coverage-driven systematic software testing, data, data-flow, dynamic programming, flow control, graphs, limitations, program analysis-driven testing, software management, software validation, software verification, static programming, symbolic program analysis, test case coverage, testing, testing
+**Syllabii:** <a href='./202120/CMSC_525_Syllabus_Spring_2021.pdf'>Spring 2021</a>, <a href='./202220/CMSC_525_Syllabus_Spring_2022.pdf'>Spring 2022</a>, <a href='./202320/CMSC_525_Syllabus_Spring_2023.pdf'>Spring 2023</a>
+
+**Topics:** advanced testing strategies, analysis, concolic hybrid analysis, control flow, coverage-driven systematic software testing, data, data-flow, dynamic programming, flow control, graphs, limitations, program analysis-driven testing, software management, software validation, software verification, static programming, symbolic program analysis, test case coverage, testing
+
+**ABET coverage:** software development, algorithms and complexity, concepts of programming languages, general purpose programming language, computer architecture and organization, techniques, skills, and tools, computer science theory
 
 
 ## [CMSC 526 - Theory of Programming Languages](CMSC526.qmd)
@@ -589,7 +797,11 @@ Semester course. 3 hours.
 
 **Description:** An introduction to the formal semantics of programming languages, logic programming and functional programming. Topics include denotational semantics, attribute grammars, Backus Formal Functional Programming, fixed point semantics, model-theoretic semantics and PROLOG.
 
+**Syllabii:** (none since Spring 2021)
+
 **Topics:** languages, logic, model-theoretic semtances, semantics
+
+**ABET coverage:** general purpose programming language, techniques, skills, and tools, concepts of programming languages
 
 
 ## [CMSC 531 - 3D Computer Vision for Robot Navigation](CMSC531.qmd)
@@ -600,7 +812,11 @@ Semester course. 3 hours.
 
 **Description:** The course focuses on recent advancements in 3D robotic vision. It covers basic concepts and computational models of 3D sensing, robotic mapping, visual odometry, simultaneous localization and mapping, as well as 3D point data processing for robotic navigation. Students will acquire in-depth knowledge in robotic vision by completing a course project.
 
+**Syllabii:** (none since Spring 2021)
+
 **Topics:** 3d robotic vision, localization, mapping, robotic mapping, robotic navigation, visual odometry
+
+**ABET coverage:** techniques, skills, and tools, computer science theory, general purpose programming language, concepts of programming languages
 
 
 ## [CMSC 591 - Topics in Computer Science](CMSC591.qmd)
@@ -611,7 +827,11 @@ Semester course. 3 hours.
 
 **Description:** May be repeated for credit. Enrollment requires permission of the instructor. The course is open to students with graduate standing or those accepted into the accelerated BS to MS program in computer science. A study of selected topic(s) in computer science at the graduate level. See the Schedule of Classes for specific topics to be offered each semester.
 
+**Syllabii:** <a href='./202120/CMSC_591_Syllabus_Spring_2021.pdf'>Spring 2021</a>, <a href='./202320/CMSC_591_Syllabus_Spring_2023.pdf'>Spring 2023</a>
+
 **Topics:** circuits, compact representations, complexity analysis, convex sets, limitations, linear algebra, loss function, machine learning, models, neural networks, optimization, quantum computation, quantum gates, quantum measurement, selected topics, tensor
+
+**ABET coverage:** concepts of programming languages, computer science theory, algorithms and complexity, techniques, skills, and tools, discrete mathematics, general purpose programming language, networking and communication
 
 
 ## [CMSC 601 - Convex Optimization](CMSC601.qmd)
@@ -622,7 +842,11 @@ Semester course. 3 hours.
 
 **Description:** A background in undergraduate-level linear algebra is assumed. Convex sets and functions. Convex optimization problems: Linear, quadratic, semi-definite and cone programs. Duality theory. Approximation algorithms for NP-complete integer optimization problems via semi-definite relaxations and rounding schemes. Algorithms for optimization, such as gradient descent, proximal descent, alternating directions method of multipliers, interior point methods.
 
+**Syllabii:** (none since Spring 2021)
+
 **Topics:** approximation, convex sets, duality theory, gradient descent, interior point methods, linear algebra, multipliers, optimization, proximal descent
+
+**ABET coverage:** discrete mathematics, concepts of programming languages, computer science theory
 
 
 ## [CMSC 602 - Operating Systems](CMSC602.qmd)
@@ -633,7 +857,11 @@ Semester course. 3 hours.
 
 **Description:** A study of operating systems including those in multiprocessor and distributed environments. I/O programming, resource management (including processor and memory management), security and system performance evaluation.
 
+**Syllabii:** (none since Spring 2021)
+
 **Topics:** input/output, multiprocessor environments, operating systems, resources management, security, system performance
+
+**ABET coverage:** computer architecture and organization, operating systems, techniques, skills, and tools, security and privacy, software development
 
 
 ## [CMSC 603 - High Performance Distributed Systems](CMSC603.qmd)
@@ -644,7 +872,11 @@ Semester course. 3 hours.
 
 **Description:** The course will assume undergraduate-level background in algorithms, data structures and parallel programming. Upon successful completion of this course, the student will be able to understand the concepts underlying distributed systems; analyze problems to identify performance bottlenecks, parallelization opportunities and concurrency issues in a distributed environment; create distributed and scalable implementations using multiple hosts/GPUs; design and implement algorithms using Hadoop, Spark and CUDA.
 
-**Topics:** algorithms, algorithms, concurrency, cuda, data structures, hadoop, parallel algorithms, performance bottlenecks, spark
+**Syllabii:** <a href='./202210/CMSC_603_Syllabus_Fall_2021.pdf'>Fall 2021</a>, <a href='./202310/CMSC_603_Syllabus_Fall_2022.pdf'>Fall 2022</a>
+
+**Topics:** algorithms, concurrency, cuda, data structures, hadoop, parallel algorithms, performance bottlenecks, spark
+
+**ABET coverage:** algorithms and complexity, concepts of programming languages, parallel and distributed computing, computer architecture and organization, techniques, skills, and tools
 
 
 ## [CMSC 605 - Advanced Computer Architecture](CMSC605.qmd)
@@ -655,7 +887,11 @@ Semester course. 3 hours.
 
 **Description:** This course will focus on the design and analysis of high performance computer architectures. Topics investigated include pipeline design, superscalar computers, multiprocessors, memory systems, peripherals, interfacing techniques, networks, performance and software issues. Crosslisted as: EGRE 635.
 
+**Syllabii:** (none since Spring 2021)
+
 **Topics:** architecture, interfaces, memory systems, multiprocessor environments, networks, peripherals, pipeline design, software management, software quality, superscalar computers
+
+**ABET coverage:** computer architecture and organization, concepts of programming languages, information management, operating systems, networking and communication, software development
 
 
 ## [CMSC 608 - Advanced Database](CMSC608.qmd)
@@ -666,7 +902,11 @@ Semester course. 3 hours.
 
 **Description:** Topics discussed include: handling of missing information; the relationship between relational calculus, relational algebra and SQL; logic databases; distributed databases; outer joins; and transaction processing. Emphasis is placed on theoretical issues involved in these topics. In addition students will work in teams to develop a working database application.
 
+**Syllabii:** (none since Spring 2021)
+
 **Topics:** calculus, logic, relational algebra, sql, teamwork
+
+**ABET coverage:** discrete mathematics, techniques, skills, and tools, general purpose programming language
 
 
 ## [CMSC 610 - Algorithmic Foundations of Bioinformatics](CMSC610.qmd)
@@ -677,7 +917,11 @@ Semester course. 3 hours.
 
 **Description:** The purpose of the course is to teach algorithms for analyzing biological and medical data. The focus will be on understanding the inner workings of algorithms used in bioinformatics tools. Topic covered will include algorithms for assembling and searching biological sequences, finding patterns associated with disease, and exploring biological networks.
 
+**Syllabii:** (none since Spring 2021)
+
 **Topics:** algorithms, bioinformatics, biological sequences, data, networks, patterns
+
+**ABET coverage:** algorithms and complexity, techniques, skills, and tools, information management, networking and communication, parallel and distributed computing
 
 
 ## [CMSC 611 - Computer Multimedia](CMSC611.qmd)
@@ -688,7 +932,11 @@ Semester course. 3 hours.
 
 **Description:** Study of computer multimedia techniques relating to images, sound, video and text. Emphasis on compression techniques and standard storage formats. This course is programming-intensive.
 
+**Syllabii:** (none since Spring 2021)
+
 **Topics:** compression, multimedia , storage formats
+
+**ABET coverage:** concepts of programming languages, information management
 
 
 ## [CMSC 612 - Game Theory and Security](CMSC612.qmd)
@@ -699,7 +947,11 @@ Semester course. 3 hours.
 
 **Description:** The course will provide an introduction to game theory and mechanism design concepts. Lectures cover topics such as introduction of games, equilibrium concepts, computation of game-theoretic solution concepts, mechanism, and issues in game theory and mechanism design.
 
+**Syllabii:** <a href='./202120/CMSC_612_Syllabus_Spring_2021.pdf'>Spring 2021</a>
+
 **Topics:** abstract complexity, design, equilibrium concepts, game theory, security, universal programs, unsolvability
+
+**ABET coverage:** algorithms and complexity, concepts of programming languages, computer science theory, security and privacy
 
 
 ## [CMSC 615 - Cryptocurrency and Blockchain Techniques](CMSC615.qmd)
@@ -710,7 +962,11 @@ Semester course. 3 hours.
 
 **Description:** The course will assume undergraduate-level background in algorithms, data structures and programming. Upon successful completion of this course, the student will be able to understand the major concepts about cryptocurrency and blockchain techniques; be familiar with major blockchain applications as well as real-world issues; understand the underlying consensus mechanisms in the Bitcoin system and other alternative cryptocurrency systems; analyze the security of Nakamoto consensus; understand, write and execute smart contracts using an Ethereum-like platform.
 
-**Topics:** algorithms, altcoins, analysis, anonymity, bitcoin, bitcoin, blockchain, blockchain, consensus protocols, cryptocurrency, cryptocurrency, data structures, distributed systems, etherum, legal, nakamoto consensus, nakamoto's blockchain, programming, real-world applications, security, security, sidechains
+**Syllabii:** <a href='./202120/CMSC_615_Syllabus_Spring_2021.pdf'>Spring 2021</a>, <a href='./202220/CMSC_615_Syllabus_Spring_2022.pdf'>Spring 2022</a>, <a href='./202320/CMSC_615_Syllabus_Spring_2023.pdf'>Spring 2023</a>
+
+**Topics:** algorithms, altcoins, analysis, anonymity, bitcoin, blockchain, consensus protocols, cryptocurrency, data structures, distributed systems, etherum, legal, nakamoto consensus, nakamoto's blockchain, programming, real-world applications, security, sidechains
+
+**ABET coverage:** algorithms and complexity, concepts of programming languages, local and global impacts, networking and communication, computer architecture and organization, parallel and distributed computing, computer science theory, general purpose programming language, security and privacy
 
 
 ## [CMSC 618 - Database and Application Security](CMSC618.qmd)
@@ -721,7 +977,11 @@ Semester course. 3 hours.
 
 **Description:** Theory and practice of database and software security focusing in particular on some common database software security risks and on the identification of potential threats and vulnerabilities. Crosslisted as: CISS 618.
 
+**Syllabii:** (none since Spring 2021)
+
 **Topics:** database, security, software management
+
+**ABET coverage:** information management, security and privacy
 
 
 ## [CMSC 619 - The Design and Specifications of User Interfaces](CMSC619.qmd)
@@ -732,7 +992,11 @@ Semester course. 3 hours.
 
 **Description:** Requires knowledge of first order predicate calculus and context-free languages. Focuses on human-computer interface design principles and methodology and formal specifications of user interfaces.
 
+**Syllabii:** (none since Spring 2021)
+
 **Topics:** calculus, design, interfaces, languages, user interface
+
+**ABET coverage:** discrete mathematics, concepts of programming languages
 
 
 ## [CMSC 620 - Applied Cryptography](CMSC620.qmd)
@@ -743,7 +1007,11 @@ Semester course. 3 hours.
 
 **Description:** Provides a comprehensive survey of modern cryptography. Included are techniques of enciphering and deciphering messages using cryptographic algorithms, block ciphers and block cipher modes, hash functions and message authentication codes, public key cryptography and digital signatures, and steganography. Crosslisted as: CISS 624.
 
+**Syllabii:** (none since Spring 2021)
+
 **Topics:** authentication, block cipher, cryptographic systems, deciphering, digital signatures, enciphering, hash functions, public key encryption, steganography
+
+**ABET coverage:** security and privacy, algorithms and complexity
 
 
 ## [CMSC 621 - Theory of Computation](CMSC621.qmd)
@@ -754,7 +1022,11 @@ Semester course. 3 hours.
 
 **Description:** Discussion of the complexity and computability of problems and programs. Topics will include unsolvability, universal programs and abstract complexity.
 
+**Syllabii:** (none since Spring 2021)
+
 **Topics:** 
+
+**ABET coverage:** 
 
 
 ## [CMSC 622 - Network and System Security](CMSC622.qmd)
@@ -765,7 +1037,11 @@ Semester course. 3 hours.
 
 **Description:** Studies the principles of network security and system security. Included are topics relating to application layer security, TCP layer security, network layer security and link layer security and the use of access control, intrusion detection, intrusion prevention and other related tools.
 
-**Topics:** access control, assumption, computer security, concepts, intrustion detection, network security, networks, networks, presentation, security, security, security paper survey, system security, tcp layer security, technical paper reading, trust
+**Syllabii:** <a href='./202210/CMSC_622_Syllabus_Fall_2021.pdf'>Fall 2021</a>, <a href='./202320/CMSC_622_Syllabus_Spring_2023.pdf'>Spring 2023</a>
+
+**Topics:** access control, assumption, computer security, concepts, intrustion detection, network security, networks, presentation, security, security paper survey, system security, tcp layer security, technical paper reading, trust
+
+**ABET coverage:** security and privacy, concepts of programming languages, networking and communication
 
 
 ## [CMSC 623 - Cloud Computing](CMSC623.qmd)
@@ -776,7 +1052,11 @@ Semester course. 3 hours.
 
 **Description:** Provides an introduction to cloud computing architecture and cloud computing security. The course covers the basic concepts of cloud computing, including memory virtualization, device virtualization and related security problems in cloud computing.
 
+**Syllabii:** (none since Spring 2021)
+
 **Topics:** cloud computing, device virtualization, memory virtualization, security
+
+**ABET coverage:** computing-based systems, concepts of programming languages, security and privacy
 
 
 ## [CMSC 624 - Software Quality Assurance](CMSC624.qmd)
@@ -787,7 +1067,11 @@ Semester course. 3 hours.
 
 **Description:** A study of issues that affect the quality of software and of methodology to assure that software products are of the desired quality. This also includes issues in assessing product quality as well as the process by which the software is produced. Topics include various methodologies, standards, metrics and tools.
 
+**Syllabii:** (none since Spring 2021)
+
 **Topics:** metrics, software quality
+
+**ABET coverage:** concepts of programming languages, software development
 
 
 ## [CMSC 625 - Advanced Software Analysis, Testing and Verification](CMSC625.qmd)
@@ -798,7 +1082,11 @@ Semester course. 3 hours.
 
 **Description:** Studies the concepts and techniques used in the analysis of software and the derivation of test data. Focuses on software metrics and reliability; construction of tools to aid software analysis and testing. Requires students to review seminal and current papers from the literature, and lead their discussion in class.
 
+**Syllabii:** (none since Spring 2021)
+
 **Topics:** analysis, current literature, metrics, software management, testing
+
+**ABET coverage:** algorithms and complexity, local and global impacts, concepts of programming languages, software development
 
 
 ## [CMSC 628 - Mobile Networks: Applications, Modeling and Analysis](CMSC628.qmd)
@@ -809,7 +1097,11 @@ Semester course. 3 hours.
 
 **Description:** The course will assume undergraduate-level background in algorithms, data structures, programming and networks. Upon successful completion of this course, the student will be able to understand the major concepts about mobile networks such as device-to-device communication technologies, mobility models and coverage; be familiar with various mobile network types (e.g., mobile social networks, delay tolerant networks, overlay networks, vehicular networks and cellular networks) and devices (e.g., smartphones, femtocells, WiFi), learn how to model mobile networks with stochastic processes and real datasets; be able to use different networking simulators; and understand various routing algorithms and analyze their behavior.
 
-**Topics:** algorithms, analysis, analysis, communication systems, communication systems, data, data driven stimulations, data structures, evaluation, mobile networks, mobile networks, mobility models, modeling, network simulators, networks, networks, programming, routing
+**Syllabii:** <a href='./202120/CMSC_628_Syllabus_Spring_2021.pdf'>Spring 2021</a>, <a href='./202320/CMSC_628_Syllabus_Spring_2023.pdf'>Spring 2023</a>
+
+**Topics:** algorithms, analysis, communication systems, data, data driven stimulations, data structures, evaluation, mobile networks, mobility models, modeling, network simulators, networks, programming, routing
+
+**ABET coverage:** algorithms and complexity, networking and communication, information management, concepts of programming languages, general purpose programming language, techniques, skills, and tools
 
 
 ## [CMSC 630 - Image Analysis](CMSC630.qmd)
@@ -820,7 +1112,11 @@ Semester course. 3 hours.
 
 **Description:** Introduces theoretical and practical aspects of computer vision for image processing and understanding. It provides a comprehensive walkthrough from basics of image preparation to using computational intelligence tools for knowledge discovery from images. The course will cover basics of image processing and computer vision, including image sampling and quantization, color, pixel-based operations, image filtering, morphological image processing, and image transforms; information extraction including segmentation and feature extraction; pattern recognition for computer vision: classification, novelty and object detection, image understanding, learning from video streams, and tensor-based methods. Examples will include medical image analysis, object recognition in ground and aerial photographs and hyperspectral imaging.
 
-**Topics:** analysis, computers, feature extraction, feature selection, image, image, image analysis, image filtering, image processing, image processing, image segmentation, images, information extraction, machine learning, patterns, pixel-based operations, quantization, segmentation, segmentation, tensor
+**Syllabii:** <a href='./202120/CMSC_630_Syllabus_Spring_2021.pdf'>Spring 2021</a>, <a href='./202220/CMSC_630_Syllabus_Spring_2022.pdf'>Spring 2022</a>, <a href='./202320/CMSC_630_Syllabus_Spring_2023.pdf'>Spring 2023</a>
+
+**Topics:** analysis, computers, feature extraction, feature selection, image, image analysis, image filtering, image processing, image segmentation, images, information extraction, machine learning, patterns, pixel-based operations, quantization, segmentation, tensor
+
+**ABET coverage:** algorithms and complexity, operating systems, general purpose programming language, concepts of programming languages, computer science theory
 
 
 ## [CMSC 635 - Knowledge Discovery and Data Mining](CMSC635.qmd)
@@ -831,7 +1127,11 @@ Semester course. 3 hours.
 
 **Description:** Covers knowledge discovery and data mining concepts, tools and methods; provides hands-on experience based on a project involving analysis of large real-life data. Topics include the knowledge discovery process, data storage and representation, preprocessing algorithms for missing data imputation, feature selection and discretization; unsupervised learning algorithms for clustering and association mining; supervised learning algorithms including decision trees, Bayesian models and introduction to support vector machines and neural networks; ensemble learning; protocols and measures for validation of predictive models; and data security and privacy issues.
 
-**Topics:** algorithms, analysis, bayesian models, data, data, data imputation, data mining, data preprocessing, data security, data storage, decision trees, discovery process, discretization, ensemble learning, feature selection, neural networks, real-world applications, security, supervised data analysis, support vector machines, unsupervised data analysis
+**Syllabii:** <a href='./202120/CMSC_635_Syllabus_Spring_2021.pdf'>Spring 2021</a>, <a href='./202220/CMSC_635_Syllabus_Spring_2022.pdf'>Spring 2022</a>, <a href='./202320/CMSC_635_Syllabus_Spring_2023.pdf'>Spring 2023</a>
+
+**Topics:** algorithms, analysis, bayesian models, data, data imputation, data mining, data preprocessing, data security, data storage, decision trees, discovery process, discretization, ensemble learning, feature selection, neural networks, real-world applications, security, supervised data analysis, support vector machines, unsupervised data analysis
+
+**ABET coverage:** algorithms and complexity, concepts of programming languages, computer architecture and organization, information management, computer science theory, general purpose programming language, networking and communication, local and global impacts, security and privacy
 
 
 ## [CMSC 636 - Artificial Neural Networks and Deep Learning](CMSC636.qmd)
@@ -842,7 +1142,11 @@ Semester course. 3 hours.
 
 **Description:** The course will assume undergraduate-level background in programming, algorithms, linear algebra, calculus, statistics and probability. Topics ranging from fundamental learning rules, functional, cascade correlational, recurrent and gradient descent networks, to neocognitron, softmax, deep convolutional networks, autoencoders and pretrained deep learning (restricted Boltzmann machines). Students will be required to work in teams on a class paper.
 
-**Topics:** architecture, autoencoders, calculus, cascade correlational, chatgpt, convolutional neural networks, deep belief networks, deep convolutional networks, deep learning, deep neural networks, google, gradient descent, linear algebra, neocognitron, neural networks, neural networks, probability, recurrences, recurrences, restricted boltzmann machines, statistics
+**Syllabii:** <a href='./202120/CMSC_636_Syllabus_Spring_2021.pdf'>Spring 2021</a>, <a href='./202220/CMSC_636_Syllabus_Spring_2022.pdf'>Spring 2022</a>, <a href='./202320/CMSC_636_Syllabus_Spring_2023.pdf'>Spring 2023</a>
+
+**Topics:** architecture, autoencoders, calculus, cascade correlational, chatgpt, convolutional neural networks, deep belief networks, deep convolutional networks, deep learning, deep neural networks, google, gradient descent, linear algebra, neocognitron, neural networks, probability, recurrences, restricted boltzmann machines, statistics
+
+**ABET coverage:** computer architecture and organization, computer science theory, discrete mathematics, concepts of programming languages, algorithms and complexity, techniques, skills, and tools, probability, software development, statistics
 
 
 ## [CMSC 654 - Memory and Malware Forensics](CMSC654.qmd)
@@ -853,7 +1157,11 @@ Semester course. 3 hours.
 
 **Description:** Students should have significant programming experience. This course provides foundation for memory and malware forensics, using the Volatility memory forensics framework, an open source toolkit written in Python. It is focused on investigation of the contents of volatile computer memory (RAM), to reveal hidden malware processes, network connections, clipboard contents, evidence of malware and other malicious evidence. The course will teach skills for analyzing internals of operating systems, such as Mac, Windows and Linux, by concentrating on data structures used by these operating systems.
 
+**Syllabii:** <a href='./202210/CMSC_654_Syllabus_Fall_2021.pdf'>Fall 2021</a>, <a href='./202310/CMSC_654_Syllabus_Fall_2022.pdf'>Fall 2022</a>
+
 **Topics:** malicious evidence, malware forensics, memory, networks, operating systems, python, volatility memory forensics
+
+**ABET coverage:** security and privacy, information management, networking and communication, operating systems, general purpose programming language, concepts of programming languages
 
 
 ## [CMSC 678 - Statistical Learning and Fuzzy Logic Algorithms](CMSC678.qmd)
@@ -864,7 +1172,11 @@ Semester course. 3 hours.
 
 **Description:** The course considers two central problems in modern science and engineering: i) the problem of statistical learning from examples (empirical data) and ii) the problem of embedding existing human knowledge into workable mathematics. Topics include: examples of multivariate functional mapping, basics of classic classification and regression, support vector machines as a learning paradigm based on structural risk minimization, fuzzy logic algorithms, basics of multi-class classification over high dimensional spaces, curve and surface fittings, multivariate function approximation and nonlinear optimization; fuzzy logic systems; crisp and fuzzy sets, linguistic variables, fuzzy set theory; if-then rules, fuzzy interference, fuzzification and defuzzification, neuro-fuzzy paradigms.
 
+**Syllabii:** (none since Spring 2021)
+
 **Topics:** classification, functional mapping, functions, fuzzification, fuzzy logic algorithms, linguistic variables, multi-class classification, neuro-fuzzy paradigms, nonlinear optimization, optimization, regression, statistical learning, statistics, support vector machines
+
+**ABET coverage:** concepts of programming languages, computer science theory, statistics
 
 
 ## [CMSC 691 - Special Topics in Computer Science](CMSC691.qmd)
@@ -875,7 +1187,11 @@ Semester course. 3 hours.
 
 **Description:** An advanced study of selected topic(s) in computer science at the graduate level. See the Schedule of Classes for specific topics to be offered each semester.
 
+**Syllabii:** (none since Spring 2021)
+
 **Topics:** selected topics
+
+**ABET coverage:** 
 
 
 ## [CMSC 692 - Independent Study](CMSC692.qmd)
@@ -886,7 +1202,11 @@ Semester course. 3 hours.
 
 **Description:** Independent study done under the supervision of a faculty member. The student must identify a faculty member willing to supervise the research and submit a proposal for approval by the computer science graduate committee no later than the 10th week of the prior semester. A written report and an oral presentation are required upon completion of the research project. Graded as Pass/Fail.
 
+**Syllabii:** (none since Spring 2021)
+
 **Topics:** independent study
+
+**ABET coverage:** concepts of programming languages
 
 
 ## [CMSC 697 - Directed Research](CMSC697.qmd)
@@ -897,7 +1217,11 @@ Semester course. 5 hours.
 
 **Description:** May be repeated for credit. A total of three credits may be used to fulfill the MS in Computer Science thesis requirement. Independent research culminating in the writing of the required thesis or dissertation. The student must identify a faculty member willing to supervise the research and submit a proposal to the computer science graduate committee no later than the 10th week of the prior semester. This proposal must be approved before the student can register for the course. Graded as S/U/F.
 
+**Syllabii:** (none since Spring 2021)
+
 **Topics:** research
+
+**ABET coverage:** concepts of programming languages
 
 
 ## [CMSC 701 - Research Methods](CMSC701.qmd)
@@ -908,7 +1232,11 @@ Semester course. 3 hours.
 
 **Description:** Covers the principles of conducting a research project, reporting the findings in the form of a journal paper and promoting the research through public presentations. Students learn to write grant proposals and practice reviewing research papers and grant proposals. The main emphasis of the course is writing a paper and a grant proposal in a format compliant with NSF, NIH or DoD guidelines.
 
+**Syllabii:** (none since Spring 2021)
+
 **Topics:** grant proposal, research
+
+**ABET coverage:** techniques, skills, and tools, concepts of programming languages
 
 
 ## [CMSC 702 - Computer Science Seminar](CMSC702.qmd)
@@ -919,5 +1247,9 @@ Semester course. 1 hour.
 
 **Description:** Students will attend a weekly research seminar in which the topic and speaker will change each week in order to cover a broad range of subjects at the forefront of computer science research. Students will have to present and to write a report on at least one seminar presented by other speakers. The objective is to expose students to research topics and scholars in the field of computer science as well as to provide them experience in delivering and critiquing seminar talks. Graded as satisfactory/unsatisfactory.
 
+**Syllabii:** (none since Spring 2021)
+
 **Topics:** research, seminar
+
+**ABET coverage:** concepts of programming languages
 

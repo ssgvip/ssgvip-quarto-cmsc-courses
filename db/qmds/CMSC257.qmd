@@ -19,9 +19,41 @@ CMSC 256 with a minimum grade of C.
 
 Topics include UNIX essentials; system programming in C; machine-level representation and organization of programs/data, arrays and pointers; types, structs and unions; strings; bit/byte operations; memory management; shell programming; input/output, including file handling; debugging; signals; network programming using sockets; program concurrency using forks and threads; experiments on program performance and optimization techniques.
 
+## Past Syllabii
+
+<a href='./202120/CMSC_257_Syllabus_Spring_2021.pdf'>Spring 2021</a>, <a href='./202210/CMSC_257_Syllabus_Fall_2021.pdf'>Fall 2021</a>, <a href='./202220/CMSC_257_Syllabus_Spring_2022.pdf'>Spring 2022</a>, <a href='./202310/CMSC_257_Syllabus_Fall_2022.pdf'>Fall 2022</a>, <a href='./202320/CMSC_257_Syllabus_Spring_2023.pdf'>Spring 2023</a>
+
 ## Topics
 
 arrays, bit/bye operations, debugging, files, forks and threads, input/output, machine-level representation, memory management, network programming using sockets, optimization, pointers, program performance, programming in c, shell programming, signals, types, structs, and unions
+
+## ABET Coverage
+
+concepts of programming languages, computer architecture and organization, techniques, skills, and tools, information management, general purpose programming language, algorithms and complexity
+
+## Coverage and Topics Map
+
+Note that topics without associated ABET category assignments are excluded from this map.  See the [mapping](https://docs.google.com/spreadsheets/d/1qrN3L7eRLsM-aVMHYaLQN-FMYtrTJf0_h6dLKlUdPkk/edit#gid=338318647) for more details.
+
+ABET coverage                           Adjusted Topic                     Course
+--------------------------------------  ---------------------------------  ----------------------------------
+algorithms and complexity               optimization                       <a href='CMSC257.qmd'>CMSC 257</a>
+computer architecture and organization  bit/bye operations                 <a href='CMSC257.qmd'>CMSC 257</a>
+computer architecture and organization  program performance                <a href='CMSC257.qmd'>CMSC 257</a>
+concepts of programming languages       arrays                             <a href='CMSC257.qmd'>CMSC 257</a>
+concepts of programming languages       files                              <a href='CMSC257.qmd'>CMSC 257</a>
+concepts of programming languages       forks and threads                  <a href='CMSC257.qmd'>CMSC 257</a>
+concepts of programming languages       memory management                  <a href='CMSC257.qmd'>CMSC 257</a>
+concepts of programming languages       pointers                           <a href='CMSC257.qmd'>CMSC 257</a>
+concepts of programming languages       signals                            <a href='CMSC257.qmd'>CMSC 257</a>
+concepts of programming languages       types, structs, and unions         <a href='CMSC257.qmd'>CMSC 257</a>
+general purpose programming language    machine-level representation       <a href='CMSC257.qmd'>CMSC 257</a>
+general purpose programming language    network programming using sockets  <a href='CMSC257.qmd'>CMSC 257</a>
+general purpose programming language    programming in c                   <a href='CMSC257.qmd'>CMSC 257</a>
+general purpose programming language    shell programming                  <a href='CMSC257.qmd'>CMSC 257</a>
+information management                  input/output                       <a href='CMSC257.qmd'>CMSC 257</a>
+techniques, skills, and tools           debugging                          <a href='CMSC257.qmd'>CMSC 257</a>
+
 
 ## Syllabus Statements
 

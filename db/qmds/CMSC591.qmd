@@ -19,9 +19,40 @@ Semester course; 3 lecture hours (delivered online, face-to-face or hybrid). 3 c
 
 May be repeated for credit. Enrollment requires permission of the instructor. The course is open to students with graduate standing or those accepted into the accelerated BS to MS program in computer science. A study of selected topic(s) in computer science at the graduate level. See the Schedule of Classes for specific topics to be offered each semester.
 
+## Past Syllabii
+
+<a href='./202120/CMSC_591_Syllabus_Spring_2021.pdf'>Spring 2021</a>, <a href='./202320/CMSC_591_Syllabus_Spring_2023.pdf'>Spring 2023</a>
+
 ## Topics
 
 circuits, compact representations, complexity analysis, convex sets, limitations, linear algebra, loss function, machine learning, models, neural networks, optimization, quantum computation, quantum gates, quantum measurement, selected topics, tensor
+
+## ABET Coverage
+
+concepts of programming languages, computer science theory, algorithms and complexity, techniques, skills, and tools, discrete mathematics, general purpose programming language, networking and communication
+
+## Coverage and Topics Map
+
+Note that topics without associated ABET category assignments are excluded from this map.  See the [mapping](https://docs.google.com/spreadsheets/d/1qrN3L7eRLsM-aVMHYaLQN-FMYtrTJf0_h6dLKlUdPkk/edit#gid=338318647) for more details.
+
+ABET coverage                         Adjusted Topic           Course
+------------------------------------  -----------------------  ----------------------------------
+algorithms and complexity             complexity analysis      <a href='CMSC591.qmd'>CMSC 591</a>
+computer science theory               compact representations  <a href='CMSC591.qmd'>CMSC 591</a>
+computer science theory               loss function            <a href='CMSC591.qmd'>CMSC 591</a>
+concepts of programming languages     circuits                 <a href='CMSC591.qmd'>CMSC 591</a>
+concepts of programming languages     limitations              <a href='CMSC591.qmd'>CMSC 591</a>
+discrete mathematics                  linear algebra           <a href='CMSC591.qmd'>CMSC 591</a>
+general purpose programming language  machine learning         <a href='CMSC591.qmd'>CMSC 591</a>
+general purpose programming language  models                   <a href='CMSC591.qmd'>CMSC 591</a>
+general purpose programming language  optimization             <a href='CMSC591.qmd'>CMSC 591</a>
+general purpose programming language  quantum computation      <a href='CMSC591.qmd'>CMSC 591</a>
+general purpose programming language  quantum gates            <a href='CMSC591.qmd'>CMSC 591</a>
+general purpose programming language  quantum measurement      <a href='CMSC591.qmd'>CMSC 591</a>
+general purpose programming language  tensor                   <a href='CMSC591.qmd'>CMSC 591</a>
+networking and communication          neural networks          <a href='CMSC591.qmd'>CMSC 591</a>
+techniques, skills, and tools         convex sets              <a href='CMSC591.qmd'>CMSC 591</a>
+
 
 ## Syllabus Statements
 

@@ -19,9 +19,31 @@ MATH 151 or satisfactory score on the Mathematical Placement Test. Students re
 
 Introduction to the concepts and practice of structured programming using C++. Problem-solving, top-down design of algorithms, objects, basic C++ syntax, control structures, functions and arrays. This course is intended for engineering majors.
 
+## Past Syllabii
+
+(none since Spring 2021)
+
 ## Topics
 
 arrays, c++ syntax, control structures, functions, problem solving, top down design
+
+## ABET Coverage
+
+concepts of programming languages, algorithms and complexity, computer science theory, software development
+
+## Coverage and Topics Map
+
+Note that topics without associated ABET category assignments are excluded from this map.  See the [mapping](https://docs.google.com/spreadsheets/d/1qrN3L7eRLsM-aVMHYaLQN-FMYtrTJf0_h6dLKlUdPkk/edit#gid=338318647) for more details.
+
+ABET coverage                      Adjusted Topic      Course
+---------------------------------  ------------------  ----------------------------------
+algorithms and complexity          control structures  <a href='CMSC245.qmd'>CMSC 245</a>
+computer science theory            problem solving     <a href='CMSC245.qmd'>CMSC 245</a>
+concepts of programming languages  arrays              <a href='CMSC245.qmd'>CMSC 245</a>
+concepts of programming languages  c++ syntax          <a href='CMSC245.qmd'>CMSC 245</a>
+concepts of programming languages  functions           <a href='CMSC245.qmd'>CMSC 245</a>
+software development               top down design     <a href='CMSC245.qmd'>CMSC 245</a>
+
 
 ## Syllabus Statements
 

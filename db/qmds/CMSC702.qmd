@@ -19,9 +19,27 @@ Enrollment restricted to students in the doctoral program in computer science. S
 
 Students will attend a weekly research seminar in which the topic and speaker will change each week in order to cover a broad range of subjects at the forefront of computer science research. Students will have to present and to write a report on at least one seminar presented by other speakers. The objective is to expose students to research topics and scholars in the field of computer science as well as to provide them experience in delivering and critiquing seminar talks. Graded as satisfactory/unsatisfactory.
 
+## Past Syllabii
+
+(none since Spring 2021)
+
 ## Topics
 
 research, seminar
+
+## ABET Coverage
+
+concepts of programming languages
+
+## Coverage and Topics Map
+
+Note that topics without associated ABET category assignments are excluded from this map.  See the [mapping](https://docs.google.com/spreadsheets/d/1qrN3L7eRLsM-aVMHYaLQN-FMYtrTJf0_h6dLKlUdPkk/edit#gid=338318647) for more details.
+
+ABET coverage                      Adjusted Topic    Course
+---------------------------------  ----------------  ----------------------------------
+concepts of programming languages  research          <a href='CMSC702.qmd'>CMSC 702</a>
+concepts of programming languages  seminar           <a href='CMSC702.qmd'>CMSC 702</a>
+
 
 ## Syllabus Statements
 

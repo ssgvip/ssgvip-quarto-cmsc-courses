@@ -19,9 +19,27 @@ PHD standing or permission of instructor.
 
 Covers the principles of conducting a research project, reporting the findings in the form of a journal paper and promoting the research through public presentations. Students learn to write grant proposals and practice reviewing research papers and grant proposals. The main emphasis of the course is writing a paper and a grant proposal in a format compliant with NSF, NIH or DoD guidelines.
 
+## Past Syllabii
+
+(none since Spring 2021)
+
 ## Topics
 
 grant proposal, research
+
+## ABET Coverage
+
+techniques, skills, and tools, concepts of programming languages
+
+## Coverage and Topics Map
+
+Note that topics without associated ABET category assignments are excluded from this map.  See the [mapping](https://docs.google.com/spreadsheets/d/1qrN3L7eRLsM-aVMHYaLQN-FMYtrTJf0_h6dLKlUdPkk/edit#gid=338318647) for more details.
+
+ABET coverage                      Adjusted Topic    Course
+---------------------------------  ----------------  ----------------------------------
+concepts of programming languages  research          <a href='CMSC701.qmd'>CMSC 701</a>
+techniques, skills, and tools      grant proposal    <a href='CMSC701.qmd'>CMSC 701</a>
+
 
 ## Syllabus Statements
 

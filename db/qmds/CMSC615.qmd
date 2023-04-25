@@ -19,9 +19,43 @@ Enrollment is restricted to students with graduate standing in computer science 
 
 The course will assume undergraduate-level background in algorithms, data structures and programming. Upon successful completion of this course, the student will be able to understand the major concepts about cryptocurrency and blockchain techniques; be familiar with major blockchain applications as well as real-world issues; understand the underlying consensus mechanisms in the Bitcoin system and other alternative cryptocurrency systems; analyze the security of Nakamoto consensus; understand, write and execute smart contracts using an Ethereum-like platform.
 
+## Past Syllabii
+
+<a href='./202120/CMSC_615_Syllabus_Spring_2021.pdf'>Spring 2021</a>, <a href='./202220/CMSC_615_Syllabus_Spring_2022.pdf'>Spring 2022</a>, <a href='./202320/CMSC_615_Syllabus_Spring_2023.pdf'>Spring 2023</a>
+
 ## Topics
 
 algorithms, altcoins, analysis, anonymity, bitcoin, blockchain, consensus protocols, cryptocurrency, data structures, distributed systems, etherum, legal, nakamoto consensus, nakamoto's blockchain, programming, real-world applications, security, sidechains
+
+## ABET Coverage
+
+algorithms and complexity, concepts of programming languages, local and global impacts, networking and communication, computer architecture and organization, parallel and distributed computing, computer science theory, general purpose programming language, security and privacy
+
+## Coverage and Topics Map
+
+Note that topics without associated ABET category assignments are excluded from this map.  See the [mapping](https://docs.google.com/spreadsheets/d/1qrN3L7eRLsM-aVMHYaLQN-FMYtrTJf0_h6dLKlUdPkk/edit#gid=338318647) for more details.
+
+ABET coverage                           Adjusted Topic           Course
+--------------------------------------  -----------------------  ----------------------------------
+algorithms and complexity               algorithms               <a href='CMSC615.qmd'>CMSC 615</a>
+algorithms and complexity               analysis                 <a href='CMSC615.qmd'>CMSC 615</a>
+computer architecture and organization  data structures          <a href='CMSC615.qmd'>CMSC 615</a>
+computer science theory                 nakamoto's blockchain    <a href='CMSC615.qmd'>CMSC 615</a>
+concepts of programming languages       altcoins                 <a href='CMSC615.qmd'>CMSC 615</a>
+concepts of programming languages       anonymity                <a href='CMSC615.qmd'>CMSC 615</a>
+concepts of programming languages       nakamoto consensus       <a href='CMSC615.qmd'>CMSC 615</a>
+concepts of programming languages       sidechains               <a href='CMSC615.qmd'>CMSC 615</a>
+general purpose programming language    programming              <a href='CMSC615.qmd'>CMSC 615</a>
+local and global impacts                bitcoin                  <a href='CMSC615.qmd'>CMSC 615</a>
+local and global impacts                blockchain               <a href='CMSC615.qmd'>CMSC 615</a>
+local and global impacts                cryptocurrency           <a href='CMSC615.qmd'>CMSC 615</a>
+local and global impacts                etherum                  <a href='CMSC615.qmd'>CMSC 615</a>
+local and global impacts                legal                    <a href='CMSC615.qmd'>CMSC 615</a>
+local and global impacts                real-world applications  <a href='CMSC615.qmd'>CMSC 615</a>
+networking and communication            consensus protocols      <a href='CMSC615.qmd'>CMSC 615</a>
+parallel and distributed computing      distributed systems      <a href='CMSC615.qmd'>CMSC 615</a>
+security and privacy                    security                 <a href='CMSC615.qmd'>CMSC 615</a>
+
 
 ## Syllabus Statements
 

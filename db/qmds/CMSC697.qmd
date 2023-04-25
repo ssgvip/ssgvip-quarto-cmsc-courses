@@ -19,9 +19,26 @@ Semester course; 1-15 research hours (to be arranged). 1-15 credits. May be repe
 
 May be repeated for credit. A total of three credits may be used to fulfill the MS in Computer Science thesis requirement. Independent research culminating in the writing of the required thesis or dissertation. The student must identify a faculty member willing to supervise the research and submit a proposal to the computer science graduate committee no later than the 10th week of the prior semester. This proposal must be approved before the student can register for the course. Graded as S/U/F.
 
+## Past Syllabii
+
+(none since Spring 2021)
+
 ## Topics
 
 research
+
+## ABET Coverage
+
+concepts of programming languages
+
+## Coverage and Topics Map
+
+Note that topics without associated ABET category assignments are excluded from this map.  See the [mapping](https://docs.google.com/spreadsheets/d/1qrN3L7eRLsM-aVMHYaLQN-FMYtrTJf0_h6dLKlUdPkk/edit#gid=338318647) for more details.
+
+ABET coverage                      Adjusted Topic    Course
+---------------------------------  ----------------  ----------------------------------
+concepts of programming languages  research          <a href='CMSC697.qmd'>CMSC 697</a>
+
 
 ## Syllabus Statements
 

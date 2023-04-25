@@ -19,9 +19,52 @@ Semester course; 3 lecture hours (delivered online). 3 credits. Introduction to 
 
 Introduction to object-oriented programming using Python. The course introduces students to structured programming logic and design techniques. The course content also includes instruction in critical thinking and problem-solving skills using contemporary tools. Specific topics include flowcharting, pseudocode and program control structures, including sequence, selection and repetition. This course is not applicable for credit toward the BS in Computer Science.
 
+## Past Syllabii
+
+<a href='./202120/CMSC_210_Syllabus_Spring_2021.pdf'>Spring 2021</a>, <a href='./202210/CMSC_210_Syllabus_Fall_2021.pdf'>Fall 2021</a>, <a href='./202220/CMSC_210_Syllabus_Spring_2022.pdf'>Spring 2022</a>, <a href='./202310/CMSC_210_Syllabus_Fall_2022.pdf'>Fall 2022</a>, <a href='./202320/CMSC_210_Syllabus_Spring_2023.pdf'>Spring 2023</a>
+
 ## Topics
 
 calling functions, conditional execution, control structures, critical thinking, debugging, dictionaries, expressions, files, flow charting, lists, loops and iterations, network programming, problem solving, program design, programming logic, pseudocode, regular expressions, repetition, sequencing, statement, strings, structured programming, tuples, variables, writing functions
+
+## ABET Coverage
+
+concepts of programming languages, techniques, skills, and tools, software development, networking and communication
+
+## Coverage and Topics Map
+
+Note that topics without associated ABET category assignments are excluded from this map.  See the [mapping](https://docs.google.com/spreadsheets/d/1qrN3L7eRLsM-aVMHYaLQN-FMYtrTJf0_h6dLKlUdPkk/edit#gid=338318647) for more details.
+
+ABET coverage                      Adjusted Topic          Course
+---------------------------------  ----------------------  ----------------------------------
+concepts of programming languages  calling functions       <a href='CMSC210.qmd'>CMSC 210</a>
+concepts of programming languages  conditional execution   <a href='CMSC210.qmd'>CMSC 210</a>
+concepts of programming languages  control structures      <a href='CMSC210.qmd'>CMSC 210</a>
+concepts of programming languages  dictionaries            <a href='CMSC210.qmd'>CMSC 210</a>
+concepts of programming languages  expressions             <a href='CMSC210.qmd'>CMSC 210</a>
+concepts of programming languages  lists                   <a href='CMSC210.qmd'>CMSC 210</a>
+concepts of programming languages  loops and iterations    <a href='CMSC210.qmd'>CMSC 210</a>
+concepts of programming languages  programming logic       <a href='CMSC210.qmd'>CMSC 210</a>
+concepts of programming languages  pseudocode              <a href='CMSC210.qmd'>CMSC 210</a>
+concepts of programming languages  regular expressions     <a href='CMSC210.qmd'>CMSC 210</a>
+concepts of programming languages  repetition              <a href='CMSC210.qmd'>CMSC 210</a>
+concepts of programming languages  sequencing              <a href='CMSC210.qmd'>CMSC 210</a>
+concepts of programming languages  statement               <a href='CMSC210.qmd'>CMSC 210</a>
+concepts of programming languages  strings                 <a href='CMSC210.qmd'>CMSC 210</a>
+concepts of programming languages  structured programming  <a href='CMSC210.qmd'>CMSC 210</a>
+concepts of programming languages  tuples                  <a href='CMSC210.qmd'>CMSC 210</a>
+concepts of programming languages  variables               <a href='CMSC210.qmd'>CMSC 210</a>
+concepts of programming languages  writing functions       <a href='CMSC210.qmd'>CMSC 210</a>
+networking and communication       network programming     <a href='CMSC210.qmd'>CMSC 210</a>
+software development               flow charting           <a href='CMSC210.qmd'>CMSC 210</a>
+software development               program design          <a href='CMSC210.qmd'>CMSC 210</a>
+software development               writing functions       <a href='CMSC210.qmd'>CMSC 210</a>
+techniques, skills, and tools      critical thinking       <a href='CMSC210.qmd'>CMSC 210</a>
+techniques, skills, and tools      debugging               <a href='CMSC210.qmd'>CMSC 210</a>
+techniques, skills, and tools      files                   <a href='CMSC210.qmd'>CMSC 210</a>
+techniques, skills, and tools      flow charting           <a href='CMSC210.qmd'>CMSC 210</a>
+techniques, skills, and tools      problem solving         <a href='CMSC210.qmd'>CMSC 210</a>
+
 
 ## Syllabus Statements
 

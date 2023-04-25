@@ -19,9 +19,31 @@ Graduate student standing or acceptance into five-year accelerated program in co
 
 The purpose of the course is to teach algorithms for analyzing biological and medical data. The focus will be on understanding the inner workings of algorithms used in bioinformatics tools. Topic covered will include algorithms for assembling and searching biological sequences, finding patterns associated with disease, and exploring biological networks.
 
+## Past Syllabii
+
+(none since Spring 2021)
+
 ## Topics
 
 algorithms, bioinformatics, biological sequences, data, networks, patterns
+
+## ABET Coverage
+
+algorithms and complexity, techniques, skills, and tools, information management, networking and communication, parallel and distributed computing
+
+## Coverage and Topics Map
+
+Note that topics without associated ABET category assignments are excluded from this map.  See the [mapping](https://docs.google.com/spreadsheets/d/1qrN3L7eRLsM-aVMHYaLQN-FMYtrTJf0_h6dLKlUdPkk/edit#gid=338318647) for more details.
+
+ABET coverage                       Adjusted Topic        Course
+----------------------------------  --------------------  ----------------------------------
+algorithms and complexity           algorithms            <a href='CMSC610.qmd'>CMSC 610</a>
+information management              data                  <a href='CMSC610.qmd'>CMSC 610</a>
+networking and communication        networks              <a href='CMSC610.qmd'>CMSC 610</a>
+parallel and distributed computing  patterns              <a href='CMSC610.qmd'>CMSC 610</a>
+techniques, skills, and tools       bioinformatics        <a href='CMSC610.qmd'>CMSC 610</a>
+techniques, skills, and tools       biological sequences  <a href='CMSC610.qmd'>CMSC 610</a>
+
 
 ## Syllabus Statements
 

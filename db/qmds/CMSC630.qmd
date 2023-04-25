@@ -19,9 +19,42 @@ Enrollment is restricted to students with graduate standing in engineering or sc
 
 Introduces theoretical and practical aspects of computer vision for image processing and understanding. It provides a comprehensive walkthrough from basics of image preparation to using computational intelligence tools for knowledge discovery from images. The course will cover basics of image processing and computer vision, including image sampling and quantization, color, pixel-based operations, image filtering, morphological image processing, and image transforms; information extraction including segmentation and feature extraction; pattern recognition for computer vision: classification, novelty and object detection, image understanding, learning from video streams, and tensor-based methods. Examples will include medical image analysis, object recognition in ground and aerial photographs and hyperspectral imaging.
 
+## Past Syllabii
+
+<a href='./202120/CMSC_630_Syllabus_Spring_2021.pdf'>Spring 2021</a>, <a href='./202220/CMSC_630_Syllabus_Spring_2022.pdf'>Spring 2022</a>, <a href='./202320/CMSC_630_Syllabus_Spring_2023.pdf'>Spring 2023</a>
+
 ## Topics
 
 analysis, computers, feature extraction, feature selection, image, image analysis, image filtering, image processing, image segmentation, images, information extraction, machine learning, patterns, pixel-based operations, quantization, segmentation, tensor
+
+## ABET Coverage
+
+algorithms and complexity, operating systems, general purpose programming language, concepts of programming languages, computer science theory
+
+## Coverage and Topics Map
+
+Note that topics without associated ABET category assignments are excluded from this map.  See the [mapping](https://docs.google.com/spreadsheets/d/1qrN3L7eRLsM-aVMHYaLQN-FMYtrTJf0_h6dLKlUdPkk/edit#gid=338318647) for more details.
+
+ABET coverage                         Adjusted Topic          Course
+------------------------------------  ----------------------  ----------------------------------
+algorithms and complexity             analysis                <a href='CMSC630.qmd'>CMSC 630</a>
+computer science theory               pixel-based operations  <a href='CMSC630.qmd'>CMSC 630</a>
+computer science theory               quantization            <a href='CMSC630.qmd'>CMSC 630</a>
+computer science theory               segmentation            <a href='CMSC630.qmd'>CMSC 630</a>
+computer science theory               tensor                  <a href='CMSC630.qmd'>CMSC 630</a>
+concepts of programming languages     image                   <a href='CMSC630.qmd'>CMSC 630</a>
+concepts of programming languages     patterns                <a href='CMSC630.qmd'>CMSC 630</a>
+general purpose programming language  feature extraction      <a href='CMSC630.qmd'>CMSC 630</a>
+general purpose programming language  feature selection       <a href='CMSC630.qmd'>CMSC 630</a>
+general purpose programming language  image analysis          <a href='CMSC630.qmd'>CMSC 630</a>
+general purpose programming language  image filtering         <a href='CMSC630.qmd'>CMSC 630</a>
+general purpose programming language  image processing        <a href='CMSC630.qmd'>CMSC 630</a>
+general purpose programming language  image segmentation      <a href='CMSC630.qmd'>CMSC 630</a>
+general purpose programming language  images                  <a href='CMSC630.qmd'>CMSC 630</a>
+general purpose programming language  information extraction  <a href='CMSC630.qmd'>CMSC 630</a>
+general purpose programming language  machine learning        <a href='CMSC630.qmd'>CMSC 630</a>
+operating systems                     computers               <a href='CMSC630.qmd'>CMSC 630</a>
+
 
 ## Syllabus Statements
 

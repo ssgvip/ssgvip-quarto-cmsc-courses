@@ -19,9 +19,30 @@ CMSC 525.
 
 Studies the concepts and techniques used in the analysis of software and the derivation of test data. Focuses on software metrics and reliability; construction of tools to aid software analysis and testing. Requires students to review seminal and current papers from the literature, and lead their discussion in class.
 
+## Past Syllabii
+
+(none since Spring 2021)
+
 ## Topics
 
 analysis, current literature, metrics, software management, testing
+
+## ABET Coverage
+
+algorithms and complexity, local and global impacts, concepts of programming languages, software development
+
+## Coverage and Topics Map
+
+Note that topics without associated ABET category assignments are excluded from this map.  See the [mapping](https://docs.google.com/spreadsheets/d/1qrN3L7eRLsM-aVMHYaLQN-FMYtrTJf0_h6dLKlUdPkk/edit#gid=338318647) for more details.
+
+ABET coverage                      Adjusted Topic       Course
+---------------------------------  -------------------  ----------------------------------
+algorithms and complexity          analysis             <a href='CMSC625.qmd'>CMSC 625</a>
+concepts of programming languages  metrics              <a href='CMSC625.qmd'>CMSC 625</a>
+local and global impacts           current literature   <a href='CMSC625.qmd'>CMSC 625</a>
+software development               software management  <a href='CMSC625.qmd'>CMSC 625</a>
+software development               testing              <a href='CMSC625.qmd'>CMSC 625</a>
+
 
 ## Syllabus Statements
 

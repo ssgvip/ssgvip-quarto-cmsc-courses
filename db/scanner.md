@@ -1,5 +1,5 @@
 ---
-date: 4/12/23
+date: 4/25/23
 title: Building this web site
 toc-title: Table of contents
 ---
@@ -73,6 +73,7 @@ import json
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 import pandas as pd
+import numpy as np
 from IPython.display import Markdown
 from tabulate import tabulate
 
@@ -141,12 +142,56 @@ for col in ["Count","Number","Level"]:
   topics_df[col] = topics_df[col].astype("int")
 
 topics_df["CourseId"] = topics_df["CourseId"].apply( str.strip )
+
+
+# Coverage data: restack ABET 1, 2 and 3 categories
+g1 = topics_df[ ["abet_tag1","ADJTopic","idx","CourseId"] ]
+g2 = topics_df[ ["abet_tag2","ADJTopic","idx","CourseId"] ].rename(columns={"abet_tag2":"abet_tag1"})
+g3 = topics_df[ ["abet_tag3","ADJTopic","idx","CourseId"] ].rename(columns={"abet_tag3":"abet_tag1"})
+g =  pd.concat( [g1,g2,g3],axis=0)
+coverage_df = g[ g["abet_tag1"] != ""]
+```
+:::
+
+# Loading past syllabii
+
+::: {.cell execution_count="4"}
+``` {.python .cell-code}
+directories = ['../docs']
+
+# Create an empty pandas DataFrame
+syllabii_df = pd.DataFrame(columns=['filename', 'url', 'idx', 'termId','termName','urlByTermName','urlByCourseId'])
+
+# Loop through all the directories
+for directory in directories:
+    # Loop through all the files in the directory and its subdirectories
+    for root, dirs, files in os.walk(directory):
+        for file in files:
+            # Check if the file is a PDF file
+            if file.endswith('.pdf') and file.startswith('CMSC_'):
+                # Append the filename to the pandas DataFrame
+                filename = file.strip()
+                url = "./"+root[8:]+"/"+file
+                idx = file[0:4] + file[5:8]
+                termId = root[8:]
+                termName = " ".join(filename.split('_')[-2:])[:-4]
+                urlByTermName = "<a href='"+url+"'>"+termName+"</a>"
+                urlByCourseId = "<a href='"+url+"'>"+idx+"</a>"
+                syllabii_df.loc[len(syllabii_df)] = [filename,url,idx,termId,termName,urlByTermName,urlByCourseId]
+
+
+def showSyllabiiByTerm( courseId ):
+  off = syllabii_df[ syllabii_df["idx"]==courseId ];
+  slist = ", ".join( off["urlByTermName"])
+  if slist=="":
+    slist = "(none since Spring 2021)"
+  return slist
 ```
 :::
 
 ## a list of columns in the *CMSC-course-data* tab
 
-::: {.cell execution_count="4"}
+::: {.cell execution_count="5"}
 ::: {.cell-output .cell-output-display}
 Here is a list of columns:`<br/>`{=html}'Subject', 'Number', 'CourseId',
 'idx', 'Title', 'Hours', 'foc', 'bscs', 'bscs-cyber', 'bscs-data',
@@ -157,7 +202,7 @@ Here is a list of columns:`<br/>`{=html}'Subject', 'Number', 'CourseId',
 
 ## CMSC Courses in the Bulletin
 
-::: {.cell execution_count="5"}
+::: {.cell execution_count="6"}
 ::: {.cell-output .cell-output-display}
 [Table 1](#tbl-table1) presents a list of CMSC courses in the bulletin.
 There are 83 courses in the bulletin.
@@ -261,13 +306,44 @@ There are 83 courses in the bulletin.
 Now for the tricky AND fun part. Using the data from the dataframe,
 let's create a bunch of QMDs one for each course.
 
-::: {.cell execution_count="6"}
+::: {.cell execution_count="7"}
 ``` {.python .cell-code}
+def expandURL( courseList ):
+  """ expand list of courses into a string of URL pointing to course pages """
+  urls = course_df[ course_df["idx"].isin( courseList) ].reset_index()
+  urls["url"] = "<a href='"+urls["idx"]+".qmd"+"'>"+urls["CourseId"]+"</a>"
+  returnValue = "";
+  for i,url in urls["url"].items():
+    if i==0:
+      returnValue = url
+#    elif i % 4 == 0:
+#        returnValue = returnValue + ", <br/>\n" + url
+    else:
+      returnValue = returnValue + ", " + url
+  return returnValue
+
 def showTopics( courseId ):
+  """ expand topic list to a single string """
   topics = topics_df[ topics_df["CourseId"].str.contains(courseId[5:]) & topics_df["CourseId"].str.contains(courseId[:4]) ]
 #  slist = courseId[:4]+"/"+courseId[5:]+": "+", ".join( topics["ADJTopic"] )
   slist = ", ".join( topics["ADJTopic"].unique() )
   return slist
+
+def showCoverage( courseId ):
+  """ expand coverage list to a single string """
+  topics = coverage_df[ coverage_df["CourseId"].str.contains(courseId[5:]) & coverage_df["CourseId"].str.contains(courseId[:4]) ]
+#  slist = courseId[:4]+"/"+courseId[5:]+": "+", ".join( topics["ADJTopic"] )
+  slist = ", ".join( topics["abet_tag1"].unique() )
+  return slist
+
+def showMap( courseId ):
+  """ map topics and coverages for specific course """
+  topics = coverage_df[ coverage_df["CourseId"].str.contains(courseId[5:]) & coverage_df["CourseId"].str.contains(courseId[:4]) ]
+#  df_grouped = topics.groupby(['ADJTopic','abet_tag1'])['idx'].unique().apply( expandURL ).reset_index()
+  df_grouped = topics.groupby(['abet_tag1','ADJTopic'])['idx'].unique().apply( expandURL ).reset_index()
+  tab = tabulate(df_grouped, tablefmt='fancy', showindex=False, headers=["ABET coverage","Adjusted Topic","Course"] )
+  d = Markdown(tab).data
+  return d
 
 
 block = "";
@@ -295,9 +371,24 @@ format:
 
 {row["Isolated Description"]}
 
+## Past Syllabii
+
+{showSyllabiiByTerm( row["idx"] )}
+
 ## Topics
 
 {showTopics( row["CourseId"] )}
+
+## ABET Coverage
+
+{showCoverage( row["CourseId"] )}
+
+## Coverage and Topics Map
+
+Note that topics without associated ABET category assignments are excluded from this map.  See the [mapping](https://docs.google.com/spreadsheets/d/1qrN3L7eRLsM-aVMHYaLQN-FMYtrTJf0_h6dLKlUdPkk/edit#gid=338318647) for more details.
+
+{showMap( row["CourseId"] )}
+
 
 ## Syllabus Statements
 
@@ -321,7 +412,7 @@ Students should visit the URL below and review all syllabus statement informatio
 
 # Autogenerating left menu bar in *contents.yml*
 
-::: {.cell execution_count="7"}
+::: {.cell execution_count="8"}
 ``` {.python .cell-code}
 from math import floor
 
@@ -355,7 +446,7 @@ with open(filename, 'w',encoding="utf-8") as file:
 
 # Autogenerating *index.qmd*
 
-::: {.cell execution_count="8"}
+::: {.cell execution_count="9"}
 ``` {.python .cell-code}
 filename = "qmds/index.qmd"
 with open(filename, 'w',encoding="utf-8") as file:
@@ -383,9 +474,9 @@ date: last-modified
 
 # Autogenerating *catalog.qmd*
 
-::: {.cell execution_count="9"}
+::: {.cell execution_count="10"}
 ``` {.python .cell-code}
-def showTopics( courseId ):
+def xxxshowTopics( courseId ):
   topics = topics_df[ topics_df["CourseId"].str.contains(courseId[5:]) & topics_df["CourseId"].str.contains(courseId[:4]) ]
 #  slist = courseId[:4]+"/"+courseId[5:]+": "+", ".join( topics["ADJTopic"] )
   slist = ", ".join( topics["ADJTopic"] )
@@ -406,7 +497,11 @@ Semester course. {row["Hours"]} {h}.
 
 **Description:** {row["Isolated Description"]}
 
+**Syllabii:** { showSyllabiiByTerm( row["idx"])}
+
 **Topics:** { showTopics( row["CourseId"] ) }
+
+**ABET coverage:** { showCoverage( row["CourseId"] ) }
 
 """
 
@@ -431,11 +526,11 @@ are offered on a regular basis.
 
 # Autogenerating *topics.qmd*
 
-::: {.cell execution_count="10"}
+::: {.cell execution_count="11"}
 ``` {.python .cell-code}
 from textwrap import wrap
 
-def expandURL( courseList ):
+def xxxexpandURL( courseList ):
   urls = course_df[ course_df["idx"].isin( courseList) ].reset_index()
   urls["url"] = "<a href='"+urls["idx"]+".qmd"+"'>"+urls["CourseId"]+"</a>"
   returnValue = "";
@@ -461,10 +556,79 @@ date: last-modified
 #  course_df['urlTitle'] = "[" + course_df["Title"].astype(str) + "](" + course_df["Subject"].astype(str) + course_df["Number"].astype(str) + '.html)'
 
 
-  df_grouped = topics_df.groupby('ADJTopic')['idx'].unique().apply( expandURL ).reset_index()
+  df_grouped = topics_df.groupby(['ADJTopic','abet_tag1'])['idx'].unique().apply( expandURL ).reset_index()
   
   file.write(
-    tabulate(df_grouped, tablefmt='fancy', showindex=False, headers=["Adjusted Topic","Course"] )
+    tabulate(df_grouped, tablefmt='fancy', showindex=False, headers=["Adjusted Topic","ABET Coverage","Course"] )
+  )
+
+  file.close()
+```
+:::
+
+# Autogenerating *coverage.qmd*
+
+::: {.cell execution_count="12"}
+``` {.python .cell-code}
+from textwrap import wrap
+
+
+filename = "qmds/coverage.qmd"
+with open(filename, 'w',encoding="utf-8") as file:
+  file.write(f"""---
+title: "CMSC courses and ABET topic coverage"
+date: last-modified
+---
+The mappings listed below represent ABET coverage for undergraduate courses only.
+
+""" )
+
+#  course_df['urlID'] = "[" + course_df["CourseId"].astype(str) + "](" + course_df["Subject"].astype(str) + course_df["Number"].astype(str) + '.html)'
+#  course_df['urlTitle'] = "[" + course_df["Title"].astype(str) + "](" + course_df["Subject"].astype(str) + course_df["Number"].astype(str) + '.html)'
+
+  df_grouped = coverage_df[ coverage_df["idx"]<"CMSC600" ].groupby('abet_tag1')['idx'].unique().apply( expandURL ).reset_index()
+
+  file.write(
+    tabulate(df_grouped, tablefmt='fancy', showindex=False, headers=["ABET coverage topic","Course"] )
+  )
+
+  file.close()
+```
+:::
+
+# Autogenerating *syllabii.qmd*
+
+::: {.cell execution_count="13"}
+``` {.python .cell-code}
+from textwrap import wrap
+
+
+filename = "qmds/syllabii.qmd"
+with open(filename, 'w',encoding="utf-8") as file:
+  file.write(f"""---
+title: "Past syllabii"
+date: last-modified
+---
+The following table maps our course catalog against a list of existing course syllabii. Note that some
+courses have not been taught for a while! In other cases, some of the courses are freshly
+added to the catalog and have not yet been taught.
+
+""" )
+
+#  course_df['urlID'] = "[" + course_df["CourseId"].astype(str) + "](" + course_df["Subject"].astype(str) + course_df["Number"].astype(str) + '.html)'
+#  course_df['urlTitle'] = "[" + course_df["Title"].astype(str) + "](" + course_df["Subject"].astype(str) + course_df["Number"].astype(str) + '.html)'
+
+  df = syllabii_df.pivot(index="idx",columns="termId",values="urlByTermName").reset_index()
+  df = pd.merge(course_df[ ["idx"] ],df,how="left",on="idx")
+
+  for columnName in df:
+    df[columnName] = df[columnName].replace(np.nan,"&nbsp;")
+
+  df["idx"] = "<a href='"+df["idx"]+".qmd'>"+df["idx"]+"</a>"
+
+  file.write("\n")
+  file.write(
+    tabulate(df, tablefmt='fancy', showindex=False, headers=df.columns)
   )
 
   file.close()

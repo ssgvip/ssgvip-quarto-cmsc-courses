@@ -19,9 +19,31 @@ CMSC 502.
 
 A study of operating systems including those in multiprocessor and distributed environments. I/O programming, resource management (including processor and memory management), security and system performance evaluation.
 
+## Past Syllabii
+
+(none since Spring 2021)
+
 ## Topics
 
 input/output, multiprocessor environments, operating systems, resources management, security, system performance
+
+## ABET Coverage
+
+computer architecture and organization, operating systems, techniques, skills, and tools, security and privacy, software development
+
+## Coverage and Topics Map
+
+Note that topics without associated ABET category assignments are excluded from this map.  See the [mapping](https://docs.google.com/spreadsheets/d/1qrN3L7eRLsM-aVMHYaLQN-FMYtrTJf0_h6dLKlUdPkk/edit#gid=338318647) for more details.
+
+ABET coverage                           Adjusted Topic               Course
+--------------------------------------  ---------------------------  ----------------------------------
+computer architecture and organization  input/output                 <a href='CMSC602.qmd'>CMSC 602</a>
+operating systems                       multiprocessor environments  <a href='CMSC602.qmd'>CMSC 602</a>
+operating systems                       operating systems            <a href='CMSC602.qmd'>CMSC 602</a>
+security and privacy                    security                     <a href='CMSC602.qmd'>CMSC 602</a>
+software development                    system performance           <a href='CMSC602.qmd'>CMSC 602</a>
+techniques, skills, and tools           resources management         <a href='CMSC602.qmd'>CMSC 602</a>
+
 
 ## Syllabus Statements
 

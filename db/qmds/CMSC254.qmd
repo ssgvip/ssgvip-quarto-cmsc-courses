@@ -19,9 +19,55 @@ Semester course; 3 lecture and 2 laboratory hours. 4 credits. Introduction to pr
 
 Introduction to problem solving and implementation of solutions using Python. The course introduces students to concepts and practice of structured programming, problem-solving, top-down design of algorithms, a Python language syntax, control structures and arrays. The course content also includes instruction in critical-thinking and problem-solving skills using contemporary tools. Specific topics include flowcharting, pseudocode and program control structures, including sequence, selection, repetition and modularization.
 
+## Past Syllabii
+
+<a href='./202310/CMSC_254_Syllabus_Fall_2022.pdf'>Fall 2022</a>, <a href='./202320/CMSC_254_Syllabus_Spring_2023.pdf'>Spring 2023</a>
+
 ## Topics
 
-analysis, arrays, basic concepts of computer systems, control structures, critical thinking, data, decision structures, dictionaries, flow charting, functions, lists, modeling, modularization, problem solving, processing code, programming, pseudocode, python syntax, repetition, repetition structures, selection, sequencing, sequential data structures, structured programming, structures, top down design, tuples
+analysis, arrays, basic concepts of computer systems, control structures, critical thinking, data, decision structures, dictionaries, flow charting, functions, lists, modeling, modularization, problem solving, processing code, programming, pseudocode, python syntax, repetition, selection, sequencing, sequential data structures, structured programming, structures, top down design, tuples
+
+## ABET Coverage
+
+algorithms and complexity, concepts of programming languages, computer architecture and organization, software development, techniques, skills, and tools, information management, computer science theory, general purpose programming language
+
+## Coverage and Topics Map
+
+Note that topics without associated ABET category assignments are excluded from this map.  See the [mapping](https://docs.google.com/spreadsheets/d/1qrN3L7eRLsM-aVMHYaLQN-FMYtrTJf0_h6dLKlUdPkk/edit#gid=338318647) for more details.
+
+ABET coverage                           Adjusted Topic                      Course
+--------------------------------------  ----------------------------------  ----------------------------------
+algorithms and complexity               analysis                            <a href='CMSC254.qmd'>CMSC 254</a>
+computer architecture and organization  basic concepts of computer systems  <a href='CMSC254.qmd'>CMSC 254</a>
+computer science theory                 decision structures                 <a href='CMSC254.qmd'>CMSC 254</a>
+computer science theory                 modeling                            <a href='CMSC254.qmd'>CMSC 254</a>
+computer science theory                 modularization                      <a href='CMSC254.qmd'>CMSC 254</a>
+computer science theory                 structures                          <a href='CMSC254.qmd'>CMSC 254</a>
+concepts of programming languages       arrays                              <a href='CMSC254.qmd'>CMSC 254</a>
+concepts of programming languages       dictionaries                        <a href='CMSC254.qmd'>CMSC 254</a>
+concepts of programming languages       flow charting                       <a href='CMSC254.qmd'>CMSC 254</a>
+concepts of programming languages       functions                           <a href='CMSC254.qmd'>CMSC 254</a>
+concepts of programming languages       lists                               <a href='CMSC254.qmd'>CMSC 254</a>
+concepts of programming languages       processing code                     <a href='CMSC254.qmd'>CMSC 254</a>
+concepts of programming languages       programming                         <a href='CMSC254.qmd'>CMSC 254</a>
+concepts of programming languages       python syntax                       <a href='CMSC254.qmd'>CMSC 254</a>
+concepts of programming languages       repetition                          <a href='CMSC254.qmd'>CMSC 254</a>
+concepts of programming languages       selection                           <a href='CMSC254.qmd'>CMSC 254</a>
+concepts of programming languages       sequencing                          <a href='CMSC254.qmd'>CMSC 254</a>
+concepts of programming languages       sequential data structures          <a href='CMSC254.qmd'>CMSC 254</a>
+concepts of programming languages       structured programming              <a href='CMSC254.qmd'>CMSC 254</a>
+concepts of programming languages       structures                          <a href='CMSC254.qmd'>CMSC 254</a>
+concepts of programming languages       top down design                     <a href='CMSC254.qmd'>CMSC 254</a>
+concepts of programming languages       tuples                              <a href='CMSC254.qmd'>CMSC 254</a>
+general purpose programming language    pseudocode                          <a href='CMSC254.qmd'>CMSC 254</a>
+general purpose programming language    structured programming              <a href='CMSC254.qmd'>CMSC 254</a>
+information management                  data                                <a href='CMSC254.qmd'>CMSC 254</a>
+software development                    control structures                  <a href='CMSC254.qmd'>CMSC 254</a>
+software development                    top down design                     <a href='CMSC254.qmd'>CMSC 254</a>
+techniques, skills, and tools           critical thinking                   <a href='CMSC254.qmd'>CMSC 254</a>
+techniques, skills, and tools           flow charting                       <a href='CMSC254.qmd'>CMSC 254</a>
+techniques, skills, and tools           problem solving                     <a href='CMSC254.qmd'>CMSC 254</a>
+
 
 ## Syllabus Statements
 

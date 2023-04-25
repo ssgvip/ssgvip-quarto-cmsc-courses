@@ -19,9 +19,25 @@ permission of the instructor.
 
 This course will teach selected topics in computer science. See the Schedule of Classes for specific topics to be offered each semester and prerequisites.
 
+## Past Syllabii
+
+<a href='./202310/CMSC_391_Syllabus_Fall_2022.pdf'>Fall 2022</a>
+
 ## Topics
 
 selected topics
+
+## ABET Coverage
+
+
+
+## Coverage and Topics Map
+
+Note that topics without associated ABET category assignments are excluded from this map.  See the [mapping](https://docs.google.com/spreadsheets/d/1qrN3L7eRLsM-aVMHYaLQN-FMYtrTJf0_h6dLKlUdPkk/edit#gid=338318647) for more details.
+
+ABET coverage    Adjusted Topic    Course
+---------------  ----------------  --------
+
 
 ## Syllabus Statements
 

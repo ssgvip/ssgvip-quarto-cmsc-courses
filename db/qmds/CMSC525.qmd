@@ -19,9 +19,44 @@ CMSC 401 and 403. Enrollment is restricted to students with graduate standing
 
 An introduction to concepts and techniques used in the analysis of software for certain properties. Using analytic results to derive test data and verify the correct implementation of programs. Flow graphs, fault/failure model, theoretical and practical limitations. Control flow, data flow and error flow analyses. Testing strategies including random, structural, mutation and error flow. Software metrics.
 
+## Past Syllabii
+
+<a href='./202120/CMSC_525_Syllabus_Spring_2021.pdf'>Spring 2021</a>, <a href='./202220/CMSC_525_Syllabus_Spring_2022.pdf'>Spring 2022</a>, <a href='./202320/CMSC_525_Syllabus_Spring_2023.pdf'>Spring 2023</a>
+
 ## Topics
 
 advanced testing strategies, analysis, concolic hybrid analysis, control flow, coverage-driven systematic software testing, data, data-flow, dynamic programming, flow control, graphs, limitations, program analysis-driven testing, software management, software validation, software verification, static programming, symbolic program analysis, test case coverage, testing
+
+## ABET Coverage
+
+software development, algorithms and complexity, concepts of programming languages, general purpose programming language, computer architecture and organization, techniques, skills, and tools, computer science theory
+
+## Coverage and Topics Map
+
+Note that topics without associated ABET category assignments are excluded from this map.  See the [mapping](https://docs.google.com/spreadsheets/d/1qrN3L7eRLsM-aVMHYaLQN-FMYtrTJf0_h6dLKlUdPkk/edit#gid=338318647) for more details.
+
+ABET coverage                           Adjusted Topic                               Course
+--------------------------------------  -------------------------------------------  ----------------------------------
+algorithms and complexity               analysis                                     <a href='CMSC525.qmd'>CMSC 525</a>
+algorithms and complexity               concolic hybrid analysis                     <a href='CMSC525.qmd'>CMSC 525</a>
+algorithms and complexity               symbolic program analysis                    <a href='CMSC525.qmd'>CMSC 525</a>
+computer architecture and organization  data                                         <a href='CMSC525.qmd'>CMSC 525</a>
+computer architecture and organization  data-flow                                    <a href='CMSC525.qmd'>CMSC 525</a>
+computer science theory                 program analysis-driven testing              <a href='CMSC525.qmd'>CMSC 525</a>
+computer science theory                 test case coverage                           <a href='CMSC525.qmd'>CMSC 525</a>
+concepts of programming languages       control flow                                 <a href='CMSC525.qmd'>CMSC 525</a>
+concepts of programming languages       flow control                                 <a href='CMSC525.qmd'>CMSC 525</a>
+general purpose programming language    coverage-driven systematic software testing  <a href='CMSC525.qmd'>CMSC 525</a>
+general purpose programming language    dynamic programming                          <a href='CMSC525.qmd'>CMSC 525</a>
+general purpose programming language    static programming                           <a href='CMSC525.qmd'>CMSC 525</a>
+software development                    advanced testing strategies                  <a href='CMSC525.qmd'>CMSC 525</a>
+software development                    software management                          <a href='CMSC525.qmd'>CMSC 525</a>
+software development                    software validation                          <a href='CMSC525.qmd'>CMSC 525</a>
+software development                    software verification                        <a href='CMSC525.qmd'>CMSC 525</a>
+techniques, skills, and tools           graphs                                       <a href='CMSC525.qmd'>CMSC 525</a>
+techniques, skills, and tools           limitations                                  <a href='CMSC525.qmd'>CMSC 525</a>
+techniques, skills, and tools           testing                                      <a href='CMSC525.qmd'>CMSC 525</a>
+
 
 ## Syllabus Statements
 

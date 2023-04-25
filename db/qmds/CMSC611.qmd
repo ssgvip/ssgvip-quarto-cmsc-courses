@@ -19,9 +19,28 @@ permission of instructor.
 
 Study of computer multimedia techniques relating to images, sound, video and text. Emphasis on compression techniques and standard storage formats. This course is programming-intensive.
 
+## Past Syllabii
+
+(none since Spring 2021)
+
 ## Topics
 
 compression, multimedia , storage formats
+
+## ABET Coverage
+
+concepts of programming languages, information management
+
+## Coverage and Topics Map
+
+Note that topics without associated ABET category assignments are excluded from this map.  See the [mapping](https://docs.google.com/spreadsheets/d/1qrN3L7eRLsM-aVMHYaLQN-FMYtrTJf0_h6dLKlUdPkk/edit#gid=338318647) for more details.
+
+ABET coverage                      Adjusted Topic    Course
+---------------------------------  ----------------  ----------------------------------
+concepts of programming languages  compression       <a href='CMSC611.qmd'>CMSC 611</a>
+concepts of programming languages  multimedia        <a href='CMSC611.qmd'>CMSC 611</a>
+information management             storage formats   <a href='CMSC611.qmd'>CMSC 611</a>
+
 
 ## Syllabus Statements
 

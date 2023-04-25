@@ -19,9 +19,33 @@ Semester course; 2 laboratory hours. 1 credit. An introduction to computer progr
 
 An introduction to computer programming in Python by teaching students to create hip hop beats. Teaches fundamental programming concepts including sequencing, syntax, variables, functions, parameters, lists, repetition and modularization. Teaches just enough music theory to ensure that student-made beats sound great, including fundamental concepts such as melody, rhythm, harmony, chord progression and orchestration. Students will complete in-class activities that reinforce class concepts and, if completed correctly, demonstrate a clear understanding of the material.
 
+## Past Syllabii
+
+<a href='./202310/CMSC_144_Syllabus_Fall_2022.pdf'>Fall 2022</a>
+
 ## Topics
 
-chord progression, functions, harmony, lists, melody, modularization, orchestration, parameters, repetition, rhytum, sequencing, syntax, variables
+functions, lists, modularization, music, parameters, repetition, sequencing, syntax, variables
+
+## ABET Coverage
+
+concepts of programming languages
+
+## Coverage and Topics Map
+
+Note that topics without associated ABET category assignments are excluded from this map.  See the [mapping](https://docs.google.com/spreadsheets/d/1qrN3L7eRLsM-aVMHYaLQN-FMYtrTJf0_h6dLKlUdPkk/edit#gid=338318647) for more details.
+
+ABET coverage                      Adjusted Topic    Course
+---------------------------------  ----------------  ----------------------------------
+concepts of programming languages  functions         <a href='CMSC144.qmd'>CMSC 144</a>
+concepts of programming languages  lists             <a href='CMSC144.qmd'>CMSC 144</a>
+concepts of programming languages  modularization    <a href='CMSC144.qmd'>CMSC 144</a>
+concepts of programming languages  parameters        <a href='CMSC144.qmd'>CMSC 144</a>
+concepts of programming languages  repetition        <a href='CMSC144.qmd'>CMSC 144</a>
+concepts of programming languages  sequencing        <a href='CMSC144.qmd'>CMSC 144</a>
+concepts of programming languages  syntax            <a href='CMSC144.qmd'>CMSC 144</a>
+concepts of programming languages  variables         <a href='CMSC144.qmd'>CMSC 144</a>
+
 
 ## Syllabus Statements
 

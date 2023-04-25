@@ -19,9 +19,52 @@ CMSC 303 with a minimum grade of C.
 
 Design and implementation of relational database systems. Emphasis is placed on entity-relationship diagrams, relational algebra, normal forms and normalization. Introduction to SQL. Discussion of physical level issues. Students will be required to complete a design project and give an oral presentation of the project. Not applicable toward the MS in Computer Science or the PHD in Engineering, computer science concentration.
 
+## Past Syllabii
+
+<a href='./202120/CMSC_508_Syllabus_Spring_2021.pdf'>Spring 2021</a>, <a href='./202210/CMSC_508_Syllabus_Fall_2021.pdf'>Fall 2021</a>, <a href='./202220/CMSC_508_Syllabus_Spring_2022.pdf'>Spring 2022</a>, <a href='./202310/CMSC_508_Syllabus_Fall_2022.pdf'>Fall 2022</a>, <a href='./202320/CMSC_508_Syllabus_Spring_2023.pdf'>Spring 2023</a>
+
 ## Topics
 
 administration, ajax, configuration, cursors, data , data storage, database, database installation, design, entities, entity-relationship diagrams, functional programming, functions, indexes, mysql, normalization, php, physical level issues, procedures, queries, relational algebra, relational design, relations, sql, subqueries, triggers, views
+
+## ABET Coverage
+
+concepts of programming languages, general purpose programming language, information management, discrete mathematics
+
+## Coverage and Topics Map
+
+Note that topics without associated ABET category assignments are excluded from this map.  See the [mapping](https://docs.google.com/spreadsheets/d/1qrN3L7eRLsM-aVMHYaLQN-FMYtrTJf0_h6dLKlUdPkk/edit#gid=338318647) for more details.
+
+ABET coverage                         Adjusted Topic                Course
+------------------------------------  ----------------------------  ----------------------------------
+concepts of programming languages     administration                <a href='CMSC508.qmd'>CMSC 508</a>
+concepts of programming languages     configuration                 <a href='CMSC508.qmd'>CMSC 508</a>
+concepts of programming languages     cursors                       <a href='CMSC508.qmd'>CMSC 508</a>
+concepts of programming languages     design                        <a href='CMSC508.qmd'>CMSC 508</a>
+concepts of programming languages     entities                      <a href='CMSC508.qmd'>CMSC 508</a>
+concepts of programming languages     entity-relationship diagrams  <a href='CMSC508.qmd'>CMSC 508</a>
+concepts of programming languages     functional programming        <a href='CMSC508.qmd'>CMSC 508</a>
+concepts of programming languages     functions                     <a href='CMSC508.qmd'>CMSC 508</a>
+concepts of programming languages     indexes                       <a href='CMSC508.qmd'>CMSC 508</a>
+concepts of programming languages     normalization                 <a href='CMSC508.qmd'>CMSC 508</a>
+concepts of programming languages     php                           <a href='CMSC508.qmd'>CMSC 508</a>
+concepts of programming languages     physical level issues         <a href='CMSC508.qmd'>CMSC 508</a>
+concepts of programming languages     procedures                    <a href='CMSC508.qmd'>CMSC 508</a>
+concepts of programming languages     queries                       <a href='CMSC508.qmd'>CMSC 508</a>
+concepts of programming languages     relations                     <a href='CMSC508.qmd'>CMSC 508</a>
+concepts of programming languages     subqueries                    <a href='CMSC508.qmd'>CMSC 508</a>
+concepts of programming languages     triggers                      <a href='CMSC508.qmd'>CMSC 508</a>
+concepts of programming languages     views                         <a href='CMSC508.qmd'>CMSC 508</a>
+discrete mathematics                  relational algebra            <a href='CMSC508.qmd'>CMSC 508</a>
+discrete mathematics                  relational design             <a href='CMSC508.qmd'>CMSC 508</a>
+general purpose programming language  ajax                          <a href='CMSC508.qmd'>CMSC 508</a>
+general purpose programming language  mysql                         <a href='CMSC508.qmd'>CMSC 508</a>
+general purpose programming language  sql                           <a href='CMSC508.qmd'>CMSC 508</a>
+information management                data                          <a href='CMSC508.qmd'>CMSC 508</a>
+information management                data storage                  <a href='CMSC508.qmd'>CMSC 508</a>
+information management                database                      <a href='CMSC508.qmd'>CMSC 508</a>
+information management                database installation         <a href='CMSC508.qmd'>CMSC 508</a>
+
 
 ## Syllabus Statements
 

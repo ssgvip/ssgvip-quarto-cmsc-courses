@@ -19,9 +19,39 @@ MATH/STAT 309 or MATH 310.
 
 The course considers two central problems in modern science and engineering: i) the problem of statistical learning from examples (empirical data) and ii) the problem of embedding existing human knowledge into workable mathematics. Topics include: examples of multivariate functional mapping, basics of classic classification and regression, support vector machines as a learning paradigm based on structural risk minimization, fuzzy logic algorithms, basics of multi-class classification over high dimensional spaces, curve and surface fittings, multivariate function approximation and nonlinear optimization; fuzzy logic systems; crisp and fuzzy sets, linguistic variables, fuzzy set theory; if-then rules, fuzzy interference, fuzzification and defuzzification, neuro-fuzzy paradigms.
 
+## Past Syllabii
+
+(none since Spring 2021)
+
 ## Topics
 
 classification, functional mapping, functions, fuzzification, fuzzy logic algorithms, linguistic variables, multi-class classification, neuro-fuzzy paradigms, nonlinear optimization, optimization, regression, statistical learning, statistics, support vector machines
+
+## ABET Coverage
+
+concepts of programming languages, computer science theory, statistics
+
+## Coverage and Topics Map
+
+Note that topics without associated ABET category assignments are excluded from this map.  See the [mapping](https://docs.google.com/spreadsheets/d/1qrN3L7eRLsM-aVMHYaLQN-FMYtrTJf0_h6dLKlUdPkk/edit#gid=338318647) for more details.
+
+ABET coverage                      Adjusted Topic              Course
+---------------------------------  --------------------------  ----------------------------------
+computer science theory            fuzzification               <a href='CMSC678.qmd'>CMSC 678</a>
+computer science theory            fuzzy logic algorithms      <a href='CMSC678.qmd'>CMSC 678</a>
+concepts of programming languages  classification              <a href='CMSC678.qmd'>CMSC 678</a>
+concepts of programming languages  functional mapping          <a href='CMSC678.qmd'>CMSC 678</a>
+concepts of programming languages  functions                   <a href='CMSC678.qmd'>CMSC 678</a>
+concepts of programming languages  linguistic variables        <a href='CMSC678.qmd'>CMSC 678</a>
+concepts of programming languages  multi-class classification  <a href='CMSC678.qmd'>CMSC 678</a>
+concepts of programming languages  neuro-fuzzy paradigms       <a href='CMSC678.qmd'>CMSC 678</a>
+concepts of programming languages  nonlinear optimization      <a href='CMSC678.qmd'>CMSC 678</a>
+concepts of programming languages  optimization                <a href='CMSC678.qmd'>CMSC 678</a>
+concepts of programming languages  regression                  <a href='CMSC678.qmd'>CMSC 678</a>
+concepts of programming languages  statistical learning        <a href='CMSC678.qmd'>CMSC 678</a>
+concepts of programming languages  support vector machines     <a href='CMSC678.qmd'>CMSC 678</a>
+statistics                         statistics                  <a href='CMSC678.qmd'>CMSC 678</a>
+
 
 ## Syllabus Statements
 

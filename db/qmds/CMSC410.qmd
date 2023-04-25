@@ -19,9 +19,37 @@ CMSC 401 and MATH 310, both with a minimum grade of B.
 
 Introduction to quantum information processing: state vectors and density operators, tensor product space, unitary evolution, no-go theorems, measurement, qubit, gate model of quantum computing, quantum complexity theory, quantum error correction, quantum algorithms, and quantum machine learning.
 
+## Past Syllabii
+
+(none since Spring 2021)
+
 ## Topics
 
 density operators, measurement, no-go theorems, quantum algorithms, quantum complexity, quantum computing, quantum error correction, quantum machine learning, qubit, state vectors, tensor, unitary evolution
+
+## ABET Coverage
+
+concepts of programming languages, computer science theory, algorithms and complexity, probability
+
+## Coverage and Topics Map
+
+Note that topics without associated ABET category assignments are excluded from this map.  See the [mapping](https://docs.google.com/spreadsheets/d/1qrN3L7eRLsM-aVMHYaLQN-FMYtrTJf0_h6dLKlUdPkk/edit#gid=338318647) for more details.
+
+ABET coverage                      Adjusted Topic            Course
+---------------------------------  ------------------------  ----------------------------------
+algorithms and complexity          quantum algorithms        <a href='CMSC410.qmd'>CMSC 410</a>
+algorithms and complexity          quantum complexity        <a href='CMSC410.qmd'>CMSC 410</a>
+algorithms and complexity          quantum computing         <a href='CMSC410.qmd'>CMSC 410</a>
+algorithms and complexity          quantum error correction  <a href='CMSC410.qmd'>CMSC 410</a>
+algorithms and complexity          quantum machine learning  <a href='CMSC410.qmd'>CMSC 410</a>
+algorithms and complexity          qubit                     <a href='CMSC410.qmd'>CMSC 410</a>
+algorithms and complexity          state vectors             <a href='CMSC410.qmd'>CMSC 410</a>
+algorithms and complexity          tensor                    <a href='CMSC410.qmd'>CMSC 410</a>
+computer science theory            no-go theorems            <a href='CMSC410.qmd'>CMSC 410</a>
+concepts of programming languages  density operators         <a href='CMSC410.qmd'>CMSC 410</a>
+concepts of programming languages  measurement               <a href='CMSC410.qmd'>CMSC 410</a>
+probability                        unitary evolution         <a href='CMSC410.qmd'>CMSC 410</a>
+
 
 ## Syllabus Statements
 

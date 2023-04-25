@@ -19,9 +19,28 @@ Semester course; 3 lecture hours. 3 credits. Theory and practice of database and
 
 Theory and practice of database and software security focusing in particular on some common database software security risks and on the identification of potential threats and vulnerabilities. Crosslisted as: CISS 618.
 
+## Past Syllabii
+
+(none since Spring 2021)
+
 ## Topics
 
 database, security, software management
+
+## ABET Coverage
+
+information management, security and privacy
+
+## Coverage and Topics Map
+
+Note that topics without associated ABET category assignments are excluded from this map.  See the [mapping](https://docs.google.com/spreadsheets/d/1qrN3L7eRLsM-aVMHYaLQN-FMYtrTJf0_h6dLKlUdPkk/edit#gid=338318647) for more details.
+
+ABET coverage           Adjusted Topic       Course
+----------------------  -------------------  ----------------------------------
+information management  database             <a href='CMSC618.qmd'>CMSC 618</a>
+information management  software management  <a href='CMSC618.qmd'>CMSC 618</a>
+security and privacy    security             <a href='CMSC618.qmd'>CMSC 618</a>
+
 
 ## Syllabus Statements
 

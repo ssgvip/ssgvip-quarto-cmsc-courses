@@ -19,9 +19,30 @@ CMSC 355 and MATH 310.
 
 Presents mathematical techniques for graphic development and transformation, curve and surface approximation and projections, graphical languages and data structures and their implementation, graphic modeling.
 
+## Past Syllabii
+
+(none since Spring 2021)
+
 ## Topics
 
 curve and surface approximations, data structures, graphic development, projections, transformation
+
+## ABET Coverage
+
+discrete mathematics, information management, networking and communication
+
+## Coverage and Topics Map
+
+Note that topics without associated ABET category assignments are excluded from this map.  See the [mapping](https://docs.google.com/spreadsheets/d/1qrN3L7eRLsM-aVMHYaLQN-FMYtrTJf0_h6dLKlUdPkk/edit#gid=338318647) for more details.
+
+ABET coverage                 Adjusted Topic                    Course
+----------------------------  --------------------------------  ----------------------------------
+discrete mathematics          curve and surface approximations  <a href='CMSC411.qmd'>CMSC 411</a>
+information management        data structures                   <a href='CMSC411.qmd'>CMSC 411</a>
+networking and communication  graphic development               <a href='CMSC411.qmd'>CMSC 411</a>
+networking and communication  projections                       <a href='CMSC411.qmd'>CMSC 411</a>
+networking and communication  transformation                    <a href='CMSC411.qmd'>CMSC 411</a>
+
 
 ## Syllabus Statements
 

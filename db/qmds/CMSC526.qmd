@@ -19,9 +19,29 @@ CMSC 403, graduate student standing or acceptance into the five-year accelerate
 
 An introduction to the formal semantics of programming languages, logic programming and functional programming. Topics include denotational semantics, attribute grammars, Backus Formal Functional Programming, fixed point semantics, model-theoretic semantics and PROLOG.
 
+## Past Syllabii
+
+(none since Spring 2021)
+
 ## Topics
 
 languages, logic, model-theoretic semtances, semantics
+
+## ABET Coverage
+
+general purpose programming language, techniques, skills, and tools, concepts of programming languages
+
+## Coverage and Topics Map
+
+Note that topics without associated ABET category assignments are excluded from this map.  See the [mapping](https://docs.google.com/spreadsheets/d/1qrN3L7eRLsM-aVMHYaLQN-FMYtrTJf0_h6dLKlUdPkk/edit#gid=338318647) for more details.
+
+ABET coverage                         Adjusted Topic             Course
+------------------------------------  -------------------------  ----------------------------------
+concepts of programming languages     model-theoretic semtances  <a href='CMSC526.qmd'>CMSC 526</a>
+concepts of programming languages     semantics                  <a href='CMSC526.qmd'>CMSC 526</a>
+general purpose programming language  languages                  <a href='CMSC526.qmd'>CMSC 526</a>
+techniques, skills, and tools         logic                      <a href='CMSC526.qmd'>CMSC 526</a>
+
 
 ## Syllabus Statements
 

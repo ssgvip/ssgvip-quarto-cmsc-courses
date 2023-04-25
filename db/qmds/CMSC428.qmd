@@ -19,9 +19,29 @@ CMSC 355, with a minimum grade of C.
 
 This course covers the fundamentals of Swift, Xcode and iOS for programming and design of iOS applications. Background in object-oriented programming and access to a computer with Xcode platform is required.
 
+## Past Syllabii
+
+<a href='./202220/CMSC_428_Syllabus_Spring_2022.pdf'>Spring 2022</a>
+
 ## Topics
 
 ios, objects, swift, xcode
+
+## ABET Coverage
+
+operating systems, concepts of programming languages, techniques, skills, and tools
+
+## Coverage and Topics Map
+
+Note that topics without associated ABET category assignments are excluded from this map.  See the [mapping](https://docs.google.com/spreadsheets/d/1qrN3L7eRLsM-aVMHYaLQN-FMYtrTJf0_h6dLKlUdPkk/edit#gid=338318647) for more details.
+
+ABET coverage                      Adjusted Topic    Course
+---------------------------------  ----------------  ----------------------------------
+concepts of programming languages  objects           <a href='CMSC428.qmd'>CMSC 428</a>
+concepts of programming languages  swift             <a href='CMSC428.qmd'>CMSC 428</a>
+operating systems                  ios               <a href='CMSC428.qmd'>CMSC 428</a>
+techniques, skills, and tools      xcode             <a href='CMSC428.qmd'>CMSC 428</a>
+
 
 ## Syllabus Statements
 

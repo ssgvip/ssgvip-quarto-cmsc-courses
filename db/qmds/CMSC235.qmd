@@ -19,9 +19,28 @@ Semester course; 3 lecture hours. 3 credits. Introduction to ethical considerati
 
 Introduction to ethical considerations for computing and working with data, legal implications surrounding data and computational systems, and sociotechnical responsibilities.
 
+## Past Syllabii
+
+(none since Spring 2021)
+
 ## Topics
 
 ethics, Legal implications, sociotechnical responsibilities
+
+## ABET Coverage
+
+local and global impacts
+
+## Coverage and Topics Map
+
+Note that topics without associated ABET category assignments are excluded from this map.  See the [mapping](https://docs.google.com/spreadsheets/d/1qrN3L7eRLsM-aVMHYaLQN-FMYtrTJf0_h6dLKlUdPkk/edit#gid=338318647) for more details.
+
+ABET coverage             Adjusted Topic                   Course
+------------------------  -------------------------------  ----------------------------------
+local and global impacts  Legal implications               <a href='CMSC235.qmd'>CMSC 235</a>
+local and global impacts  ethics                           <a href='CMSC235.qmd'>CMSC 235</a>
+local and global impacts  sociotechnical responsibilities  <a href='CMSC235.qmd'>CMSC 235</a>
+
 
 ## Syllabus Statements
 

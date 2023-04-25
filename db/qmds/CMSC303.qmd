@@ -19,9 +19,35 @@ CMSC 302 or the equivalent with a grade of C or better.
 
 Complexity classes, grammars, automata, formal languages, Turing machines, computability.
 
+## Past Syllabii
+
+<a href='./202120/CMSC_303_Syllabus_Spring_2021.pdf'>Spring 2021</a>, <a href='./202210/CMSC_303_Syllabus_Fall_2021.pdf'>Fall 2021</a>, <a href='./202220/CMSC_303_Syllabus_Spring_2022.pdf'>Spring 2022</a>, <a href='./202310/CMSC_303_Syllabus_Fall_2022.pdf'>Fall 2022</a>, <a href='./202320/CMSC_303_Syllabus_Spring_2023.pdf'>Spring 2023</a>
+
 ## Topics
 
 automata, complexity analysis, computability theory, context-free grammars, discrete math, finite automata, logic, pushdown automata, regular expressions, turing machines
+
+## ABET Coverage
+
+computer science theory, algorithms and complexity, concepts of programming languages, discrete mathematics, general purpose programming language, techniques, skills, and tools, operating systems
+
+## Coverage and Topics Map
+
+Note that topics without associated ABET category assignments are excluded from this map.  See the [mapping](https://docs.google.com/spreadsheets/d/1qrN3L7eRLsM-aVMHYaLQN-FMYtrTJf0_h6dLKlUdPkk/edit#gid=338318647) for more details.
+
+ABET coverage                         Adjusted Topic         Course
+------------------------------------  ---------------------  ----------------------------------
+algorithms and complexity             complexity analysis    <a href='CMSC303.qmd'>CMSC 303</a>
+algorithms and complexity             computability theory   <a href='CMSC303.qmd'>CMSC 303</a>
+computer science theory               automata               <a href='CMSC303.qmd'>CMSC 303</a>
+concepts of programming languages     context-free grammars  <a href='CMSC303.qmd'>CMSC 303</a>
+concepts of programming languages     regular expressions    <a href='CMSC303.qmd'>CMSC 303</a>
+discrete mathematics                  discrete math          <a href='CMSC303.qmd'>CMSC 303</a>
+general purpose programming language  finite automata        <a href='CMSC303.qmd'>CMSC 303</a>
+general purpose programming language  pushdown automata      <a href='CMSC303.qmd'>CMSC 303</a>
+operating systems                     turing machines        <a href='CMSC303.qmd'>CMSC 303</a>
+techniques, skills, and tools         logic                  <a href='CMSC303.qmd'>CMSC 303</a>
+
 
 ## Syllabus Statements
 

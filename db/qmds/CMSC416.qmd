@@ -19,9 +19,38 @@ CMSC 401 with a minimum grade of C.
 
 Covers rule-based and statistical methods for creating computer programs that analyze, generate and understand human language. Topics include regular expressions and automata, context-free grammars, probabilistic classifiers, and machine learning. Word-level, syntactic and semantic processing are all considered. Application to real-world problems such as spell-checking, Web search, automatic question answering, authorship identification and developing conversational interfaces.
 
+## Past Syllabii
+
+<a href='./202120/CMSC_416_Syllabus_Spring_2021.pdf'>Spring 2021</a>, <a href='./202220/CMSC_416_Syllabus_Spring_2022.pdf'>Spring 2022</a>, <a href='./202320/CMSC_416_Syllabus_Spring_2023.pdf'>Spring 2023</a>
+
 ## Topics
 
 automation, computer systems design, context-free grammars, machine learning, natural language, probabilistic classifiers, real-world applications, regular expressions, semantics, spell-checking, statistics, syntax, web search
+
+## ABET Coverage
+
+techniques, skills, and tools, software development, general purpose programming language, probability, local and global impacts, concepts of programming languages, statistics, networking and communication
+
+## Coverage and Topics Map
+
+Note that topics without associated ABET category assignments are excluded from this map.  See the [mapping](https://docs.google.com/spreadsheets/d/1qrN3L7eRLsM-aVMHYaLQN-FMYtrTJf0_h6dLKlUdPkk/edit#gid=338318647) for more details.
+
+ABET coverage                         Adjusted Topic             Course
+------------------------------------  -------------------------  ----------------------------------
+concepts of programming languages     regular expressions        <a href='CMSC416.qmd'>CMSC 416</a>
+concepts of programming languages     semantics                  <a href='CMSC416.qmd'>CMSC 416</a>
+general purpose programming language  machine learning           <a href='CMSC416.qmd'>CMSC 416</a>
+general purpose programming language  natural language           <a href='CMSC416.qmd'>CMSC 416</a>
+local and global impacts              real-world applications    <a href='CMSC416.qmd'>CMSC 416</a>
+networking and communication          web search                 <a href='CMSC416.qmd'>CMSC 416</a>
+probability                           probabilistic classifiers  <a href='CMSC416.qmd'>CMSC 416</a>
+software development                  computer systems design    <a href='CMSC416.qmd'>CMSC 416</a>
+statistics                            statistics                 <a href='CMSC416.qmd'>CMSC 416</a>
+techniques, skills, and tools         automation                 <a href='CMSC416.qmd'>CMSC 416</a>
+techniques, skills, and tools         context-free grammars      <a href='CMSC416.qmd'>CMSC 416</a>
+techniques, skills, and tools         spell-checking             <a href='CMSC416.qmd'>CMSC 416</a>
+techniques, skills, and tools         syntax                     <a href='CMSC416.qmd'>CMSC 416</a>
+
 
 ## Syllabus Statements
 

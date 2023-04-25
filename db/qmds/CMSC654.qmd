@@ -19,9 +19,33 @@ CMSC 312. Enrollment is restricted to students with graduate standing in comput
 
 Students should have significant programming experience. This course provides foundation for memory and malware forensics, using the Volatility memory forensics framework, an open source toolkit written in Python. It is focused on investigation of the contents of volatile computer memory (RAM), to reveal hidden malware processes, network connections, clipboard contents, evidence of malware and other malicious evidence. The course will teach skills for analyzing internals of operating systems, such as Mac, Windows and Linux, by concentrating on data structures used by these operating systems.
 
+## Past Syllabii
+
+<a href='./202210/CMSC_654_Syllabus_Fall_2021.pdf'>Fall 2021</a>, <a href='./202310/CMSC_654_Syllabus_Fall_2022.pdf'>Fall 2022</a>
+
 ## Topics
 
 malicious evidence, malware forensics, memory, networks, operating systems, python, volatility memory forensics
+
+## ABET Coverage
+
+security and privacy, information management, networking and communication, operating systems, general purpose programming language, concepts of programming languages
+
+## Coverage and Topics Map
+
+Note that topics without associated ABET category assignments are excluded from this map.  See the [mapping](https://docs.google.com/spreadsheets/d/1qrN3L7eRLsM-aVMHYaLQN-FMYtrTJf0_h6dLKlUdPkk/edit#gid=338318647) for more details.
+
+ABET coverage                         Adjusted Topic               Course
+------------------------------------  ---------------------------  ----------------------------------
+concepts of programming languages     volatility memory forensics  <a href='CMSC654.qmd'>CMSC 654</a>
+general purpose programming language  python                       <a href='CMSC654.qmd'>CMSC 654</a>
+information management                memory                       <a href='CMSC654.qmd'>CMSC 654</a>
+networking and communication          networks                     <a href='CMSC654.qmd'>CMSC 654</a>
+operating systems                     operating systems            <a href='CMSC654.qmd'>CMSC 654</a>
+security and privacy                  malicious evidence           <a href='CMSC654.qmd'>CMSC 654</a>
+security and privacy                  malware forensics            <a href='CMSC654.qmd'>CMSC 654</a>
+security and privacy                  volatility memory forensics  <a href='CMSC654.qmd'>CMSC 654</a>
+
 
 ## Syllabus Statements
 

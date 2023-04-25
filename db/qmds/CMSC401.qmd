@@ -19,9 +19,42 @@ CMSC 256 with a grade of C or better and CMSC 302 with a grade of C or bett
 
 Introduction to algorithm analysis and complexity classes. Advanced data structures topics including multiple linked lists, height-balanced trees, B-trees, hashing and graph representation; incorporating data structures into object-oriented design. Analysis of various searching and sorting algorithms. Algorithm design topics include divide-and-conquer, dynamic programming and greedy methods.
 
+## Past Syllabii
+
+<a href='./202120/CMSC_401_Syllabus_Spring_2021.pdf'>Spring 2021</a>, <a href='./202210/CMSC_401_Syllabus_Fall_2021.pdf'>Fall 2021</a>, <a href='./202220/CMSC_401_Syllabus_Spring_2022.pdf'>Spring 2022</a>, <a href='./202310/CMSC_401_Syllabus_Fall_2022.pdf'>Fall 2022</a>, <a href='./202320/CMSC_401_Syllabus_Spring_2023.pdf'>Spring 2023</a>
+
 ## Topics
 
 algorithms, analysis, b-trees, complexity analysis, data structures, design, divide and conquer approach, dynamic programming, graph algorithms, graphs, greedy approach, hashing, height-balanced trees, linked lists, objects, recurrences, sorting
+
+## ABET Coverage
+
+algorithms and complexity, computer science theory, information management, techniques, skills, and tools, general purpose programming language, concepts of programming languages
+
+## Coverage and Topics Map
+
+Note that topics without associated ABET category assignments are excluded from this map.  See the [mapping](https://docs.google.com/spreadsheets/d/1qrN3L7eRLsM-aVMHYaLQN-FMYtrTJf0_h6dLKlUdPkk/edit#gid=338318647) for more details.
+
+ABET coverage                         Adjusted Topic               Course
+------------------------------------  ---------------------------  ----------------------------------
+algorithms and complexity             algorithms                   <a href='CMSC401.qmd'>CMSC 401</a>
+algorithms and complexity             analysis                     <a href='CMSC401.qmd'>CMSC 401</a>
+algorithms and complexity             complexity analysis          <a href='CMSC401.qmd'>CMSC 401</a>
+algorithms and complexity             graph algorithms             <a href='CMSC401.qmd'>CMSC 401</a>
+algorithms and complexity             hashing                      <a href='CMSC401.qmd'>CMSC 401</a>
+computer science theory               b-trees                      <a href='CMSC401.qmd'>CMSC 401</a>
+computer science theory               divide and conquer approach  <a href='CMSC401.qmd'>CMSC 401</a>
+concepts of programming languages     graphs                       <a href='CMSC401.qmd'>CMSC 401</a>
+concepts of programming languages     greedy approach              <a href='CMSC401.qmd'>CMSC 401</a>
+concepts of programming languages     height-balanced trees        <a href='CMSC401.qmd'>CMSC 401</a>
+concepts of programming languages     linked lists                 <a href='CMSC401.qmd'>CMSC 401</a>
+concepts of programming languages     objects                      <a href='CMSC401.qmd'>CMSC 401</a>
+concepts of programming languages     recurrences                  <a href='CMSC401.qmd'>CMSC 401</a>
+concepts of programming languages     sorting                      <a href='CMSC401.qmd'>CMSC 401</a>
+general purpose programming language  dynamic programming          <a href='CMSC401.qmd'>CMSC 401</a>
+information management                data structures              <a href='CMSC401.qmd'>CMSC 401</a>
+techniques, skills, and tools         design                       <a href='CMSC401.qmd'>CMSC 401</a>
+
 
 ## Syllabus Statements
 

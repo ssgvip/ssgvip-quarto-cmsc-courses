@@ -19,9 +19,44 @@ Enrollment is restricted to students with graduate standing in computer science.
 
 The course will assume undergraduate-level background in programming, algorithms, linear algebra, calculus, statistics and probability. Topics ranging from fundamental learning rules, functional, cascade correlational, recurrent and gradient descent networks, to neocognitron, softmax, deep convolutional networks, autoencoders and pretrained deep learning (restricted Boltzmann machines). Students will be required to work in teams on a class paper.
 
+## Past Syllabii
+
+<a href='./202120/CMSC_636_Syllabus_Spring_2021.pdf'>Spring 2021</a>, <a href='./202220/CMSC_636_Syllabus_Spring_2022.pdf'>Spring 2022</a>, <a href='./202320/CMSC_636_Syllabus_Spring_2023.pdf'>Spring 2023</a>
+
 ## Topics
 
 architecture, autoencoders, calculus, cascade correlational, chatgpt, convolutional neural networks, deep belief networks, deep convolutional networks, deep learning, deep neural networks, google, gradient descent, linear algebra, neocognitron, neural networks, probability, recurrences, restricted boltzmann machines, statistics
+
+## ABET Coverage
+
+computer architecture and organization, computer science theory, discrete mathematics, concepts of programming languages, algorithms and complexity, techniques, skills, and tools, probability, software development, statistics
+
+## Coverage and Topics Map
+
+Note that topics without associated ABET category assignments are excluded from this map.  See the [mapping](https://docs.google.com/spreadsheets/d/1qrN3L7eRLsM-aVMHYaLQN-FMYtrTJf0_h6dLKlUdPkk/edit#gid=338318647) for more details.
+
+ABET coverage                           Adjusted Topic                 Course
+--------------------------------------  -----------------------------  ----------------------------------
+algorithms and complexity               chatgpt                        <a href='CMSC636.qmd'>CMSC 636</a>
+algorithms and complexity               convolutional neural networks  <a href='CMSC636.qmd'>CMSC 636</a>
+algorithms and complexity               deep belief networks           <a href='CMSC636.qmd'>CMSC 636</a>
+algorithms and complexity               deep convolutional networks    <a href='CMSC636.qmd'>CMSC 636</a>
+algorithms and complexity               deep learning                  <a href='CMSC636.qmd'>CMSC 636</a>
+algorithms and complexity               deep neural networks           <a href='CMSC636.qmd'>CMSC 636</a>
+algorithms and complexity               neural networks                <a href='CMSC636.qmd'>CMSC 636</a>
+computer architecture and organization  architecture                   <a href='CMSC636.qmd'>CMSC 636</a>
+computer science theory                 autoencoders                   <a href='CMSC636.qmd'>CMSC 636</a>
+concepts of programming languages       cascade correlational          <a href='CMSC636.qmd'>CMSC 636</a>
+concepts of programming languages       gradient descent               <a href='CMSC636.qmd'>CMSC 636</a>
+concepts of programming languages       neocognitron                   <a href='CMSC636.qmd'>CMSC 636</a>
+concepts of programming languages       recurrences                    <a href='CMSC636.qmd'>CMSC 636</a>
+discrete mathematics                    calculus                       <a href='CMSC636.qmd'>CMSC 636</a>
+discrete mathematics                    linear algebra                 <a href='CMSC636.qmd'>CMSC 636</a>
+probability                             probability                    <a href='CMSC636.qmd'>CMSC 636</a>
+software development                    restricted boltzmann machines  <a href='CMSC636.qmd'>CMSC 636</a>
+statistics                              statistics                     <a href='CMSC636.qmd'>CMSC 636</a>
+techniques, skills, and tools           google                         <a href='CMSC636.qmd'>CMSC 636</a>
+
 
 ## Syllabus Statements
 

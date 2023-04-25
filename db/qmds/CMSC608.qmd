@@ -19,9 +19,30 @@ CMSC 508.
 
 Topics discussed include: handling of missing information; the relationship between relational calculus, relational algebra and SQL; logic databases; distributed databases; outer joins; and transaction processing. Emphasis is placed on theoretical issues involved in these topics. In addition students will work in teams to develop a working database application.
 
+## Past Syllabii
+
+(none since Spring 2021)
+
 ## Topics
 
 calculus, logic, relational algebra, sql, teamwork
+
+## ABET Coverage
+
+discrete mathematics, techniques, skills, and tools, general purpose programming language
+
+## Coverage and Topics Map
+
+Note that topics without associated ABET category assignments are excluded from this map.  See the [mapping](https://docs.google.com/spreadsheets/d/1qrN3L7eRLsM-aVMHYaLQN-FMYtrTJf0_h6dLKlUdPkk/edit#gid=338318647) for more details.
+
+ABET coverage                         Adjusted Topic      Course
+------------------------------------  ------------------  ----------------------------------
+discrete mathematics                  calculus            <a href='CMSC608.qmd'>CMSC 608</a>
+discrete mathematics                  relational algebra  <a href='CMSC608.qmd'>CMSC 608</a>
+general purpose programming language  sql                 <a href='CMSC608.qmd'>CMSC 608</a>
+techniques, skills, and tools         logic               <a href='CMSC608.qmd'>CMSC 608</a>
+techniques, skills, and tools         teamwork            <a href='CMSC608.qmd'>CMSC 608</a>
+
 
 ## Syllabus Statements
 

@@ -19,9 +19,38 @@ CMSC 245.
 
 Advanced programming in C++. Topics include program design, objects, classes, inheritance, files, strings, linked lists, stacks, queues, binary trees, recursion, and basic searching and sorting techniques. This course is intended for engineering majors.
 
+## Past Syllabii
+
+(none since Spring 2021)
+
 ## Topics
 
 basic searching, basic sorting, binary trees, classes, files, inheritance, linked lists, objects, program design, queues, recursion, stacks, strings
+
+## ABET Coverage
+
+algorithms and complexity, software development, information management, concepts of programming languages
+
+## Coverage and Topics Map
+
+Note that topics without associated ABET category assignments are excluded from this map.  See the [mapping](https://docs.google.com/spreadsheets/d/1qrN3L7eRLsM-aVMHYaLQN-FMYtrTJf0_h6dLKlUdPkk/edit#gid=338318647) for more details.
+
+ABET coverage                      Adjusted Topic    Course
+---------------------------------  ----------------  ----------------------------------
+algorithms and complexity          basic searching   <a href='CMSC246.qmd'>CMSC 246</a>
+algorithms and complexity          basic sorting     <a href='CMSC246.qmd'>CMSC 246</a>
+algorithms and complexity          binary trees      <a href='CMSC246.qmd'>CMSC 246</a>
+algorithms and complexity          linked lists      <a href='CMSC246.qmd'>CMSC 246</a>
+concepts of programming languages  queues            <a href='CMSC246.qmd'>CMSC 246</a>
+concepts of programming languages  recursion         <a href='CMSC246.qmd'>CMSC 246</a>
+concepts of programming languages  stacks            <a href='CMSC246.qmd'>CMSC 246</a>
+concepts of programming languages  strings           <a href='CMSC246.qmd'>CMSC 246</a>
+information management             files             <a href='CMSC246.qmd'>CMSC 246</a>
+software development               classes           <a href='CMSC246.qmd'>CMSC 246</a>
+software development               inheritance       <a href='CMSC246.qmd'>CMSC 246</a>
+software development               objects           <a href='CMSC246.qmd'>CMSC 246</a>
+software development               program design    <a href='CMSC246.qmd'>CMSC 246</a>
+
 
 ## Syllabus Statements
 

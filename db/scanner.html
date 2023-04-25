@@ -6,6 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2023-04-25">
 
 <title>Building this web site</title>
 <style>
@@ -116,6 +117,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="quarto-title-meta">
 
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">April 25, 2023</p>
+    </div>
+  </div>
   
     
   </div>
@@ -125,7 +132,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <p><a href="https://quarto.org">Quarto</a> is used to build this web site.</p>
 <p>A list of CMSC courses was downloaded from the <a href="http://bulletin.vcu.edu/azcourses/cmsc/">campus bulletin</a>. The list was stored into a <a href="https://docs.google.com/spreadsheets/d/1qrN3L7eRLsM-aVMHYaLQN-FMYtrTJf0_h6dLKlUdPkk/edit#gid=107368023">google sheet</a> and signficantly cleaned.</p>
-<p>Two tabs are significant in the google sheet:</p>
+<p>Two tabs are significant in the <a href="https://docs.google.com/spreadsheets/d/1qrN3L7eRLsM-aVMHYaLQN-FMYtrTJf0_h6dLKlUdPkk/edit#gid=107368023">google sheet</a>:</p>
 <ol type="1">
 <li><p><a href="https://docs.google.com/spreadsheets/d/1qrN3L7eRLsM-aVMHYaLQN-FMYtrTJf0_h6dLKlUdPkk/edit#gid=107368023">CMSC-course-data</a>: This tab contains one record per course found in the <a href="http://bulletin.vcu.edu/azcourses/cmsc/">VCU Bulletin/online catalog</a>. These are CMSC classes <em>on the books</em> and not necessarily taught regularly, or even taught at all.</p></li>
 <li><p><a href="https://docs.google.com/spreadsheets/d/1qrN3L7eRLsM-aVMHYaLQN-FMYtrTJf0_h6dLKlUdPkk/edit#gid=338318647">CMSC-course-topics</a>: This tab contains one record per topic per course. The first column is the CourseID and then there are one or more topics on successive rows. Topics were pulled from several different sources:</p>
@@ -135,7 +142,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>from the course topic outline found in their Spring 2023 course syllabus.</li>
 </ul></li>
 </ol>
-<p>Not every instructure included a custom course description or topical outline in their Spring 2023 syllabus. In general the topics are all treated as comparable, but they are distinquishable using the <em>Source</em> column in the topics tab, so we can analysis their differences.</p>
+<p>Not every instructor included a custom course description or topical outline in their Spring 2023 syllabus. In general the topics are all treated as comparable, but they are distinquishable using the <em>Source</em> column in the topics tab, so we can analysis their differences.</p>
 <p>The code in the sections below below generates this website using the course data in the google sheet. The construction of the web site is a 2-step process:</p>
 <ol type="1">
 <li><p>Build a quarto website template using data stored in the database. This includes building:</p>
@@ -215,21 +222,63 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> col <span class="kw">in</span> [<span class="st">"Count"</span>,<span class="st">"Number"</span>,<span class="st">"Level"</span>]:</span>
 <span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>  topics_df[col] <span class="op">=</span> topics_df[col].astype(<span class="st">"int"</span>)</span>
 <span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>topics_df[<span class="st">"CourseId"</span>] <span class="op">=</span> topics_df[<span class="st">"CourseId"</span>].<span class="bu">apply</span>( <span class="bu">str</span>.strip )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>topics_df[<span class="st">"CourseId"</span>] <span class="op">=</span> topics_df[<span class="st">"CourseId"</span>].<span class="bu">apply</span>( <span class="bu">str</span>.strip )</span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a><span class="co"># Coverage data: restack ABET 1, 2 and 3 categories</span></span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>g1 <span class="op">=</span> topics_df[ [<span class="st">"abet_tag1"</span>,<span class="st">"ADJTopic"</span>,<span class="st">"idx"</span>,<span class="st">"CourseId"</span>] ]</span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>g2 <span class="op">=</span> topics_df[ [<span class="st">"abet_tag2"</span>,<span class="st">"ADJTopic"</span>,<span class="st">"idx"</span>,<span class="st">"CourseId"</span>] ].rename(columns<span class="op">=</span>{<span class="st">"abet_tag2"</span>:<span class="st">"abet_tag1"</span>})</span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a>g3 <span class="op">=</span> topics_df[ [<span class="st">"abet_tag3"</span>,<span class="st">"ADJTopic"</span>,<span class="st">"idx"</span>,<span class="st">"CourseId"</span>] ].rename(columns<span class="op">=</span>{<span class="st">"abet_tag3"</span>:<span class="st">"abet_tag1"</span>})</span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a>g <span class="op">=</span>  pd.concat( [g1,g2,g3],axis<span class="op">=</span><span class="dv">0</span>)</span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a>coverage_df <span class="op">=</span> g[ g[<span class="st">"abet_tag1"</span>] <span class="op">!=</span> <span class="st">""</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="loading-past-syllabii" class="level1">
+<h1>Loading past syllabii</h1>
+<div class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>directories <span class="op">=</span> [<span class="st">'../docs'</span>]</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Create an empty pandas DataFrame</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>syllabii_df <span class="op">=</span> pd.DataFrame(columns<span class="op">=</span>[<span class="st">'filename'</span>, <span class="st">'url'</span>, <span class="st">'idx'</span>, <span class="st">'termId'</span>,<span class="st">'termName'</span>,<span class="st">'urlByTermName'</span>,<span class="st">'urlByCourseId'</span>])</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Loop through all the directories</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> directory <span class="kw">in</span> directories:</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Loop through all the files in the directory and its subdirectories</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> root, dirs, files <span class="kw">in</span> os.walk(directory):</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> <span class="bu">file</span> <span class="kw">in</span> files:</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>            <span class="co"># Check if the file is a PDF file</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> <span class="bu">file</span>.endswith(<span class="st">'.pdf'</span>) <span class="kw">and</span> <span class="bu">file</span>.startswith(<span class="st">'CMSC_'</span>):</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>                <span class="co"># Append the filename to the pandas DataFrame</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>                filename <span class="op">=</span> <span class="bu">file</span>.strip()</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>                url <span class="op">=</span> <span class="st">"./"</span><span class="op">+</span>root[<span class="dv">8</span>:]<span class="op">+</span><span class="st">"/"</span><span class="op">+</span><span class="bu">file</span></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>                idx <span class="op">=</span> <span class="bu">file</span>[<span class="dv">0</span>:<span class="dv">4</span>] <span class="op">+</span> <span class="bu">file</span>[<span class="dv">5</span>:<span class="dv">8</span>]</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>                termId <span class="op">=</span> root[<span class="dv">8</span>:]</span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>                termName <span class="op">=</span> <span class="st">" "</span>.join(filename.split(<span class="st">'_'</span>)[<span class="op">-</span><span class="dv">2</span>:])[:<span class="op">-</span><span class="dv">4</span>]</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>                urlByTermName <span class="op">=</span> <span class="st">"&lt;a href='"</span><span class="op">+</span>url<span class="op">+</span><span class="st">"'&gt;"</span><span class="op">+</span>termName<span class="op">+</span><span class="st">"&lt;/a&gt;"</span></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>                urlByCourseId <span class="op">=</span> <span class="st">"&lt;a href='"</span><span class="op">+</span>url<span class="op">+</span><span class="st">"'&gt;"</span><span class="op">+</span>idx<span class="op">+</span><span class="st">"&lt;/a&gt;"</span></span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>                syllabii_df.loc[<span class="bu">len</span>(syllabii_df)] <span class="op">=</span> [filename,url,idx,termId,termName,urlByTermName,urlByCourseId]</span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> showSyllabiiByTerm( courseId ):</span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>  off <span class="op">=</span> syllabii_df[ syllabii_df[<span class="st">"idx"</span>]<span class="op">==</span>courseId ]<span class="op">;</span></span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>  slist <span class="op">=</span> <span class="st">", "</span>.join( off[<span class="st">"urlByTermName"</span>])</span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> slist<span class="op">==</span><span class="st">""</span>:</span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>    slist <span class="op">=</span> <span class="st">"(none since Spring 2021)"</span></span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> slist</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <section id="a-list-of-columns-in-the-cmsc-course-data-tab" class="level2">
 <h2 class="anchored" data-anchor-id="a-list-of-columns-in-the-cmsc-course-data-tab">a list of columns in the <em>CMSC-course-data</em> tab</h2>
-<div class="cell" data-execution_count="4">
+<div class="cell" data-execution_count="5">
 <div class="cell-output cell-output-display">
-<p>Here is a list of columns:<br>‘Subject’, ‘Number’, ‘CourseId’, ‘idx’, ‘Title’, ‘Hours’, ‘foc’, ‘bscs’, ‘bscs-cyber’, ‘bscs-data’, ‘bscs-sftengr’, ‘Catalog’, ‘Catalog Description’, ‘Restrictions’, ‘Isolated Description’.</p>
+<p>Here is a list of columns:<br>‘Subject’, ‘Number’, ‘CourseId’, ‘idx’, ‘Title’, ‘Hours’, ‘foc’, ‘bscs’, ‘bscs-cyber’, ‘bscs-data’, ‘bscs-sftengr’, ‘postbac’, ‘Catalog’, ‘Catalog Description’, ‘Restrictions’, ‘Isolated Description’.</p>
 </div>
 </div>
 </section>
 <section id="cmsc-courses-in-the-bulletin" class="level2">
 <h2 class="anchored" data-anchor-id="cmsc-courses-in-the-bulletin">CMSC Courses in the Bulletin</h2>
-<div class="cell" data-execution_count="5">
+<div class="cell" data-execution_count="6">
 <div class="cell-output cell-output-display">
-<p><a href="#tbl-table1">Table&nbsp;1</a> presents a list of CMSC courses in the bulletin. There are 82 courses in the bulletin.</p>
+<p><a href="#tbl-table1">Table&nbsp;1</a> presents a list of CMSC courses in the bulletin. There are 83 courses in the bulletin.</p>
 </div>
 <div class="cell-output cell-output-display">
 <div id="tbl-table1" class="anchored">
@@ -259,314 +308,318 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <td style="text-align: left;">Computers and Programming</td>
 </tr>
 <tr class="odd">
+<td style="text-align: left;">CMSC 235</td>
+<td style="text-align: left;">Computing and Data Ethics</td>
+</tr>
+<tr class="even">
 <td style="text-align: left;">CMSC&nbsp;245</td>
 <td style="text-align: left;">Introduction to Programming Using C++</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">CMSC&nbsp;246</td>
 <td style="text-align: left;">Advanced Programming Using C++</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">CMSC&nbsp;254</td>
 <td style="text-align: left;">Introduction to Problem-solving</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">CMSC&nbsp;255</td>
 <td style="text-align: left;">Introduction to Programming</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">CMSC&nbsp;256</td>
 <td style="text-align: left;">Data Structures and Object Oriented Programming</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">CMSC&nbsp;257</td>
 <td style="text-align: left;">Computer Systems</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">CMSC&nbsp;302</td>
 <td style="text-align: left;">Introduction to Discrete Structures</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">CMSC&nbsp;303</td>
 <td style="text-align: left;">Introduction to the Theory of Computation</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">CMSC&nbsp;311</td>
 <td style="text-align: left;">Computer Organization</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">CMSC&nbsp;312</td>
 <td style="text-align: left;">Introduction to Operating Systems</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">CMSC&nbsp;320</td>
 <td style="text-align: left;">Software Engineering and Web Development</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">CMSC&nbsp;330</td>
 <td style="text-align: left;">Data Science Skills</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">CMSC&nbsp;340</td>
 <td style="text-align: left;">Cybersecurity Skills</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">CMSC&nbsp;355</td>
 <td style="text-align: left;">Fundamentals of Software Engineering</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">CMSC&nbsp;391</td>
 <td style="text-align: left;">Topics in Computer Science</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">CMSC&nbsp;401</td>
 <td style="text-align: left;">Algorithm Analysis with Advanced Data Structures</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">CMSC&nbsp;403</td>
 <td style="text-align: left;">Programming Languages</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">CMSC&nbsp;404</td>
 <td style="text-align: left;">Compiler Construction</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">CMSC&nbsp;409</td>
 <td style="text-align: left;">Artificial Intelligence</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">CMSC&nbsp;410</td>
 <td style="text-align: left;">Introduction to Quantum Computing</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">CMSC&nbsp;411</td>
 <td style="text-align: left;">Computer Graphics</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">CMSC&nbsp;412</td>
 <td style="text-align: left;">Social Network Analysis and Cybersecurity Risks</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">CMSC&nbsp;413</td>
 <td style="text-align: left;">Introduction to Cybersecurity</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">CMSC&nbsp;414</td>
 <td style="text-align: left;">Computer and Network Security</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">CMSC&nbsp;415</td>
 <td style="text-align: left;">Introduction to Cryptography</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">CMSC&nbsp;416</td>
 <td style="text-align: left;">Introduction to Natural Language Processing</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">CMSC&nbsp;420</td>
 <td style="text-align: left;">Software Project Management</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">CMSC&nbsp;425</td>
 <td style="text-align: left;">Introduction to Software Analysis and Testing</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">CMSC&nbsp;428</td>
 <td style="text-align: left;">Mobile Programming: iOS</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">CMSC&nbsp;435</td>
 <td style="text-align: left;">Introduction to Data Science</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">CMSC&nbsp;440</td>
 <td style="text-align: left;">Data Communication and Networking</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">CMSC&nbsp;441</td>
 <td style="text-align: left;">Senior Design Studio I (Laboratory/Project Time)</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">CMSC&nbsp;442</td>
 <td style="text-align: left;">Senior Design Studio II (Laboratory/Project Time)</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">CMSC&nbsp;451</td>
 <td style="text-align: left;">Senior Project I</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">CMSC&nbsp;452</td>
 <td style="text-align: left;">Senior Project II</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">CMSC&nbsp;455</td>
 <td style="text-align: left;">Software as a Service</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">CMSC&nbsp;475</td>
 <td style="text-align: left;">Design and Implementation of User Interfaces</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">CMSC&nbsp;491</td>
 <td style="text-align: left;">Topics in Computer Science</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">CMSC&nbsp;492</td>
 <td style="text-align: left;">Independent Study</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">CMSC&nbsp;501</td>
 <td style="text-align: left;">Advanced Algorithms</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">CMSC&nbsp;502</td>
 <td style="text-align: left;">Parallel Algorithms</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">CMSC&nbsp;506</td>
 <td style="text-align: left;">Computer Networks and Communications</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">CMSC&nbsp;508</td>
 <td style="text-align: left;">Database Theory</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">CMSC&nbsp;510</td>
 <td style="text-align: left;">Regularization Methods for Machine Learning</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">CMSC&nbsp;512</td>
 <td style="text-align: left;">Advanced Social Network Analysis and Security</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">CMSC&nbsp;516</td>
 <td style="text-align: left;">Advanced Natural Language Processing</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">CMSC&nbsp;525</td>
 <td style="text-align: left;">Introduction to Software Analysis, Testing and Verification</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">CMSC&nbsp;526</td>
 <td style="text-align: left;">Theory of Programming Languages</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">CMSC&nbsp;531</td>
 <td style="text-align: left;">3D Computer Vision for Robot Navigation</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">CMSC&nbsp;591</td>
 <td style="text-align: left;">Topics in Computer Science</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">CMSC&nbsp;601</td>
 <td style="text-align: left;">Convex Optimization</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">CMSC&nbsp;602</td>
 <td style="text-align: left;">Operating Systems</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">CMSC&nbsp;603</td>
 <td style="text-align: left;">High Performance Distributed Systems</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">CMSC&nbsp;605</td>
 <td style="text-align: left;">Advanced Computer Architecture</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">CMSC&nbsp;608</td>
 <td style="text-align: left;">Advanced Database</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">CMSC&nbsp;610</td>
 <td style="text-align: left;">Algorithmic Foundations of Bioinformatics</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">CMSC&nbsp;611</td>
 <td style="text-align: left;">Computer Multimedia</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">CMSC&nbsp;612</td>
 <td style="text-align: left;">Game Theory and Security</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">CMSC&nbsp;615</td>
 <td style="text-align: left;">Cryptocurrency and Blockchain Techniques</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">CMSC&nbsp;618</td>
 <td style="text-align: left;">Database and Application Security</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">CMSC&nbsp;619</td>
 <td style="text-align: left;">The Design and Specifications of User Interfaces</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">CMSC&nbsp;620</td>
 <td style="text-align: left;">Applied Cryptography</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">CMSC&nbsp;621</td>
 <td style="text-align: left;">Theory of Computation</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">CMSC&nbsp;622</td>
 <td style="text-align: left;">Network and System Security</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">CMSC&nbsp;623</td>
 <td style="text-align: left;">Cloud Computing</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">CMSC&nbsp;624</td>
 <td style="text-align: left;">Software Quality Assurance</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">CMSC&nbsp;625</td>
 <td style="text-align: left;">Advanced Software Analysis, Testing and Verification</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">CMSC&nbsp;628</td>
 <td style="text-align: left;">Mobile Networks: Applications, Modeling and Analysis</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">CMSC&nbsp;630</td>
 <td style="text-align: left;">Image Analysis</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">CMSC&nbsp;635</td>
 <td style="text-align: left;">Knowledge Discovery and Data Mining</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">CMSC&nbsp;636</td>
 <td style="text-align: left;">Artificial Neural Networks and Deep Learning</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">CMSC&nbsp;654</td>
 <td style="text-align: left;">Memory and Malware Forensics</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">CMSC&nbsp;678</td>
 <td style="text-align: left;">Statistical Learning and Fuzzy Logic Algorithms</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">CMSC&nbsp;691</td>
 <td style="text-align: left;">Special Topics in Computer Science</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">CMSC&nbsp;692</td>
 <td style="text-align: left;">Independent Study</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">CMSC&nbsp;697</td>
 <td style="text-align: left;">Directed Research</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">CMSC&nbsp;701</td>
 <td style="text-align: left;">Research Methods</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">CMSC&nbsp;702</td>
 <td style="text-align: left;">Computer Science Seminar</td>
 </tr>
@@ -580,201 +633,311 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <section id="generating-individual-course-qmd-files" class="level1">
 <h1>Generating individual course QMD files</h1>
 <p>Now for the tricky AND fun part. Using the data from the dataframe, let’s create a bunch of QMDs one for each course.</p>
-<div class="cell" data-execution_count="6">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> showTopics( courseId ):</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  topics <span class="op">=</span> topics_df[ topics_df[<span class="st">"CourseId"</span>].<span class="bu">str</span>.contains(courseId[<span class="dv">5</span>:]) <span class="op">&amp;</span> topics_df[<span class="st">"CourseId"</span>].<span class="bu">str</span>.contains(courseId[:<span class="dv">4</span>]) ]</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co">#  slist = courseId[:4]+"/"+courseId[5:]+": "+", ".join( topics["ADJTopic"] )</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  slist <span class="op">=</span> <span class="st">", "</span>.join( topics[<span class="st">"ADJTopic"</span>].unique() )</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> slist</span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>block <span class="op">=</span> <span class="st">""</span><span class="op">;</span></span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> index, row <span class="kw">in</span> course_df.iterrows():</span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>  filename <span class="op">=</span> <span class="ss">f'./qmds/</span><span class="sc">{</span>row[<span class="st">"Subject"</span>]<span class="sc">}{</span>row[<span class="st">"Number"</span>]<span class="sc">}</span><span class="ss">.qmd'</span></span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>  <span class="cf">with</span> <span class="bu">open</span>(filename, <span class="st">'w'</span>,encoding<span class="op">=</span><span class="st">"utf-8"</span>) <span class="im">as</span> <span class="bu">file</span>:</span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>    <span class="bu">file</span>.write(<span class="ss">f"""---</span></span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="ss">title: "</span><span class="sc">{</span>row[<span class="st">"CourseId"</span>]<span class="sc">}</span><span class="ss"> - </span><span class="sc">{</span>row[<span class="st">"Title"</span>]<span class="sc">}</span><span class="ss">"</span></span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="ss">date: last-modified</span></span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="ss">format:</span></span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="ss">  html:</span></span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a><span class="ss">    toc: true</span></span>
-<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="ss">---</span></span>
-<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a><span class="ss">## Catalog Description</span></span>
-<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a><span class="sc">{</span>row[<span class="st">"Catalog Description"</span>]<span class="sc">}</span></span>
-<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a><span class="ss">## Restrictions including pre- or co-requisities</span></span>
-<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a><span class="ss"> </span></span>
-<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a><span class="sc">{</span>row[<span class="st">"Restrictions"</span>]<span class="sc">}</span></span>
-<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a><span class="ss">## Description</span></span>
-<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a><span class="sc">{</span>row[<span class="st">"Isolated Description"</span>]<span class="sc">}</span></span>
-<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a><span class="ss">## Topics</span></span>
-<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a><span class="sc">{</span>showTopics( row[<span class="st">"CourseId"</span>] )<span class="sc">}</span></span>
-<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a><span class="ss">## Syllabus Statements</span></span>
-<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a><span class="ss">Students should visit the URL below and review all syllabus statement information. The full university syllabus statement includes information on safety, registration, the VCU Honor Code, student conduct, withdrawal and more.</span></span>
-<span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a><span class="ss">*&lt;https://provost.vcu.edu/faculty/faculty-resources/syllabus/#statements&gt;*</span></span>
-<span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-43"><a href="#cb3-43" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-44"><a href="#cb3-44" aria-hidden="true" tabindex="-1"></a><span class="ss">"""</span></span>
-<span id="cb3-45"><a href="#cb3-45" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb3-46"><a href="#cb3-46" aria-hidden="true" tabindex="-1"></a>    <span class="bu">file</span>.close()</span>
-<span id="cb3-47"><a href="#cb3-47" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-48"><a href="#cb3-48" aria-hidden="true" tabindex="-1"></a>  block <span class="op">=</span> block <span class="op">+</span> <span class="ss">f"""</span></span>
-<span id="cb3-49"><a href="#cb3-49" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-50"><a href="#cb3-50" aria-hidden="true" tabindex="-1"></a><span class="sc">{</span>filename<span class="sc">}</span></span>
-<span id="cb3-51"><a href="#cb3-51" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-52"><a href="#cb3-52" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-53"><a href="#cb3-53" aria-hidden="true" tabindex="-1"></a><span class="ss">"""</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> expandURL( courseList ):</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="co">""" expand list of courses into a string of URL pointing to course pages """</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  urls <span class="op">=</span> course_df[ course_df[<span class="st">"idx"</span>].isin( courseList) ].reset_index()</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  urls[<span class="st">"url"</span>] <span class="op">=</span> <span class="st">"&lt;a href='"</span><span class="op">+</span>urls[<span class="st">"idx"</span>]<span class="op">+</span><span class="st">".qmd"</span><span class="op">+</span><span class="st">"'&gt;"</span><span class="op">+</span>urls[<span class="st">"CourseId"</span>]<span class="op">+</span><span class="st">"&lt;/a&gt;"</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  returnValue <span class="op">=</span> <span class="st">""</span><span class="op">;</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> i,url <span class="kw">in</span> urls[<span class="st">"url"</span>].items():</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> i<span class="op">==</span><span class="dv">0</span>:</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>      returnValue <span class="op">=</span> url</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="co">#    elif i % 4 == 0:</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="co">#        returnValue = returnValue + ", &lt;br/&gt;\n" + url</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>      returnValue <span class="op">=</span> returnValue <span class="op">+</span> <span class="st">", "</span> <span class="op">+</span> url</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> returnValue</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> showTopics( courseId ):</span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>  <span class="co">""" expand topic list to a single string """</span></span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>  topics <span class="op">=</span> topics_df[ topics_df[<span class="st">"CourseId"</span>].<span class="bu">str</span>.contains(courseId[<span class="dv">5</span>:]) <span class="op">&amp;</span> topics_df[<span class="st">"CourseId"</span>].<span class="bu">str</span>.contains(courseId[:<span class="dv">4</span>]) ]</span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a><span class="co">#  slist = courseId[:4]+"/"+courseId[5:]+": "+", ".join( topics["ADJTopic"] )</span></span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>  slist <span class="op">=</span> <span class="st">", "</span>.join( topics[<span class="st">"ADJTopic"</span>].unique() )</span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> slist</span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> showCoverage( courseId ):</span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>  <span class="co">""" expand coverage list to a single string """</span></span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>  topics <span class="op">=</span> coverage_df[ coverage_df[<span class="st">"CourseId"</span>].<span class="bu">str</span>.contains(courseId[<span class="dv">5</span>:]) <span class="op">&amp;</span> coverage_df[<span class="st">"CourseId"</span>].<span class="bu">str</span>.contains(courseId[:<span class="dv">4</span>]) ]</span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a><span class="co">#  slist = courseId[:4]+"/"+courseId[5:]+": "+", ".join( topics["ADJTopic"] )</span></span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a>  slist <span class="op">=</span> <span class="st">", "</span>.join( topics[<span class="st">"abet_tag1"</span>].unique() )</span>
+<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> slist</span>
+<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> showMap( courseId ):</span>
+<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a>  <span class="co">""" map topics and coverages for specific course """</span></span>
+<span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a>  topics <span class="op">=</span> coverage_df[ coverage_df[<span class="st">"CourseId"</span>].<span class="bu">str</span>.contains(courseId[<span class="dv">5</span>:]) <span class="op">&amp;</span> coverage_df[<span class="st">"CourseId"</span>].<span class="bu">str</span>.contains(courseId[:<span class="dv">4</span>]) ]</span>
+<span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a><span class="co">#  df_grouped = topics.groupby(['ADJTopic','abet_tag1'])['idx'].unique().apply( expandURL ).reset_index()</span></span>
+<span id="cb4-33"><a href="#cb4-33" aria-hidden="true" tabindex="-1"></a>  df_grouped <span class="op">=</span> topics.groupby([<span class="st">'abet_tag1'</span>,<span class="st">'ADJTopic'</span>])[<span class="st">'idx'</span>].unique().<span class="bu">apply</span>( expandURL ).reset_index()</span>
+<span id="cb4-34"><a href="#cb4-34" aria-hidden="true" tabindex="-1"></a>  tab <span class="op">=</span> tabulate(df_grouped, tablefmt<span class="op">=</span><span class="st">'fancy'</span>, showindex<span class="op">=</span><span class="va">False</span>, headers<span class="op">=</span>[<span class="st">"ABET coverage"</span>,<span class="st">"Adjusted Topic"</span>,<span class="st">"Course"</span>] )</span>
+<span id="cb4-35"><a href="#cb4-35" aria-hidden="true" tabindex="-1"></a>  d <span class="op">=</span> Markdown(tab).data</span>
+<span id="cb4-36"><a href="#cb4-36" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> d</span>
+<span id="cb4-37"><a href="#cb4-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-38"><a href="#cb4-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-39"><a href="#cb4-39" aria-hidden="true" tabindex="-1"></a>block <span class="op">=</span> <span class="st">""</span><span class="op">;</span></span>
+<span id="cb4-40"><a href="#cb4-40" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> index, row <span class="kw">in</span> course_df.iterrows():</span>
+<span id="cb4-41"><a href="#cb4-41" aria-hidden="true" tabindex="-1"></a>  filename <span class="op">=</span> <span class="ss">f'./qmds/</span><span class="sc">{</span>row[<span class="st">"Subject"</span>]<span class="sc">}{</span>row[<span class="st">"Number"</span>]<span class="sc">}</span><span class="ss">.qmd'</span></span>
+<span id="cb4-42"><a href="#cb4-42" aria-hidden="true" tabindex="-1"></a>  <span class="cf">with</span> <span class="bu">open</span>(filename, <span class="st">'w'</span>,encoding<span class="op">=</span><span class="st">"utf-8"</span>) <span class="im">as</span> <span class="bu">file</span>:</span>
+<span id="cb4-43"><a href="#cb4-43" aria-hidden="true" tabindex="-1"></a>    <span class="bu">file</span>.write(<span class="ss">f"""---</span></span>
+<span id="cb4-44"><a href="#cb4-44" aria-hidden="true" tabindex="-1"></a><span class="ss">title: "</span><span class="sc">{</span>row[<span class="st">"CourseId"</span>]<span class="sc">}</span><span class="ss"> - </span><span class="sc">{</span>row[<span class="st">"Title"</span>]<span class="sc">}</span><span class="ss">"</span></span>
+<span id="cb4-45"><a href="#cb4-45" aria-hidden="true" tabindex="-1"></a><span class="ss">date: last-modified</span></span>
+<span id="cb4-46"><a href="#cb4-46" aria-hidden="true" tabindex="-1"></a><span class="ss">format:</span></span>
+<span id="cb4-47"><a href="#cb4-47" aria-hidden="true" tabindex="-1"></a><span class="ss">  html:</span></span>
+<span id="cb4-48"><a href="#cb4-48" aria-hidden="true" tabindex="-1"></a><span class="ss">    toc: true</span></span>
+<span id="cb4-49"><a href="#cb4-49" aria-hidden="true" tabindex="-1"></a><span class="ss">---</span></span>
+<span id="cb4-50"><a href="#cb4-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-51"><a href="#cb4-51" aria-hidden="true" tabindex="-1"></a><span class="ss">## Catalog Description</span></span>
+<span id="cb4-52"><a href="#cb4-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-53"><a href="#cb4-53" aria-hidden="true" tabindex="-1"></a><span class="sc">{</span>row[<span class="st">"Catalog Description"</span>]<span class="sc">}</span></span>
+<span id="cb4-54"><a href="#cb4-54" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-55"><a href="#cb4-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-56"><a href="#cb4-56" aria-hidden="true" tabindex="-1"></a><span class="ss">## Restrictions including pre- or co-requisities</span></span>
+<span id="cb4-57"><a href="#cb4-57" aria-hidden="true" tabindex="-1"></a><span class="ss"> </span></span>
+<span id="cb4-58"><a href="#cb4-58" aria-hidden="true" tabindex="-1"></a><span class="sc">{</span>row[<span class="st">"Restrictions"</span>]<span class="sc">}</span></span>
+<span id="cb4-59"><a href="#cb4-59" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-60"><a href="#cb4-60" aria-hidden="true" tabindex="-1"></a><span class="ss">## Description</span></span>
+<span id="cb4-61"><a href="#cb4-61" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-62"><a href="#cb4-62" aria-hidden="true" tabindex="-1"></a><span class="sc">{</span>row[<span class="st">"Isolated Description"</span>]<span class="sc">}</span></span>
+<span id="cb4-63"><a href="#cb4-63" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-64"><a href="#cb4-64" aria-hidden="true" tabindex="-1"></a><span class="ss">## Past Syllabii</span></span>
+<span id="cb4-65"><a href="#cb4-65" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-66"><a href="#cb4-66" aria-hidden="true" tabindex="-1"></a><span class="sc">{</span>showSyllabiiByTerm( row[<span class="st">"idx"</span>] )<span class="sc">}</span></span>
+<span id="cb4-67"><a href="#cb4-67" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-68"><a href="#cb4-68" aria-hidden="true" tabindex="-1"></a><span class="ss">## Topics</span></span>
+<span id="cb4-69"><a href="#cb4-69" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-70"><a href="#cb4-70" aria-hidden="true" tabindex="-1"></a><span class="sc">{</span>showTopics( row[<span class="st">"CourseId"</span>] )<span class="sc">}</span></span>
+<span id="cb4-71"><a href="#cb4-71" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-72"><a href="#cb4-72" aria-hidden="true" tabindex="-1"></a><span class="ss">## ABET Coverage</span></span>
+<span id="cb4-73"><a href="#cb4-73" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-74"><a href="#cb4-74" aria-hidden="true" tabindex="-1"></a><span class="sc">{</span>showCoverage( row[<span class="st">"CourseId"</span>] )<span class="sc">}</span></span>
+<span id="cb4-75"><a href="#cb4-75" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-76"><a href="#cb4-76" aria-hidden="true" tabindex="-1"></a><span class="ss">## Coverage and Topics Map</span></span>
+<span id="cb4-77"><a href="#cb4-77" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-78"><a href="#cb4-78" aria-hidden="true" tabindex="-1"></a><span class="ss">Note that topics without associated ABET category assignments are excluded from this map.  See the [mapping](https://docs.google.com/spreadsheets/d/1qrN3L7eRLsM-aVMHYaLQN-FMYtrTJf0_h6dLKlUdPkk/edit#gid=338318647) for more details.</span></span>
+<span id="cb4-79"><a href="#cb4-79" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-80"><a href="#cb4-80" aria-hidden="true" tabindex="-1"></a><span class="sc">{</span>showMap( row[<span class="st">"CourseId"</span>] )<span class="sc">}</span></span>
+<span id="cb4-81"><a href="#cb4-81" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-82"><a href="#cb4-82" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-83"><a href="#cb4-83" aria-hidden="true" tabindex="-1"></a><span class="ss">## Syllabus Statements</span></span>
+<span id="cb4-84"><a href="#cb4-84" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-85"><a href="#cb4-85" aria-hidden="true" tabindex="-1"></a><span class="ss">Students should visit the URL below and review all syllabus statement information. The full university syllabus statement includes information on safety, registration, the VCU Honor Code, student conduct, withdrawal and more.</span></span>
+<span id="cb4-86"><a href="#cb4-86" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-87"><a href="#cb4-87" aria-hidden="true" tabindex="-1"></a><span class="ss">*&lt;https://provost.vcu.edu/faculty/faculty-resources/syllabus/#statements&gt;*</span></span>
+<span id="cb4-88"><a href="#cb4-88" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-89"><a href="#cb4-89" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-90"><a href="#cb4-90" aria-hidden="true" tabindex="-1"></a><span class="ss">"""</span></span>
+<span id="cb4-91"><a href="#cb4-91" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb4-92"><a href="#cb4-92" aria-hidden="true" tabindex="-1"></a>    <span class="bu">file</span>.close()</span>
+<span id="cb4-93"><a href="#cb4-93" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-94"><a href="#cb4-94" aria-hidden="true" tabindex="-1"></a>  block <span class="op">=</span> block <span class="op">+</span> <span class="ss">f"""</span></span>
+<span id="cb4-95"><a href="#cb4-95" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-96"><a href="#cb4-96" aria-hidden="true" tabindex="-1"></a><span class="sc">{</span>filename<span class="sc">}</span></span>
+<span id="cb4-97"><a href="#cb4-97" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-98"><a href="#cb4-98" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-99"><a href="#cb4-99" aria-hidden="true" tabindex="-1"></a><span class="ss">"""</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="autogenerating-left-menu-bar-in-contents.yml" class="level1">
 <h1>Autogenerating left menu bar in <em>contents.yml</em></h1>
-<div class="cell" data-execution_count="7">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> math <span class="im">import</span> floor</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> floor_to_nearest_100(number):</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> floor(number <span class="op">/</span> <span class="dv">100</span>) <span class="op">*</span> <span class="dv">100</span></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>filename <span class="op">=</span> <span class="st">"qmds/_contents.yml"</span></span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(filename, <span class="st">'w'</span>,encoding<span class="op">=</span><span class="st">"utf-8"</span>) <span class="im">as</span> <span class="bu">file</span>:</span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>  <span class="bu">file</span>.write(<span class="st">"""website:</span></span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="st">  sidebar:</span></span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="st">    contents:</span></span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="st">"""</span></span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>  oldBlockId <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> index, row <span class="kw">in</span> course_df.iterrows():</span>
-<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (oldBlockId <span class="op">!=</span> floor_to_nearest_100(row[<span class="st">"Number"</span>])):</span>
-<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>      oldBlockId <span class="op">=</span> floor_to_nearest_100(row[<span class="st">"Number"</span>])</span>
-<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>      <span class="bu">file</span>.write(<span class="ss">f"""</span></span>
-<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a><span class="ss">    - section: "</span><span class="sc">{</span>oldBlockId<span class="sc">}</span><span class="ss"> level"</span></span>
-<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a><span class="ss">      contents:</span></span>
-<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a><span class="ss">"""</span></span>
-<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>    <span class="bu">file</span>.write(<span class="ss">f'        - href: </span><span class="sc">{</span>row[<span class="st">"Subject"</span>]<span class="sc">}{</span>row[<span class="st">"Number"</span>]<span class="sc">}</span><span class="ss">.qmd</span><span class="ch">\n</span><span class="ss">'</span>)</span>
-<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>    <span class="bu">file</span>.write(<span class="ss">f'          text: </span><span class="sc">{</span>row[<span class="st">"Subject"</span>]<span class="sc">}</span><span class="ss"> </span><span class="sc">{</span>row[<span class="st">"Number"</span>]<span class="sc">}</span><span class="ch">\n</span><span class="ss">'</span>)</span>
-<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a>  <span class="bu">file</span>.write(<span class="st">"</span><span class="ch">\n</span><span class="st">"</span>)</span>
-<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a>  <span class="bu">file</span>.close()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> math <span class="im">import</span> floor</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> floor_to_nearest_100(number):</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> floor(number <span class="op">/</span> <span class="dv">100</span>) <span class="op">*</span> <span class="dv">100</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>filename <span class="op">=</span> <span class="st">"qmds/_contents.yml"</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(filename, <span class="st">'w'</span>,encoding<span class="op">=</span><span class="st">"utf-8"</span>) <span class="im">as</span> <span class="bu">file</span>:</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>  <span class="bu">file</span>.write(<span class="st">"""website:</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="st">  sidebar:</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="st">    contents:</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="st">"""</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>  oldBlockId <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> index, row <span class="kw">in</span> course_df.iterrows():</span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (oldBlockId <span class="op">!=</span> floor_to_nearest_100(row[<span class="st">"Number"</span>])):</span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>      oldBlockId <span class="op">=</span> floor_to_nearest_100(row[<span class="st">"Number"</span>])</span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>      <span class="bu">file</span>.write(<span class="ss">f"""</span></span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a><span class="ss">    - section: "</span><span class="sc">{</span>oldBlockId<span class="sc">}</span><span class="ss"> level"</span></span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a><span class="ss">      contents:</span></span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a><span class="ss">"""</span></span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>    <span class="bu">file</span>.write(<span class="ss">f'        - href: </span><span class="sc">{</span>row[<span class="st">"Subject"</span>]<span class="sc">}{</span>row[<span class="st">"Number"</span>]<span class="sc">}</span><span class="ss">.qmd</span><span class="ch">\n</span><span class="ss">'</span>)</span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>    <span class="bu">file</span>.write(<span class="ss">f'          text: </span><span class="sc">{</span>row[<span class="st">"Subject"</span>]<span class="sc">}</span><span class="ss"> </span><span class="sc">{</span>row[<span class="st">"Number"</span>]<span class="sc">}</span><span class="ch">\n</span><span class="ss">'</span>)</span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a>  <span class="bu">file</span>.write(<span class="st">"</span><span class="ch">\n</span><span class="st">"</span>)</span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>  <span class="bu">file</span>.close()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="autogenerating-index.qmd" class="level1">
 <h1>Autogenerating <em>index.qmd</em></h1>
-<div class="cell" data-execution_count="8">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>filename <span class="op">=</span> <span class="st">"qmds/index.qmd"</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(filename, <span class="st">'w'</span>,encoding<span class="op">=</span><span class="st">"utf-8"</span>) <span class="im">as</span> <span class="bu">file</span>:</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="bu">file</span>.write(<span class="ss">f"""---</span></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="ss">title: "CMSC Courses and Titles"</span></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="ss">date: last-modified</span></span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="ss">---</span></span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="ss">"""</span> )</span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>  course_df[<span class="st">'urlID'</span>] <span class="op">=</span> <span class="st">"["</span> <span class="op">+</span> course_df[<span class="st">"CourseId"</span>].astype(<span class="bu">str</span>) <span class="op">+</span> <span class="st">"]("</span> <span class="op">+</span> course_df[<span class="st">"Subject"</span>].astype(<span class="bu">str</span>) <span class="op">+</span> course_df[<span class="st">"Number"</span>].astype(<span class="bu">str</span>) <span class="op">+</span> <span class="st">'.html)'</span></span>
-<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>  course_df[<span class="st">'urlTitle'</span>] <span class="op">=</span> <span class="st">"["</span> <span class="op">+</span> course_df[<span class="st">"Title"</span>].astype(<span class="bu">str</span>) <span class="op">+</span> <span class="st">"]("</span> <span class="op">+</span> course_df[<span class="st">"Subject"</span>].astype(<span class="bu">str</span>) <span class="op">+</span> course_df[<span class="st">"Number"</span>].astype(<span class="bu">str</span>) <span class="op">+</span> <span class="st">'.html)'</span></span>
-<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>  cols <span class="op">=</span> [<span class="st">"urlID"</span>,<span class="st">"urlTitle"</span>]</span>
-<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>  <span class="bu">file</span>.write(tabulate(</span>
-<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>  course_df[ cols ],</span>
-<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>  showindex<span class="op">=</span><span class="va">False</span>,</span>
-<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>  headers<span class="op">=</span>[<span class="st">"Course"</span>,<span class="st">"Title"</span>],</span>
-<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>  tablefmt<span class="op">=</span><span class="st">"fancy"</span></span>
-<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>  <span class="bu">file</span>.close()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-execution_count="9">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>filename <span class="op">=</span> <span class="st">"qmds/index.qmd"</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(filename, <span class="st">'w'</span>,encoding<span class="op">=</span><span class="st">"utf-8"</span>) <span class="im">as</span> <span class="bu">file</span>:</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="bu">file</span>.write(<span class="ss">f"""---</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="ss">title: "CMSC Courses and Titles"</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="ss">date: last-modified</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="ss">---</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="ss">"""</span> )</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>  course_df[<span class="st">'urlID'</span>] <span class="op">=</span> <span class="st">"["</span> <span class="op">+</span> course_df[<span class="st">"CourseId"</span>].astype(<span class="bu">str</span>) <span class="op">+</span> <span class="st">"]("</span> <span class="op">+</span> course_df[<span class="st">"Subject"</span>].astype(<span class="bu">str</span>) <span class="op">+</span> course_df[<span class="st">"Number"</span>].astype(<span class="bu">str</span>) <span class="op">+</span> <span class="st">'.html)'</span></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>  course_df[<span class="st">'urlTitle'</span>] <span class="op">=</span> <span class="st">"["</span> <span class="op">+</span> course_df[<span class="st">"Title"</span>].astype(<span class="bu">str</span>) <span class="op">+</span> <span class="st">"]("</span> <span class="op">+</span> course_df[<span class="st">"Subject"</span>].astype(<span class="bu">str</span>) <span class="op">+</span> course_df[<span class="st">"Number"</span>].astype(<span class="bu">str</span>) <span class="op">+</span> <span class="st">'.html)'</span></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>  cols <span class="op">=</span> [<span class="st">"urlID"</span>,<span class="st">"urlTitle"</span>]</span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>  <span class="bu">file</span>.write(tabulate(</span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>  course_df[ cols ],</span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>  showindex<span class="op">=</span><span class="va">False</span>,</span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>  headers<span class="op">=</span>[<span class="st">"Course"</span>,<span class="st">"Title"</span>],</span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>  tablefmt<span class="op">=</span><span class="st">"fancy"</span></span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a>  <span class="bu">file</span>.close()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="autogenerating-listing.qmd" class="level1">
-<h1>Autogenerating <em>listing.qmd</em></h1>
-<div class="cell" data-execution_count="9">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> showTopics( courseId ):</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  topics <span class="op">=</span> topics_df[ topics_df[<span class="st">"CourseId"</span>].<span class="bu">str</span>.contains(courseId[<span class="dv">5</span>:]) <span class="op">&amp;</span> topics_df[<span class="st">"CourseId"</span>].<span class="bu">str</span>.contains(courseId[:<span class="dv">4</span>]) ]</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="co">#  slist = courseId[:4]+"/"+courseId[5:]+": "+", ".join( topics["ADJTopic"] )</span></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  slist <span class="op">=</span> <span class="st">", "</span>.join( topics[<span class="st">"ADJTopic"</span>] )</span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> slist</span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>course_df[<span class="st">'urlHeader'</span>] <span class="op">=</span> <span class="st">"["</span> <span class="op">+</span> course_df[<span class="st">"CourseId"</span>].astype(<span class="bu">str</span>) <span class="op">+</span> <span class="st">" - "</span> <span class="op">+</span>  course_df[<span class="st">"Title"</span>].astype(<span class="bu">str</span>) <span class="op">+</span> <span class="st">"]("</span> <span class="op">+</span> course_df[<span class="st">"Subject"</span>].astype(<span class="bu">str</span>) <span class="op">+</span> course_df[<span class="st">"Number"</span>].astype(<span class="bu">str</span>) <span class="op">+</span> <span class="st">'.qmd)'</span></span>
-<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>block <span class="op">=</span> <span class="st">""</span><span class="op">;</span></span>
-<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> index, row <span class="kw">in</span> course_df.iterrows():</span>
-<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>  h <span class="op">=</span> <span class="st">"hours"</span> <span class="cf">if</span>(row[<span class="st">"Hours"</span>]<span class="op">&gt;</span><span class="dv">1</span>) <span class="cf">else</span> <span class="st">"hour"</span></span>
-<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>  block <span class="op">=</span> block <span class="op">+</span> <span class="ss">f"""</span></span>
-<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a><span class="ss">## </span><span class="sc">{</span>row[<span class="st">"urlHeader"</span>]<span class="sc">}</span></span>
-<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a><span class="ss">Semester course. </span><span class="sc">{</span>row[<span class="st">"Hours"</span>]<span class="sc">}</span><span class="ss"> </span><span class="sc">{</span>h<span class="sc">}</span><span class="ss">.</span></span>
-<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a><span class="ss">**Restrictions:** </span><span class="sc">{</span>row[<span class="st">"Restrictions"</span>]<span class="sc">}</span></span>
-<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a><span class="ss">**Description:** </span><span class="sc">{</span>row[<span class="st">"Isolated Description"</span>]<span class="sc">}</span></span>
-<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a><span class="ss">**Topics:** </span><span class="sc">{</span> showTopics( row[<span class="st">"CourseId"</span>] ) <span class="sc">}</span></span>
-<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a><span class="ss">"""</span></span>
-<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a>filename <span class="op">=</span> <span class="st">"qmds/listing.qmd"</span></span>
-<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(filename, <span class="st">'w'</span>,encoding<span class="op">=</span><span class="st">"utf-8"</span>) <span class="im">as</span> <span class="bu">file</span>:</span>
-<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a>  <span class="bu">file</span>.write(<span class="ss">f"""---</span></span>
-<span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a><span class="ss">title: "Full Listing of CMSC Courses and Titles"</span></span>
-<span id="cb6-30"><a href="#cb6-30" aria-hidden="true" tabindex="-1"></a><span class="ss">date: last-modified</span></span>
-<span id="cb6-31"><a href="#cb6-31" aria-hidden="true" tabindex="-1"></a><span class="ss">format:</span></span>
-<span id="cb6-32"><a href="#cb6-32" aria-hidden="true" tabindex="-1"></a><span class="ss">  html:</span></span>
-<span id="cb6-33"><a href="#cb6-33" aria-hidden="true" tabindex="-1"></a><span class="ss">    toc: False</span></span>
-<span id="cb6-34"><a href="#cb6-34" aria-hidden="true" tabindex="-1"></a><span class="ss">---</span></span>
-<span id="cb6-35"><a href="#cb6-35" aria-hidden="true" tabindex="-1"></a><span class="ss">"""</span> )</span>
-<span id="cb6-36"><a href="#cb6-36" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-37"><a href="#cb6-37" aria-hidden="true" tabindex="-1"></a>  <span class="bu">file</span>.write(block)</span>
-<span id="cb6-38"><a href="#cb6-38" aria-hidden="true" tabindex="-1"></a>  <span class="bu">file</span>.close()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="autogenerating-catalog.qmd" class="level1">
+<h1>Autogenerating <em>catalog.qmd</em></h1>
+<div class="cell" data-execution_count="10">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> xxxshowTopics( courseId ):</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  topics <span class="op">=</span> topics_df[ topics_df[<span class="st">"CourseId"</span>].<span class="bu">str</span>.contains(courseId[<span class="dv">5</span>:]) <span class="op">&amp;</span> topics_df[<span class="st">"CourseId"</span>].<span class="bu">str</span>.contains(courseId[:<span class="dv">4</span>]) ]</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="co">#  slist = courseId[:4]+"/"+courseId[5:]+": "+", ".join( topics["ADJTopic"] )</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  slist <span class="op">=</span> <span class="st">", "</span>.join( topics[<span class="st">"ADJTopic"</span>] )</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> slist</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>course_df[<span class="st">'urlHeader'</span>] <span class="op">=</span> <span class="st">"["</span> <span class="op">+</span> course_df[<span class="st">"CourseId"</span>].astype(<span class="bu">str</span>) <span class="op">+</span> <span class="st">" - "</span> <span class="op">+</span>  course_df[<span class="st">"Title"</span>].astype(<span class="bu">str</span>) <span class="op">+</span> <span class="st">"]("</span> <span class="op">+</span> course_df[<span class="st">"Subject"</span>].astype(<span class="bu">str</span>) <span class="op">+</span> course_df[<span class="st">"Number"</span>].astype(<span class="bu">str</span>) <span class="op">+</span> <span class="st">'.qmd)'</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>block <span class="op">=</span> <span class="st">""</span><span class="op">;</span></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> index, row <span class="kw">in</span> course_df.iterrows():</span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>  h <span class="op">=</span> <span class="st">"hours"</span> <span class="cf">if</span>(row[<span class="st">"Hours"</span>]<span class="op">&gt;</span><span class="dv">1</span>) <span class="cf">else</span> <span class="st">"hour"</span></span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>  block <span class="op">=</span> block <span class="op">+</span> <span class="ss">f"""</span></span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a><span class="ss">## </span><span class="sc">{</span>row[<span class="st">"urlHeader"</span>]<span class="sc">}</span></span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a><span class="ss">Semester course. </span><span class="sc">{</span>row[<span class="st">"Hours"</span>]<span class="sc">}</span><span class="ss"> </span><span class="sc">{</span>h<span class="sc">}</span><span class="ss">.</span></span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a><span class="ss">**Restrictions:** </span><span class="sc">{</span>row[<span class="st">"Restrictions"</span>]<span class="sc">}</span></span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a><span class="ss">**Description:** </span><span class="sc">{</span>row[<span class="st">"Isolated Description"</span>]<span class="sc">}</span></span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a><span class="ss">**Syllabii:** </span><span class="sc">{</span> showSyllabiiByTerm( row[<span class="st">"idx"</span>])<span class="sc">}</span></span>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a><span class="ss">**Topics:** </span><span class="sc">{</span> showTopics( row[<span class="st">"CourseId"</span>] ) <span class="sc">}</span></span>
+<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a><span class="ss">**ABET coverage:** </span><span class="sc">{</span> showCoverage( row[<span class="st">"CourseId"</span>] ) <span class="sc">}</span></span>
+<span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-28"><a href="#cb7-28" aria-hidden="true" tabindex="-1"></a><span class="ss">"""</span></span>
+<span id="cb7-29"><a href="#cb7-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-30"><a href="#cb7-30" aria-hidden="true" tabindex="-1"></a>filename <span class="op">=</span> <span class="st">"qmds/catalog.qmd"</span></span>
+<span id="cb7-31"><a href="#cb7-31" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(filename, <span class="st">'w'</span>,encoding<span class="op">=</span><span class="st">"utf-8"</span>) <span class="im">as</span> <span class="bu">file</span>:</span>
+<span id="cb7-32"><a href="#cb7-32" aria-hidden="true" tabindex="-1"></a>  <span class="bu">file</span>.write(<span class="ss">f"""---</span></span>
+<span id="cb7-33"><a href="#cb7-33" aria-hidden="true" tabindex="-1"></a><span class="ss">title: "Catalog of CMSC Courses and Titles"</span></span>
+<span id="cb7-34"><a href="#cb7-34" aria-hidden="true" tabindex="-1"></a><span class="ss">date: last-modified</span></span>
+<span id="cb7-35"><a href="#cb7-35" aria-hidden="true" tabindex="-1"></a><span class="ss">format:</span></span>
+<span id="cb7-36"><a href="#cb7-36" aria-hidden="true" tabindex="-1"></a><span class="ss">  html:</span></span>
+<span id="cb7-37"><a href="#cb7-37" aria-hidden="true" tabindex="-1"></a><span class="ss">    toc: False</span></span>
+<span id="cb7-38"><a href="#cb7-38" aria-hidden="true" tabindex="-1"></a><span class="ss">---</span></span>
+<span id="cb7-39"><a href="#cb7-39" aria-hidden="true" tabindex="-1"></a><span class="ss">The following a complete catalog of CMSC courses listed in the VCU 2022-2023 Catalog. Not all courses</span></span>
+<span id="cb7-40"><a href="#cb7-40" aria-hidden="true" tabindex="-1"></a><span class="ss">are offered on a regular basis.</span></span>
+<span id="cb7-41"><a href="#cb7-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-42"><a href="#cb7-42" aria-hidden="true" tabindex="-1"></a><span class="ss">"""</span> )</span>
+<span id="cb7-43"><a href="#cb7-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-44"><a href="#cb7-44" aria-hidden="true" tabindex="-1"></a>  <span class="bu">file</span>.write(block)</span>
+<span id="cb7-45"><a href="#cb7-45" aria-hidden="true" tabindex="-1"></a>  <span class="bu">file</span>.close()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="autogenerating-topics.qmd" class="level1">
 <h1>Autogenerating <em>topics.qmd</em></h1>
-<div class="cell" data-execution_count="10">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> textwrap <span class="im">import</span> wrap</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> expandURL( courseList ):</span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  urls <span class="op">=</span> course_df[ course_df[<span class="st">"idx"</span>].isin( courseList) ].reset_index()</span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>  urls[<span class="st">"url"</span>] <span class="op">=</span> <span class="st">"&lt;a href='"</span><span class="op">+</span>urls[<span class="st">"idx"</span>]<span class="op">+</span><span class="st">".qmd"</span><span class="op">+</span><span class="st">"'&gt;"</span><span class="op">+</span>urls[<span class="st">"CourseId"</span>]<span class="op">+</span><span class="st">"&lt;/a&gt;"</span></span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>  returnValue <span class="op">=</span> <span class="st">""</span><span class="op">;</span></span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> i,url <span class="kw">in</span> urls[<span class="st">"url"</span>].items():</span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> i<span class="op">==</span><span class="dv">0</span>:</span>
-<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>      returnValue <span class="op">=</span> url</span>
-<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="co">#    elif i % 4 == 0:</span></span>
-<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a><span class="co">#        returnValue = returnValue + ", &lt;br/&gt;\n" + url</span></span>
-<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
-<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>      returnValue <span class="op">=</span> returnValue <span class="op">+</span> <span class="st">", "</span> <span class="op">+</span> url</span>
-<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> returnValue</span>
-<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>filename <span class="op">=</span> <span class="st">"qmds/topics.qmd"</span></span>
-<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(filename, <span class="st">'w'</span>,encoding<span class="op">=</span><span class="st">"utf-8"</span>) <span class="im">as</span> <span class="bu">file</span>:</span>
-<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>  <span class="bu">file</span>.write(<span class="ss">f"""---</span></span>
-<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a><span class="ss">title: "CMSC topics and courses"</span></span>
-<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a><span class="ss">date: last-modified</span></span>
-<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a><span class="ss">---</span></span>
-<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a><span class="ss">"""</span> )</span>
-<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a><span class="co">#  course_df['urlID'] = "[" + course_df["CourseId"].astype(str) + "](" + course_df["Subject"].astype(str) + course_df["Number"].astype(str) + '.html)'</span></span>
-<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a><span class="co">#  course_df['urlTitle'] = "[" + course_df["Title"].astype(str) + "](" + course_df["Subject"].astype(str) + course_df["Number"].astype(str) + '.html)'</span></span>
-<span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-28"><a href="#cb7-28" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-29"><a href="#cb7-29" aria-hidden="true" tabindex="-1"></a>  df_grouped <span class="op">=</span> topics_df.groupby(<span class="st">'ADJTopic'</span>)[<span class="st">'idx'</span>].unique().<span class="bu">apply</span>( expandURL ).reset_index()</span>
-<span id="cb7-30"><a href="#cb7-30" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb7-31"><a href="#cb7-31" aria-hidden="true" tabindex="-1"></a>  <span class="bu">file</span>.write(</span>
-<span id="cb7-32"><a href="#cb7-32" aria-hidden="true" tabindex="-1"></a>    tabulate(df_grouped, tablefmt<span class="op">=</span><span class="st">'fancy'</span>, showindex<span class="op">=</span><span class="va">False</span>, headers<span class="op">=</span>[<span class="st">"Adjusted Topic"</span>,<span class="st">"Course"</span>] )</span>
-<span id="cb7-33"><a href="#cb7-33" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb7-34"><a href="#cb7-34" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-35"><a href="#cb7-35" aria-hidden="true" tabindex="-1"></a>  <span class="bu">file</span>.close()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-execution_count="11">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> textwrap <span class="im">import</span> wrap</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> xxxexpandURL( courseList ):</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>  urls <span class="op">=</span> course_df[ course_df[<span class="st">"idx"</span>].isin( courseList) ].reset_index()</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>  urls[<span class="st">"url"</span>] <span class="op">=</span> <span class="st">"&lt;a href='"</span><span class="op">+</span>urls[<span class="st">"idx"</span>]<span class="op">+</span><span class="st">".qmd"</span><span class="op">+</span><span class="st">"'&gt;"</span><span class="op">+</span>urls[<span class="st">"CourseId"</span>]<span class="op">+</span><span class="st">"&lt;/a&gt;"</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>  returnValue <span class="op">=</span> <span class="st">""</span><span class="op">;</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> i,url <span class="kw">in</span> urls[<span class="st">"url"</span>].items():</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> i<span class="op">==</span><span class="dv">0</span>:</span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>      returnValue <span class="op">=</span> url</span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a><span class="co">#    elif i % 4 == 0:</span></span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a><span class="co">#        returnValue = returnValue + ", &lt;br/&gt;\n" + url</span></span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>      returnValue <span class="op">=</span> returnValue <span class="op">+</span> <span class="st">", "</span> <span class="op">+</span> url</span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> returnValue</span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a>filename <span class="op">=</span> <span class="st">"qmds/topics.qmd"</span></span>
+<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(filename, <span class="st">'w'</span>,encoding<span class="op">=</span><span class="st">"utf-8"</span>) <span class="im">as</span> <span class="bu">file</span>:</span>
+<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a>  <span class="bu">file</span>.write(<span class="ss">f"""---</span></span>
+<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a><span class="ss">title: "CMSC topics and courses"</span></span>
+<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a><span class="ss">date: last-modified</span></span>
+<span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a><span class="ss">---</span></span>
+<span id="cb8-23"><a href="#cb8-23" aria-hidden="true" tabindex="-1"></a><span class="ss">"""</span> )</span>
+<span id="cb8-24"><a href="#cb8-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-25"><a href="#cb8-25" aria-hidden="true" tabindex="-1"></a><span class="co">#  course_df['urlID'] = "[" + course_df["CourseId"].astype(str) + "](" + course_df["Subject"].astype(str) + course_df["Number"].astype(str) + '.html)'</span></span>
+<span id="cb8-26"><a href="#cb8-26" aria-hidden="true" tabindex="-1"></a><span class="co">#  course_df['urlTitle'] = "[" + course_df["Title"].astype(str) + "](" + course_df["Subject"].astype(str) + course_df["Number"].astype(str) + '.html)'</span></span>
+<span id="cb8-27"><a href="#cb8-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-28"><a href="#cb8-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-29"><a href="#cb8-29" aria-hidden="true" tabindex="-1"></a>  df_grouped <span class="op">=</span> topics_df.groupby([<span class="st">'ADJTopic'</span>,<span class="st">'abet_tag1'</span>])[<span class="st">'idx'</span>].unique().<span class="bu">apply</span>( expandURL ).reset_index()</span>
+<span id="cb8-30"><a href="#cb8-30" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb8-31"><a href="#cb8-31" aria-hidden="true" tabindex="-1"></a>  <span class="bu">file</span>.write(</span>
+<span id="cb8-32"><a href="#cb8-32" aria-hidden="true" tabindex="-1"></a>    tabulate(df_grouped, tablefmt<span class="op">=</span><span class="st">'fancy'</span>, showindex<span class="op">=</span><span class="va">False</span>, headers<span class="op">=</span>[<span class="st">"Adjusted Topic"</span>,<span class="st">"ABET Coverage"</span>,<span class="st">"Course"</span>] )</span>
+<span id="cb8-33"><a href="#cb8-33" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb8-34"><a href="#cb8-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-35"><a href="#cb8-35" aria-hidden="true" tabindex="-1"></a>  <span class="bu">file</span>.close()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="autogenerating-coverage.qmd" class="level1">
+<h1>Autogenerating <em>coverage.qmd</em></h1>
+<div class="cell" data-execution_count="12">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> textwrap <span class="im">import</span> wrap</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>filename <span class="op">=</span> <span class="st">"qmds/coverage.qmd"</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(filename, <span class="st">'w'</span>,encoding<span class="op">=</span><span class="st">"utf-8"</span>) <span class="im">as</span> <span class="bu">file</span>:</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>  <span class="bu">file</span>.write(<span class="ss">f"""---</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="ss">title: "CMSC courses and ABET topic coverage"</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a><span class="ss">date: last-modified</span></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a><span class="ss">---</span></span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a><span class="ss">The mappings listed below represent ABET coverage for undergraduate courses only.</span></span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a><span class="ss">"""</span> )</span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a><span class="co">#  course_df['urlID'] = "[" + course_df["CourseId"].astype(str) + "](" + course_df["Subject"].astype(str) + course_df["Number"].astype(str) + '.html)'</span></span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a><span class="co">#  course_df['urlTitle'] = "[" + course_df["Title"].astype(str) + "](" + course_df["Subject"].astype(str) + course_df["Number"].astype(str) + '.html)'</span></span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>  df_grouped <span class="op">=</span> coverage_df[ coverage_df[<span class="st">"idx"</span>]<span class="op">&lt;</span><span class="st">"CMSC600"</span> ].groupby(<span class="st">'abet_tag1'</span>)[<span class="st">'idx'</span>].unique().<span class="bu">apply</span>( expandURL ).reset_index()</span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a>  <span class="bu">file</span>.write(</span>
+<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a>    tabulate(df_grouped, tablefmt<span class="op">=</span><span class="st">'fancy'</span>, showindex<span class="op">=</span><span class="va">False</span>, headers<span class="op">=</span>[<span class="st">"ABET coverage topic"</span>,<span class="st">"Course"</span>] )</span>
+<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-23"><a href="#cb9-23" aria-hidden="true" tabindex="-1"></a>  <span class="bu">file</span>.close()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="autogenerating-syllabii.qmd" class="level1">
+<h1>Autogenerating <em>syllabii.qmd</em></h1>
+<div class="cell" data-execution_count="13">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> textwrap <span class="im">import</span> wrap</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>filename <span class="op">=</span> <span class="st">"qmds/syllabii.qmd"</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(filename, <span class="st">'w'</span>,encoding<span class="op">=</span><span class="st">"utf-8"</span>) <span class="im">as</span> <span class="bu">file</span>:</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>  <span class="bu">file</span>.write(<span class="ss">f"""---</span></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="ss">title: "Past syllabii"</span></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a><span class="ss">date: last-modified</span></span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a><span class="ss">---</span></span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a><span class="ss">The following table maps our course catelog against a list of existing</span></span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a><span class="ss">course syllabii.</span></span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a><span class="ss">"""</span> )</span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a><span class="co">#  course_df['urlID'] = "[" + course_df["CourseId"].astype(str) + "](" + course_df["Subject"].astype(str) + course_df["Number"].astype(str) + '.html)'</span></span>
+<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a><span class="co">#  course_df['urlTitle'] = "[" + course_df["Title"].astype(str) + "](" + course_df["Subject"].astype(str) + course_df["Number"].astype(str) + '.html)'</span></span>
+<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a>  df_grouped <span class="op">=</span> coverage_df[ coverage_df[<span class="st">"idx"</span>]<span class="op">&lt;</span><span class="st">"CMSC600"</span> ].groupby(<span class="st">'abet_tag1'</span>)[<span class="st">'idx'</span>].unique().<span class="bu">apply</span>( expandURL ).reset_index()</span>
+<span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-20"><a href="#cb10-20" aria-hidden="true" tabindex="-1"></a>  <span class="bu">file</span>.write(</span>
+<span id="cb10-21"><a href="#cb10-21" aria-hidden="true" tabindex="-1"></a>    tabulate(df_grouped, tablefmt<span class="op">=</span><span class="st">'fancy'</span>, showindex<span class="op">=</span><span class="va">False</span>, headers<span class="op">=</span>[<span class="st">"ABET coverage topic"</span>,<span class="st">"Course"</span>] )</span>
+<span id="cb10-22"><a href="#cb10-22" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb10-23"><a href="#cb10-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-24"><a href="#cb10-24" aria-hidden="true" tabindex="-1"></a>  <span class="bu">file</span>.close()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 

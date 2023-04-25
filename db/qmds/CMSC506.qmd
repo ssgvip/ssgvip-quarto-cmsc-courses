@@ -19,9 +19,33 @@ CMSC 312.
 
 Theoretical and applied analysis of basic data communication systems; design of networks in the framework of the OSI reference model; Local and Wide Area Networks; performance analysis of networks; error control and security. Students will work in teams to design and implement a small computer network. Crosslisted as: EGRE 526.
 
+## Past Syllabii
+
+(none since Spring 2021)
+
 ## Topics
 
 analysis, communication systems, computer networks, design, error control, local and wide area networks, osi reference model, security
+
+## ABET Coverage
+
+algorithms and complexity, networking and communication, security and privacy
+
+## Coverage and Topics Map
+
+Note that topics without associated ABET category assignments are excluded from this map.  See the [mapping](https://docs.google.com/spreadsheets/d/1qrN3L7eRLsM-aVMHYaLQN-FMYtrTJf0_h6dLKlUdPkk/edit#gid=338318647) for more details.
+
+ABET coverage                 Adjusted Topic                Course
+----------------------------  ----------------------------  ----------------------------------
+algorithms and complexity     analysis                      <a href='CMSC506.qmd'>CMSC 506</a>
+networking and communication  communication systems         <a href='CMSC506.qmd'>CMSC 506</a>
+networking and communication  computer networks             <a href='CMSC506.qmd'>CMSC 506</a>
+networking and communication  design                        <a href='CMSC506.qmd'>CMSC 506</a>
+networking and communication  error control                 <a href='CMSC506.qmd'>CMSC 506</a>
+networking and communication  local and wide area networks  <a href='CMSC506.qmd'>CMSC 506</a>
+networking and communication  osi reference model           <a href='CMSC506.qmd'>CMSC 506</a>
+security and privacy          security                      <a href='CMSC506.qmd'>CMSC 506</a>
+
 
 ## Syllabus Statements
 

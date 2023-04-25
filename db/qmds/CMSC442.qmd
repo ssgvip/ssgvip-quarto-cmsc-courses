@@ -19,9 +19,31 @@ CMSC 441, CMSC 451 and CMSC 508, each with a minimum grade of C. Corequisi
 
 A minimum of six laboratory hours per week dedicated to the execution phase of the senior design (capstone) project for the computer science major. Tasks include team meetings, brainstorming, sponsor advising, researching, designing, implementing, reviewing, testing and validating projects. Each student will participate, either individually or as part of a team, in a project or other experience approved by the course coordinator or sponsored by another computer science faculty member. Students must continue on the same project that was started in CMSC 441 and CMSC 451. A final project report and presentation are due at the conclusion of the two-semester project or experience. This course cannot be counted as upper-level CMSC electives for students graduating under bulletins prio
 
+## Past Syllabii
+
+(none since Spring 2021)
+
 ## Topics
 
 brainstorming, final project, project planning, researching, teamwork, testing
+
+## ABET Coverage
+
+techniques, skills, and tools
+
+## Coverage and Topics Map
+
+Note that topics without associated ABET category assignments are excluded from this map.  See the [mapping](https://docs.google.com/spreadsheets/d/1qrN3L7eRLsM-aVMHYaLQN-FMYtrTJf0_h6dLKlUdPkk/edit#gid=338318647) for more details.
+
+ABET coverage                  Adjusted Topic    Course
+-----------------------------  ----------------  ----------------------------------
+techniques, skills, and tools  brainstorming     <a href='CMSC442.qmd'>CMSC 442</a>
+techniques, skills, and tools  final project     <a href='CMSC442.qmd'>CMSC 442</a>
+techniques, skills, and tools  project planning  <a href='CMSC442.qmd'>CMSC 442</a>
+techniques, skills, and tools  researching       <a href='CMSC442.qmd'>CMSC 442</a>
+techniques, skills, and tools  teamwork          <a href='CMSC442.qmd'>CMSC 442</a>
+techniques, skills, and tools  testing           <a href='CMSC442.qmd'>CMSC 442</a>
+
 
 ## Syllabus Statements
 

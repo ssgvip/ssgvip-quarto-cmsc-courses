@@ -19,9 +19,39 @@ Enrollment is restricted to students with graduate standing in computer science 
 
 The course will assume undergraduate-level background in algorithms, data structures, programming and networks. Upon successful completion of this course, the student will be able to understand the major concepts about mobile networks such as device-to-device communication technologies, mobility models and coverage; be familiar with various mobile network types (e.g., mobile social networks, delay tolerant networks, overlay networks, vehicular networks and cellular networks) and devices (e.g., smartphones, femtocells, WiFi), learn how to model mobile networks with stochastic processes and real datasets; be able to use different networking simulators; and understand various routing algorithms and analyze their behavior.
 
+## Past Syllabii
+
+<a href='./202120/CMSC_628_Syllabus_Spring_2021.pdf'>Spring 2021</a>, <a href='./202320/CMSC_628_Syllabus_Spring_2023.pdf'>Spring 2023</a>
+
 ## Topics
 
 algorithms, analysis, communication systems, data, data driven stimulations, data structures, evaluation, mobile networks, mobility models, modeling, network simulators, networks, programming, routing
+
+## ABET Coverage
+
+algorithms and complexity, networking and communication, information management, concepts of programming languages, general purpose programming language, techniques, skills, and tools
+
+## Coverage and Topics Map
+
+Note that topics without associated ABET category assignments are excluded from this map.  See the [mapping](https://docs.google.com/spreadsheets/d/1qrN3L7eRLsM-aVMHYaLQN-FMYtrTJf0_h6dLKlUdPkk/edit#gid=338318647) for more details.
+
+ABET coverage                         Adjusted Topic            Course
+------------------------------------  ------------------------  ----------------------------------
+algorithms and complexity             algorithms                <a href='CMSC628.qmd'>CMSC 628</a>
+algorithms and complexity             analysis                  <a href='CMSC628.qmd'>CMSC 628</a>
+concepts of programming languages     evaluation                <a href='CMSC628.qmd'>CMSC 628</a>
+general purpose programming language  programming               <a href='CMSC628.qmd'>CMSC 628</a>
+information management                data                      <a href='CMSC628.qmd'>CMSC 628</a>
+information management                data driven stimulations  <a href='CMSC628.qmd'>CMSC 628</a>
+information management                data structures           <a href='CMSC628.qmd'>CMSC 628</a>
+networking and communication          communication systems     <a href='CMSC628.qmd'>CMSC 628</a>
+networking and communication          mobile networks           <a href='CMSC628.qmd'>CMSC 628</a>
+networking and communication          mobility models           <a href='CMSC628.qmd'>CMSC 628</a>
+networking and communication          modeling                  <a href='CMSC628.qmd'>CMSC 628</a>
+networking and communication          network simulators        <a href='CMSC628.qmd'>CMSC 628</a>
+networking and communication          networks                  <a href='CMSC628.qmd'>CMSC 628</a>
+techniques, skills, and tools         routing                   <a href='CMSC628.qmd'>CMSC 628</a>
+
 
 ## Syllabus Statements
 

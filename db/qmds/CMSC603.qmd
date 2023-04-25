@@ -19,9 +19,33 @@ Enrollment is restricted to students with graduate standing in computer science 
 
 The course will assume undergraduate-level background in algorithms, data structures and parallel programming. Upon successful completion of this course, the student will be able to understand the concepts underlying distributed systems; analyze problems to identify performance bottlenecks, parallelization opportunities and concurrency issues in a distributed environment; create distributed and scalable implementations using multiple hosts/GPUs; design and implement algorithms using Hadoop, Spark and CUDA.
 
+## Past Syllabii
+
+<a href='./202210/CMSC_603_Syllabus_Fall_2021.pdf'>Fall 2021</a>, <a href='./202310/CMSC_603_Syllabus_Fall_2022.pdf'>Fall 2022</a>
+
 ## Topics
 
 algorithms, concurrency, cuda, data structures, hadoop, parallel algorithms, performance bottlenecks, spark
+
+## ABET Coverage
+
+algorithms and complexity, concepts of programming languages, parallel and distributed computing, computer architecture and organization, techniques, skills, and tools
+
+## Coverage and Topics Map
+
+Note that topics without associated ABET category assignments are excluded from this map.  See the [mapping](https://docs.google.com/spreadsheets/d/1qrN3L7eRLsM-aVMHYaLQN-FMYtrTJf0_h6dLKlUdPkk/edit#gid=338318647) for more details.
+
+ABET coverage                           Adjusted Topic           Course
+--------------------------------------  -----------------------  ----------------------------------
+algorithms and complexity               algorithms               <a href='CMSC603.qmd'>CMSC 603</a>
+computer architecture and organization  data structures          <a href='CMSC603.qmd'>CMSC 603</a>
+concepts of programming languages       concurrency              <a href='CMSC603.qmd'>CMSC 603</a>
+concepts of programming languages       performance bottlenecks  <a href='CMSC603.qmd'>CMSC 603</a>
+concepts of programming languages       spark                    <a href='CMSC603.qmd'>CMSC 603</a>
+parallel and distributed computing      cuda                     <a href='CMSC603.qmd'>CMSC 603</a>
+parallel and distributed computing      parallel algorithms      <a href='CMSC603.qmd'>CMSC 603</a>
+techniques, skills, and tools           hadoop                   <a href='CMSC603.qmd'>CMSC 603</a>
+
 
 ## Syllabus Statements
 

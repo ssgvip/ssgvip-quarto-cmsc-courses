@@ -19,9 +19,26 @@ Semester course; variable hours. 2, 3 or 4 credits per semester. Maximum 4 credi
 
 Maximum 4 credits per semester; maximum total of 6 credits. Generally open only to students of junior or senior standing who have acquired at least 12 credits in the departmental discipline. Determination of the amount of credit and permission of instructor and department chair must be procured prior to registration of the course. The student must submit a proposal for investigating some area or problem not contained in the regular curriculum. The results of the student's study will be presented in a report.
 
+## Past Syllabii
+
+(none since Spring 2021)
+
 ## Topics
 
 independent study
+
+## ABET Coverage
+
+concepts of programming languages
+
+## Coverage and Topics Map
+
+Note that topics without associated ABET category assignments are excluded from this map.  See the [mapping](https://docs.google.com/spreadsheets/d/1qrN3L7eRLsM-aVMHYaLQN-FMYtrTJf0_h6dLKlUdPkk/edit#gid=338318647) for more details.
+
+ABET coverage                      Adjusted Topic     Course
+---------------------------------  -----------------  ----------------------------------
+concepts of programming languages  independent study  <a href='CMSC492.qmd'>CMSC 492</a>
+
 
 ## Syllabus Statements
 

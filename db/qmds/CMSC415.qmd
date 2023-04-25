@@ -19,9 +19,30 @@ CMSC 401 with a minimum grade of C.
 
 This course provides a rigorous and theoretical introduction to modern cryptography. Key topics include symmetric key encryption and authentication, public key encryption, and digital signatures.
 
+## Past Syllabii
+
+<a href='./202210/CMSC_415_Syllabus_Fall_2021.pdf'>Fall 2021</a>, <a href='./202310/CMSC_415_Syllabus_Fall_2022.pdf'>Fall 2022</a>
+
 ## Topics
 
 authentication, cryptographic systems, digital signatures, public key encryption, symmetric key encryption
+
+## ABET Coverage
+
+security and privacy
+
+## Coverage and Topics Map
+
+Note that topics without associated ABET category assignments are excluded from this map.  See the [mapping](https://docs.google.com/spreadsheets/d/1qrN3L7eRLsM-aVMHYaLQN-FMYtrTJf0_h6dLKlUdPkk/edit#gid=338318647) for more details.
+
+ABET coverage         Adjusted Topic            Course
+--------------------  ------------------------  ----------------------------------
+security and privacy  authentication            <a href='CMSC415.qmd'>CMSC 415</a>
+security and privacy  cryptographic systems     <a href='CMSC415.qmd'>CMSC 415</a>
+security and privacy  digital signatures        <a href='CMSC415.qmd'>CMSC 415</a>
+security and privacy  public key encryption     <a href='CMSC415.qmd'>CMSC 415</a>
+security and privacy  symmetric key encryption  <a href='CMSC415.qmd'>CMSC 415</a>
+
 
 ## Syllabus Statements
 

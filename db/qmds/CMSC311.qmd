@@ -19,9 +19,46 @@ CMSC 302 with minimum grade of C; corequisite: CMSC 257.
 
 Introduction to the basic organization of computers including elementary digital logic design, processor and arithmetic/logic unit design, data paths, memory hierarchy, I/O devices, instruction set architecture and addressing modes.
 
+## Past Syllabii
+
+<a href='./202120/CMSC_311_Syllabus_Spring_2021.pdf'>Spring 2021</a>, <a href='./202210/CMSC_311_Syllabus_Fall_2021.pdf'>Fall 2021</a>, <a href='./202220/CMSC_311_Syllabus_Spring_2022.pdf'>Spring 2022</a>, <a href='./202310/CMSC_311_Syllabus_Fall_2022.pdf'>Fall 2022</a>, <a href='./202320/CMSC_311_Syllabus_Spring_2023.pdf'>Spring 2023</a>
+
 ## Topics
 
 addressing modes, architecture, assembly language, cache memories, computers, data, data paths, data types, digital logic structures, input/output, instruction set architecture, logic, machine language, memory hierarchy, organization, stacks, trap routines, trap subroutines, unit design, virtual memory, von neumann model
+
+## ABET Coverage
+
+concepts of programming languages, computer architecture and organization, general purpose programming language, information management, operating systems, techniques, skills, and tools, computing-based systems
+
+## Coverage and Topics Map
+
+Note that topics without associated ABET category assignments are excluded from this map.  See the [mapping](https://docs.google.com/spreadsheets/d/1qrN3L7eRLsM-aVMHYaLQN-FMYtrTJf0_h6dLKlUdPkk/edit#gid=338318647) for more details.
+
+ABET coverage                           Adjusted Topic                Course
+--------------------------------------  ----------------------------  ----------------------------------
+computer architecture and organization  architecture                  <a href='CMSC311.qmd'>CMSC 311</a>
+computer architecture and organization  instruction set architecture  <a href='CMSC311.qmd'>CMSC 311</a>
+computer architecture and organization  organization                  <a href='CMSC311.qmd'>CMSC 311</a>
+computing-based systems                 unit design                   <a href='CMSC311.qmd'>CMSC 311</a>
+concepts of programming languages       addressing modes              <a href='CMSC311.qmd'>CMSC 311</a>
+concepts of programming languages       digital logic structures      <a href='CMSC311.qmd'>CMSC 311</a>
+concepts of programming languages       stacks                        <a href='CMSC311.qmd'>CMSC 311</a>
+concepts of programming languages       trap routines                 <a href='CMSC311.qmd'>CMSC 311</a>
+concepts of programming languages       trap subroutines              <a href='CMSC311.qmd'>CMSC 311</a>
+concepts of programming languages       von neumann model             <a href='CMSC311.qmd'>CMSC 311</a>
+general purpose programming language    assembly language             <a href='CMSC311.qmd'>CMSC 311</a>
+general purpose programming language    input/output                  <a href='CMSC311.qmd'>CMSC 311</a>
+general purpose programming language    machine language              <a href='CMSC311.qmd'>CMSC 311</a>
+information management                  cache memories                <a href='CMSC311.qmd'>CMSC 311</a>
+information management                  data                          <a href='CMSC311.qmd'>CMSC 311</a>
+information management                  data paths                    <a href='CMSC311.qmd'>CMSC 311</a>
+information management                  data types                    <a href='CMSC311.qmd'>CMSC 311</a>
+information management                  virtual memory                <a href='CMSC311.qmd'>CMSC 311</a>
+operating systems                       computers                     <a href='CMSC311.qmd'>CMSC 311</a>
+operating systems                       memory hierarchy              <a href='CMSC311.qmd'>CMSC 311</a>
+techniques, skills, and tools           logic                         <a href='CMSC311.qmd'>CMSC 311</a>
+
 
 ## Syllabus Statements
 

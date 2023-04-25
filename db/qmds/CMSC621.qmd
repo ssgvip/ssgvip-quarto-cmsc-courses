@@ -19,8 +19,24 @@ graduate student standing and permission of instructor.
 
 Discussion of the complexity and computability of problems and programs. Topics will include unsolvability, universal programs and abstract complexity.
 
+## Past Syllabii
+
+(none since Spring 2021)
+
 ## Topics
 
+
+
+## ABET Coverage
+
+
+
+## Coverage and Topics Map
+
+Note that topics without associated ABET category assignments are excluded from this map.  See the [mapping](https://docs.google.com/spreadsheets/d/1qrN3L7eRLsM-aVMHYaLQN-FMYtrTJf0_h6dLKlUdPkk/edit#gid=338318647) for more details.
+
+ABET coverage    Adjusted Topic    Course
+---------------  ----------------  --------
 
 
 ## Syllabus Statements

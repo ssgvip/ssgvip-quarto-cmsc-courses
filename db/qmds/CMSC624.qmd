@@ -19,9 +19,27 @@ a course in software engineering and graduate standing in computer science, or p
 
 A study of issues that affect the quality of software and of methodology to assure that software products are of the desired quality. This also includes issues in assessing product quality as well as the process by which the software is produced. Topics include various methodologies, standards, metrics and tools.
 
+## Past Syllabii
+
+(none since Spring 2021)
+
 ## Topics
 
 metrics, software quality
+
+## ABET Coverage
+
+concepts of programming languages, software development
+
+## Coverage and Topics Map
+
+Note that topics without associated ABET category assignments are excluded from this map.  See the [mapping](https://docs.google.com/spreadsheets/d/1qrN3L7eRLsM-aVMHYaLQN-FMYtrTJf0_h6dLKlUdPkk/edit#gid=338318647) for more details.
+
+ABET coverage                      Adjusted Topic    Course
+---------------------------------  ----------------  ----------------------------------
+concepts of programming languages  metrics           <a href='CMSC624.qmd'>CMSC 624</a>
+software development               software quality  <a href='CMSC624.qmd'>CMSC 624</a>
+
 
 ## Syllabus Statements
 

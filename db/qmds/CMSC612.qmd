@@ -19,9 +19,32 @@ CMSC 401. Enrollment is restricted to students with graduate standing in comput
 
 The course will provide an introduction to game theory and mechanism design concepts. Lectures cover topics such as introduction of games, equilibrium concepts, computation of game-theoretic solution concepts, mechanism, and issues in game theory and mechanism design.
 
+## Past Syllabii
+
+<a href='./202120/CMSC_612_Syllabus_Spring_2021.pdf'>Spring 2021</a>
+
 ## Topics
 
 abstract complexity, design, equilibrium concepts, game theory, security, universal programs, unsolvability
+
+## ABET Coverage
+
+algorithms and complexity, concepts of programming languages, computer science theory, security and privacy
+
+## Coverage and Topics Map
+
+Note that topics without associated ABET category assignments are excluded from this map.  See the [mapping](https://docs.google.com/spreadsheets/d/1qrN3L7eRLsM-aVMHYaLQN-FMYtrTJf0_h6dLKlUdPkk/edit#gid=338318647) for more details.
+
+ABET coverage                      Adjusted Topic        Course
+---------------------------------  --------------------  ----------------------------------
+algorithms and complexity          abstract complexity   <a href='CMSC612.qmd'>CMSC 612</a>
+computer science theory            game theory           <a href='CMSC612.qmd'>CMSC 612</a>
+concepts of programming languages  design                <a href='CMSC612.qmd'>CMSC 612</a>
+concepts of programming languages  equilibrium concepts  <a href='CMSC612.qmd'>CMSC 612</a>
+concepts of programming languages  universal programs    <a href='CMSC612.qmd'>CMSC 612</a>
+concepts of programming languages  unsolvability         <a href='CMSC612.qmd'>CMSC 612</a>
+security and privacy               security              <a href='CMSC612.qmd'>CMSC 612</a>
+
 
 ## Syllabus Statements
 

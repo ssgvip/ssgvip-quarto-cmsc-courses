@@ -19,9 +19,31 @@ Enrollment is restricted to graduate students in computer science or related dis
 
 The course focuses on recent advancements in 3D robotic vision. It covers basic concepts and computational models of 3D sensing, robotic mapping, visual odometry, simultaneous localization and mapping, as well as 3D point data processing for robotic navigation. Students will acquire in-depth knowledge in robotic vision by completing a course project.
 
+## Past Syllabii
+
+(none since Spring 2021)
+
 ## Topics
 
 3d robotic vision, localization, mapping, robotic mapping, robotic navigation, visual odometry
+
+## ABET Coverage
+
+techniques, skills, and tools, computer science theory, general purpose programming language, concepts of programming languages
+
+## Coverage and Topics Map
+
+Note that topics without associated ABET category assignments are excluded from this map.  See the [mapping](https://docs.google.com/spreadsheets/d/1qrN3L7eRLsM-aVMHYaLQN-FMYtrTJf0_h6dLKlUdPkk/edit#gid=338318647) for more details.
+
+ABET coverage                         Adjusted Topic      Course
+------------------------------------  ------------------  ----------------------------------
+computer science theory               localization        <a href='CMSC531.qmd'>CMSC 531</a>
+computer science theory               robotic mapping     <a href='CMSC531.qmd'>CMSC 531</a>
+computer science theory               robotic navigation  <a href='CMSC531.qmd'>CMSC 531</a>
+concepts of programming languages     visual odometry     <a href='CMSC531.qmd'>CMSC 531</a>
+general purpose programming language  mapping             <a href='CMSC531.qmd'>CMSC 531</a>
+techniques, skills, and tools         3d robotic vision   <a href='CMSC531.qmd'>CMSC 531</a>
+
 
 ## Syllabus Statements
 

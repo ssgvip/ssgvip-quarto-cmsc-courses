@@ -19,9 +19,35 @@ EGRE 426 or with permission of instructor.
 
 This course will focus on the design and analysis of high performance computer architectures. Topics investigated include pipeline design, superscalar computers, multiprocessors, memory systems, peripherals, interfacing techniques, networks, performance and software issues. Crosslisted as: EGRE 635.
 
+## Past Syllabii
+
+(none since Spring 2021)
+
 ## Topics
 
 architecture, interfaces, memory systems, multiprocessor environments, networks, peripherals, pipeline design, software management, software quality, superscalar computers
+
+## ABET Coverage
+
+computer architecture and organization, concepts of programming languages, information management, operating systems, networking and communication, software development
+
+## Coverage and Topics Map
+
+Note that topics without associated ABET category assignments are excluded from this map.  See the [mapping](https://docs.google.com/spreadsheets/d/1qrN3L7eRLsM-aVMHYaLQN-FMYtrTJf0_h6dLKlUdPkk/edit#gid=338318647) for more details.
+
+ABET coverage                           Adjusted Topic               Course
+--------------------------------------  ---------------------------  ----------------------------------
+computer architecture and organization  architecture                 <a href='CMSC605.qmd'>CMSC 605</a>
+concepts of programming languages       interfaces                   <a href='CMSC605.qmd'>CMSC 605</a>
+concepts of programming languages       peripherals                  <a href='CMSC605.qmd'>CMSC 605</a>
+concepts of programming languages       pipeline design              <a href='CMSC605.qmd'>CMSC 605</a>
+concepts of programming languages       superscalar computers        <a href='CMSC605.qmd'>CMSC 605</a>
+information management                  memory systems               <a href='CMSC605.qmd'>CMSC 605</a>
+networking and communication            networks                     <a href='CMSC605.qmd'>CMSC 605</a>
+operating systems                       multiprocessor environments  <a href='CMSC605.qmd'>CMSC 605</a>
+software development                    software management          <a href='CMSC605.qmd'>CMSC 605</a>
+software development                    software quality             <a href='CMSC605.qmd'>CMSC 605</a>
+
 
 ## Syllabus Statements
 
