@@ -448,6 +448,13 @@ with open(filename, 'w',encoding="utf-8") as file:
 
 ::: {.cell execution_count="9"}
 ``` {.python .cell-code}
+def showRowSyllabiiByTerm( row ):
+  off = syllabii_df[ syllabii_df["idx"]==row["idx"] ];
+  slist = ", ".join( off["urlByTermName"])
+  if slist=="":
+    slist = "(none since Spring 2021)"
+  return slist
+
 filename = "qmds/index.qmd"
 with open(filename, 'w',encoding="utf-8") as file:
   file.write(f"""---
@@ -456,15 +463,16 @@ date: last-modified
 ---
 """ )
 
-  course_df['urlID'] = "[" + course_df["CourseId"].astype(str) + "](" + course_df["Subject"].astype(str) + course_df["Number"].astype(str) + '.html)'
-  course_df['urlTitle'] = "[" + course_df["Title"].astype(str) + "](" + course_df["Subject"].astype(str) + course_df["Number"].astype(str) + '.html)'
+  course_df['urlID'] = "[" + course_df["CourseId"].astype(str) + "](" + course_df["Subject"].astype(str) + course_df["Number"].astype(str) + '.qmd)'
+  course_df['urlTitle'] = "[" + course_df["Title"].astype(str) + "](" + course_df["Subject"].astype(str) + course_df["Number"].astype(str) + '.qmd)'
 
+  course_df = course_df.assign(Offerings=course_df.apply( showRowSyllabiiByTerm,axis=1 ))
 
   cols = ["urlID","urlTitle"]
   file.write(tabulate(
   course_df[ cols ],
   showindex=False,
-  headers=["Course","Title"],
+  headers=["Course","Title","Syllabii"],
   tablefmt="fancy"
     )
   )
