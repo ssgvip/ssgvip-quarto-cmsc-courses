@@ -10,4 +10,4 @@ This repository publishes a web site from the *docs* folder. See: <https://ssgvi
 
 * *precious* folder contains the original PDF syllabi. There are inconsistencies across names, so these files were dropped into appropriate folders in the *docs* directory and then renamed as appropriate. The *snapshop.7z" file in the *precious* folder contains a snapshot of the clean file names. This is handy if we need to rebuild the entire site.
 
-See See the [code page on the web site](https://ssgvip.github.io/ssgvip-quarto-cmsc-courses/scanner.html) for details on how the web site is built, etc.
+See the [code page on the web site](https://ssgvip.github.io/ssgvip-quarto-cmsc-courses/scanner.html) for details on how the web site is built, etc.
