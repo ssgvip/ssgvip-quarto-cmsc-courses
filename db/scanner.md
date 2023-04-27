@@ -1,5 +1,5 @@
 ---
-date: 4/25/23
+date: 4/27/23
 title: Building this web site
 toc-title: Table of contents
 ---
@@ -460,6 +460,8 @@ with open(filename, 'w',encoding="utf-8") as file:
   file.write(f"""---
 title: "CMSC Courses and Titles"
 date: last-modified
+website:
+  search: false
 ---
 """ )
 
@@ -518,6 +520,8 @@ with open(filename, 'w',encoding="utf-8") as file:
   file.write(f"""---
 title: "Catalog of CMSC Courses and Titles"
 date: last-modified
+website:
+  search: false
 format:
   html:
     toc: False
@@ -557,6 +561,8 @@ with open(filename, 'w',encoding="utf-8") as file:
   file.write(f"""---
 title: "CMSC topics and courses"
 date: last-modified
+website:
+  search: false
 ---
 """ )
 
@@ -580,25 +586,164 @@ date: last-modified
 ``` {.python .cell-code}
 from textwrap import wrap
 
+def dumpConcentration( file,tabTitle,concentrationId,programTitle ):
+## new tab block starts here. Write H2 tab name then fill it.
+  file.write(f"""
+\n
+## {tabTitle}
+\n
+The following map represents the ABET coverage for the courses included in the *{programTitle}* program.
+\n
+
+""")
+
+  # build list of unique ABET topics
+  df = pd.DataFrame( {"abet_tag1":pd.Series(coverage_df["abet_tag1"].unique()).sort_values().to_list() })
+  # build list of courses in a specific program
+  filter_list = course_df[course_df[concentrationId] != ""]["idx"].to_list()
+  # map coverage to courses in program
+  df_grouped = coverage_df[ coverage_df["idx"].isin( filter_list )].groupby('abet_tag1')['idx'].unique().apply( expandURL ).reset_index()
+  # merge with list of unique topics in case something is missing
+  df = pd.merge(df,df_grouped,how="left",on="abet_tag1")
+  # write out the table
+  file.write(
+    tabulate(df, tablefmt='fancy', showindex=False, headers=["ABET coverage topic","Course"] )
+  )
+  file.write("""
+\n
+Here is a list of additional courses required for the concentration.
+\n
+
+""")
+
+  cols = ["urlID","urlTitle"]
+  concentration_list = course_df[course_df[concentrationId] == "concentration"]["idx"].to_list()
+  file.write(tabulate(
+  course_df[ course_df["idx"].isin( concentration_list )][ cols ],
+  showindex=False,
+  headers=["Course","Title","Syllabii"],
+  tablefmt="fancy"
+    )
+  )
+  file.write("""
+\n
+and here is a list of courses in the concentration core.
+\n
+""")
+  cols = ["urlID","urlTitle"]
+  core_list = course_df[course_df[concentrationId] == "core"]["idx"].to_list()
+  file.write(tabulate(
+  course_df[ course_df["idx"].isin( core_list )][ cols ],
+  showindex=False,
+  headers=["Course","Title","Syllabii"],
+  tablefmt="fancy"
+    )
+  )
+  file.write("\n\n\n")
+
 
 filename = "qmds/coverage.qmd"
 with open(filename, 'w',encoding="utf-8") as file:
-  file.write(f"""---
+  file.write("""---
 title: "CMSC courses and ABET topic coverage"
 date: last-modified
+website:
+  search: false
 ---
-The mappings listed below represent ABET coverage for undergraduate courses only.
+The mappings listed below associate ABET coverage categoris with specific courses in our curricula. Select
+an appropriate tab.\n\n
 
+\n
+
+::: {.panel-tabset}
+
+## Undergraduate
+
+\n
 """ )
-
-#  course_df['urlID'] = "[" + course_df["CourseId"].astype(str) + "](" + course_df["Subject"].astype(str) + course_df["Number"].astype(str) + '.html)'
-#  course_df['urlTitle'] = "[" + course_df["Title"].astype(str) + "](" + course_df["Subject"].astype(str) + course_df["Number"].astype(str) + '.html)'
-
   df_grouped = coverage_df[ coverage_df["idx"]<"CMSC600" ].groupby('abet_tag1')['idx'].unique().apply( expandURL ).reset_index()
-
   file.write(
     tabulate(df_grouped, tablefmt='fancy', showindex=False, headers=["ABET coverage topic","Course"] )
   )
+
+## new tab block starts here. Write H2 tab name then fill it.
+  file.write(""" 
+\n
+## Graduate
+\n
+""")
+  df_grouped = coverage_df[ coverage_df["idx"]>="CMSC600" ].groupby('abet_tag1')['idx'].unique().apply( expandURL ).reset_index()
+  file.write(
+    tabulate(df_grouped, tablefmt='fancy', showindex=False, headers=["ABET coverage topic","Course"] )
+  )
+
+
+## new tab block starts here. Write H2 tab name then fill it.
+  file.write(""" 
+\n
+## Combined
+\n
+""")
+  df_grouped = coverage_df.groupby('abet_tag1')['idx'].unique().apply( expandURL ).reset_index()
+  file.write(
+    tabulate(df_grouped, tablefmt='fancy', showindex=False, headers=["ABET coverage topic","Course"] )
+  )
+
+
+## new tab block starts here. Write H2 tab name then fill it.
+  file.write(""" 
+\n
+## BSCS
+\n
+The following map represents the coverage of the core courses in the *Bachelors of Science in Computer Science* program.
+\n
+
+""")
+
+  # build list of unique ABET topics
+  df = pd.DataFrame( {"abet_tag1":pd.Series(coverage_df["abet_tag1"].unique()).sort_values().to_list() })
+  # build list of courses in a specific program
+  filter_list = course_df[course_df["bscs"] != ""]["idx"].to_list()
+  # map coverage to courses in program
+  df_grouped = coverage_df[ coverage_df["idx"].isin( filter_list )].groupby('abet_tag1')['idx'].unique().apply( expandURL ).reset_index()
+  # merge with list of unique topics in case something is missing
+  df = pd.merge(df,df_grouped,how="left",on="abet_tag1")
+  # write out the table
+  file.write(
+    tabulate(df, tablefmt='fancy', showindex=False, headers=["ABET coverage topic","Course"] )
+  )
+  file.write("""
+\n
+Here is a list of courses included in the BSCS core  
+\n
+
+""")
+
+  cols = ["urlID","urlTitle"]
+  file.write(tabulate(
+  course_df[ course_df["idx"].isin( filter_list )][ cols ],
+  showindex=False,
+  headers=["Course","Title","Syllabii"],
+  tablefmt="fancy"
+    )
+  )
+
+## new tab
+
+  dumpConcentration( file,"Cyber","bscs-cyber","Bachelors of Science in Computer Science with a concentration in cybersecurity")
+
+  dumpConcentration( file,"Data","bscs-data","Bachlors of Science in Computer Science with a concentration in data science")
+
+  dumpConcentration( file,"Software","bscs-sftengr","Bachlors of Science in Computer Science with a concentration in software engineering")
+
+
+
+## close the panel tabset
+  file.write("""
+\n
+:::
+
+""")
 
   file.close()
 ```
@@ -616,6 +761,8 @@ with open(filename, 'w',encoding="utf-8") as file:
   file.write(f"""---
 title: "Past syllabii"
 date: last-modified
+website:
+  search: false
 ---
 The following table maps our course catalog against a list of existing course syllabii. Note that some
 courses have not been taught for a while! In other cases, some of the courses are freshly

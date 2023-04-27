@@ -1,8 +1,22 @@
 ---
 title: "CMSC courses and ABET topic coverage"
 date: last-modified
+website:
+  search: false
 ---
-The mappings listed below represent ABET coverage for undergraduate courses only.
+The mappings listed below associate ABET coverage categoris with specific courses in our curricula. Select
+an appropriate tab.
+
+
+
+
+
+
+::: {.panel-tabset}
+
+## Undergraduate
+
+
 
 ABET coverage topic                     Course
 --------------------------------------  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -22,4 +36,308 @@ probability                             <a href='CMSC302.qmd'>CMSC 302</a>, <a 
 security and privacy                    <a href='CMSC101.qmd'>CMSC 101</a>, <a href='CMSC330.qmd'>CMSC 330</a>, <a href='CMSC340.qmd'>CMSC 340</a>, <a href='CMSC412.qmd'>CMSC 412</a>, <a href='CMSC413.qmd'>CMSC 413</a>, <a href='CMSC414.qmd'>CMSC 414</a>, <a href='CMSC415.qmd'>CMSC 415</a>, <a href='CMSC420.qmd'>CMSC 420</a>, <a href='CMSC452.qmd'>CMSC 452</a>, <a href='CMSC506.qmd'>CMSC 506</a>, <a href='CMSC512.qmd'>CMSC 512</a>
 software development                    <a href='CMSC101.qmd'>CMSC 101</a>, <a href='CMSC210.qmd'>CMSC 210</a>, <a href='CMSC245.qmd'>CMSC 245</a>, <a href='CMSC246.qmd'>CMSC 246</a>, <a href='CMSC254.qmd'>CMSC 254</a>, <a href='CMSC255.qmd'>CMSC 255</a>, <a href='CMSC320.qmd'>CMSC 320</a>, <a href='CMSC340.qmd'>CMSC 340</a>, <a href='CMSC355.qmd'>CMSC 355</a>, <a href='CMSC414.qmd'>CMSC 414</a>, <a href='CMSC416.qmd'>CMSC 416</a>, <a href='CMSC420.qmd'>CMSC 420</a>, <a href='CMSC425.qmd'>CMSC 425</a>, <a href='CMSC451.qmd'>CMSC 451</a>, <a href='CMSC452.qmd'>CMSC 452</a>, <a href='CMSC455.qmd'>CMSC 455</a>, <a href='CMSC502.qmd'>CMSC 502</a>, <a href='CMSC525.qmd'>CMSC 525</a>
 statistics                              <a href='CMSC101.qmd'>CMSC 101</a>, <a href='CMSC416.qmd'>CMSC 416</a>, <a href='CMSC510.qmd'>CMSC 510</a>, <a href='CMSC516.qmd'>CMSC 516</a>
-techniques, skills, and tools           <a href='CMSC101.qmd'>CMSC 101</a>, <a href='CMSC210.qmd'>CMSC 210</a>, <a href='CMSC254.qmd'>CMSC 254</a>, <a href='CMSC255.qmd'>CMSC 255</a>, <a href='CMSC257.qmd'>CMSC 257</a>, <a href='CMSC302.qmd'>CMSC 302</a>, <a href='CMSC303.qmd'>CMSC 303</a>, <a href='CMSC311.qmd'>CMSC 311</a>, <a href='CMSC320.qmd'>CMSC 320</a>, <a href='CMSC340.qmd'>CMSC 340</a>, <a href='CMSC355.qmd'>CMSC 355</a>, <a href='CMSC401.qmd'>CMSC 401</a>, <a href='CMSC403.qmd'>CMSC 403</a>, <a href='CMSC409.qmd'>CMSC 409</a>, <a href='CMSC412.qmd'>CMSC 412</a>, <a href='CMSC416.qmd'>CMSC 416</a>, <a href='CMSC420.qmd'>CMSC 420</a>, <a href='CMSC425.qmd'>CMSC 425</a>, <a href='CMSC428.qmd'>CMSC 428</a>, <a href='CMSC440.qmd'>CMSC 440</a>, <a href='CMSC441.qmd'>CMSC 441</a>, <a href='CMSC442.qmd'>CMSC 442</a>, <a href='CMSC451.qmd'>CMSC 451</a>, <a href='CMSC516.qmd'>CMSC 516</a>, <a href='CMSC525.qmd'>CMSC 525</a>, <a href='CMSC526.qmd'>CMSC 526</a>, <a href='CMSC531.qmd'>CMSC 531</a>, <a href='CMSC591.qmd'>CMSC 591</a>
+techniques, skills, and tools           <a href='CMSC101.qmd'>CMSC 101</a>, <a href='CMSC210.qmd'>CMSC 210</a>, <a href='CMSC254.qmd'>CMSC 254</a>, <a href='CMSC255.qmd'>CMSC 255</a>, <a href='CMSC257.qmd'>CMSC 257</a>, <a href='CMSC302.qmd'>CMSC 302</a>, <a href='CMSC303.qmd'>CMSC 303</a>, <a href='CMSC311.qmd'>CMSC 311</a>, <a href='CMSC320.qmd'>CMSC 320</a>, <a href='CMSC340.qmd'>CMSC 340</a>, <a href='CMSC355.qmd'>CMSC 355</a>, <a href='CMSC401.qmd'>CMSC 401</a>, <a href='CMSC403.qmd'>CMSC 403</a>, <a href='CMSC409.qmd'>CMSC 409</a>, <a href='CMSC412.qmd'>CMSC 412</a>, <a href='CMSC416.qmd'>CMSC 416</a>, <a href='CMSC420.qmd'>CMSC 420</a>, <a href='CMSC425.qmd'>CMSC 425</a>, <a href='CMSC428.qmd'>CMSC 428</a>, <a href='CMSC440.qmd'>CMSC 440</a>, <a href='CMSC441.qmd'>CMSC 441</a>, <a href='CMSC442.qmd'>CMSC 442</a>, <a href='CMSC451.qmd'>CMSC 451</a>, <a href='CMSC516.qmd'>CMSC 516</a>, <a href='CMSC525.qmd'>CMSC 525</a>, <a href='CMSC526.qmd'>CMSC 526</a>, <a href='CMSC531.qmd'>CMSC 531</a>, <a href='CMSC591.qmd'>CMSC 591</a> 
+
+
+## Graduate
+
+
+ABET coverage topic                     Course
+--------------------------------------  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+algorithms and complexity               <a href='CMSC603.qmd'>CMSC 603</a>, <a href='CMSC610.qmd'>CMSC 610</a>, <a href='CMSC612.qmd'>CMSC 612</a>, <a href='CMSC615.qmd'>CMSC 615</a>, <a href='CMSC620.qmd'>CMSC 620</a>, <a href='CMSC625.qmd'>CMSC 625</a>, <a href='CMSC628.qmd'>CMSC 628</a>, <a href='CMSC630.qmd'>CMSC 630</a>, <a href='CMSC635.qmd'>CMSC 635</a>, <a href='CMSC636.qmd'>CMSC 636</a>
+computer architecture and organization  <a href='CMSC602.qmd'>CMSC 602</a>, <a href='CMSC603.qmd'>CMSC 603</a>, <a href='CMSC605.qmd'>CMSC 605</a>, <a href='CMSC615.qmd'>CMSC 615</a>, <a href='CMSC635.qmd'>CMSC 635</a>, <a href='CMSC636.qmd'>CMSC 636</a>
+computer science theory                 <a href='CMSC601.qmd'>CMSC 601</a>, <a href='CMSC612.qmd'>CMSC 612</a>, <a href='CMSC615.qmd'>CMSC 615</a>, <a href='CMSC630.qmd'>CMSC 630</a>, <a href='CMSC635.qmd'>CMSC 635</a>, <a href='CMSC636.qmd'>CMSC 636</a>, <a href='CMSC678.qmd'>CMSC 678</a>
+computing-based systems                 <a href='CMSC623.qmd'>CMSC 623</a>
+concepts of programming languages       <a href='CMSC601.qmd'>CMSC 601</a>, <a href='CMSC603.qmd'>CMSC 603</a>, <a href='CMSC605.qmd'>CMSC 605</a>, <a href='CMSC611.qmd'>CMSC 611</a>, <a href='CMSC612.qmd'>CMSC 612</a>, <a href='CMSC615.qmd'>CMSC 615</a>, <a href='CMSC619.qmd'>CMSC 619</a>, <a href='CMSC622.qmd'>CMSC 622</a>, <a href='CMSC623.qmd'>CMSC 623</a>, <a href='CMSC624.qmd'>CMSC 624</a>, <a href='CMSC625.qmd'>CMSC 625</a>, <a href='CMSC628.qmd'>CMSC 628</a>, <a href='CMSC630.qmd'>CMSC 630</a>, <a href='CMSC635.qmd'>CMSC 635</a>, <a href='CMSC636.qmd'>CMSC 636</a>, <a href='CMSC654.qmd'>CMSC 654</a>, <a href='CMSC678.qmd'>CMSC 678</a>, <a href='CMSC692.qmd'>CMSC 692</a>, <a href='CMSC697.qmd'>CMSC 697</a>, <a href='CMSC701.qmd'>CMSC 701</a>, <a href='CMSC702.qmd'>CMSC 702</a>
+discrete mathematics                    <a href='CMSC601.qmd'>CMSC 601</a>, <a href='CMSC608.qmd'>CMSC 608</a>, <a href='CMSC619.qmd'>CMSC 619</a>, <a href='CMSC636.qmd'>CMSC 636</a>
+general purpose programming language    <a href='CMSC608.qmd'>CMSC 608</a>, <a href='CMSC615.qmd'>CMSC 615</a>, <a href='CMSC628.qmd'>CMSC 628</a>, <a href='CMSC630.qmd'>CMSC 630</a>, <a href='CMSC635.qmd'>CMSC 635</a>, <a href='CMSC654.qmd'>CMSC 654</a>
+information management                  <a href='CMSC605.qmd'>CMSC 605</a>, <a href='CMSC610.qmd'>CMSC 610</a>, <a href='CMSC611.qmd'>CMSC 611</a>, <a href='CMSC618.qmd'>CMSC 618</a>, <a href='CMSC628.qmd'>CMSC 628</a>, <a href='CMSC635.qmd'>CMSC 635</a>, <a href='CMSC654.qmd'>CMSC 654</a>
+local and global impacts                <a href='CMSC615.qmd'>CMSC 615</a>, <a href='CMSC625.qmd'>CMSC 625</a>, <a href='CMSC635.qmd'>CMSC 635</a>
+networking and communication            <a href='CMSC605.qmd'>CMSC 605</a>, <a href='CMSC610.qmd'>CMSC 610</a>, <a href='CMSC615.qmd'>CMSC 615</a>, <a href='CMSC622.qmd'>CMSC 622</a>, <a href='CMSC628.qmd'>CMSC 628</a>, <a href='CMSC635.qmd'>CMSC 635</a>, <a href='CMSC654.qmd'>CMSC 654</a>
+operating systems                       <a href='CMSC602.qmd'>CMSC 602</a>, <a href='CMSC605.qmd'>CMSC 605</a>, <a href='CMSC630.qmd'>CMSC 630</a>, <a href='CMSC654.qmd'>CMSC 654</a>
+parallel and distributed computing      <a href='CMSC603.qmd'>CMSC 603</a>, <a href='CMSC610.qmd'>CMSC 610</a>, <a href='CMSC615.qmd'>CMSC 615</a>
+probability                             <a href='CMSC636.qmd'>CMSC 636</a>
+security and privacy                    <a href='CMSC602.qmd'>CMSC 602</a>, <a href='CMSC612.qmd'>CMSC 612</a>, <a href='CMSC615.qmd'>CMSC 615</a>, <a href='CMSC618.qmd'>CMSC 618</a>, <a href='CMSC620.qmd'>CMSC 620</a>, <a href='CMSC622.qmd'>CMSC 622</a>, <a href='CMSC623.qmd'>CMSC 623</a>, <a href='CMSC635.qmd'>CMSC 635</a>, <a href='CMSC654.qmd'>CMSC 654</a>
+software development                    <a href='CMSC602.qmd'>CMSC 602</a>, <a href='CMSC605.qmd'>CMSC 605</a>, <a href='CMSC624.qmd'>CMSC 624</a>, <a href='CMSC625.qmd'>CMSC 625</a>, <a href='CMSC636.qmd'>CMSC 636</a>
+statistics                              <a href='CMSC636.qmd'>CMSC 636</a>, <a href='CMSC678.qmd'>CMSC 678</a>
+techniques, skills, and tools           <a href='CMSC602.qmd'>CMSC 602</a>, <a href='CMSC603.qmd'>CMSC 603</a>, <a href='CMSC608.qmd'>CMSC 608</a>, <a href='CMSC610.qmd'>CMSC 610</a>, <a href='CMSC628.qmd'>CMSC 628</a>, <a href='CMSC636.qmd'>CMSC 636</a>, <a href='CMSC701.qmd'>CMSC 701</a> 
+
+
+## Combined
+
+
+ABET coverage topic                     Course
+--------------------------------------  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+algorithms and complexity               <a href='CMSC245.qmd'>CMSC 245</a>, <a href='CMSC246.qmd'>CMSC 246</a>, <a href='CMSC254.qmd'>CMSC 254</a>, <a href='CMSC255.qmd'>CMSC 255</a>, <a href='CMSC256.qmd'>CMSC 256</a>, <a href='CMSC257.qmd'>CMSC 257</a>, <a href='CMSC303.qmd'>CMSC 303</a>, <a href='CMSC330.qmd'>CMSC 330</a>, <a href='CMSC401.qmd'>CMSC 401</a>, <a href='CMSC403.qmd'>CMSC 403</a>, <a href='CMSC404.qmd'>CMSC 404</a>, <a href='CMSC410.qmd'>CMSC 410</a>, <a href='CMSC412.qmd'>CMSC 412</a>, <a href='CMSC425.qmd'>CMSC 425</a>, <a href='CMSC435.qmd'>CMSC 435</a>, <a href='CMSC501.qmd'>CMSC 501</a>, <a href='CMSC506.qmd'>CMSC 506</a>, <a href='CMSC510.qmd'>CMSC 510</a>, <a href='CMSC512.qmd'>CMSC 512</a>, <a href='CMSC516.qmd'>CMSC 516</a>, <a href='CMSC525.qmd'>CMSC 525</a>, <a href='CMSC591.qmd'>CMSC 591</a>, <a href='CMSC603.qmd'>CMSC 603</a>, <a href='CMSC610.qmd'>CMSC 610</a>, <a href='CMSC612.qmd'>CMSC 612</a>, <a href='CMSC615.qmd'>CMSC 615</a>, <a href='CMSC620.qmd'>CMSC 620</a>, <a href='CMSC625.qmd'>CMSC 625</a>, <a href='CMSC628.qmd'>CMSC 628</a>, <a href='CMSC630.qmd'>CMSC 630</a>, <a href='CMSC635.qmd'>CMSC 635</a>, <a href='CMSC636.qmd'>CMSC 636</a>
+computer architecture and organization  <a href='CMSC101.qmd'>CMSC 101</a>, <a href='CMSC254.qmd'>CMSC 254</a>, <a href='CMSC256.qmd'>CMSC 256</a>, <a href='CMSC257.qmd'>CMSC 257</a>, <a href='CMSC311.qmd'>CMSC 311</a>, <a href='CMSC355.qmd'>CMSC 355</a>, <a href='CMSC414.qmd'>CMSC 414</a>, <a href='CMSC440.qmd'>CMSC 440</a>, <a href='CMSC525.qmd'>CMSC 525</a>, <a href='CMSC602.qmd'>CMSC 602</a>, <a href='CMSC603.qmd'>CMSC 603</a>, <a href='CMSC605.qmd'>CMSC 605</a>, <a href='CMSC615.qmd'>CMSC 615</a>, <a href='CMSC635.qmd'>CMSC 635</a>, <a href='CMSC636.qmd'>CMSC 636</a>
+computer science theory                 <a href='CMSC101.qmd'>CMSC 101</a>, <a href='CMSC245.qmd'>CMSC 245</a>, <a href='CMSC254.qmd'>CMSC 254</a>, <a href='CMSC255.qmd'>CMSC 255</a>, <a href='CMSC256.qmd'>CMSC 256</a>, <a href='CMSC302.qmd'>CMSC 302</a>, <a href='CMSC303.qmd'>CMSC 303</a>, <a href='CMSC401.qmd'>CMSC 401</a>, <a href='CMSC404.qmd'>CMSC 404</a>, <a href='CMSC410.qmd'>CMSC 410</a>, <a href='CMSC412.qmd'>CMSC 412</a>, <a href='CMSC425.qmd'>CMSC 425</a>, <a href='CMSC525.qmd'>CMSC 525</a>, <a href='CMSC531.qmd'>CMSC 531</a>, <a href='CMSC591.qmd'>CMSC 591</a>, <a href='CMSC601.qmd'>CMSC 601</a>, <a href='CMSC612.qmd'>CMSC 612</a>, <a href='CMSC615.qmd'>CMSC 615</a>, <a href='CMSC630.qmd'>CMSC 630</a>, <a href='CMSC635.qmd'>CMSC 635</a>, <a href='CMSC636.qmd'>CMSC 636</a>, <a href='CMSC678.qmd'>CMSC 678</a>
+computing-based systems                 <a href='CMSC101.qmd'>CMSC 101</a>, <a href='CMSC256.qmd'>CMSC 256</a>, <a href='CMSC311.qmd'>CMSC 311</a>, <a href='CMSC330.qmd'>CMSC 330</a>, <a href='CMSC623.qmd'>CMSC 623</a>
+concepts of programming languages       <a href='CMSC144.qmd'>CMSC 144</a>, <a href='CMSC210.qmd'>CMSC 210</a>, <a href='CMSC245.qmd'>CMSC 245</a>, <a href='CMSC246.qmd'>CMSC 246</a>, <a href='CMSC254.qmd'>CMSC 254</a>, <a href='CMSC255.qmd'>CMSC 255</a>, <a href='CMSC256.qmd'>CMSC 256</a>, <a href='CMSC257.qmd'>CMSC 257</a>, <a href='CMSC302.qmd'>CMSC 302</a>, <a href='CMSC303.qmd'>CMSC 303</a>, <a href='CMSC311.qmd'>CMSC 311</a>, <a href='CMSC312.qmd'>CMSC 312</a>, <a href='CMSC320.qmd'>CMSC 320</a>, <a href='CMSC340.qmd'>CMSC 340</a>, <a href='CMSC355.qmd'>CMSC 355</a>, <a href='CMSC401.qmd'>CMSC 401</a>, <a href='CMSC403.qmd'>CMSC 403</a>, <a href='CMSC404.qmd'>CMSC 404</a>, <a href='CMSC409.qmd'>CMSC 409</a>, <a href='CMSC410.qmd'>CMSC 410</a>, <a href='CMSC412.qmd'>CMSC 412</a>, <a href='CMSC416.qmd'>CMSC 416</a>, <a href='CMSC425.qmd'>CMSC 425</a>, <a href='CMSC428.qmd'>CMSC 428</a>, <a href='CMSC440.qmd'>CMSC 440</a>, <a href='CMSC452.qmd'>CMSC 452</a>, <a href='CMSC455.qmd'>CMSC 455</a>, <a href='CMSC475.qmd'>CMSC 475</a>, <a href='CMSC492.qmd'>CMSC 492</a>, <a href='CMSC501.qmd'>CMSC 501</a>, <a href='CMSC502.qmd'>CMSC 502</a>, <a href='CMSC508.qmd'>CMSC 508</a>, <a href='CMSC510.qmd'>CMSC 510</a>, <a href='CMSC516.qmd'>CMSC 516</a>, <a href='CMSC525.qmd'>CMSC 525</a>, <a href='CMSC526.qmd'>CMSC 526</a>, <a href='CMSC531.qmd'>CMSC 531</a>, <a href='CMSC591.qmd'>CMSC 591</a>, <a href='CMSC601.qmd'>CMSC 601</a>, <a href='CMSC603.qmd'>CMSC 603</a>, <a href='CMSC605.qmd'>CMSC 605</a>, <a href='CMSC611.qmd'>CMSC 611</a>, <a href='CMSC612.qmd'>CMSC 612</a>, <a href='CMSC615.qmd'>CMSC 615</a>, <a href='CMSC619.qmd'>CMSC 619</a>, <a href='CMSC622.qmd'>CMSC 622</a>, <a href='CMSC623.qmd'>CMSC 623</a>, <a href='CMSC624.qmd'>CMSC 624</a>, <a href='CMSC625.qmd'>CMSC 625</a>, <a href='CMSC628.qmd'>CMSC 628</a>, <a href='CMSC630.qmd'>CMSC 630</a>, <a href='CMSC635.qmd'>CMSC 635</a>, <a href='CMSC636.qmd'>CMSC 636</a>, <a href='CMSC654.qmd'>CMSC 654</a>, <a href='CMSC678.qmd'>CMSC 678</a>, <a href='CMSC692.qmd'>CMSC 692</a>, <a href='CMSC697.qmd'>CMSC 697</a>, <a href='CMSC701.qmd'>CMSC 701</a>, <a href='CMSC702.qmd'>CMSC 702</a>
+discrete mathematics                    <a href='CMSC302.qmd'>CMSC 302</a>, <a href='CMSC303.qmd'>CMSC 303</a>, <a href='CMSC411.qmd'>CMSC 411</a>, <a href='CMSC501.qmd'>CMSC 501</a>, <a href='CMSC508.qmd'>CMSC 508</a>, <a href='CMSC510.qmd'>CMSC 510</a>, <a href='CMSC591.qmd'>CMSC 591</a>, <a href='CMSC601.qmd'>CMSC 601</a>, <a href='CMSC608.qmd'>CMSC 608</a>, <a href='CMSC619.qmd'>CMSC 619</a>, <a href='CMSC636.qmd'>CMSC 636</a>
+general purpose programming language    <a href='CMSC254.qmd'>CMSC 254</a>, <a href='CMSC255.qmd'>CMSC 255</a>, <a href='CMSC256.qmd'>CMSC 256</a>, <a href='CMSC257.qmd'>CMSC 257</a>, <a href='CMSC303.qmd'>CMSC 303</a>, <a href='CMSC311.qmd'>CMSC 311</a>, <a href='CMSC312.qmd'>CMSC 312</a>, <a href='CMSC401.qmd'>CMSC 401</a>, <a href='CMSC403.qmd'>CMSC 403</a>, <a href='CMSC404.qmd'>CMSC 404</a>, <a href='CMSC409.qmd'>CMSC 409</a>, <a href='CMSC416.qmd'>CMSC 416</a>, <a href='CMSC425.qmd'>CMSC 425</a>, <a href='CMSC441.qmd'>CMSC 441</a>, <a href='CMSC452.qmd'>CMSC 452</a>, <a href='CMSC508.qmd'>CMSC 508</a>, <a href='CMSC510.qmd'>CMSC 510</a>, <a href='CMSC516.qmd'>CMSC 516</a>, <a href='CMSC525.qmd'>CMSC 525</a>, <a href='CMSC526.qmd'>CMSC 526</a>, <a href='CMSC531.qmd'>CMSC 531</a>, <a href='CMSC591.qmd'>CMSC 591</a>, <a href='CMSC608.qmd'>CMSC 608</a>, <a href='CMSC615.qmd'>CMSC 615</a>, <a href='CMSC628.qmd'>CMSC 628</a>, <a href='CMSC630.qmd'>CMSC 630</a>, <a href='CMSC635.qmd'>CMSC 635</a>, <a href='CMSC654.qmd'>CMSC 654</a>
+information management                  <a href='CMSC246.qmd'>CMSC 246</a>, <a href='CMSC254.qmd'>CMSC 254</a>, <a href='CMSC257.qmd'>CMSC 257</a>, <a href='CMSC311.qmd'>CMSC 311</a>, <a href='CMSC312.qmd'>CMSC 312</a>, <a href='CMSC330.qmd'>CMSC 330</a>, <a href='CMSC340.qmd'>CMSC 340</a>, <a href='CMSC355.qmd'>CMSC 355</a>, <a href='CMSC401.qmd'>CMSC 401</a>, <a href='CMSC403.qmd'>CMSC 403</a>, <a href='CMSC411.qmd'>CMSC 411</a>, <a href='CMSC412.qmd'>CMSC 412</a>, <a href='CMSC425.qmd'>CMSC 425</a>, <a href='CMSC435.qmd'>CMSC 435</a>, <a href='CMSC440.qmd'>CMSC 440</a>, <a href='CMSC501.qmd'>CMSC 501</a>, <a href='CMSC508.qmd'>CMSC 508</a>, <a href='CMSC605.qmd'>CMSC 605</a>, <a href='CMSC610.qmd'>CMSC 610</a>, <a href='CMSC611.qmd'>CMSC 611</a>, <a href='CMSC618.qmd'>CMSC 618</a>, <a href='CMSC628.qmd'>CMSC 628</a>, <a href='CMSC635.qmd'>CMSC 635</a>, <a href='CMSC654.qmd'>CMSC 654</a>
+local and global impacts                <a href='CMSC101.qmd'>CMSC 101</a>, <a href='CMSC235.qmd'>CMSC 235</a>, <a href='CMSC340.qmd'>CMSC 340</a>, <a href='CMSC416.qmd'>CMSC 416</a>, <a href='CMSC451.qmd'>CMSC 451</a>, <a href='CMSC452.qmd'>CMSC 452</a>, <a href='CMSC615.qmd'>CMSC 615</a>, <a href='CMSC625.qmd'>CMSC 625</a>, <a href='CMSC635.qmd'>CMSC 635</a>
+networking and communication            <a href='CMSC101.qmd'>CMSC 101</a>, <a href='CMSC210.qmd'>CMSC 210</a>, <a href='CMSC312.qmd'>CMSC 312</a>, <a href='CMSC411.qmd'>CMSC 411</a>, <a href='CMSC412.qmd'>CMSC 412</a>, <a href='CMSC414.qmd'>CMSC 414</a>, <a href='CMSC416.qmd'>CMSC 416</a>, <a href='CMSC440.qmd'>CMSC 440</a>, <a href='CMSC441.qmd'>CMSC 441</a>, <a href='CMSC502.qmd'>CMSC 502</a>, <a href='CMSC506.qmd'>CMSC 506</a>, <a href='CMSC512.qmd'>CMSC 512</a>, <a href='CMSC591.qmd'>CMSC 591</a>, <a href='CMSC605.qmd'>CMSC 605</a>, <a href='CMSC610.qmd'>CMSC 610</a>, <a href='CMSC615.qmd'>CMSC 615</a>, <a href='CMSC622.qmd'>CMSC 622</a>, <a href='CMSC628.qmd'>CMSC 628</a>, <a href='CMSC635.qmd'>CMSC 635</a>, <a href='CMSC654.qmd'>CMSC 654</a>
+operating systems                       <a href='CMSC255.qmd'>CMSC 255</a>, <a href='CMSC303.qmd'>CMSC 303</a>, <a href='CMSC311.qmd'>CMSC 311</a>, <a href='CMSC312.qmd'>CMSC 312</a>, <a href='CMSC404.qmd'>CMSC 404</a>, <a href='CMSC425.qmd'>CMSC 425</a>, <a href='CMSC428.qmd'>CMSC 428</a>, <a href='CMSC602.qmd'>CMSC 602</a>, <a href='CMSC605.qmd'>CMSC 605</a>, <a href='CMSC630.qmd'>CMSC 630</a>, <a href='CMSC654.qmd'>CMSC 654</a>
+parallel and distributed computing      <a href='CMSC312.qmd'>CMSC 312</a>, <a href='CMSC502.qmd'>CMSC 502</a>, <a href='CMSC603.qmd'>CMSC 603</a>, <a href='CMSC610.qmd'>CMSC 610</a>, <a href='CMSC615.qmd'>CMSC 615</a>
+probability                             <a href='CMSC302.qmd'>CMSC 302</a>, <a href='CMSC410.qmd'>CMSC 410</a>, <a href='CMSC416.qmd'>CMSC 416</a>, <a href='CMSC510.qmd'>CMSC 510</a>, <a href='CMSC516.qmd'>CMSC 516</a>, <a href='CMSC636.qmd'>CMSC 636</a>
+security and privacy                    <a href='CMSC101.qmd'>CMSC 101</a>, <a href='CMSC330.qmd'>CMSC 330</a>, <a href='CMSC340.qmd'>CMSC 340</a>, <a href='CMSC412.qmd'>CMSC 412</a>, <a href='CMSC413.qmd'>CMSC 413</a>, <a href='CMSC414.qmd'>CMSC 414</a>, <a href='CMSC415.qmd'>CMSC 415</a>, <a href='CMSC420.qmd'>CMSC 420</a>, <a href='CMSC452.qmd'>CMSC 452</a>, <a href='CMSC506.qmd'>CMSC 506</a>, <a href='CMSC512.qmd'>CMSC 512</a>, <a href='CMSC602.qmd'>CMSC 602</a>, <a href='CMSC612.qmd'>CMSC 612</a>, <a href='CMSC615.qmd'>CMSC 615</a>, <a href='CMSC618.qmd'>CMSC 618</a>, <a href='CMSC620.qmd'>CMSC 620</a>, <a href='CMSC622.qmd'>CMSC 622</a>, <a href='CMSC623.qmd'>CMSC 623</a>, <a href='CMSC635.qmd'>CMSC 635</a>, <a href='CMSC654.qmd'>CMSC 654</a>
+software development                    <a href='CMSC101.qmd'>CMSC 101</a>, <a href='CMSC210.qmd'>CMSC 210</a>, <a href='CMSC245.qmd'>CMSC 245</a>, <a href='CMSC246.qmd'>CMSC 246</a>, <a href='CMSC254.qmd'>CMSC 254</a>, <a href='CMSC255.qmd'>CMSC 255</a>, <a href='CMSC320.qmd'>CMSC 320</a>, <a href='CMSC340.qmd'>CMSC 340</a>, <a href='CMSC355.qmd'>CMSC 355</a>, <a href='CMSC414.qmd'>CMSC 414</a>, <a href='CMSC416.qmd'>CMSC 416</a>, <a href='CMSC420.qmd'>CMSC 420</a>, <a href='CMSC425.qmd'>CMSC 425</a>, <a href='CMSC451.qmd'>CMSC 451</a>, <a href='CMSC452.qmd'>CMSC 452</a>, <a href='CMSC455.qmd'>CMSC 455</a>, <a href='CMSC502.qmd'>CMSC 502</a>, <a href='CMSC525.qmd'>CMSC 525</a>, <a href='CMSC602.qmd'>CMSC 602</a>, <a href='CMSC605.qmd'>CMSC 605</a>, <a href='CMSC624.qmd'>CMSC 624</a>, <a href='CMSC625.qmd'>CMSC 625</a>, <a href='CMSC636.qmd'>CMSC 636</a>
+statistics                              <a href='CMSC101.qmd'>CMSC 101</a>, <a href='CMSC416.qmd'>CMSC 416</a>, <a href='CMSC510.qmd'>CMSC 510</a>, <a href='CMSC516.qmd'>CMSC 516</a>, <a href='CMSC636.qmd'>CMSC 636</a>, <a href='CMSC678.qmd'>CMSC 678</a>
+techniques, skills, and tools           <a href='CMSC101.qmd'>CMSC 101</a>, <a href='CMSC210.qmd'>CMSC 210</a>, <a href='CMSC254.qmd'>CMSC 254</a>, <a href='CMSC255.qmd'>CMSC 255</a>, <a href='CMSC257.qmd'>CMSC 257</a>, <a href='CMSC302.qmd'>CMSC 302</a>, <a href='CMSC303.qmd'>CMSC 303</a>, <a href='CMSC311.qmd'>CMSC 311</a>, <a href='CMSC320.qmd'>CMSC 320</a>, <a href='CMSC340.qmd'>CMSC 340</a>, <a href='CMSC355.qmd'>CMSC 355</a>, <a href='CMSC401.qmd'>CMSC 401</a>, <a href='CMSC403.qmd'>CMSC 403</a>, <a href='CMSC409.qmd'>CMSC 409</a>, <a href='CMSC412.qmd'>CMSC 412</a>, <a href='CMSC416.qmd'>CMSC 416</a>, <a href='CMSC420.qmd'>CMSC 420</a>, <a href='CMSC425.qmd'>CMSC 425</a>, <a href='CMSC428.qmd'>CMSC 428</a>, <a href='CMSC440.qmd'>CMSC 440</a>, <a href='CMSC441.qmd'>CMSC 441</a>, <a href='CMSC442.qmd'>CMSC 442</a>, <a href='CMSC451.qmd'>CMSC 451</a>, <a href='CMSC516.qmd'>CMSC 516</a>, <a href='CMSC525.qmd'>CMSC 525</a>, <a href='CMSC526.qmd'>CMSC 526</a>, <a href='CMSC531.qmd'>CMSC 531</a>, <a href='CMSC591.qmd'>CMSC 591</a>, <a href='CMSC602.qmd'>CMSC 602</a>, <a href='CMSC603.qmd'>CMSC 603</a>, <a href='CMSC608.qmd'>CMSC 608</a>, <a href='CMSC610.qmd'>CMSC 610</a>, <a href='CMSC628.qmd'>CMSC 628</a>, <a href='CMSC636.qmd'>CMSC 636</a>, <a href='CMSC701.qmd'>CMSC 701</a> 
+
+
+## BSCS
+
+
+The following map represents the coverage of the core courses in the *Bachelors of Science in Computer Science* program.
+
+
+
+ABET coverage topic                     Course
+--------------------------------------  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+algorithms and complexity               <a href='CMSC255.qmd'>CMSC 255</a>, <a href='CMSC256.qmd'>CMSC 256</a>, <a href='CMSC257.qmd'>CMSC 257</a>, <a href='CMSC303.qmd'>CMSC 303</a>, <a href='CMSC401.qmd'>CMSC 401</a>, <a href='CMSC403.qmd'>CMSC 403</a>
+computer architecture and organization  <a href='CMSC256.qmd'>CMSC 256</a>, <a href='CMSC257.qmd'>CMSC 257</a>, <a href='CMSC311.qmd'>CMSC 311</a>, <a href='CMSC355.qmd'>CMSC 355</a>, <a href='CMSC440.qmd'>CMSC 440</a>
+computer science theory                 <a href='CMSC255.qmd'>CMSC 255</a>, <a href='CMSC256.qmd'>CMSC 256</a>, <a href='CMSC302.qmd'>CMSC 302</a>, <a href='CMSC303.qmd'>CMSC 303</a>, <a href='CMSC401.qmd'>CMSC 401</a>
+computing-based systems                 <a href='CMSC256.qmd'>CMSC 256</a>, <a href='CMSC311.qmd'>CMSC 311</a>
+concepts of programming languages       <a href='CMSC255.qmd'>CMSC 255</a>, <a href='CMSC256.qmd'>CMSC 256</a>, <a href='CMSC257.qmd'>CMSC 257</a>, <a href='CMSC302.qmd'>CMSC 302</a>, <a href='CMSC303.qmd'>CMSC 303</a>, <a href='CMSC311.qmd'>CMSC 311</a>, <a href='CMSC312.qmd'>CMSC 312</a>, <a href='CMSC355.qmd'>CMSC 355</a>, <a href='CMSC401.qmd'>CMSC 401</a>, <a href='CMSC403.qmd'>CMSC 403</a>, <a href='CMSC440.qmd'>CMSC 440</a>, <a href='CMSC452.qmd'>CMSC 452</a>, <a href='CMSC508.qmd'>CMSC 508</a>
+discrete mathematics                    <a href='CMSC302.qmd'>CMSC 302</a>, <a href='CMSC303.qmd'>CMSC 303</a>, <a href='CMSC508.qmd'>CMSC 508</a>
+general purpose programming language    <a href='CMSC255.qmd'>CMSC 255</a>, <a href='CMSC256.qmd'>CMSC 256</a>, <a href='CMSC257.qmd'>CMSC 257</a>, <a href='CMSC303.qmd'>CMSC 303</a>, <a href='CMSC311.qmd'>CMSC 311</a>, <a href='CMSC312.qmd'>CMSC 312</a>, <a href='CMSC401.qmd'>CMSC 401</a>, <a href='CMSC403.qmd'>CMSC 403</a>, <a href='CMSC441.qmd'>CMSC 441</a>, <a href='CMSC452.qmd'>CMSC 452</a>, <a href='CMSC508.qmd'>CMSC 508</a>
+information management                  <a href='CMSC257.qmd'>CMSC 257</a>, <a href='CMSC311.qmd'>CMSC 311</a>, <a href='CMSC312.qmd'>CMSC 312</a>, <a href='CMSC355.qmd'>CMSC 355</a>, <a href='CMSC401.qmd'>CMSC 401</a>, <a href='CMSC403.qmd'>CMSC 403</a>, <a href='CMSC440.qmd'>CMSC 440</a>, <a href='CMSC508.qmd'>CMSC 508</a>
+local and global impacts                <a href='CMSC235.qmd'>CMSC 235</a>, <a href='CMSC451.qmd'>CMSC 451</a>, <a href='CMSC452.qmd'>CMSC 452</a>
+networking and communication            <a href='CMSC312.qmd'>CMSC 312</a>, <a href='CMSC440.qmd'>CMSC 440</a>, <a href='CMSC441.qmd'>CMSC 441</a>
+operating systems                       <a href='CMSC255.qmd'>CMSC 255</a>, <a href='CMSC303.qmd'>CMSC 303</a>, <a href='CMSC311.qmd'>CMSC 311</a>, <a href='CMSC312.qmd'>CMSC 312</a>
+parallel and distributed computing      <a href='CMSC312.qmd'>CMSC 312</a>
+probability                             <a href='CMSC302.qmd'>CMSC 302</a>
+security and privacy                    <a href='CMSC452.qmd'>CMSC 452</a>
+software development                    <a href='CMSC255.qmd'>CMSC 255</a>, <a href='CMSC355.qmd'>CMSC 355</a>, <a href='CMSC451.qmd'>CMSC 451</a>, <a href='CMSC452.qmd'>CMSC 452</a>
+statistics                              nan
+techniques, skills, and tools           <a href='CMSC255.qmd'>CMSC 255</a>, <a href='CMSC257.qmd'>CMSC 257</a>, <a href='CMSC302.qmd'>CMSC 302</a>, <a href='CMSC303.qmd'>CMSC 303</a>, <a href='CMSC311.qmd'>CMSC 311</a>, <a href='CMSC355.qmd'>CMSC 355</a>, <a href='CMSC401.qmd'>CMSC 401</a>, <a href='CMSC403.qmd'>CMSC 403</a>, <a href='CMSC440.qmd'>CMSC 440</a>, <a href='CMSC441.qmd'>CMSC 441</a>, <a href='CMSC442.qmd'>CMSC 442</a>, <a href='CMSC451.qmd'>CMSC 451</a>
+
+
+Here is a list of courses included in the BSCS core  
+
+
+
+Course                   Title
+-----------------------  ----------------------------------------------------------------
+[CMSC 235](CMSC235.qmd)  [Computing and Data Ethics](CMSC235.qmd)
+[CMSC 255](CMSC255.qmd)  [Introduction to Programming](CMSC255.qmd)
+[CMSC 256](CMSC256.qmd)  [Data Structures and Object Oriented Programming](CMSC256.qmd)
+[CMSC 257](CMSC257.qmd)  [Computer Systems](CMSC257.qmd)
+[CMSC 302](CMSC302.qmd)  [Introduction to Discrete Structures](CMSC302.qmd)
+[CMSC 303](CMSC303.qmd)  [Introduction to the Theory of Computation](CMSC303.qmd)
+[CMSC 311](CMSC311.qmd)  [Computer Organization](CMSC311.qmd)
+[CMSC 312](CMSC312.qmd)  [Introduction to Operating Systems](CMSC312.qmd)
+[CMSC 355](CMSC355.qmd)  [Fundamentals of Software Engineering](CMSC355.qmd)
+[CMSC 401](CMSC401.qmd)  [Algorithm Analysis with Advanced Data Structures](CMSC401.qmd)
+[CMSC 403](CMSC403.qmd)  [Programming Languages](CMSC403.qmd)
+[CMSC 440](CMSC440.qmd)  [Data Communication and Networking](CMSC440.qmd)
+[CMSC 441](CMSC441.qmd)  [Senior Design Studio I (Laboratory/Project Time)](CMSC441.qmd)
+[CMSC 442](CMSC442.qmd)  [Senior Design Studio II (Laboratory/Project Time)](CMSC442.qmd)
+[CMSC 451](CMSC451.qmd)  [Senior Project I](CMSC451.qmd)
+[CMSC 452](CMSC452.qmd)  [Senior Project II](CMSC452.qmd)
+[CMSC 508](CMSC508.qmd)  [Database Theory](CMSC508.qmd)
+
+
+## Cyber
+
+
+The following map represents the ABET coverage for the courses included in the *Bachelors of Science in Computer Science with a concentration in cybersecurity* program.
+
+
+
+ABET coverage topic                     Course
+--------------------------------------  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+algorithms and complexity               <a href='CMSC255.qmd'>CMSC 255</a>, <a href='CMSC256.qmd'>CMSC 256</a>, <a href='CMSC257.qmd'>CMSC 257</a>, <a href='CMSC303.qmd'>CMSC 303</a>, <a href='CMSC401.qmd'>CMSC 401</a>, <a href='CMSC403.qmd'>CMSC 403</a>
+computer architecture and organization  <a href='CMSC256.qmd'>CMSC 256</a>, <a href='CMSC257.qmd'>CMSC 257</a>, <a href='CMSC311.qmd'>CMSC 311</a>, <a href='CMSC355.qmd'>CMSC 355</a>, <a href='CMSC414.qmd'>CMSC 414</a>, <a href='CMSC440.qmd'>CMSC 440</a>
+computer science theory                 <a href='CMSC255.qmd'>CMSC 255</a>, <a href='CMSC256.qmd'>CMSC 256</a>, <a href='CMSC302.qmd'>CMSC 302</a>, <a href='CMSC303.qmd'>CMSC 303</a>, <a href='CMSC401.qmd'>CMSC 401</a>
+computing-based systems                 <a href='CMSC256.qmd'>CMSC 256</a>, <a href='CMSC311.qmd'>CMSC 311</a>
+concepts of programming languages       <a href='CMSC255.qmd'>CMSC 255</a>, <a href='CMSC256.qmd'>CMSC 256</a>, <a href='CMSC257.qmd'>CMSC 257</a>, <a href='CMSC302.qmd'>CMSC 302</a>, <a href='CMSC303.qmd'>CMSC 303</a>, <a href='CMSC311.qmd'>CMSC 311</a>, <a href='CMSC312.qmd'>CMSC 312</a>, <a href='CMSC355.qmd'>CMSC 355</a>, <a href='CMSC401.qmd'>CMSC 401</a>, <a href='CMSC403.qmd'>CMSC 403</a>, <a href='CMSC440.qmd'>CMSC 440</a>, <a href='CMSC452.qmd'>CMSC 452</a>, <a href='CMSC508.qmd'>CMSC 508</a>
+discrete mathematics                    <a href='CMSC302.qmd'>CMSC 302</a>, <a href='CMSC303.qmd'>CMSC 303</a>, <a href='CMSC508.qmd'>CMSC 508</a>
+general purpose programming language    <a href='CMSC255.qmd'>CMSC 255</a>, <a href='CMSC256.qmd'>CMSC 256</a>, <a href='CMSC257.qmd'>CMSC 257</a>, <a href='CMSC303.qmd'>CMSC 303</a>, <a href='CMSC311.qmd'>CMSC 311</a>, <a href='CMSC312.qmd'>CMSC 312</a>, <a href='CMSC401.qmd'>CMSC 401</a>, <a href='CMSC403.qmd'>CMSC 403</a>, <a href='CMSC441.qmd'>CMSC 441</a>, <a href='CMSC452.qmd'>CMSC 452</a>, <a href='CMSC508.qmd'>CMSC 508</a>
+information management                  <a href='CMSC257.qmd'>CMSC 257</a>, <a href='CMSC311.qmd'>CMSC 311</a>, <a href='CMSC312.qmd'>CMSC 312</a>, <a href='CMSC355.qmd'>CMSC 355</a>, <a href='CMSC401.qmd'>CMSC 401</a>, <a href='CMSC403.qmd'>CMSC 403</a>, <a href='CMSC440.qmd'>CMSC 440</a>, <a href='CMSC508.qmd'>CMSC 508</a>
+local and global impacts                <a href='CMSC235.qmd'>CMSC 235</a>, <a href='CMSC451.qmd'>CMSC 451</a>, <a href='CMSC452.qmd'>CMSC 452</a>
+networking and communication            <a href='CMSC312.qmd'>CMSC 312</a>, <a href='CMSC414.qmd'>CMSC 414</a>, <a href='CMSC440.qmd'>CMSC 440</a>, <a href='CMSC441.qmd'>CMSC 441</a>
+operating systems                       <a href='CMSC255.qmd'>CMSC 255</a>, <a href='CMSC303.qmd'>CMSC 303</a>, <a href='CMSC311.qmd'>CMSC 311</a>, <a href='CMSC312.qmd'>CMSC 312</a>
+parallel and distributed computing      <a href='CMSC312.qmd'>CMSC 312</a>
+probability                             <a href='CMSC302.qmd'>CMSC 302</a>
+security and privacy                    <a href='CMSC413.qmd'>CMSC 413</a>, <a href='CMSC414.qmd'>CMSC 414</a>, <a href='CMSC415.qmd'>CMSC 415</a>, <a href='CMSC452.qmd'>CMSC 452</a>
+software development                    <a href='CMSC255.qmd'>CMSC 255</a>, <a href='CMSC355.qmd'>CMSC 355</a>, <a href='CMSC414.qmd'>CMSC 414</a>, <a href='CMSC451.qmd'>CMSC 451</a>, <a href='CMSC452.qmd'>CMSC 452</a>
+statistics                              nan
+techniques, skills, and tools           <a href='CMSC255.qmd'>CMSC 255</a>, <a href='CMSC257.qmd'>CMSC 257</a>, <a href='CMSC302.qmd'>CMSC 302</a>, <a href='CMSC303.qmd'>CMSC 303</a>, <a href='CMSC311.qmd'>CMSC 311</a>, <a href='CMSC355.qmd'>CMSC 355</a>, <a href='CMSC401.qmd'>CMSC 401</a>, <a href='CMSC403.qmd'>CMSC 403</a>, <a href='CMSC440.qmd'>CMSC 440</a>, <a href='CMSC441.qmd'>CMSC 441</a>, <a href='CMSC442.qmd'>CMSC 442</a>, <a href='CMSC451.qmd'>CMSC 451</a>
+
+
+Here is a list of additional courses required for the concentration.
+
+
+
+Course                   Title
+-----------------------  --------------------------------------------
+[CMSC 413](CMSC413.qmd)  [Introduction to Cybersecurity](CMSC413.qmd)
+[CMSC 414](CMSC414.qmd)  [Computer and Network Security](CMSC414.qmd)
+[CMSC 415](CMSC415.qmd)  [Introduction to Cryptography](CMSC415.qmd)
+
+
+and here is a list of courses in the concentration core.
+
+
+Course                   Title
+-----------------------  ----------------------------------------------------------------
+[CMSC 235](CMSC235.qmd)  [Computing and Data Ethics](CMSC235.qmd)
+[CMSC 255](CMSC255.qmd)  [Introduction to Programming](CMSC255.qmd)
+[CMSC 256](CMSC256.qmd)  [Data Structures and Object Oriented Programming](CMSC256.qmd)
+[CMSC 257](CMSC257.qmd)  [Computer Systems](CMSC257.qmd)
+[CMSC 302](CMSC302.qmd)  [Introduction to Discrete Structures](CMSC302.qmd)
+[CMSC 303](CMSC303.qmd)  [Introduction to the Theory of Computation](CMSC303.qmd)
+[CMSC 311](CMSC311.qmd)  [Computer Organization](CMSC311.qmd)
+[CMSC 312](CMSC312.qmd)  [Introduction to Operating Systems](CMSC312.qmd)
+[CMSC 355](CMSC355.qmd)  [Fundamentals of Software Engineering](CMSC355.qmd)
+[CMSC 401](CMSC401.qmd)  [Algorithm Analysis with Advanced Data Structures](CMSC401.qmd)
+[CMSC 403](CMSC403.qmd)  [Programming Languages](CMSC403.qmd)
+[CMSC 440](CMSC440.qmd)  [Data Communication and Networking](CMSC440.qmd)
+[CMSC 441](CMSC441.qmd)  [Senior Design Studio I (Laboratory/Project Time)](CMSC441.qmd)
+[CMSC 442](CMSC442.qmd)  [Senior Design Studio II (Laboratory/Project Time)](CMSC442.qmd)
+[CMSC 451](CMSC451.qmd)  [Senior Project I](CMSC451.qmd)
+[CMSC 452](CMSC452.qmd)  [Senior Project II](CMSC452.qmd)
+[CMSC 508](CMSC508.qmd)  [Database Theory](CMSC508.qmd)
+
+
+
+
+
+## Data
+
+
+The following map represents the ABET coverage for the courses included in the *Bachlors of Science in Computer Science with a concentration in data science* program.
+
+
+
+ABET coverage topic                     Course
+--------------------------------------  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+algorithms and complexity               <a href='CMSC255.qmd'>CMSC 255</a>, <a href='CMSC256.qmd'>CMSC 256</a>, <a href='CMSC257.qmd'>CMSC 257</a>, <a href='CMSC303.qmd'>CMSC 303</a>, <a href='CMSC401.qmd'>CMSC 401</a>, <a href='CMSC403.qmd'>CMSC 403</a>, <a href='CMSC435.qmd'>CMSC 435</a>
+computer architecture and organization  <a href='CMSC256.qmd'>CMSC 256</a>, <a href='CMSC257.qmd'>CMSC 257</a>, <a href='CMSC311.qmd'>CMSC 311</a>, <a href='CMSC355.qmd'>CMSC 355</a>, <a href='CMSC440.qmd'>CMSC 440</a>
+computer science theory                 <a href='CMSC255.qmd'>CMSC 255</a>, <a href='CMSC256.qmd'>CMSC 256</a>, <a href='CMSC302.qmd'>CMSC 302</a>, <a href='CMSC303.qmd'>CMSC 303</a>, <a href='CMSC401.qmd'>CMSC 401</a>
+computing-based systems                 <a href='CMSC256.qmd'>CMSC 256</a>, <a href='CMSC311.qmd'>CMSC 311</a>
+concepts of programming languages       <a href='CMSC255.qmd'>CMSC 255</a>, <a href='CMSC256.qmd'>CMSC 256</a>, <a href='CMSC257.qmd'>CMSC 257</a>, <a href='CMSC302.qmd'>CMSC 302</a>, <a href='CMSC303.qmd'>CMSC 303</a>, <a href='CMSC311.qmd'>CMSC 311</a>, <a href='CMSC312.qmd'>CMSC 312</a>, <a href='CMSC355.qmd'>CMSC 355</a>, <a href='CMSC401.qmd'>CMSC 401</a>, <a href='CMSC403.qmd'>CMSC 403</a>, <a href='CMSC409.qmd'>CMSC 409</a>, <a href='CMSC416.qmd'>CMSC 416</a>, <a href='CMSC440.qmd'>CMSC 440</a>, <a href='CMSC452.qmd'>CMSC 452</a>, <a href='CMSC508.qmd'>CMSC 508</a>
+discrete mathematics                    <a href='CMSC302.qmd'>CMSC 302</a>, <a href='CMSC303.qmd'>CMSC 303</a>, <a href='CMSC508.qmd'>CMSC 508</a>
+general purpose programming language    <a href='CMSC255.qmd'>CMSC 255</a>, <a href='CMSC256.qmd'>CMSC 256</a>, <a href='CMSC257.qmd'>CMSC 257</a>, <a href='CMSC303.qmd'>CMSC 303</a>, <a href='CMSC311.qmd'>CMSC 311</a>, <a href='CMSC312.qmd'>CMSC 312</a>, <a href='CMSC401.qmd'>CMSC 401</a>, <a href='CMSC403.qmd'>CMSC 403</a>, <a href='CMSC409.qmd'>CMSC 409</a>, <a href='CMSC416.qmd'>CMSC 416</a>, <a href='CMSC441.qmd'>CMSC 441</a>, <a href='CMSC452.qmd'>CMSC 452</a>, <a href='CMSC508.qmd'>CMSC 508</a>
+information management                  <a href='CMSC257.qmd'>CMSC 257</a>, <a href='CMSC311.qmd'>CMSC 311</a>, <a href='CMSC312.qmd'>CMSC 312</a>, <a href='CMSC355.qmd'>CMSC 355</a>, <a href='CMSC401.qmd'>CMSC 401</a>, <a href='CMSC403.qmd'>CMSC 403</a>, <a href='CMSC435.qmd'>CMSC 435</a>, <a href='CMSC440.qmd'>CMSC 440</a>, <a href='CMSC508.qmd'>CMSC 508</a>
+local and global impacts                <a href='CMSC235.qmd'>CMSC 235</a>, <a href='CMSC416.qmd'>CMSC 416</a>, <a href='CMSC451.qmd'>CMSC 451</a>, <a href='CMSC452.qmd'>CMSC 452</a>
+networking and communication            <a href='CMSC312.qmd'>CMSC 312</a>, <a href='CMSC416.qmd'>CMSC 416</a>, <a href='CMSC440.qmd'>CMSC 440</a>, <a href='CMSC441.qmd'>CMSC 441</a>
+operating systems                       <a href='CMSC255.qmd'>CMSC 255</a>, <a href='CMSC303.qmd'>CMSC 303</a>, <a href='CMSC311.qmd'>CMSC 311</a>, <a href='CMSC312.qmd'>CMSC 312</a>
+parallel and distributed computing      <a href='CMSC312.qmd'>CMSC 312</a>
+probability                             <a href='CMSC302.qmd'>CMSC 302</a>, <a href='CMSC416.qmd'>CMSC 416</a>
+security and privacy                    <a href='CMSC452.qmd'>CMSC 452</a>
+software development                    <a href='CMSC255.qmd'>CMSC 255</a>, <a href='CMSC355.qmd'>CMSC 355</a>, <a href='CMSC416.qmd'>CMSC 416</a>, <a href='CMSC451.qmd'>CMSC 451</a>, <a href='CMSC452.qmd'>CMSC 452</a>
+statistics                              <a href='CMSC416.qmd'>CMSC 416</a>
+techniques, skills, and tools           <a href='CMSC255.qmd'>CMSC 255</a>, <a href='CMSC257.qmd'>CMSC 257</a>, <a href='CMSC302.qmd'>CMSC 302</a>, <a href='CMSC303.qmd'>CMSC 303</a>, <a href='CMSC311.qmd'>CMSC 311</a>, <a href='CMSC355.qmd'>CMSC 355</a>, <a href='CMSC401.qmd'>CMSC 401</a>, <a href='CMSC403.qmd'>CMSC 403</a>, <a href='CMSC409.qmd'>CMSC 409</a>, <a href='CMSC416.qmd'>CMSC 416</a>, <a href='CMSC440.qmd'>CMSC 440</a>, <a href='CMSC441.qmd'>CMSC 441</a>, <a href='CMSC442.qmd'>CMSC 442</a>, <a href='CMSC451.qmd'>CMSC 451</a>
+
+
+Here is a list of additional courses required for the concentration.
+
+
+
+Course                   Title
+-----------------------  ----------------------------------------------------------
+[CMSC 409](CMSC409.qmd)  [Artificial Intelligence](CMSC409.qmd)
+[CMSC 416](CMSC416.qmd)  [Introduction to Natural Language Processing](CMSC416.qmd)
+[CMSC 435](CMSC435.qmd)  [Introduction to Data Science](CMSC435.qmd)
+
+
+and here is a list of courses in the concentration core.
+
+
+Course                   Title
+-----------------------  ----------------------------------------------------------------
+[CMSC 235](CMSC235.qmd)  [Computing and Data Ethics](CMSC235.qmd)
+[CMSC 255](CMSC255.qmd)  [Introduction to Programming](CMSC255.qmd)
+[CMSC 256](CMSC256.qmd)  [Data Structures and Object Oriented Programming](CMSC256.qmd)
+[CMSC 257](CMSC257.qmd)  [Computer Systems](CMSC257.qmd)
+[CMSC 302](CMSC302.qmd)  [Introduction to Discrete Structures](CMSC302.qmd)
+[CMSC 303](CMSC303.qmd)  [Introduction to the Theory of Computation](CMSC303.qmd)
+[CMSC 311](CMSC311.qmd)  [Computer Organization](CMSC311.qmd)
+[CMSC 312](CMSC312.qmd)  [Introduction to Operating Systems](CMSC312.qmd)
+[CMSC 355](CMSC355.qmd)  [Fundamentals of Software Engineering](CMSC355.qmd)
+[CMSC 401](CMSC401.qmd)  [Algorithm Analysis with Advanced Data Structures](CMSC401.qmd)
+[CMSC 403](CMSC403.qmd)  [Programming Languages](CMSC403.qmd)
+[CMSC 440](CMSC440.qmd)  [Data Communication and Networking](CMSC440.qmd)
+[CMSC 441](CMSC441.qmd)  [Senior Design Studio I (Laboratory/Project Time)](CMSC441.qmd)
+[CMSC 442](CMSC442.qmd)  [Senior Design Studio II (Laboratory/Project Time)](CMSC442.qmd)
+[CMSC 451](CMSC451.qmd)  [Senior Project I](CMSC451.qmd)
+[CMSC 452](CMSC452.qmd)  [Senior Project II](CMSC452.qmd)
+[CMSC 508](CMSC508.qmd)  [Database Theory](CMSC508.qmd)
+
+
+
+
+
+## Software
+
+
+The following map represents the ABET coverage for the courses included in the *Bachlors of Science in Computer Science with a concentration in software engineering* program.
+
+
+
+ABET coverage topic                     Course
+--------------------------------------  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+algorithms and complexity               <a href='CMSC255.qmd'>CMSC 255</a>, <a href='CMSC256.qmd'>CMSC 256</a>, <a href='CMSC257.qmd'>CMSC 257</a>, <a href='CMSC303.qmd'>CMSC 303</a>, <a href='CMSC401.qmd'>CMSC 401</a>, <a href='CMSC403.qmd'>CMSC 403</a>, <a href='CMSC425.qmd'>CMSC 425</a>
+computer architecture and organization  <a href='CMSC256.qmd'>CMSC 256</a>, <a href='CMSC257.qmd'>CMSC 257</a>, <a href='CMSC311.qmd'>CMSC 311</a>, <a href='CMSC355.qmd'>CMSC 355</a>, <a href='CMSC440.qmd'>CMSC 440</a>
+computer science theory                 <a href='CMSC255.qmd'>CMSC 255</a>, <a href='CMSC256.qmd'>CMSC 256</a>, <a href='CMSC302.qmd'>CMSC 302</a>, <a href='CMSC303.qmd'>CMSC 303</a>, <a href='CMSC401.qmd'>CMSC 401</a>, <a href='CMSC425.qmd'>CMSC 425</a>
+computing-based systems                 <a href='CMSC256.qmd'>CMSC 256</a>, <a href='CMSC311.qmd'>CMSC 311</a>
+concepts of programming languages       <a href='CMSC255.qmd'>CMSC 255</a>, <a href='CMSC256.qmd'>CMSC 256</a>, <a href='CMSC257.qmd'>CMSC 257</a>, <a href='CMSC302.qmd'>CMSC 302</a>, <a href='CMSC303.qmd'>CMSC 303</a>, <a href='CMSC311.qmd'>CMSC 311</a>, <a href='CMSC312.qmd'>CMSC 312</a>, <a href='CMSC355.qmd'>CMSC 355</a>, <a href='CMSC401.qmd'>CMSC 401</a>, <a href='CMSC403.qmd'>CMSC 403</a>, <a href='CMSC425.qmd'>CMSC 425</a>, <a href='CMSC440.qmd'>CMSC 440</a>, <a href='CMSC452.qmd'>CMSC 452</a>, <a href='CMSC455.qmd'>CMSC 455</a>, <a href='CMSC475.qmd'>CMSC 475</a>, <a href='CMSC508.qmd'>CMSC 508</a>
+discrete mathematics                    <a href='CMSC302.qmd'>CMSC 302</a>, <a href='CMSC303.qmd'>CMSC 303</a>, <a href='CMSC508.qmd'>CMSC 508</a>
+general purpose programming language    <a href='CMSC255.qmd'>CMSC 255</a>, <a href='CMSC256.qmd'>CMSC 256</a>, <a href='CMSC257.qmd'>CMSC 257</a>, <a href='CMSC303.qmd'>CMSC 303</a>, <a href='CMSC311.qmd'>CMSC 311</a>, <a href='CMSC312.qmd'>CMSC 312</a>, <a href='CMSC401.qmd'>CMSC 401</a>, <a href='CMSC403.qmd'>CMSC 403</a>, <a href='CMSC425.qmd'>CMSC 425</a>, <a href='CMSC441.qmd'>CMSC 441</a>, <a href='CMSC452.qmd'>CMSC 452</a>, <a href='CMSC508.qmd'>CMSC 508</a>
+information management                  <a href='CMSC257.qmd'>CMSC 257</a>, <a href='CMSC311.qmd'>CMSC 311</a>, <a href='CMSC312.qmd'>CMSC 312</a>, <a href='CMSC355.qmd'>CMSC 355</a>, <a href='CMSC401.qmd'>CMSC 401</a>, <a href='CMSC403.qmd'>CMSC 403</a>, <a href='CMSC425.qmd'>CMSC 425</a>, <a href='CMSC440.qmd'>CMSC 440</a>, <a href='CMSC508.qmd'>CMSC 508</a>
+local and global impacts                <a href='CMSC235.qmd'>CMSC 235</a>, <a href='CMSC451.qmd'>CMSC 451</a>, <a href='CMSC452.qmd'>CMSC 452</a>
+networking and communication            <a href='CMSC312.qmd'>CMSC 312</a>, <a href='CMSC440.qmd'>CMSC 440</a>, <a href='CMSC441.qmd'>CMSC 441</a>
+operating systems                       <a href='CMSC255.qmd'>CMSC 255</a>, <a href='CMSC303.qmd'>CMSC 303</a>, <a href='CMSC311.qmd'>CMSC 311</a>, <a href='CMSC312.qmd'>CMSC 312</a>, <a href='CMSC425.qmd'>CMSC 425</a>
+parallel and distributed computing      <a href='CMSC312.qmd'>CMSC 312</a>
+probability                             <a href='CMSC302.qmd'>CMSC 302</a>
+security and privacy                    <a href='CMSC420.qmd'>CMSC 420</a>, <a href='CMSC452.qmd'>CMSC 452</a>
+software development                    <a href='CMSC255.qmd'>CMSC 255</a>, <a href='CMSC355.qmd'>CMSC 355</a>, <a href='CMSC420.qmd'>CMSC 420</a>, <a href='CMSC425.qmd'>CMSC 425</a>, <a href='CMSC451.qmd'>CMSC 451</a>, <a href='CMSC452.qmd'>CMSC 452</a>, <a href='CMSC455.qmd'>CMSC 455</a>
+statistics                              nan
+techniques, skills, and tools           <a href='CMSC255.qmd'>CMSC 255</a>, <a href='CMSC257.qmd'>CMSC 257</a>, <a href='CMSC302.qmd'>CMSC 302</a>, <a href='CMSC303.qmd'>CMSC 303</a>, <a href='CMSC311.qmd'>CMSC 311</a>, <a href='CMSC355.qmd'>CMSC 355</a>, <a href='CMSC401.qmd'>CMSC 401</a>, <a href='CMSC403.qmd'>CMSC 403</a>, <a href='CMSC420.qmd'>CMSC 420</a>, <a href='CMSC425.qmd'>CMSC 425</a>, <a href='CMSC440.qmd'>CMSC 440</a>, <a href='CMSC441.qmd'>CMSC 441</a>, <a href='CMSC442.qmd'>CMSC 442</a>, <a href='CMSC451.qmd'>CMSC 451</a>
+
+
+Here is a list of additional courses required for the concentration.
+
+
+
+Course                   Title
+-----------------------  ------------------------------------------------------------
+[CMSC 420](CMSC420.qmd)  [Software Project Management](CMSC420.qmd)
+[CMSC 425](CMSC425.qmd)  [Introduction to Software Analysis and Testing](CMSC425.qmd)
+[CMSC 455](CMSC455.qmd)  [Software as a Service](CMSC455.qmd)
+[CMSC 475](CMSC475.qmd)  [Design and Implementation of User Interfaces](CMSC475.qmd)
+
+
+and here is a list of courses in the concentration core.
+
+
+Course                   Title
+-----------------------  ----------------------------------------------------------------
+[CMSC 235](CMSC235.qmd)  [Computing and Data Ethics](CMSC235.qmd)
+[CMSC 255](CMSC255.qmd)  [Introduction to Programming](CMSC255.qmd)
+[CMSC 256](CMSC256.qmd)  [Data Structures and Object Oriented Programming](CMSC256.qmd)
+[CMSC 257](CMSC257.qmd)  [Computer Systems](CMSC257.qmd)
+[CMSC 302](CMSC302.qmd)  [Introduction to Discrete Structures](CMSC302.qmd)
+[CMSC 303](CMSC303.qmd)  [Introduction to the Theory of Computation](CMSC303.qmd)
+[CMSC 311](CMSC311.qmd)  [Computer Organization](CMSC311.qmd)
+[CMSC 312](CMSC312.qmd)  [Introduction to Operating Systems](CMSC312.qmd)
+[CMSC 355](CMSC355.qmd)  [Fundamentals of Software Engineering](CMSC355.qmd)
+[CMSC 401](CMSC401.qmd)  [Algorithm Analysis with Advanced Data Structures](CMSC401.qmd)
+[CMSC 403](CMSC403.qmd)  [Programming Languages](CMSC403.qmd)
+[CMSC 440](CMSC440.qmd)  [Data Communication and Networking](CMSC440.qmd)
+[CMSC 441](CMSC441.qmd)  [Senior Design Studio I (Laboratory/Project Time)](CMSC441.qmd)
+[CMSC 442](CMSC442.qmd)  [Senior Design Studio II (Laboratory/Project Time)](CMSC442.qmd)
+[CMSC 451](CMSC451.qmd)  [Senior Project I](CMSC451.qmd)
+[CMSC 452](CMSC452.qmd)  [Senior Project II](CMSC452.qmd)
+[CMSC 508](CMSC508.qmd)  [Database Theory](CMSC508.qmd)
+
+
+
+
+
+:::
+

@@ -4,7 +4,9 @@ project:
 
 website:
   title: "CMSC Courses"
-  search: true
+  search:
+    location: navbar
+    type: overlay
   navbar:
     background: primary
     search: true
