@@ -549,11 +549,62 @@ title: "CMSC topics and courses"
 date: last-modified
 website:
   search: false
+format:
+  html:
+    include-in-header:
+      text: |
+        <script>
+        function myFunction() {
+          // Declare variables
+          var input, filter, table, tr, td, i, txtValue;
+          input = document.getElementById("myInput");
+          filter = input.value.toUpperCase();
+          table = document.getElementsByTagName("table")[0];
+          tr = table.getElementsByTagName("tr");
+
+          // Loop through all table rows, and hide those who don't match the search query
+          for (i = 0; i < tr.length; i++) {
+            var toggle;
+            toggle = "none";
+            td = tr[i].getElementsByTagName("td")[0];
+            if (td) {
+              txtValue = td.textContent || td.innerText;
+              if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                //tr[i].style.display = "";
+                toggle = "";
+              } else {
+                //tr[i].style.display = "none";
+              }
+            }
+            td = tr[i].getElementsByTagName("td")[1];
+            if (td) {
+              txtValue = td.textContent || td.innerText;
+              if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                //tr[i].style.display = "";
+                toggle = "";
+              } else {
+                //tr[i].style.display = "none";
+              }
+            }
+            td = tr[i].getElementsByTagName("td")[2];
+            if (td) {
+              txtValue = td.textContent || td.innerText;
+              if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                //tr[i].style.display = "";
+                toggle = "";
+              } else {
+                //tr[i].style.display = "none";
+              }
+            }
+            tr[i].style.display = toggle
+          }
+        }
+        </script>
 ---
 
-::: {.panel-tabset}
 
-## Sort by topic
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for key words" title="Type in a name" style="width: 600px;">
+
 \n
 """ )
 
@@ -564,21 +615,6 @@ website:
 
   file.write("""\n
 \n
-## Sort by ABET topic
-\n
-""" )
-
-#  course_df['urlID'] = "[" + course_df["CourseId"].astype(str) + "](" + course_df["Subject"].astype(str) + course_df["Number"].astype(str) + '.html)'
-#  course_df['urlTitle'] = "[" + course_df["Title"].astype(str) + "](" + course_df["Subject"].astype(str) + course_df["Number"].astype(str) + '.html)'
-
-  df_grouped = topics_df.groupby(['abet_tag1','ADJTopic'])['idx'].unique().apply( expandURL ).reset_index()
-  file.write(
-    tabulate(df_grouped, tablefmt='fancy', showindex=False, headers=["Adjusted Topic","ABET Coverage","Course"] )
-  )
-  
-  file.write("""
-
-::: 
 
 """)
   file.close()
