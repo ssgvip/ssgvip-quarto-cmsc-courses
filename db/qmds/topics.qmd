@@ -1,8 +1,7 @@
 ---
 title: "CMSC topics and courses"
 date: last-modified
-website:
-  search: false
+search: false
 format:
   html:
     include-in-header:

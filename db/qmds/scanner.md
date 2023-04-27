@@ -460,8 +460,7 @@ with open(filename, 'w',encoding="utf-8") as file:
   file.write(f"""---
 title: "CMSC Courses and Titles"
 date: last-modified
-website:
-  search: false
+search: false
 ---
 """ )
 
@@ -520,8 +519,7 @@ with open(filename, 'w',encoding="utf-8") as file:
   file.write(f"""---
 title: "Catalog of CMSC Courses and Titles"
 date: last-modified
-website:
-  search: false
+search: false
 format:
   html:
     toc: False
@@ -547,8 +545,7 @@ with open(filename, 'w',encoding="utf-8") as file:
   file.write("""---
 title: "CMSC topics and courses"
 date: last-modified
-website:
-  search: false
+search: false
 format:
   html:
     include-in-header:
@@ -688,8 +685,7 @@ with open(filename, 'w',encoding="utf-8") as file:
   file.write("""---
 title: "CMSC courses and ABET topic coverage"
 date: last-modified
-website:
-  search: false
+search: false
 ---
 The mappings listed below associate ABET coverage categoris with specific courses in our curricula. Select
 an appropriate tab.\n\n
@@ -802,8 +798,7 @@ with open(filename, 'w',encoding="utf-8") as file:
   file.write(f"""---
 title: "Past syllabii"
 date: last-modified
-website:
-  search: false
+search: false
 ---
 The following table maps our course catalog against a list of existing course syllabii. Note that some
 courses have not been taught for a while! In other cases, some of the courses are freshly

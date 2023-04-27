@@ -1,8 +1,7 @@
 ---
 title: "CMSC Courses and Titles"
 date: last-modified
-website:
-  search: false
+search: false
 ---
 Course                   Title
 -----------------------  --------------------------------------------------------------------------

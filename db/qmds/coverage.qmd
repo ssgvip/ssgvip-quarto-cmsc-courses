@@ -1,8 +1,7 @@
 ---
 title: "CMSC courses and ABET topic coverage"
 date: last-modified
-website:
-  search: false
+search: false
 ---
 The mappings listed below associate ABET coverage categoris with specific courses in our curricula. Select
 an appropriate tab.

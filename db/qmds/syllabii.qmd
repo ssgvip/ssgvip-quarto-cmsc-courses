@@ -1,8 +1,7 @@
 ---
 title: "Past syllabii"
 date: last-modified
-website:
-  search: false
+search: false
 ---
 The following table maps our course catalog against a list of existing course syllabii. Note that some
 courses have not been taught for a while! In other cases, some of the courses are freshly
