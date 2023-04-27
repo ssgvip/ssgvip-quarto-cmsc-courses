@@ -1,9 +1,0 @@
----
-title: "Computer Science (CMSC) courses"
----
-
-A menu bar shows different courses down the left.
-
-A table of contents shows down the right.
-
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
