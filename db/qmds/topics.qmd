@@ -4,6 +4,12 @@ date: last-modified
 website:
   search: false
 ---
+
+::: {.panel-tabset}
+
+## Sort by topic
+
+
 Adjusted Topic                               ABET Coverage                           Course
 -------------------------------------------  --------------------------------------  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 3d robotic vision                            techniques, skills, and tools           <a href='CMSC531.qmd'>CMSC 531</a>
@@ -555,3 +561,563 @@ web development                              software development               
 web search                                   networking and communication            <a href='CMSC416.qmd'>CMSC 416</a>
 writing functions                            software development                    <a href='CMSC210.qmd'>CMSC 210</a>
 xcode                                        techniques, skills, and tools           <a href='CMSC428.qmd'>CMSC 428</a>
+
+
+
+## Sort by ABET topic
+
+
+Adjusted Topic                          ABET Coverage                                Course
+--------------------------------------  -------------------------------------------  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                                        music                                        <a href='CMSC144.qmd'>CMSC 144</a>
+                                        selected topics                              <a href='CMSC191.qmd'>CMSC 191</a>, <a href='CMSC391.qmd'>CMSC 391</a>, <a href='CMSC491.qmd'>CMSC 491</a>, <a href='CMSC591.qmd'>CMSC 591</a>, <a href='CMSC691.qmd'>CMSC 691</a>
+algorithms and complexity               abstract complexity                          <a href='CMSC256.qmd'>CMSC 256</a>, <a href='CMSC612.qmd'>CMSC 612</a>
+algorithms and complexity               algorithms                                   <a href='CMSC255.qmd'>CMSC 255</a>, <a href='CMSC256.qmd'>CMSC 256</a>, <a href='CMSC401.qmd'>CMSC 401</a>, <a href='CMSC403.qmd'>CMSC 403</a>, <a href='CMSC501.qmd'>CMSC 501</a>, <a href='CMSC510.qmd'>CMSC 510</a>, <a href='CMSC512.qmd'>CMSC 512</a>, <a href='CMSC603.qmd'>CMSC 603</a>, <a href='CMSC610.qmd'>CMSC 610</a>, <a href='CMSC615.qmd'>CMSC 615</a>, <a href='CMSC628.qmd'>CMSC 628</a>, <a href='CMSC635.qmd'>CMSC 635</a>
+algorithms and complexity               analysis                                     <a href='CMSC254.qmd'>CMSC 254</a>, <a href='CMSC330.qmd'>CMSC 330</a>, <a href='CMSC401.qmd'>CMSC 401</a>, <a href='CMSC425.qmd'>CMSC 425</a>, <a href='CMSC435.qmd'>CMSC 435</a>, <a href='CMSC506.qmd'>CMSC 506</a>, <a href='CMSC512.qmd'>CMSC 512</a>, <a href='CMSC525.qmd'>CMSC 525</a>, <a href='CMSC615.qmd'>CMSC 615</a>, <a href='CMSC625.qmd'>CMSC 625</a>, <a href='CMSC628.qmd'>CMSC 628</a>, <a href='CMSC630.qmd'>CMSC 630</a>, <a href='CMSC635.qmd'>CMSC 635</a>
+algorithms and complexity               basic searching                              <a href='CMSC246.qmd'>CMSC 246</a>, <a href='CMSC256.qmd'>CMSC 256</a>
+algorithms and complexity               basic sorting                                <a href='CMSC246.qmd'>CMSC 246</a>
+algorithms and complexity               binary trees                                 <a href='CMSC246.qmd'>CMSC 246</a>, <a href='CMSC256.qmd'>CMSC 256</a>
+algorithms and complexity               chatgpt                                      <a href='CMSC636.qmd'>CMSC 636</a>
+algorithms and complexity               complexity analysis                          <a href='CMSC303.qmd'>CMSC 303</a>, <a href='CMSC401.qmd'>CMSC 401</a>, <a href='CMSC591.qmd'>CMSC 591</a>
+algorithms and complexity               computability theory                         <a href='CMSC303.qmd'>CMSC 303</a>
+algorithms and complexity               concolic hybrid analysis                     <a href='CMSC525.qmd'>CMSC 525</a>
+algorithms and complexity               control structures                           <a href='CMSC245.qmd'>CMSC 245</a>
+algorithms and complexity               convolutional neural networks                <a href='CMSC636.qmd'>CMSC 636</a>
+algorithms and complexity               data analysis                                <a href='CMSC510.qmd'>CMSC 510</a>
+algorithms and complexity               deep belief networks                         <a href='CMSC636.qmd'>CMSC 636</a>
+algorithms and complexity               deep convolutional networks                  <a href='CMSC636.qmd'>CMSC 636</a>
+algorithms and complexity               deep learning                                <a href='CMSC636.qmd'>CMSC 636</a>
+algorithms and complexity               deep neural networks                         <a href='CMSC636.qmd'>CMSC 636</a>
+algorithms and complexity               graph algorithms                             <a href='CMSC401.qmd'>CMSC 401</a>, <a href='CMSC501.qmd'>CMSC 501</a>, <a href='CMSC510.qmd'>CMSC 510</a>
+algorithms and complexity               hash functions                               <a href='CMSC256.qmd'>CMSC 256</a>, <a href='CMSC620.qmd'>CMSC 620</a>
+algorithms and complexity               hashing                                      <a href='CMSC401.qmd'>CMSC 401</a>
+algorithms and complexity               lexical analysis                             <a href='CMSC404.qmd'>CMSC 404</a>
+algorithms and complexity               link analysis                                <a href='CMSC412.qmd'>CMSC 412</a>
+algorithms and complexity               linked lists                                 <a href='CMSC246.qmd'>CMSC 246</a>
+algorithms and complexity               neural networks                              <a href='CMSC636.qmd'>CMSC 636</a>
+algorithms and complexity               nlp algorithms                               <a href='CMSC516.qmd'>CMSC 516</a>
+algorithms and complexity               optimization                                 <a href='CMSC257.qmd'>CMSC 257</a>, <a href='CMSC404.qmd'>CMSC 404</a>, <a href='CMSC501.qmd'>CMSC 501</a>
+algorithms and complexity               quantum algorithms                           <a href='CMSC410.qmd'>CMSC 410</a>
+algorithms and complexity               quantum complexity                           <a href='CMSC410.qmd'>CMSC 410</a>
+algorithms and complexity               quantum computing                            <a href='CMSC410.qmd'>CMSC 410</a>
+algorithms and complexity               quantum error correction                     <a href='CMSC410.qmd'>CMSC 410</a>
+algorithms and complexity               quantum machine learning                     <a href='CMSC410.qmd'>CMSC 410</a>
+algorithms and complexity               qubit                                        <a href='CMSC410.qmd'>CMSC 410</a>
+algorithms and complexity               state vectors                                <a href='CMSC410.qmd'>CMSC 410</a>
+algorithms and complexity               supervised data analysis                     <a href='CMSC635.qmd'>CMSC 635</a>
+algorithms and complexity               support vector machines                      <a href='CMSC635.qmd'>CMSC 635</a>
+algorithms and complexity               symbolic program analysis                    <a href='CMSC425.qmd'>CMSC 425</a>, <a href='CMSC525.qmd'>CMSC 525</a>
+algorithms and complexity               tensor                                       <a href='CMSC410.qmd'>CMSC 410</a>
+algorithms and complexity               unsupervised data analysis                   <a href='CMSC635.qmd'>CMSC 635</a>
+computer architecture and organization  architecture                                 <a href='CMSC311.qmd'>CMSC 311</a>, <a href='CMSC414.qmd'>CMSC 414</a>, <a href='CMSC440.qmd'>CMSC 440</a>, <a href='CMSC605.qmd'>CMSC 605</a>, <a href='CMSC636.qmd'>CMSC 636</a>
+computer architecture and organization  ascii                                        <a href='CMSC101.qmd'>CMSC 101</a>
+computer architecture and organization  basic concepts of computer systems           <a href='CMSC254.qmd'>CMSC 254</a>
+computer architecture and organization  basics of computer organization              <a href='CMSC101.qmd'>CMSC 101</a>
+computer architecture and organization  bit/bye operations                           <a href='CMSC257.qmd'>CMSC 257</a>
+computer architecture and organization  data                                         <a href='CMSC525.qmd'>CMSC 525</a>, <a href='CMSC635.qmd'>CMSC 635</a>
+computer architecture and organization  data structures                              <a href='CMSC603.qmd'>CMSC 603</a>, <a href='CMSC615.qmd'>CMSC 615</a>
+computer architecture and organization  data-flow                                    <a href='CMSC525.qmd'>CMSC 525</a>
+computer architecture and organization  inheritance                                  <a href='CMSC256.qmd'>CMSC 256</a>
+computer architecture and organization  input/output                                 <a href='CMSC602.qmd'>CMSC 602</a>
+computer architecture and organization  instruction set architecture                 <a href='CMSC311.qmd'>CMSC 311</a>
+computer architecture and organization  object oriented programming                  <a href='CMSC256.qmd'>CMSC 256</a>
+computer architecture and organization  organization                                 <a href='CMSC311.qmd'>CMSC 311</a>
+computer architecture and organization  program performance                          <a href='CMSC257.qmd'>CMSC 257</a>
+computer architecture and organization  software architecture                        <a href='CMSC355.qmd'>CMSC 355</a>
+computer science theory                 autoencoders                                 <a href='CMSC636.qmd'>CMSC 636</a>
+computer science theory                 automata                                     <a href='CMSC303.qmd'>CMSC 303</a>
+computer science theory                 b-trees                                      <a href='CMSC401.qmd'>CMSC 401</a>
+computer science theory                 code management                              <a href='CMSC404.qmd'>CMSC 404</a>
+computer science theory                 compact representations                      <a href='CMSC591.qmd'>CMSC 591</a>
+computer science theory                 decision structures                          <a href='CMSC254.qmd'>CMSC 254</a>
+computer science theory                 discretization                               <a href='CMSC635.qmd'>CMSC 635</a>
+computer science theory                 divide and conquer approach                  <a href='CMSC401.qmd'>CMSC 401</a>
+computer science theory                 duality theory                               <a href='CMSC601.qmd'>CMSC 601</a>
+computer science theory                 exceptions                                   <a href='CMSC256.qmd'>CMSC 256</a>
+computer science theory                 fuzzification                                <a href='CMSC678.qmd'>CMSC 678</a>
+computer science theory                 fuzzy logic algorithms                       <a href='CMSC678.qmd'>CMSC 678</a>
+computer science theory                 game theory                                  <a href='CMSC612.qmd'>CMSC 612</a>
+computer science theory                 localization                                 <a href='CMSC531.qmd'>CMSC 531</a>
+computer science theory                 loss function                                <a href='CMSC591.qmd'>CMSC 591</a>
+computer science theory                 modeling                                     <a href='CMSC254.qmd'>CMSC 254</a>
+computer science theory                 modularization                               <a href='CMSC254.qmd'>CMSC 254</a>
+computer science theory                 nakamoto's blockchain                        <a href='CMSC615.qmd'>CMSC 615</a>
+computer science theory                 no-go theorems                               <a href='CMSC410.qmd'>CMSC 410</a>
+computer science theory                 pixel-based operations                       <a href='CMSC630.qmd'>CMSC 630</a>
+computer science theory                 problem solving                              <a href='CMSC245.qmd'>CMSC 245</a>
+computer science theory                 program analysis-driven testing              <a href='CMSC425.qmd'>CMSC 425</a>, <a href='CMSC525.qmd'>CMSC 525</a>
+computer science theory                 quantization                                 <a href='CMSC630.qmd'>CMSC 630</a>
+computer science theory                 robotic mapping                              <a href='CMSC531.qmd'>CMSC 531</a>
+computer science theory                 robotic navigation                           <a href='CMSC531.qmd'>CMSC 531</a>
+computer science theory                 segmentation                                 <a href='CMSC630.qmd'>CMSC 630</a>
+computer science theory                 set theory                                   <a href='CMSC302.qmd'>CMSC 302</a>
+computer science theory                 small world phenomenon                       <a href='CMSC412.qmd'>CMSC 412</a>
+computer science theory                 structures                                   <a href='CMSC254.qmd'>CMSC 254</a>
+computer science theory                 tensor                                       <a href='CMSC630.qmd'>CMSC 630</a>
+computer science theory                 test case coverage                           <a href='CMSC525.qmd'>CMSC 525</a>
+computer science theory                 top down design                              <a href='CMSC255.qmd'>CMSC 255</a>
+computer science theory                 unicode                                      <a href='CMSC101.qmd'>CMSC 101</a>
+computing-based systems                 cloud computing                              <a href='CMSC623.qmd'>CMSC 623</a>
+computing-based systems                 interfaces                                   <a href='CMSC256.qmd'>CMSC 256</a>
+computing-based systems                 unit design                                  <a href='CMSC311.qmd'>CMSC 311</a>
+computing-based systems                 visualization                                <a href='CMSC330.qmd'>CMSC 330</a>
+concepts of programming languages       addressing modes                             <a href='CMSC311.qmd'>CMSC 311</a>
+concepts of programming languages       administration                               <a href='CMSC508.qmd'>CMSC 508</a>
+concepts of programming languages       altcoins                                     <a href='CMSC615.qmd'>CMSC 615</a>
+concepts of programming languages       anonymity                                    <a href='CMSC615.qmd'>CMSC 615</a>
+concepts of programming languages       api                                          <a href='CMSC455.qmd'>CMSC 455</a>
+concepts of programming languages       arrays                                       <a href='CMSC245.qmd'>CMSC 245</a>, <a href='CMSC254.qmd'>CMSC 254</a>, <a href='CMSC255.qmd'>CMSC 255</a>, <a href='CMSC257.qmd'>CMSC 257</a>
+concepts of programming languages       bayesian models                              <a href='CMSC635.qmd'>CMSC 635</a>
+concepts of programming languages       c++ syntax                                   <a href='CMSC245.qmd'>CMSC 245</a>
+concepts of programming languages       calling functions                            <a href='CMSC210.qmd'>CMSC 210</a>
+concepts of programming languages       cascade correlational                        <a href='CMSC636.qmd'>CMSC 636</a>
+concepts of programming languages       centrality                                   <a href='CMSC412.qmd'>CMSC 412</a>
+concepts of programming languages       ci/cd                                        <a href='CMSC355.qmd'>CMSC 355</a>
+concepts of programming languages       circuits                                     <a href='CMSC591.qmd'>CMSC 591</a>
+concepts of programming languages       classes                                      <a href='CMSC255.qmd'>CMSC 255</a>, <a href='CMSC256.qmd'>CMSC 256</a>
+concepts of programming languages       classification                               <a href='CMSC678.qmd'>CMSC 678</a>
+concepts of programming languages       cloud computing                              <a href='CMSC455.qmd'>CMSC 455</a>
+concepts of programming languages       co-routines                                  <a href='CMSC403.qmd'>CMSC 403</a>
+concepts of programming languages       compilers                                    <a href='CMSC404.qmd'>CMSC 404</a>
+concepts of programming languages       compression                                  <a href='CMSC611.qmd'>CMSC 611</a>
+concepts of programming languages       computer systems design                      <a href='CMSC312.qmd'>CMSC 312</a>
+concepts of programming languages       concepts                                     <a href='CMSC622.qmd'>CMSC 622</a>
+concepts of programming languages       concolic hybrid analysis                     <a href='CMSC425.qmd'>CMSC 425</a>
+concepts of programming languages       concurrency                                  <a href='CMSC312.qmd'>CMSC 312</a>, <a href='CMSC502.qmd'>CMSC 502</a>, <a href='CMSC603.qmd'>CMSC 603</a>
+concepts of programming languages       conditional execution                        <a href='CMSC210.qmd'>CMSC 210</a>
+concepts of programming languages       configuration                                <a href='CMSC508.qmd'>CMSC 508</a>
+concepts of programming languages       context-free grammars                        <a href='CMSC303.qmd'>CMSC 303</a>, <a href='CMSC516.qmd'>CMSC 516</a>
+concepts of programming languages       control flow                                 <a href='CMSC425.qmd'>CMSC 425</a>, <a href='CMSC525.qmd'>CMSC 525</a>
+concepts of programming languages       control structures                           <a href='CMSC210.qmd'>CMSC 210</a>, <a href='CMSC255.qmd'>CMSC 255</a>
+concepts of programming languages       convex sets                                  <a href='CMSC601.qmd'>CMSC 601</a>
+concepts of programming languages       cursors                                      <a href='CMSC508.qmd'>CMSC 508</a>
+concepts of programming languages       cybersecurity                                <a href='CMSC340.qmd'>CMSC 340</a>
+concepts of programming languages       data structures                              <a href='CMSC256.qmd'>CMSC 256</a>
+concepts of programming languages       debugging                                    <a href='CMSC312.qmd'>CMSC 312</a>
+concepts of programming languages       density operators                            <a href='CMSC410.qmd'>CMSC 410</a>
+concepts of programming languages       deques                                       <a href='CMSC256.qmd'>CMSC 256</a>
+concepts of programming languages       design                                       <a href='CMSC355.qmd'>CMSC 355</a>, <a href='CMSC403.qmd'>CMSC 403</a>, <a href='CMSC475.qmd'>CMSC 475</a>, <a href='CMSC508.qmd'>CMSC 508</a>, <a href='CMSC612.qmd'>CMSC 612</a>, <a href='CMSC619.qmd'>CMSC 619</a>
+concepts of programming languages       device virtualization                        <a href='CMSC623.qmd'>CMSC 623</a>
+concepts of programming languages       dictionaries                                 <a href='CMSC210.qmd'>CMSC 210</a>, <a href='CMSC254.qmd'>CMSC 254</a>
+concepts of programming languages       digital logic structures                     <a href='CMSC311.qmd'>CMSC 311</a>
+concepts of programming languages       end-users                                    <a href='CMSC475.qmd'>CMSC 475</a>
+concepts of programming languages       entities                                     <a href='CMSC508.qmd'>CMSC 508</a>
+concepts of programming languages       entity-relationship diagrams                 <a href='CMSC508.qmd'>CMSC 508</a>
+concepts of programming languages       entrepreneurship                             <a href='CMSC452.qmd'>CMSC 452</a>
+concepts of programming languages       equilibrium concepts                         <a href='CMSC612.qmd'>CMSC 612</a>
+concepts of programming languages       evaluation                                   <a href='CMSC628.qmd'>CMSC 628</a>
+concepts of programming languages       expert systems                               <a href='CMSC409.qmd'>CMSC 409</a>
+concepts of programming languages       expressions                                  <a href='CMSC210.qmd'>CMSC 210</a>
+concepts of programming languages       files                                        <a href='CMSC257.qmd'>CMSC 257</a>
+concepts of programming languages       flow charting                                <a href='CMSC254.qmd'>CMSC 254</a>
+concepts of programming languages       flow control                                 <a href='CMSC440.qmd'>CMSC 440</a>, <a href='CMSC525.qmd'>CMSC 525</a>
+concepts of programming languages       forks and threads                            <a href='CMSC257.qmd'>CMSC 257</a>
+concepts of programming languages       functional mapping                           <a href='CMSC678.qmd'>CMSC 678</a>
+concepts of programming languages       functional programming                       <a href='CMSC403.qmd'>CMSC 403</a>, <a href='CMSC508.qmd'>CMSC 508</a>
+concepts of programming languages       functions                                    <a href='CMSC144.qmd'>CMSC 144</a>, <a href='CMSC245.qmd'>CMSC 245</a>, <a href='CMSC254.qmd'>CMSC 254</a>, <a href='CMSC302.qmd'>CMSC 302</a>, <a href='CMSC508.qmd'>CMSC 508</a>, <a href='CMSC678.qmd'>CMSC 678</a>
+concepts of programming languages       game playing                                 <a href='CMSC409.qmd'>CMSC 409</a>
+concepts of programming languages       generics                                     <a href='CMSC256.qmd'>CMSC 256</a>
+concepts of programming languages       gradient descent                             <a href='CMSC601.qmd'>CMSC 601</a>, <a href='CMSC636.qmd'>CMSC 636</a>
+concepts of programming languages       graphs                                       <a href='CMSC256.qmd'>CMSC 256</a>, <a href='CMSC302.qmd'>CMSC 302</a>, <a href='CMSC401.qmd'>CMSC 401</a>
+concepts of programming languages       greedy approach                              <a href='CMSC401.qmd'>CMSC 401</a>
+concepts of programming languages       height-balanced trees                        <a href='CMSC401.qmd'>CMSC 401</a>
+concepts of programming languages       image                                        <a href='CMSC630.qmd'>CMSC 630</a>
+concepts of programming languages       independent study                            <a href='CMSC492.qmd'>CMSC 492</a>, <a href='CMSC692.qmd'>CMSC 692</a>
+concepts of programming languages       indexes                                      <a href='CMSC508.qmd'>CMSC 508</a>
+concepts of programming languages       induction                                    <a href='CMSC302.qmd'>CMSC 302</a>
+concepts of programming languages       infix                                        <a href='CMSC403.qmd'>CMSC 403</a>
+concepts of programming languages       input/output                                 <a href='CMSC255.qmd'>CMSC 255</a>, <a href='CMSC312.qmd'>CMSC 312</a>
+concepts of programming languages       interfaces                                   <a href='CMSC475.qmd'>CMSC 475</a>, <a href='CMSC502.qmd'>CMSC 502</a>, <a href='CMSC605.qmd'>CMSC 605</a>, <a href='CMSC619.qmd'>CMSC 619</a>
+concepts of programming languages       interior point methods                       <a href='CMSC601.qmd'>CMSC 601</a>
+concepts of programming languages       iterators                                    <a href='CMSC256.qmd'>CMSC 256</a>
+concepts of programming languages       knowledge representatives                    <a href='CMSC409.qmd'>CMSC 409</a>
+concepts of programming languages       languages                                    <a href='CMSC619.qmd'>CMSC 619</a>
+concepts of programming languages       limitations                                  <a href='CMSC591.qmd'>CMSC 591</a>
+concepts of programming languages       linguistic variables                         <a href='CMSC678.qmd'>CMSC 678</a>
+concepts of programming languages       linked lists                                 <a href='CMSC256.qmd'>CMSC 256</a>, <a href='CMSC401.qmd'>CMSC 401</a>
+concepts of programming languages       lists                                        <a href='CMSC144.qmd'>CMSC 144</a>, <a href='CMSC210.qmd'>CMSC 210</a>, <a href='CMSC254.qmd'>CMSC 254</a>, <a href='CMSC256.qmd'>CMSC 256</a>, <a href='CMSC403.qmd'>CMSC 403</a>
+concepts of programming languages       loops and iterations                         <a href='CMSC210.qmd'>CMSC 210</a>
+concepts of programming languages       maintainability                              <a href='CMSC452.qmd'>CMSC 452</a>
+concepts of programming languages       matrices                                     <a href='CMSC302.qmd'>CMSC 302</a>
+concepts of programming languages       measurement                                  <a href='CMSC410.qmd'>CMSC 410</a>
+concepts of programming languages       memory management                            <a href='CMSC257.qmd'>CMSC 257</a>
+concepts of programming languages       memory virtualization                        <a href='CMSC623.qmd'>CMSC 623</a>
+concepts of programming languages       methods                                      <a href='CMSC255.qmd'>CMSC 255</a>
+concepts of programming languages       metrics                                      <a href='CMSC624.qmd'>CMSC 624</a>, <a href='CMSC625.qmd'>CMSC 625</a>
+concepts of programming languages       model-theoretic semtances                    <a href='CMSC526.qmd'>CMSC 526</a>
+concepts of programming languages       modularization                               <a href='CMSC144.qmd'>CMSC 144</a>
+concepts of programming languages       multi-class classification                   <a href='CMSC678.qmd'>CMSC 678</a>
+concepts of programming languages       multimedia                                   <a href='CMSC611.qmd'>CMSC 611</a>
+concepts of programming languages       multipliers                                  <a href='CMSC601.qmd'>CMSC 601</a>
+concepts of programming languages       nakamoto consensus                           <a href='CMSC615.qmd'>CMSC 615</a>
+concepts of programming languages       neocognitron                                 <a href='CMSC636.qmd'>CMSC 636</a>
+concepts of programming languages       neuro-fuzzy paradigms                        <a href='CMSC678.qmd'>CMSC 678</a>
+concepts of programming languages       nonlinear optimization                       <a href='CMSC678.qmd'>CMSC 678</a>
+concepts of programming languages       normalization                                <a href='CMSC508.qmd'>CMSC 508</a>
+concepts of programming languages       objects                                      <a href='CMSC255.qmd'>CMSC 255</a>, <a href='CMSC256.qmd'>CMSC 256</a>, <a href='CMSC401.qmd'>CMSC 401</a>, <a href='CMSC428.qmd'>CMSC 428</a>
+concepts of programming languages       optimization                                 <a href='CMSC510.qmd'>CMSC 510</a>, <a href='CMSC601.qmd'>CMSC 601</a>, <a href='CMSC678.qmd'>CMSC 678</a>
+concepts of programming languages       parameters                                   <a href='CMSC144.qmd'>CMSC 144</a>
+concepts of programming languages       parsing                                      <a href='CMSC403.qmd'>CMSC 403</a>
+concepts of programming languages       patterns                                     <a href='CMSC630.qmd'>CMSC 630</a>
+concepts of programming languages       performance bottlenecks                      <a href='CMSC603.qmd'>CMSC 603</a>
+concepts of programming languages       peripherals                                  <a href='CMSC605.qmd'>CMSC 605</a>
+concepts of programming languages       php                                          <a href='CMSC508.qmd'>CMSC 508</a>
+concepts of programming languages       physical level issues                        <a href='CMSC508.qmd'>CMSC 508</a>
+concepts of programming languages       pipeline design                              <a href='CMSC605.qmd'>CMSC 605</a>
+concepts of programming languages       pointers                                     <a href='CMSC257.qmd'>CMSC 257</a>
+concepts of programming languages       polymorphism                                 <a href='CMSC256.qmd'>CMSC 256</a>
+concepts of programming languages       precendence                                  <a href='CMSC403.qmd'>CMSC 403</a>
+concepts of programming languages       prefix                                       <a href='CMSC403.qmd'>CMSC 403</a>
+concepts of programming languages       problem solving                              <a href='CMSC255.qmd'>CMSC 255</a>
+concepts of programming languages       procedures                                   <a href='CMSC508.qmd'>CMSC 508</a>
+concepts of programming languages       process scheduling                           <a href='CMSC312.qmd'>CMSC 312</a>
+concepts of programming languages       processing code                              <a href='CMSC254.qmd'>CMSC 254</a>
+concepts of programming languages       programming                                  <a href='CMSC254.qmd'>CMSC 254</a>
+concepts of programming languages       programming logic                            <a href='CMSC210.qmd'>CMSC 210</a>
+concepts of programming languages       proofs                                       <a href='CMSC302.qmd'>CMSC 302</a>
+concepts of programming languages       proximal descent                             <a href='CMSC601.qmd'>CMSC 601</a>
+concepts of programming languages       pseudocode                                   <a href='CMSC210.qmd'>CMSC 210</a>
+concepts of programming languages       python syntax                                <a href='CMSC254.qmd'>CMSC 254</a>
+concepts of programming languages       queries                                      <a href='CMSC508.qmd'>CMSC 508</a>
+concepts of programming languages       queues                                       <a href='CMSC246.qmd'>CMSC 246</a>, <a href='CMSC256.qmd'>CMSC 256</a>
+concepts of programming languages       recurrences                                  <a href='CMSC302.qmd'>CMSC 302</a>, <a href='CMSC401.qmd'>CMSC 401</a>, <a href='CMSC636.qmd'>CMSC 636</a>
+concepts of programming languages       recursion                                    <a href='CMSC246.qmd'>CMSC 246</a>, <a href='CMSC256.qmd'>CMSC 256</a>, <a href='CMSC302.qmd'>CMSC 302</a>
+concepts of programming languages       regression                                   <a href='CMSC678.qmd'>CMSC 678</a>
+concepts of programming languages       regular expressions                          <a href='CMSC210.qmd'>CMSC 210</a>, <a href='CMSC303.qmd'>CMSC 303</a>, <a href='CMSC416.qmd'>CMSC 416</a>, <a href='CMSC516.qmd'>CMSC 516</a>
+concepts of programming languages       regularization                               <a href='CMSC510.qmd'>CMSC 510</a>
+concepts of programming languages       relations                                    <a href='CMSC302.qmd'>CMSC 302</a>, <a href='CMSC508.qmd'>CMSC 508</a>
+concepts of programming languages       repetition                                   <a href='CMSC144.qmd'>CMSC 144</a>, <a href='CMSC210.qmd'>CMSC 210</a>, <a href='CMSC254.qmd'>CMSC 254</a>
+concepts of programming languages       research                                     <a href='CMSC697.qmd'>CMSC 697</a>, <a href='CMSC701.qmd'>CMSC 701</a>, <a href='CMSC702.qmd'>CMSC 702</a>
+concepts of programming languages       scalability                                  <a href='CMSC452.qmd'>CMSC 452</a>
+concepts of programming languages       selection                                    <a href='CMSC254.qmd'>CMSC 254</a>
+concepts of programming languages       semantics                                    <a href='CMSC403.qmd'>CMSC 403</a>, <a href='CMSC416.qmd'>CMSC 416</a>, <a href='CMSC516.qmd'>CMSC 516</a>, <a href='CMSC526.qmd'>CMSC 526</a>
+concepts of programming languages       seminar                                      <a href='CMSC702.qmd'>CMSC 702</a>
+concepts of programming languages       sequences                                    <a href='CMSC302.qmd'>CMSC 302</a>
+concepts of programming languages       sequencing                                   <a href='CMSC144.qmd'>CMSC 144</a>, <a href='CMSC210.qmd'>CMSC 210</a>, <a href='CMSC254.qmd'>CMSC 254</a>, <a href='CMSC302.qmd'>CMSC 302</a>
+concepts of programming languages       sequential data structures                   <a href='CMSC254.qmd'>CMSC 254</a>
+concepts of programming languages       sets                                         <a href='CMSC302.qmd'>CMSC 302</a>
+concepts of programming languages       sidechains                                   <a href='CMSC615.qmd'>CMSC 615</a>
+concepts of programming languages       signals                                      <a href='CMSC257.qmd'>CMSC 257</a>
+concepts of programming languages       simple data types                            <a href='CMSC255.qmd'>CMSC 255</a>
+concepts of programming languages       sorting                                      <a href='CMSC256.qmd'>CMSC 256</a>, <a href='CMSC401.qmd'>CMSC 401</a>
+concepts of programming languages       spark                                        <a href='CMSC603.qmd'>CMSC 603</a>
+concepts of programming languages       stacks                                       <a href='CMSC246.qmd'>CMSC 246</a>, <a href='CMSC256.qmd'>CMSC 256</a>, <a href='CMSC311.qmd'>CMSC 311</a>
+concepts of programming languages       statement                                    <a href='CMSC210.qmd'>CMSC 210</a>
+concepts of programming languages       statistical learning                         <a href='CMSC678.qmd'>CMSC 678</a>
+concepts of programming languages       strings                                      <a href='CMSC210.qmd'>CMSC 210</a>, <a href='CMSC246.qmd'>CMSC 246</a>, <a href='CMSC255.qmd'>CMSC 255</a>, <a href='CMSC403.qmd'>CMSC 403</a>, <a href='CMSC501.qmd'>CMSC 501</a>
+concepts of programming languages       structured programming                       <a href='CMSC210.qmd'>CMSC 210</a>
+concepts of programming languages       sub-routines                                 <a href='CMSC403.qmd'>CMSC 403</a>
+concepts of programming languages       subqueries                                   <a href='CMSC508.qmd'>CMSC 508</a>
+concepts of programming languages       summations                                   <a href='CMSC302.qmd'>CMSC 302</a>
+concepts of programming languages       sums                                         <a href='CMSC302.qmd'>CMSC 302</a>
+concepts of programming languages       superscalar computers                        <a href='CMSC605.qmd'>CMSC 605</a>
+concepts of programming languages       support vector machines                      <a href='CMSC678.qmd'>CMSC 678</a>
+concepts of programming languages       swift                                        <a href='CMSC428.qmd'>CMSC 428</a>
+concepts of programming languages       symbol table                                 <a href='CMSC403.qmd'>CMSC 403</a>
+concepts of programming languages       syntax                                       <a href='CMSC144.qmd'>CMSC 144</a>, <a href='CMSC255.qmd'>CMSC 255</a>, <a href='CMSC403.qmd'>CMSC 403</a>, <a href='CMSC404.qmd'>CMSC 404</a>, <a href='CMSC516.qmd'>CMSC 516</a>
+concepts of programming languages       teamwork                                     <a href='CMSC452.qmd'>CMSC 452</a>
+concepts of programming languages       test case coverage                           <a href='CMSC425.qmd'>CMSC 425</a>
+concepts of programming languages       testing                                      <a href='CMSC320.qmd'>CMSC 320</a>, <a href='CMSC452.qmd'>CMSC 452</a>
+concepts of programming languages       testing functionality                        <a href='CMSC320.qmd'>CMSC 320</a>
+concepts of programming languages       trap routines                                <a href='CMSC311.qmd'>CMSC 311</a>
+concepts of programming languages       trap subroutines                             <a href='CMSC311.qmd'>CMSC 311</a>
+concepts of programming languages       trees                                        <a href='CMSC256.qmd'>CMSC 256</a>, <a href='CMSC302.qmd'>CMSC 302</a>
+concepts of programming languages       triggers                                     <a href='CMSC508.qmd'>CMSC 508</a>
+concepts of programming languages       trust                                        <a href='CMSC622.qmd'>CMSC 622</a>
+concepts of programming languages       tuples                                       <a href='CMSC210.qmd'>CMSC 210</a>, <a href='CMSC254.qmd'>CMSC 254</a>
+concepts of programming languages       types, structs, and unions                   <a href='CMSC257.qmd'>CMSC 257</a>
+concepts of programming languages       universal programs                           <a href='CMSC612.qmd'>CMSC 612</a>
+concepts of programming languages       unsolvability                                <a href='CMSC612.qmd'>CMSC 612</a>
+concepts of programming languages       user interface                               <a href='CMSC475.qmd'>CMSC 475</a>, <a href='CMSC619.qmd'>CMSC 619</a>
+concepts of programming languages       variables                                    <a href='CMSC144.qmd'>CMSC 144</a>, <a href='CMSC210.qmd'>CMSC 210</a>
+concepts of programming languages       views                                        <a href='CMSC508.qmd'>CMSC 508</a>
+concepts of programming languages       visual odometry                              <a href='CMSC531.qmd'>CMSC 531</a>
+concepts of programming languages       volatility memory forensics                  <a href='CMSC654.qmd'>CMSC 654</a>
+concepts of programming languages       von neumann model                            <a href='CMSC311.qmd'>CMSC 311</a>
+discrete mathematics                    algebra                                      <a href='CMSC302.qmd'>CMSC 302</a>
+discrete mathematics                    approximation                                <a href='CMSC501.qmd'>CMSC 501</a>, <a href='CMSC601.qmd'>CMSC 601</a>
+discrete mathematics                    calculus                                     <a href='CMSC510.qmd'>CMSC 510</a>, <a href='CMSC608.qmd'>CMSC 608</a>, <a href='CMSC619.qmd'>CMSC 619</a>, <a href='CMSC636.qmd'>CMSC 636</a>
+discrete mathematics                    computational geometry                       <a href='CMSC501.qmd'>CMSC 501</a>
+discrete mathematics                    counting                                     <a href='CMSC302.qmd'>CMSC 302</a>
+discrete mathematics                    curve and surface approximations             <a href='CMSC411.qmd'>CMSC 411</a>
+discrete mathematics                    discrete math                                <a href='CMSC303.qmd'>CMSC 303</a>
+discrete mathematics                    linear algebra                               <a href='CMSC510.qmd'>CMSC 510</a>, <a href='CMSC591.qmd'>CMSC 591</a>, <a href='CMSC601.qmd'>CMSC 601</a>, <a href='CMSC636.qmd'>CMSC 636</a>
+discrete mathematics                    relational algebra                           <a href='CMSC508.qmd'>CMSC 508</a>, <a href='CMSC608.qmd'>CMSC 608</a>
+discrete mathematics                    relational design                            <a href='CMSC508.qmd'>CMSC 508</a>
+general purpose programming language    ajax                                         <a href='CMSC508.qmd'>CMSC 508</a>
+general purpose programming language    assembly language                            <a href='CMSC311.qmd'>CMSC 311</a>
+general purpose programming language    capstone                                     <a href='CMSC441.qmd'>CMSC 441</a>
+general purpose programming language    command languages                            <a href='CMSC312.qmd'>CMSC 312</a>
+general purpose programming language    coverage-driven systematic software testing  <a href='CMSC525.qmd'>CMSC 525</a>
+general purpose programming language    design                                       <a href='CMSC441.qmd'>CMSC 441</a>
+general purpose programming language    dynamic programming                          <a href='CMSC401.qmd'>CMSC 401</a>, <a href='CMSC425.qmd'>CMSC 425</a>, <a href='CMSC525.qmd'>CMSC 525</a>
+general purpose programming language    ensemble learning                            <a href='CMSC635.qmd'>CMSC 635</a>
+general purpose programming language    feature extraction                           <a href='CMSC630.qmd'>CMSC 630</a>
+general purpose programming language    feature selection                            <a href='CMSC630.qmd'>CMSC 630</a>, <a href='CMSC635.qmd'>CMSC 635</a>
+general purpose programming language    final project                                <a href='CMSC441.qmd'>CMSC 441</a>, <a href='CMSC452.qmd'>CMSC 452</a>
+general purpose programming language    finite automata                              <a href='CMSC303.qmd'>CMSC 303</a>
+general purpose programming language    image analysis                               <a href='CMSC630.qmd'>CMSC 630</a>
+general purpose programming language    image filtering                              <a href='CMSC630.qmd'>CMSC 630</a>
+general purpose programming language    image processing                             <a href='CMSC630.qmd'>CMSC 630</a>
+general purpose programming language    image segmentation                           <a href='CMSC630.qmd'>CMSC 630</a>
+general purpose programming language    images                                       <a href='CMSC630.qmd'>CMSC 630</a>
+general purpose programming language    information extraction                       <a href='CMSC630.qmd'>CMSC 630</a>
+general purpose programming language    input/output                                 <a href='CMSC311.qmd'>CMSC 311</a>
+general purpose programming language    intermediate languages                       <a href='CMSC404.qmd'>CMSC 404</a>
+general purpose programming language    languages                                    <a href='CMSC403.qmd'>CMSC 403</a>, <a href='CMSC404.qmd'>CMSC 404</a>, <a href='CMSC526.qmd'>CMSC 526</a>
+general purpose programming language    limitations                                  <a href='CMSC425.qmd'>CMSC 425</a>
+general purpose programming language    machine language                             <a href='CMSC311.qmd'>CMSC 311</a>
+general purpose programming language    machine learning                             <a href='CMSC409.qmd'>CMSC 409</a>, <a href='CMSC416.qmd'>CMSC 416</a>, <a href='CMSC510.qmd'>CMSC 510</a>, <a href='CMSC516.qmd'>CMSC 516</a>, <a href='CMSC591.qmd'>CMSC 591</a>, <a href='CMSC630.qmd'>CMSC 630</a>
+general purpose programming language    machine-level representation                 <a href='CMSC257.qmd'>CMSC 257</a>
+general purpose programming language    mapping                                      <a href='CMSC531.qmd'>CMSC 531</a>
+general purpose programming language    models                                       <a href='CMSC591.qmd'>CMSC 591</a>
+general purpose programming language    mysql                                        <a href='CMSC508.qmd'>CMSC 508</a>
+general purpose programming language    natural language                             <a href='CMSC409.qmd'>CMSC 409</a>, <a href='CMSC416.qmd'>CMSC 416</a>, <a href='CMSC510.qmd'>CMSC 510</a>, <a href='CMSC516.qmd'>CMSC 516</a>
+general purpose programming language    network programming using sockets            <a href='CMSC257.qmd'>CMSC 257</a>
+general purpose programming language    object oriented programming                  <a href='CMSC403.qmd'>CMSC 403</a>
+general purpose programming language    optimization                                 <a href='CMSC591.qmd'>CMSC 591</a>
+general purpose programming language    programming                                  <a href='CMSC615.qmd'>CMSC 615</a>, <a href='CMSC628.qmd'>CMSC 628</a>
+general purpose programming language    programming in c                             <a href='CMSC257.qmd'>CMSC 257</a>
+general purpose programming language    project planning                             <a href='CMSC452.qmd'>CMSC 452</a>
+general purpose programming language    pseudocode                                   <a href='CMSC254.qmd'>CMSC 254</a>
+general purpose programming language    pushdown automata                            <a href='CMSC303.qmd'>CMSC 303</a>
+general purpose programming language    python                                       <a href='CMSC654.qmd'>CMSC 654</a>
+general purpose programming language    quantum computation                          <a href='CMSC591.qmd'>CMSC 591</a>
+general purpose programming language    quantum gates                                <a href='CMSC591.qmd'>CMSC 591</a>
+general purpose programming language    quantum measurement                          <a href='CMSC591.qmd'>CMSC 591</a>
+general purpose programming language    shell programming                            <a href='CMSC257.qmd'>CMSC 257</a>
+general purpose programming language    sql                                          <a href='CMSC508.qmd'>CMSC 508</a>, <a href='CMSC608.qmd'>CMSC 608</a>
+general purpose programming language    static programming                           <a href='CMSC525.qmd'>CMSC 525</a>
+general purpose programming language    structured programming                       <a href='CMSC254.qmd'>CMSC 254</a>
+general purpose programming language    tensor                                       <a href='CMSC591.qmd'>CMSC 591</a>
+general purpose programming language    uml                                          <a href='CMSC255.qmd'>CMSC 255</a>, <a href='CMSC256.qmd'>CMSC 256</a>
+information management                  cache memories                               <a href='CMSC311.qmd'>CMSC 311</a>
+information management                  code management                              <a href='CMSC355.qmd'>CMSC 355</a>
+information management                  containerization                             <a href='CMSC355.qmd'>CMSC 355</a>
+information management                  data                                         <a href='CMSC254.qmd'>CMSC 254</a>, <a href='CMSC311.qmd'>CMSC 311</a>, <a href='CMSC330.qmd'>CMSC 330</a>, <a href='CMSC403.qmd'>CMSC 403</a>, <a href='CMSC435.qmd'>CMSC 435</a>, <a href='CMSC440.qmd'>CMSC 440</a>, <a href='CMSC610.qmd'>CMSC 610</a>, <a href='CMSC628.qmd'>CMSC 628</a>, <a href='CMSC635.qmd'>CMSC 635</a>
+information management                  data                                         <a href='CMSC508.qmd'>CMSC 508</a>
+information management                  data analysis                                <a href='CMSC435.qmd'>CMSC 435</a>
+information management                  data driven stimulations                     <a href='CMSC628.qmd'>CMSC 628</a>
+information management                  data flow                                    <a href='CMSC425.qmd'>CMSC 425</a>
+information management                  data imputation                              <a href='CMSC635.qmd'>CMSC 635</a>
+information management                  data management                              <a href='CMSC330.qmd'>CMSC 330</a>
+information management                  data manipulation                            <a href='CMSC330.qmd'>CMSC 330</a>
+information management                  data mining                                  <a href='CMSC635.qmd'>CMSC 635</a>
+information management                  data paths                                   <a href='CMSC311.qmd'>CMSC 311</a>
+information management                  data preprocessing                           <a href='CMSC635.qmd'>CMSC 635</a>
+information management                  data quality                                 <a href='CMSC330.qmd'>CMSC 330</a>, <a href='CMSC435.qmd'>CMSC 435</a>
+information management                  data security                                <a href='CMSC635.qmd'>CMSC 635</a>
+information management                  data storage                                 <a href='CMSC508.qmd'>CMSC 508</a>, <a href='CMSC635.qmd'>CMSC 635</a>
+information management                  data structures                              <a href='CMSC401.qmd'>CMSC 401</a>, <a href='CMSC403.qmd'>CMSC 403</a>, <a href='CMSC411.qmd'>CMSC 411</a>, <a href='CMSC435.qmd'>CMSC 435</a>, <a href='CMSC501.qmd'>CMSC 501</a>, <a href='CMSC628.qmd'>CMSC 628</a>
+information management                  data types                                   <a href='CMSC311.qmd'>CMSC 311</a>
+information management                  data-flow                                    <a href='CMSC425.qmd'>CMSC 425</a>
+information management                  database                                     <a href='CMSC435.qmd'>CMSC 435</a>, <a href='CMSC508.qmd'>CMSC 508</a>, <a href='CMSC618.qmd'>CMSC 618</a>
+information management                  database installation                        <a href='CMSC508.qmd'>CMSC 508</a>
+information management                  decision trees                               <a href='CMSC635.qmd'>CMSC 635</a>
+information management                  discovery process                            <a href='CMSC635.qmd'>CMSC 635</a>
+information management                  file management                              <a href='CMSC312.qmd'>CMSC 312</a>
+information management                  files                                        <a href='CMSC246.qmd'>CMSC 246</a>
+information management                  information propagation                      <a href='CMSC412.qmd'>CMSC 412</a>
+information management                  information security                         <a href='CMSC340.qmd'>CMSC 340</a>
+information management                  input/output                                 <a href='CMSC257.qmd'>CMSC 257</a>
+information management                  memory                                       <a href='CMSC654.qmd'>CMSC 654</a>
+information management                  memory management                            <a href='CMSC312.qmd'>CMSC 312</a>
+information management                  memory systems                               <a href='CMSC605.qmd'>CMSC 605</a>
+information management                  software management                          <a href='CMSC618.qmd'>CMSC 618</a>
+information management                  storage formats                              <a href='CMSC611.qmd'>CMSC 611</a>
+information management                  virtual memory                               <a href='CMSC311.qmd'>CMSC 311</a>
+local and global impacts                Legal implications                           <a href='CMSC235.qmd'>CMSC 235</a>
+local and global impacts                bitcoin                                      <a href='CMSC615.qmd'>CMSC 615</a>
+local and global impacts                blockchain                                   <a href='CMSC615.qmd'>CMSC 615</a>
+local and global impacts                cryptocurrency                               <a href='CMSC615.qmd'>CMSC 615</a>
+local and global impacts                current literature                           <a href='CMSC625.qmd'>CMSC 625</a>
+local and global impacts                etherum                                      <a href='CMSC615.qmd'>CMSC 615</a>
+local and global impacts                ethics                                       <a href='CMSC235.qmd'>CMSC 235</a>, <a href='CMSC340.qmd'>CMSC 340</a>
+local and global impacts                final project                                <a href='CMSC451.qmd'>CMSC 451</a>
+local and global impacts                firewalls                                    <a href='CMSC340.qmd'>CMSC 340</a>
+local and global impacts                legal                                        <a href='CMSC615.qmd'>CMSC 615</a>
+local and global impacts                real-world applications                      <a href='CMSC416.qmd'>CMSC 416</a>, <a href='CMSC615.qmd'>CMSC 615</a>, <a href='CMSC635.qmd'>CMSC 635</a>
+local and global impacts                social aspects of technology                 <a href='CMSC451.qmd'>CMSC 451</a>, <a href='CMSC452.qmd'>CMSC 452</a>
+local and global impacts                sociotechnical responsibilities              <a href='CMSC235.qmd'>CMSC 235</a>
+networking and communication            brainstorming                                <a href='CMSC441.qmd'>CMSC 441</a>
+networking and communication            client-server model                          <a href='CMSC440.qmd'>CMSC 440</a>
+networking and communication            communication systems                        <a href='CMSC506.qmd'>CMSC 506</a>, <a href='CMSC628.qmd'>CMSC 628</a>
+networking and communication            community structure                          <a href='CMSC412.qmd'>CMSC 412</a>
+networking and communication            computer networks                            <a href='CMSC440.qmd'>CMSC 440</a>, <a href='CMSC506.qmd'>CMSC 506</a>
+networking and communication            consensus protocols                          <a href='CMSC615.qmd'>CMSC 615</a>
+networking and communication            decentralized search                         <a href='CMSC412.qmd'>CMSC 412</a>
+networking and communication            design                                       <a href='CMSC506.qmd'>CMSC 506</a>
+networking and communication            dns                                          <a href='CMSC440.qmd'>CMSC 440</a>
+networking and communication            dns                                          <a href='CMSC440.qmd'>CMSC 440</a>
+networking and communication            e-mail                                       <a href='CMSC440.qmd'>CMSC 440</a>
+networking and communication            error control                                <a href='CMSC506.qmd'>CMSC 506</a>
+networking and communication            graphic development                          <a href='CMSC411.qmd'>CMSC 411</a>
+networking and communication            internet                                     <a href='CMSC414.qmd'>CMSC 414</a>, <a href='CMSC440.qmd'>CMSC 440</a>
+networking and communication            job scheduling                               <a href='CMSC312.qmd'>CMSC 312</a>
+networking and communication            local and wide area networks                 <a href='CMSC506.qmd'>CMSC 506</a>
+networking and communication            mail applications                            <a href='CMSC440.qmd'>CMSC 440</a>
+networking and communication            mobile networks                              <a href='CMSC628.qmd'>CMSC 628</a>
+networking and communication            mobility models                              <a href='CMSC628.qmd'>CMSC 628</a>
+networking and communication            modeling                                     <a href='CMSC628.qmd'>CMSC 628</a>
+networking and communication            network edge                                 <a href='CMSC440.qmd'>CMSC 440</a>
+networking and communication            network models                               <a href='CMSC412.qmd'>CMSC 412</a>, <a href='CMSC440.qmd'>CMSC 440</a>
+networking and communication            network programming                          <a href='CMSC210.qmd'>CMSC 210</a>
+networking and communication            network security                             <a href='CMSC622.qmd'>CMSC 622</a>
+networking and communication            network simulators                           <a href='CMSC628.qmd'>CMSC 628</a>
+networking and communication            networks                                     <a href='CMSC412.qmd'>CMSC 412</a>, <a href='CMSC414.qmd'>CMSC 414</a>, <a href='CMSC440.qmd'>CMSC 440</a>, <a href='CMSC502.qmd'>CMSC 502</a>, <a href='CMSC512.qmd'>CMSC 512</a>, <a href='CMSC605.qmd'>CMSC 605</a>, <a href='CMSC610.qmd'>CMSC 610</a>, <a href='CMSC622.qmd'>CMSC 622</a>, <a href='CMSC628.qmd'>CMSC 628</a>, <a href='CMSC654.qmd'>CMSC 654</a>
+networking and communication            networks vulnerability                       <a href='CMSC440.qmd'>CMSC 440</a>
+networking and communication            neural networks                              <a href='CMSC591.qmd'>CMSC 591</a>, <a href='CMSC635.qmd'>CMSC 635</a>
+networking and communication            osi reference model                          <a href='CMSC506.qmd'>CMSC 506</a>
+networking and communication            osns                                         <a href='CMSC412.qmd'>CMSC 412</a>
+networking and communication            pipelining                                   <a href='CMSC440.qmd'>CMSC 440</a>
+networking and communication            presentation                                 <a href='CMSC622.qmd'>CMSC 622</a>
+networking and communication            projections                                  <a href='CMSC411.qmd'>CMSC 411</a>
+networking and communication            protocol layers                              <a href='CMSC440.qmd'>CMSC 440</a>
+networking and communication            random networks                              <a href='CMSC412.qmd'>CMSC 412</a>
+networking and communication            reliable transmission                        <a href='CMSC440.qmd'>CMSC 440</a>
+networking and communication            research resources                           <a href='CMSC101.qmd'>CMSC 101</a>
+networking and communication            social network                               <a href='CMSC512.qmd'>CMSC 512</a>
+networking and communication            socket programming                           <a href='CMSC440.qmd'>CMSC 440</a>
+networking and communication            tcp                                          <a href='CMSC440.qmd'>CMSC 440</a>
+networking and communication            transformation                               <a href='CMSC411.qmd'>CMSC 411</a>
+networking and communication            udp                                          <a href='CMSC440.qmd'>CMSC 440</a>
+networking and communication            web development                              <a href='CMSC440.qmd'>CMSC 440</a>
+networking and communication            web search                                   <a href='CMSC416.qmd'>CMSC 416</a>
+operating systems                       computers                                    <a href='CMSC255.qmd'>CMSC 255</a>, <a href='CMSC311.qmd'>CMSC 311</a>, <a href='CMSC630.qmd'>CMSC 630</a>
+operating systems                       coverage-driven systematic software testing  <a href='CMSC425.qmd'>CMSC 425</a>
+operating systems                       ios                                          <a href='CMSC428.qmd'>CMSC 428</a>
+operating systems                       java                                         <a href='CMSC255.qmd'>CMSC 255</a>
+operating systems                       memory hierarchy                             <a href='CMSC311.qmd'>CMSC 311</a>
+operating systems                       multiprocessor environments                  <a href='CMSC602.qmd'>CMSC 602</a>, <a href='CMSC605.qmd'>CMSC 605</a>
+operating systems                       operating systems                            <a href='CMSC312.qmd'>CMSC 312</a>, <a href='CMSC602.qmd'>CMSC 602</a>, <a href='CMSC654.qmd'>CMSC 654</a>
+operating systems                       run-time system management                   <a href='CMSC404.qmd'>CMSC 404</a>
+operating systems                       secondary memory                             <a href='CMSC312.qmd'>CMSC 312</a>
+operating systems                       turing machines                              <a href='CMSC303.qmd'>CMSC 303</a>
+parallel and distributed computing      cuda                                         <a href='CMSC603.qmd'>CMSC 603</a>
+parallel and distributed computing      distributed systems                          <a href='CMSC312.qmd'>CMSC 312</a>, <a href='CMSC615.qmd'>CMSC 615</a>
+parallel and distributed computing      parallel algorithms                          <a href='CMSC502.qmd'>CMSC 502</a>, <a href='CMSC603.qmd'>CMSC 603</a>
+parallel and distributed computing      patterns                                     <a href='CMSC610.qmd'>CMSC 610</a>
+probability                             probabilistic classifiers                    <a href='CMSC416.qmd'>CMSC 416</a>, <a href='CMSC516.qmd'>CMSC 516</a>
+probability                             probability                                  <a href='CMSC302.qmd'>CMSC 302</a>, <a href='CMSC510.qmd'>CMSC 510</a>, <a href='CMSC636.qmd'>CMSC 636</a>
+probability                             unitary evolution                            <a href='CMSC410.qmd'>CMSC 410</a>
+security and privacy                    access control                               <a href='CMSC622.qmd'>CMSC 622</a>
+security and privacy                    application layer attacks                    <a href='CMSC414.qmd'>CMSC 414</a>
+security and privacy                    assumption                                   <a href='CMSC622.qmd'>CMSC 622</a>
+security and privacy                    authentication                               <a href='CMSC415.qmd'>CMSC 415</a>, <a href='CMSC620.qmd'>CMSC 620</a>
+security and privacy                    block cipher                                 <a href='CMSC620.qmd'>CMSC 620</a>
+security and privacy                    computer networks                            <a href='CMSC414.qmd'>CMSC 414</a>
+security and privacy                    computer security                            <a href='CMSC414.qmd'>CMSC 414</a>, <a href='CMSC622.qmd'>CMSC 622</a>
+security and privacy                    cryptographic systems                        <a href='CMSC414.qmd'>CMSC 414</a>, <a href='CMSC415.qmd'>CMSC 415</a>, <a href='CMSC620.qmd'>CMSC 620</a>
+security and privacy                    cyber defense                                <a href='CMSC413.qmd'>CMSC 413</a>
+security and privacy                    cyber ethics                                 <a href='CMSC413.qmd'>CMSC 413</a>
+security and privacy                    cyber forensics                              <a href='CMSC413.qmd'>CMSC 413</a>
+security and privacy                    cybersecurity                                <a href='CMSC413.qmd'>CMSC 413</a>
+security and privacy                    deciphering                                  <a href='CMSC620.qmd'>CMSC 620</a>
+security and privacy                    digital signatures                           <a href='CMSC415.qmd'>CMSC 415</a>, <a href='CMSC620.qmd'>CMSC 620</a>
+security and privacy                    enciphering                                  <a href='CMSC620.qmd'>CMSC 620</a>
+security and privacy                    ethical aspects of technology                <a href='CMSC101.qmd'>CMSC 101</a>
+security and privacy                    firewalls                                    <a href='CMSC414.qmd'>CMSC 414</a>
+security and privacy                    intrustion detection                         <a href='CMSC622.qmd'>CMSC 622</a>
+security and privacy                    link layer attacks                           <a href='CMSC414.qmd'>CMSC 414</a>
+security and privacy                    malicious evidence                           <a href='CMSC654.qmd'>CMSC 654</a>
+security and privacy                    malware forensics                            <a href='CMSC654.qmd'>CMSC 654</a>
+security and privacy                    network penetration                          <a href='CMSC414.qmd'>CMSC 414</a>
+security and privacy                    physical security                            <a href='CMSC340.qmd'>CMSC 340</a>
+security and privacy                    public key encryption                        <a href='CMSC415.qmd'>CMSC 415</a>, <a href='CMSC620.qmd'>CMSC 620</a>
+security and privacy                    risk management                              <a href='CMSC340.qmd'>CMSC 340</a>, <a href='CMSC420.qmd'>CMSC 420</a>
+security and privacy                    security                                     <a href='CMSC330.qmd'>CMSC 330</a>, <a href='CMSC340.qmd'>CMSC 340</a>, <a href='CMSC412.qmd'>CMSC 412</a>, <a href='CMSC413.qmd'>CMSC 413</a>, <a href='CMSC414.qmd'>CMSC 414</a>, <a href='CMSC452.qmd'>CMSC 452</a>, <a href='CMSC506.qmd'>CMSC 506</a>, <a href='CMSC512.qmd'>CMSC 512</a>, <a href='CMSC602.qmd'>CMSC 602</a>, <a href='CMSC612.qmd'>CMSC 612</a>, <a href='CMSC615.qmd'>CMSC 615</a>, <a href='CMSC618.qmd'>CMSC 618</a>, <a href='CMSC622.qmd'>CMSC 622</a>, <a href='CMSC623.qmd'>CMSC 623</a>, <a href='CMSC635.qmd'>CMSC 635</a>
+security and privacy                    security maintenance                         <a href='CMSC340.qmd'>CMSC 340</a>
+security and privacy                    security paper survey                        <a href='CMSC622.qmd'>CMSC 622</a>
+security and privacy                    security technology                          <a href='CMSC340.qmd'>CMSC 340</a>
+security and privacy                    social aspects of technology                 <a href='CMSC101.qmd'>CMSC 101</a>
+security and privacy                    steganography                                <a href='CMSC620.qmd'>CMSC 620</a>
+security and privacy                    symmetric key encryption                     <a href='CMSC415.qmd'>CMSC 415</a>
+security and privacy                    system security                              <a href='CMSC622.qmd'>CMSC 622</a>
+security and privacy                    tcp layer security                           <a href='CMSC622.qmd'>CMSC 622</a>
+security and privacy                    technical paper reading                      <a href='CMSC622.qmd'>CMSC 622</a>
+security and privacy                    vpns                                         <a href='CMSC340.qmd'>CMSC 340</a>
+software development                    advanced testing strategies                  <a href='CMSC425.qmd'>CMSC 425</a>, <a href='CMSC525.qmd'>CMSC 525</a>
+software development                    agile                                        <a href='CMSC355.qmd'>CMSC 355</a>, <a href='CMSC452.qmd'>CMSC 452</a>
+software development                    applications                                 <a href='CMSC455.qmd'>CMSC 455</a>
+software development                    ci/cd                                        <a href='CMSC452.qmd'>CMSC 452</a>
+software development                    classes                                      <a href='CMSC246.qmd'>CMSC 246</a>
+software development                    code management                              <a href='CMSC452.qmd'>CMSC 452</a>
+software development                    computer systems design                      <a href='CMSC414.qmd'>CMSC 414</a>, <a href='CMSC416.qmd'>CMSC 416</a>
+software development                    control structures                           <a href='CMSC254.qmd'>CMSC 254</a>
+software development                    cryptographic systems                        <a href='CMSC340.qmd'>CMSC 340</a>
+software development                    development                                  <a href='CMSC320.qmd'>CMSC 320</a>
+software development                    flow charting                                <a href='CMSC210.qmd'>CMSC 210</a>
+software development                    inheritance                                  <a href='CMSC246.qmd'>CMSC 246</a>
+software development                    objects                                      <a href='CMSC246.qmd'>CMSC 246</a>
+software development                    program design                               <a href='CMSC210.qmd'>CMSC 210</a>, <a href='CMSC246.qmd'>CMSC 246</a>
+software development                    requirement engineering                      <a href='CMSC355.qmd'>CMSC 355</a>
+software development                    restricted boltzmann machines                <a href='CMSC636.qmd'>CMSC 636</a>
+software development                    serverless coding                            <a href='CMSC355.qmd'>CMSC 355</a>
+software development                    service oriented design techniques           <a href='CMSC355.qmd'>CMSC 355</a>
+software development                    software design                              <a href='CMSC355.qmd'>CMSC 355</a>
+software development                    software development                         <a href='CMSC320.qmd'>CMSC 320</a>, <a href='CMSC355.qmd'>CMSC 355</a>, <a href='CMSC420.qmd'>CMSC 420</a>, <a href='CMSC425.qmd'>CMSC 425</a>, <a href='CMSC451.qmd'>CMSC 451</a>, <a href='CMSC452.qmd'>CMSC 452</a>, <a href='CMSC455.qmd'>CMSC 455</a>
+software development                    software engineering life cycle              <a href='CMSC101.qmd'>CMSC 101</a>
+software development                    software lifecycle                           <a href='CMSC355.qmd'>CMSC 355</a>
+software development                    software maintenance                         <a href='CMSC355.qmd'>CMSC 355</a>
+software development                    software management                          <a href='CMSC420.qmd'>CMSC 420</a>, <a href='CMSC425.qmd'>CMSC 425</a>, <a href='CMSC455.qmd'>CMSC 455</a>, <a href='CMSC525.qmd'>CMSC 525</a>, <a href='CMSC605.qmd'>CMSC 605</a>, <a href='CMSC625.qmd'>CMSC 625</a>
+software development                    software modeling                            <a href='CMSC355.qmd'>CMSC 355</a>
+software development                    software quality                             <a href='CMSC355.qmd'>CMSC 355</a>, <a href='CMSC420.qmd'>CMSC 420</a>, <a href='CMSC502.qmd'>CMSC 502</a>, <a href='CMSC605.qmd'>CMSC 605</a>, <a href='CMSC624.qmd'>CMSC 624</a>
+software development                    software validation                          <a href='CMSC355.qmd'>CMSC 355</a>, <a href='CMSC425.qmd'>CMSC 425</a>, <a href='CMSC525.qmd'>CMSC 525</a>
+software development                    software verification                        <a href='CMSC355.qmd'>CMSC 355</a>, <a href='CMSC425.qmd'>CMSC 425</a>, <a href='CMSC525.qmd'>CMSC 525</a>
+software development                    static programming                           <a href='CMSC425.qmd'>CMSC 425</a>
+software development                    system performance                           <a href='CMSC602.qmd'>CMSC 602</a>
+software development                    systems development                          <a href='CMSC320.qmd'>CMSC 320</a>
+software development                    testing                                      <a href='CMSC625.qmd'>CMSC 625</a>
+software development                    top down design                              <a href='CMSC245.qmd'>CMSC 245</a>, <a href='CMSC254.qmd'>CMSC 254</a>
+software development                    web development                              <a href='CMSC320.qmd'>CMSC 320</a>
+software development                    writing functions                            <a href='CMSC210.qmd'>CMSC 210</a>
+statistics                              numeric representation                       <a href='CMSC101.qmd'>CMSC 101</a>
+statistics                              statistics                                   <a href='CMSC416.qmd'>CMSC 416</a>, <a href='CMSC510.qmd'>CMSC 510</a>, <a href='CMSC516.qmd'>CMSC 516</a>, <a href='CMSC636.qmd'>CMSC 636</a>, <a href='CMSC678.qmd'>CMSC 678</a>
+techniques, skills, and tools           3d robotic vision                            <a href='CMSC531.qmd'>CMSC 531</a>
+techniques, skills, and tools           automation                                   <a href='CMSC416.qmd'>CMSC 416</a>, <a href='CMSC516.qmd'>CMSC 516</a>
+techniques, skills, and tools           bioinformatics                               <a href='CMSC610.qmd'>CMSC 610</a>
+techniques, skills, and tools           biological sequences                         <a href='CMSC610.qmd'>CMSC 610</a>
+techniques, skills, and tools           brainstorming                                <a href='CMSC442.qmd'>CMSC 442</a>
+techniques, skills, and tools           capstone                                     <a href='CMSC451.qmd'>CMSC 451</a>
+techniques, skills, and tools           context-free grammars                        <a href='CMSC416.qmd'>CMSC 416</a>
+techniques, skills, and tools           convex sets                                  <a href='CMSC591.qmd'>CMSC 591</a>
+techniques, skills, and tools           critical thinking                            <a href='CMSC210.qmd'>CMSC 210</a>, <a href='CMSC254.qmd'>CMSC 254</a>
+techniques, skills, and tools           debugging                                    <a href='CMSC210.qmd'>CMSC 210</a>, <a href='CMSC257.qmd'>CMSC 257</a>
+techniques, skills, and tools           design                                       <a href='CMSC320.qmd'>CMSC 320</a>, <a href='CMSC401.qmd'>CMSC 401</a>
+techniques, skills, and tools           documentation                                <a href='CMSC320.qmd'>CMSC 320</a>
+techniques, skills, and tools           entrepreneurship                             <a href='CMSC451.qmd'>CMSC 451</a>
+techniques, skills, and tools           ethics                                       <a href='CMSC451.qmd'>CMSC 451</a>
+techniques, skills, and tools           files                                        <a href='CMSC210.qmd'>CMSC 210</a>
+techniques, skills, and tools           final project                                <a href='CMSC442.qmd'>CMSC 442</a>
+techniques, skills, and tools           gathering                                    <a href='CMSC320.qmd'>CMSC 320</a>
+techniques, skills, and tools           github                                       <a href='CMSC355.qmd'>CMSC 355</a>
+techniques, skills, and tools           google                                       <a href='CMSC636.qmd'>CMSC 636</a>
+techniques, skills, and tools           grant proposal                               <a href='CMSC701.qmd'>CMSC 701</a>
+techniques, skills, and tools           graphs                                       <a href='CMSC525.qmd'>CMSC 525</a>
+techniques, skills, and tools           hadoop                                       <a href='CMSC603.qmd'>CMSC 603</a>
+techniques, skills, and tools           http application                             <a href='CMSC440.qmd'>CMSC 440</a>
+techniques, skills, and tools           ide                                          <a href='CMSC255.qmd'>CMSC 255</a>
+techniques, skills, and tools           limitations                                  <a href='CMSC525.qmd'>CMSC 525</a>
+techniques, skills, and tools           logic                                        <a href='CMSC302.qmd'>CMSC 302</a>, <a href='CMSC303.qmd'>CMSC 303</a>, <a href='CMSC311.qmd'>CMSC 311</a>, <a href='CMSC340.qmd'>CMSC 340</a>, <a href='CMSC526.qmd'>CMSC 526</a>, <a href='CMSC608.qmd'>CMSC 608</a>
+techniques, skills, and tools           patterns                                     <a href='CMSC355.qmd'>CMSC 355</a>
+techniques, skills, and tools           postfix                                      <a href='CMSC403.qmd'>CMSC 403</a>
+techniques, skills, and tools           power-laws                                   <a href='CMSC412.qmd'>CMSC 412</a>
+techniques, skills, and tools           preferential attachment                      <a href='CMSC412.qmd'>CMSC 412</a>
+techniques, skills, and tools           problem solving                              <a href='CMSC101.qmd'>CMSC 101</a>, <a href='CMSC210.qmd'>CMSC 210</a>, <a href='CMSC254.qmd'>CMSC 254</a>, <a href='CMSC409.qmd'>CMSC 409</a>
+techniques, skills, and tools           problem spaces                               <a href='CMSC409.qmd'>CMSC 409</a>
+techniques, skills, and tools           program testing                              <a href='CMSC255.qmd'>CMSC 255</a>
+techniques, skills, and tools           project planning                             <a href='CMSC420.qmd'>CMSC 420</a>, <a href='CMSC441.qmd'>CMSC 441</a>, <a href='CMSC442.qmd'>CMSC 442</a>, <a href='CMSC451.qmd'>CMSC 451</a>
+techniques, skills, and tools           prototyping                                  <a href='CMSC355.qmd'>CMSC 355</a>
+techniques, skills, and tools           quality management                           <a href='CMSC420.qmd'>CMSC 420</a>
+techniques, skills, and tools           research                                     <a href='CMSC441.qmd'>CMSC 441</a>
+techniques, skills, and tools           researching                                  <a href='CMSC442.qmd'>CMSC 442</a>
+techniques, skills, and tools           resources management                         <a href='CMSC602.qmd'>CMSC 602</a>
+techniques, skills, and tools           routing                                      <a href='CMSC628.qmd'>CMSC 628</a>
+techniques, skills, and tools           spell-checking                               <a href='CMSC416.qmd'>CMSC 416</a>
+techniques, skills, and tools           syntax                                       <a href='CMSC416.qmd'>CMSC 416</a>
+techniques, skills, and tools           teamwork                                     <a href='CMSC441.qmd'>CMSC 441</a>, <a href='CMSC442.qmd'>CMSC 442</a>, <a href='CMSC608.qmd'>CMSC 608</a>
+techniques, skills, and tools           testing                                      <a href='CMSC355.qmd'>CMSC 355</a>, <a href='CMSC425.qmd'>CMSC 425</a>, <a href='CMSC441.qmd'>CMSC 441</a>, <a href='CMSC442.qmd'>CMSC 442</a>, <a href='CMSC525.qmd'>CMSC 525</a>
+techniques, skills, and tools           xcode                                        <a href='CMSC428.qmd'>CMSC 428</a>
+
+::: 
+

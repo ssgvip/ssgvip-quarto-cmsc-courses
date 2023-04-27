@@ -1,0 +1,64 @@
+---
+title: "Bulletin"
+date: last-modified
+website:
+  search: false
+---
+Program information is maintained by the university in an on-line document named the bulletin. The bulletin
+is updated annually. Students follow the graduation rules based on version of the bulletin associated with their
+matriculation year. Students may choose to follow a later bulletin.
+
+
+```{python}
+#| echo: false
+
+import pandas as pd
+from IPython.display import Markdown
+from tabulate import tabulate
+
+programs_df = pd.DataFrame(
+  {"id":[
+    "computer-science-bs",
+    "computer-science-bs-concentration-cybersecurity",
+    "computer-science-bs-concentration-data-science",
+    "computer-science-bs-concentration-software-engineering"
+  ],
+  "name":[
+    "Bachelor of Science in Computer Science",
+    "Bachelor of Science in Computer Science with a concentration in cybersecurity",
+    "Bachelor of Science in Computer Science with a concentration in data science",
+    "Bachelor of Science in Computer Science with a concentration in software engineering"
+  ],
+  "abbr":[
+    "BSCS",
+    "BSCS-CY",
+    "BSCS-DS",
+    "BSCS-SE"
+  ]
+  })
+
+sections = [
+  "/#text",
+  "/#degreerequirementstext",
+  "/#planofstudytext",
+  "/#acceleratedbsandmstext",
+  "/#coursestext"
+]
+
+programs_df = programs_df.assign(
+  overview=lambda x: "["+x["name"]+"](http://bulletin.vcu.edu/undergraduate/engineering/computer-science/"+x["id"]+"/#text)",
+  requirements=lambda x: "[Degree requirements](http://bulletin.vcu.edu/undergraduate/engineering/computer-science/"+x["id"]+"/#degreerequirementstext)",
+  planofstudy=lambda x: "[Plan of Study](http://bulletin.vcu.edu/undergraduate/engineering/computer-science/"+x["id"]+"/#planofstudytext)",
+  accelerated=lambda x: "[Accelerated BS and MS](http://bulletin.vcu.edu/undergraduate/engineering/computer-science/"+x["id"]+"/#acceleratedbsandmstext)",
+  courses=lambda x: "[Courses](http://bulletin.vcu.edu/undergraduate/engineering/computer-science/"+x["id"]+"/#coursestext)"
+)
+
+cols = ["overview","requirements","planofstudy"]
+display(Markdown(tabulate(
+  programs_df[cols],
+  showindex=False
+
+)))
+
+```
+

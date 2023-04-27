@@ -451,40 +451,45 @@ are offered on a regular basis.
 
 from textwrap import wrap
 
-def xxxexpandURL( courseList ):
-  urls = course_df[ course_df["idx"].isin( courseList) ].reset_index()
-  urls["url"] = "<a href='"+urls["idx"]+".qmd"+"'>"+urls["CourseId"]+"</a>"
-  returnValue = "";
-  for i,url in urls["url"].items():
-    if i==0:
-      returnValue = url
-#    elif i % 4 == 0:
-#        returnValue = returnValue + ", <br/>\n" + url
-    else:
-      returnValue = returnValue + ", " + url
-  return returnValue
- 
-
 filename = "qmds/topics.qmd"
 with open(filename, 'w',encoding="utf-8") as file:
-  file.write(f"""---
+  file.write("""---
 title: "CMSC topics and courses"
 date: last-modified
 website:
   search: false
 ---
+
+::: {.panel-tabset}
+
+## Sort by topic
+\n
+""" )
+
+  df_grouped = topics_df.groupby(['ADJTopic','abet_tag1'])['idx'].unique().apply( expandURL ).reset_index()
+  file.write(
+    tabulate(df_grouped, tablefmt='fancy', showindex=False, headers=["Adjusted Topic","ABET Coverage","Course"] )
+  )
+
+  file.write("""\n
+\n
+## Sort by ABET topic
+\n
 """ )
 
 #  course_df['urlID'] = "[" + course_df["CourseId"].astype(str) + "](" + course_df["Subject"].astype(str) + course_df["Number"].astype(str) + '.html)'
 #  course_df['urlTitle'] = "[" + course_df["Title"].astype(str) + "](" + course_df["Subject"].astype(str) + course_df["Number"].astype(str) + '.html)'
 
-
-  df_grouped = topics_df.groupby(['ADJTopic','abet_tag1'])['idx'].unique().apply( expandURL ).reset_index()
-  
+  df_grouped = topics_df.groupby(['abet_tag1','ADJTopic'])['idx'].unique().apply( expandURL ).reset_index()
   file.write(
     tabulate(df_grouped, tablefmt='fancy', showindex=False, headers=["Adjusted Topic","ABET Coverage","Course"] )
   )
+  
+  file.write("""
 
+::: 
+
+""")
   file.close()
 
 ```

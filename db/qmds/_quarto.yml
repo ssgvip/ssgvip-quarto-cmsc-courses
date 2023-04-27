@@ -21,6 +21,8 @@ website:
         file: topics.qmd
       - text: "Coverage"
         file: coverage.qmd
+      - text: "Bulletin"
+        file: bulletin.qmd
       - text: "Code"
         file: scanner.md
   sidebar:
