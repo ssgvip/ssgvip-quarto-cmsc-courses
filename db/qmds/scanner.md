@@ -1,5 +1,5 @@
 ---
-date: 4/27/23
+date: 4/28/23
 title: Building this web site
 toc-title: Table of contents
 ---
@@ -69,6 +69,7 @@ sheets to generate and publish a static website.
 ::: {#setting-credentials .cell execution_count="1"}
 ``` {.python .cell-code}
 import os
+import sys
 import json
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
@@ -687,7 +688,7 @@ title: "CMSC courses and ABET topic coverage"
 date: last-modified
 search: false
 ---
-The mappings listed below associate ABET coverage categoris with specific courses in our curricula. Select
+The mappings listed below associate ABET coverage categories with specific courses in our curricula. Select
 an appropriate tab.\n\n
 
 \n
