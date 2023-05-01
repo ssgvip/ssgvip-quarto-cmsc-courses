@@ -1,0 +1,229 @@
+---
+title: "CMSC Map of courses to student outcomes"
+date: last-modified
+search: false
+format:
+  html:
+    include-in-header:
+      text: |
+        <script>
+        function myFunction() {
+          // Declare variables
+          var input, filter, table, tr, td, i, txtValue;
+          input = document.getElementById("myInput");
+          filter = input.value.toUpperCase();
+          table = document.getElementsByTagName("table")[0];
+          tr = table.getElementsByTagName("tr");
+
+          // Loop through all table rows, and hide those who don't match the search query
+          for (i = 0; i < tr.length; i++) {
+            var toggle;
+            toggle = "none";
+            td = tr[i].getElementsByTagName("td")[0];
+            if (td) {
+              txtValue = td.textContent || td.innerText;
+              if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                //tr[i].style.display = "";
+                toggle = "";
+              } else {
+                //tr[i].style.display = "none";
+              }
+            }
+            td = tr[i].getElementsByTagName("td")[1];
+            if (td) {
+              txtValue = td.textContent || td.innerText;
+              if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                //tr[i].style.display = "";
+                toggle = "";
+              } else {
+                //tr[i].style.display = "none";
+              }
+            }
+            td = tr[i].getElementsByTagName("td")[2];
+            if (td) {
+              txtValue = td.textContent || td.innerText;
+              if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                //tr[i].style.display = "";
+                toggle = "";
+              } else {
+                //tr[i].style.display = "none";
+              }
+            }
+            td = tr[i].getElementsByTagName("td")[3];
+            if (td) {
+              txtValue = td.textContent || td.innerText;
+              if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                //tr[i].style.display = "";
+                toggle = "";
+              } else {
+                //tr[i].style.display = "none";
+              }
+            }
+            td = tr[i].getElementsByTagName("td")[4];
+            if (td) {
+              txtValue = td.textContent || td.innerText;
+              if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                //tr[i].style.display = "";
+                toggle = "";
+              } else {
+                //tr[i].style.display = "none";
+              }
+            }
+            td = tr[i].getElementsByTagName("td")[5];
+            if (td) {
+              txtValue = td.textContent || td.innerText;
+              if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                //tr[i].style.display = "";
+                toggle = "";
+              } else {
+                //tr[i].style.display = "none";
+              }
+            }
+            td = tr[i].getElementsByTagName("td")[6];
+            if (td) {
+              txtValue = td.textContent || td.innerText;
+              if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                //tr[i].style.display = "";
+                toggle = "";
+              } else {
+                //tr[i].style.display = "none";
+              }
+            }
+            td = tr[i].getElementsByTagName("td")[7];
+            if (td) {
+              txtValue = td.textContent || td.innerText;
+              if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                //tr[i].style.display = "";
+                toggle = "";
+              } else {
+                //tr[i].style.display = "none";
+              }
+            }
+
+            tr[i].style.display = toggle
+          }
+        }
+        </script>
+---
+A list of student outcome descriptions is provided at the bottom of this page.
+
+
+
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Type in a course id, outcome id or title" style="width: 600px;">
+
+
+
+
+
+Course                   SO1    SO2    SO3    SO4    SO5    SO6    Title
+-----------------------  -----  -----  -----  -----  -----  -----  --------------------------------------------------------------------------
+[CMSC 101](CMSC101.qmd)  SO1    SO2                                [Introduction to Computer Science](CMSC101.qmd)
+[CMSC 144](CMSC144.qmd)  SO1    SO2    SO3                  SO6    [Code Beats With Python](CMSC144.qmd)
+[CMSC 191](CMSC191.qmd)                                            [Topics in Computer Science](CMSC191.qmd)
+[CMSC 210](CMSC210.qmd)  SO1    SO2           SO4           SO6    [Computers and Programming](CMSC210.qmd)
+[CMSC 235](CMSC235.qmd)                SO3    SO4                  [Computing and Data Ethics](CMSC235.qmd)
+[CMSC 245](CMSC245.qmd)  SO1    SO2                         SO6    [Introduction to Programming Using C++](CMSC245.qmd)
+[CMSC 246](CMSC246.qmd)  SO1    SO2                         SO6    [Advanced Programming Using C++](CMSC246.qmd)
+[CMSC 254](CMSC254.qmd)  SO1    SO2    SO3    SO4                  [Introduction to Problem-solving](CMSC254.qmd)
+[CMSC 255](CMSC255.qmd)  SO1    SO2                         SO6    [Introduction to Programming](CMSC255.qmd)
+[CMSC 256](CMSC256.qmd)  SO1    SO2                         SO6    [Data Structures and Object Oriented Programming](CMSC256.qmd)
+[CMSC 257](CMSC257.qmd)  SO1    SO2                         SO6    [Computer Systems](CMSC257.qmd)
+[CMSC 302](CMSC302.qmd)  SO1    SO2                         SO6    [Introduction to Discrete Structures](CMSC302.qmd)
+[CMSC 303](CMSC303.qmd)  SO1    SO2                         SO6    [Introduction to the Theory of Computation](CMSC303.qmd)
+[CMSC 311](CMSC311.qmd)  SO1    SO2                         SO6    [Computer Organization](CMSC311.qmd)
+[CMSC 312](CMSC312.qmd)  SO1    SO2                         SO6    [Introduction to Operating Systems](CMSC312.qmd)
+[CMSC 320](CMSC320.qmd)  SO1    SO2                         SO6    [Software Engineering and Web Development](CMSC320.qmd)
+[CMSC 330](CMSC330.qmd)  SO1    SO2                         SO6    [Data Science Skills](CMSC330.qmd)
+[CMSC 340](CMSC340.qmd)  SO1    SO2           SO4           SO6    [Cybersecurity Skills](CMSC340.qmd)
+[CMSC 355](CMSC355.qmd)  SO1    SO2           SO4    SO5    SO6    [Fundamentals of Software Engineering](CMSC355.qmd)
+[CMSC 391](CMSC391.qmd)                                            [Topics in Computer Science](CMSC391.qmd)
+[CMSC 401](CMSC401.qmd)  SO1    SO2                         SO6    [Algorithm Analysis with Advanced Data Structures](CMSC401.qmd)
+[CMSC 403](CMSC403.qmd)  SO1    SO2                         SO6    [Programming Languages](CMSC403.qmd)
+[CMSC 404](CMSC404.qmd)  SO1                                SO6    [Compiler Construction](CMSC404.qmd)
+[CMSC 409](CMSC409.qmd)  SO1    SO2                         SO6    [Artificial Intelligence](CMSC409.qmd)
+[CMSC 410](CMSC410.qmd)  SO1    SO2                         SO6    [Introduction to Quantum Computing](CMSC410.qmd)
+[CMSC 411](CMSC411.qmd)  SO1    SO2                         SO6    [Computer Graphics](CMSC411.qmd)
+[CMSC 412](CMSC412.qmd)  SO1    SO2                         SO6    [Social Network Analysis and Cybersecurity Risks](CMSC412.qmd)
+[CMSC 413](CMSC413.qmd)                                     SO6    [Introduction to Cybersecurity](CMSC413.qmd)
+[CMSC 414](CMSC414.qmd)  SO1    SO2    SO3    SO4    SO5    SO6    [Computer and Network Security](CMSC414.qmd)
+[CMSC 415](CMSC415.qmd)  SO1    SO2                         SO6    [Introduction to Cryptography](CMSC415.qmd)
+[CMSC 416](CMSC416.qmd)  SO1    SO2                         SO6    [Introduction to Natural Language Processing](CMSC416.qmd)
+[CMSC 420](CMSC420.qmd)  SO1    SO2                         SO6    [Software Project Management](CMSC420.qmd)
+[CMSC 425](CMSC425.qmd)  SO1    SO2                  SO5    SO6    [Introduction to Software Analysis and Testing](CMSC425.qmd)
+[CMSC 428](CMSC428.qmd)                                     SO6    [Mobile Programming: iOS](CMSC428.qmd)
+[CMSC 435](CMSC435.qmd)  SO1    SO2                                [Introduction to Data Science](CMSC435.qmd)
+[CMSC 440](CMSC440.qmd)  SO1    SO2                         SO6    [Data Communication and Networking](CMSC440.qmd)
+[CMSC 441](CMSC441.qmd)  SO1    SO2    SO3    SO4    SO5    SO6    [Senior Design Studio I (Laboratory/Project Time)](CMSC441.qmd)
+[CMSC 442](CMSC442.qmd)  SO1    SO2    SO3    SO4    SO5    SO6    [Senior Design Studio II (Laboratory/Project Time)](CMSC442.qmd)
+[CMSC 451](CMSC451.qmd)  SO1    SO2    SO3    SO4    SO5    SO6    [Senior Project I](CMSC451.qmd)
+[CMSC 452](CMSC452.qmd)  SO1    SO2    SO3    SO4    SO5    SO6    [Senior Project II](CMSC452.qmd)
+[CMSC 455](CMSC455.qmd)  SO1    SO2                         SO6    [Software as a Service](CMSC455.qmd)
+[CMSC 475](CMSC475.qmd)         SO2                         SO6    [Design and Implementation of User Interfaces](CMSC475.qmd)
+[CMSC 491](CMSC491.qmd)                                            [Topics in Computer Science](CMSC491.qmd)
+[CMSC 492](CMSC492.qmd)                                     SO6    [Independent Study](CMSC492.qmd)
+[CMSC 501](CMSC501.qmd)  SO1    SO2                         SO6    [Advanced Algorithms](CMSC501.qmd)
+[CMSC 502](CMSC502.qmd)  SO1    SO2                         SO6    [Parallel Algorithms](CMSC502.qmd)
+[CMSC 506](CMSC506.qmd)  SO1    SO2                         SO6    [Computer Networks and Communications](CMSC506.qmd)
+[CMSC 508](CMSC508.qmd)  SO1    SO2                         SO6    [Database Theory](CMSC508.qmd)
+[CMSC 510](CMSC510.qmd)  SO1    SO2                         SO6    [Regularization Methods for Machine Learning](CMSC510.qmd)
+[CMSC 512](CMSC512.qmd)  SO1    SO2                         SO6    [Advanced Social Network Analysis and Security](CMSC512.qmd)
+[CMSC 516](CMSC516.qmd)         SO2                         SO6    [Advanced Natural Language Processing](CMSC516.qmd)
+[CMSC 525](CMSC525.qmd)  SO1    SO2    SO3    SO4    SO5    SO6    [Introduction to Software Analysis, Testing and Verification](CMSC525.qmd)
+[CMSC 526](CMSC526.qmd)         SO2                         SO6    [Theory of Programming Languages](CMSC526.qmd)
+[CMSC 531](CMSC531.qmd)  SO1    SO2                         SO6    [3D Computer Vision for Robot Navigation](CMSC531.qmd)
+[CMSC 591](CMSC591.qmd)  SO1    SO2                         SO6    [Topics in Computer Science](CMSC591.qmd)
+[CMSC 601](CMSC601.qmd)  SO1    SO2                         SO6    [Convex Optimization](CMSC601.qmd)
+[CMSC 602](CMSC602.qmd)  SO1    SO2                         SO6    [Operating Systems](CMSC602.qmd)
+[CMSC 603](CMSC603.qmd)  SO1    SO2                         SO6    [High Performance Distributed Systems](CMSC603.qmd)
+[CMSC 605](CMSC605.qmd)  SO1    SO2                         SO6    [Advanced Computer Architecture](CMSC605.qmd)
+[CMSC 608](CMSC608.qmd)  SO1    SO2    SO3    SO4    SO5    SO6    [Advanced Database](CMSC608.qmd)
+[CMSC 610](CMSC610.qmd)  SO1    SO2                         SO6    [Algorithmic Foundations of Bioinformatics](CMSC610.qmd)
+[CMSC 611](CMSC611.qmd)                                     SO6    [Computer Multimedia](CMSC611.qmd)
+[CMSC 612](CMSC612.qmd)  SO1    SO2                         SO6    [Game Theory and Security](CMSC612.qmd)
+[CMSC 615](CMSC615.qmd)  SO1    SO2           SO4           SO6    [Cryptocurrency and Blockchain Techniques](CMSC615.qmd)
+[CMSC 618](CMSC618.qmd)  SO1    SO2                         SO6    [Database and Application Security](CMSC618.qmd)
+[CMSC 619](CMSC619.qmd)         SO2                         SO6    [The Design and Specifications of User Interfaces](CMSC619.qmd)
+[CMSC 620](CMSC620.qmd)  SO1    SO2                         SO6    [Applied Cryptography](CMSC620.qmd)
+[CMSC 621](CMSC621.qmd)  SO1    SO2                         SO6    [Theory of Computation](CMSC621.qmd)
+[CMSC 622](CMSC622.qmd)  SO1    SO2                         SO6    [Network and System Security](CMSC622.qmd)
+[CMSC 623](CMSC623.qmd)  SO1    SO2                         SO6    [Cloud Computing](CMSC623.qmd)
+[CMSC 624](CMSC624.qmd)                                     SO6    [Software Quality Assurance](CMSC624.qmd)
+[CMSC 625](CMSC625.qmd)  SO1    SO2                         SO6    [Advanced Software Analysis, Testing and Verification](CMSC625.qmd)
+[CMSC 628](CMSC628.qmd)  SO1    SO2                         SO6    [Mobile Networks: Applications, Modeling and Analysis](CMSC628.qmd)
+[CMSC 630](CMSC630.qmd)  SO1    SO2                         SO6    [Image Analysis](CMSC630.qmd)
+[CMSC 635](CMSC635.qmd)  SO1    SO2                         SO6    [Knowledge Discovery and Data Mining](CMSC635.qmd)
+[CMSC 636](CMSC636.qmd)  SO1    SO2                         SO6    [Artificial Neural Networks and Deep Learning](CMSC636.qmd)
+[CMSC 654](CMSC654.qmd)  SO1    SO2                         SO6    [Memory and Malware Forensics](CMSC654.qmd)
+[CMSC 678](CMSC678.qmd)  SO1    SO2                         SO6    [Statistical Learning and Fuzzy Logic Algorithms](CMSC678.qmd)
+[CMSC 691](CMSC691.qmd)  SO1    SO2                         SO6    [Special Topics in Computer Science](CMSC691.qmd)
+[CMSC 692](CMSC692.qmd)                                     SO6    [Independent Study](CMSC692.qmd)
+[CMSC 697](CMSC697.qmd)  SO1    SO2                                [Directed Research](CMSC697.qmd)
+[CMSC 701](CMSC701.qmd)  SO1    SO2                         SO6    [Research Methods](CMSC701.qmd)
+[CMSC 702](CMSC702.qmd)  SO1    SO2                         SO6    [Computer Science Seminar](CMSC702.qmd)
+
+
+
+**SO1** - Analyze a complex computing problem and apply principles of computing and other relevant disciplines to identify solutions;
+
+
+
+**SO2** - Design, implement and evaluate a computing-based solution to meet a given set of computing requirements in the context of the program’s discipline;
+
+
+
+**SO3** - Communicate effectively in a variety of professional contexts;
+
+
+
+**SO4** - Recognize professional responsibilities and make informed judgments in computing practice based on legal and ethical principles;
+
+
+
+**SO5** - Function effectively as a member or leader of a team engaged in activities appropriate to the program’s discipline;
+
+
+
+**SO6** - Apply computer science theory and software development fundamentals to produce computing-based solutions;
+
+
+

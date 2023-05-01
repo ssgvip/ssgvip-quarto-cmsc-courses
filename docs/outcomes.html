@@ -8,7 +8,7 @@
 
 <meta name="dcterms.date" content="2023-05-01">
 
-<title>CMSC Courses - CMSC Courses and Titles</title>
+<title>CMSC Courses - CMSC Map of courses to student outcomes</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -60,6 +60,105 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+<script>
+function myFunction() {
+  // Declare variables
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementsByTagName("table")[0];
+  tr = table.getElementsByTagName("tr");
+
+  // Loop through all table rows, and hide those who don't match the search query
+  for (i = 0; i < tr.length; i++) {
+    var toggle;
+    toggle = "none";
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        //tr[i].style.display = "";
+        toggle = "";
+      } else {
+        //tr[i].style.display = "none";
+      }
+    }
+    td = tr[i].getElementsByTagName("td")[1];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        //tr[i].style.display = "";
+        toggle = "";
+      } else {
+        //tr[i].style.display = "none";
+      }
+    }
+    td = tr[i].getElementsByTagName("td")[2];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        //tr[i].style.display = "";
+        toggle = "";
+      } else {
+        //tr[i].style.display = "none";
+      }
+    }
+    td = tr[i].getElementsByTagName("td")[3];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        //tr[i].style.display = "";
+        toggle = "";
+      } else {
+        //tr[i].style.display = "none";
+      }
+    }
+    td = tr[i].getElementsByTagName("td")[4];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        //tr[i].style.display = "";
+        toggle = "";
+      } else {
+        //tr[i].style.display = "none";
+      }
+    }
+    td = tr[i].getElementsByTagName("td")[5];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        //tr[i].style.display = "";
+        toggle = "";
+      } else {
+        //tr[i].style.display = "none";
+      }
+    }
+    td = tr[i].getElementsByTagName("td")[6];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        //tr[i].style.display = "";
+        toggle = "";
+      } else {
+        //tr[i].style.display = "none";
+      }
+    }
+    td = tr[i].getElementsByTagName("td")[7];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        //tr[i].style.display = "";
+        toggle = "";
+      } else {
+        //tr[i].style.display = "none";
+      }
+    }
+
+    tr[i].style.display = toggle
+  }
+}
+</script>
+
 
 </head>
 
@@ -80,7 +179,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page">
+    <a class="nav-link" href="./index.html">
  <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
@@ -100,7 +199,7 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Coverage</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./outcomes.html">
+    <a class="nav-link active" href="./outcomes.html" aria-current="page">
  <span class="menu-text">Outcomes</span></a>
   </li>  
   <li class="nav-item">
@@ -118,7 +217,7 @@ ul.task-list li input[type="checkbox"] {
     </nav>
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">CMSC Courses and Titles</h1>
+      <h1 class="quarto-secondary-nav-title">CMSC Map of courses to student outcomes</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -628,7 +727,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">CMSC Courses and Titles</h1>
+<h1 class="title d-none d-lg-block">CMSC Map of courses to student outcomes</h1>
 </div>
 
 
@@ -649,348 +748,860 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
+<p>A list of student outcome descriptions is provided at the bottom of this page.</p>
+<p><input type="text" id="myInput" onkeyup="myFunction()" placeholder="Type in a course id, outcome id or title" style="width: 600px;"></p>
 <table class="table">
 <thead>
 <tr class="header">
 <th style="text-align: left;">Course</th>
+<th style="text-align: left;">SO1</th>
+<th style="text-align: left;">SO2</th>
+<th style="text-align: left;">SO3</th>
+<th style="text-align: left;">SO4</th>
+<th style="text-align: left;">SO5</th>
+<th style="text-align: left;">SO6</th>
 <th style="text-align: left;">Title</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td style="text-align: left;"><a href="./CMSC101.html">CMSC&nbsp;101</a></td>
+<td style="text-align: left;">SO1</td>
+<td style="text-align: left;">SO2</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
 <td style="text-align: left;"><a href="./CMSC101.html">Introduction to Computer Science</a></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"><a href="./CMSC144.html">CMSC&nbsp;144</a></td>
+<td style="text-align: left;">SO1</td>
+<td style="text-align: left;">SO2</td>
+<td style="text-align: left;">SO3</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">SO6</td>
 <td style="text-align: left;"><a href="./CMSC144.html">Code Beats With Python</a></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"><a href="./CMSC191.html">CMSC&nbsp;191</a></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
 <td style="text-align: left;"><a href="./CMSC191.html">Topics in Computer Science</a></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"><a href="./CMSC210.html">CMSC&nbsp;210</a></td>
+<td style="text-align: left;">SO1</td>
+<td style="text-align: left;">SO2</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">SO4</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">SO6</td>
 <td style="text-align: left;"><a href="./CMSC210.html">Computers and Programming</a></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"><a href="./CMSC235.html">CMSC 235</a></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">SO3</td>
+<td style="text-align: left;">SO4</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
 <td style="text-align: left;"><a href="./CMSC235.html">Computing and Data Ethics</a></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"><a href="./CMSC245.html">CMSC&nbsp;245</a></td>
+<td style="text-align: left;">SO1</td>
+<td style="text-align: left;">SO2</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">SO6</td>
 <td style="text-align: left;"><a href="./CMSC245.html">Introduction to Programming Using C++</a></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"><a href="./CMSC246.html">CMSC&nbsp;246</a></td>
+<td style="text-align: left;">SO1</td>
+<td style="text-align: left;">SO2</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">SO6</td>
 <td style="text-align: left;"><a href="./CMSC246.html">Advanced Programming Using C++</a></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"><a href="./CMSC254.html">CMSC&nbsp;254</a></td>
+<td style="text-align: left;">SO1</td>
+<td style="text-align: left;">SO2</td>
+<td style="text-align: left;">SO3</td>
+<td style="text-align: left;">SO4</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
 <td style="text-align: left;"><a href="./CMSC254.html">Introduction to Problem-solving</a></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"><a href="./CMSC255.html">CMSC&nbsp;255</a></td>
+<td style="text-align: left;">SO1</td>
+<td style="text-align: left;">SO2</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">SO6</td>
 <td style="text-align: left;"><a href="./CMSC255.html">Introduction to Programming</a></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"><a href="./CMSC256.html">CMSC&nbsp;256</a></td>
+<td style="text-align: left;">SO1</td>
+<td style="text-align: left;">SO2</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">SO6</td>
 <td style="text-align: left;"><a href="./CMSC256.html">Data Structures and Object Oriented Programming</a></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"><a href="./CMSC257.html">CMSC&nbsp;257</a></td>
+<td style="text-align: left;">SO1</td>
+<td style="text-align: left;">SO2</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">SO6</td>
 <td style="text-align: left;"><a href="./CMSC257.html">Computer Systems</a></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"><a href="./CMSC302.html">CMSC&nbsp;302</a></td>
+<td style="text-align: left;">SO1</td>
+<td style="text-align: left;">SO2</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">SO6</td>
 <td style="text-align: left;"><a href="./CMSC302.html">Introduction to Discrete Structures</a></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"><a href="./CMSC303.html">CMSC&nbsp;303</a></td>
+<td style="text-align: left;">SO1</td>
+<td style="text-align: left;">SO2</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">SO6</td>
 <td style="text-align: left;"><a href="./CMSC303.html">Introduction to the Theory of Computation</a></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"><a href="./CMSC311.html">CMSC&nbsp;311</a></td>
+<td style="text-align: left;">SO1</td>
+<td style="text-align: left;">SO2</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">SO6</td>
 <td style="text-align: left;"><a href="./CMSC311.html">Computer Organization</a></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"><a href="./CMSC312.html">CMSC&nbsp;312</a></td>
+<td style="text-align: left;">SO1</td>
+<td style="text-align: left;">SO2</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">SO6</td>
 <td style="text-align: left;"><a href="./CMSC312.html">Introduction to Operating Systems</a></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"><a href="./CMSC320.html">CMSC&nbsp;320</a></td>
+<td style="text-align: left;">SO1</td>
+<td style="text-align: left;">SO2</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">SO6</td>
 <td style="text-align: left;"><a href="./CMSC320.html">Software Engineering and Web Development</a></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"><a href="./CMSC330.html">CMSC&nbsp;330</a></td>
+<td style="text-align: left;">SO1</td>
+<td style="text-align: left;">SO2</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">SO6</td>
 <td style="text-align: left;"><a href="./CMSC330.html">Data Science Skills</a></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"><a href="./CMSC340.html">CMSC&nbsp;340</a></td>
+<td style="text-align: left;">SO1</td>
+<td style="text-align: left;">SO2</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">SO4</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">SO6</td>
 <td style="text-align: left;"><a href="./CMSC340.html">Cybersecurity Skills</a></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"><a href="./CMSC355.html">CMSC&nbsp;355</a></td>
+<td style="text-align: left;">SO1</td>
+<td style="text-align: left;">SO2</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">SO4</td>
+<td style="text-align: left;">SO5</td>
+<td style="text-align: left;">SO6</td>
 <td style="text-align: left;"><a href="./CMSC355.html">Fundamentals of Software Engineering</a></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"><a href="./CMSC391.html">CMSC&nbsp;391</a></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
 <td style="text-align: left;"><a href="./CMSC391.html">Topics in Computer Science</a></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"><a href="./CMSC401.html">CMSC&nbsp;401</a></td>
+<td style="text-align: left;">SO1</td>
+<td style="text-align: left;">SO2</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">SO6</td>
 <td style="text-align: left;"><a href="./CMSC401.html">Algorithm Analysis with Advanced Data Structures</a></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"><a href="./CMSC403.html">CMSC&nbsp;403</a></td>
+<td style="text-align: left;">SO1</td>
+<td style="text-align: left;">SO2</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">SO6</td>
 <td style="text-align: left;"><a href="./CMSC403.html">Programming Languages</a></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"><a href="./CMSC404.html">CMSC&nbsp;404</a></td>
+<td style="text-align: left;">SO1</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">SO6</td>
 <td style="text-align: left;"><a href="./CMSC404.html">Compiler Construction</a></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"><a href="./CMSC409.html">CMSC&nbsp;409</a></td>
+<td style="text-align: left;">SO1</td>
+<td style="text-align: left;">SO2</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">SO6</td>
 <td style="text-align: left;"><a href="./CMSC409.html">Artificial Intelligence</a></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"><a href="./CMSC410.html">CMSC&nbsp;410</a></td>
+<td style="text-align: left;">SO1</td>
+<td style="text-align: left;">SO2</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">SO6</td>
 <td style="text-align: left;"><a href="./CMSC410.html">Introduction to Quantum Computing</a></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"><a href="./CMSC411.html">CMSC&nbsp;411</a></td>
+<td style="text-align: left;">SO1</td>
+<td style="text-align: left;">SO2</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">SO6</td>
 <td style="text-align: left;"><a href="./CMSC411.html">Computer Graphics</a></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"><a href="./CMSC412.html">CMSC&nbsp;412</a></td>
+<td style="text-align: left;">SO1</td>
+<td style="text-align: left;">SO2</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">SO6</td>
 <td style="text-align: left;"><a href="./CMSC412.html">Social Network Analysis and Cybersecurity Risks</a></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"><a href="./CMSC413.html">CMSC&nbsp;413</a></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">SO6</td>
 <td style="text-align: left;"><a href="./CMSC413.html">Introduction to Cybersecurity</a></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"><a href="./CMSC414.html">CMSC&nbsp;414</a></td>
+<td style="text-align: left;">SO1</td>
+<td style="text-align: left;">SO2</td>
+<td style="text-align: left;">SO3</td>
+<td style="text-align: left;">SO4</td>
+<td style="text-align: left;">SO5</td>
+<td style="text-align: left;">SO6</td>
 <td style="text-align: left;"><a href="./CMSC414.html">Computer and Network Security</a></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"><a href="./CMSC415.html">CMSC&nbsp;415</a></td>
+<td style="text-align: left;">SO1</td>
+<td style="text-align: left;">SO2</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">SO6</td>
 <td style="text-align: left;"><a href="./CMSC415.html">Introduction to Cryptography</a></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"><a href="./CMSC416.html">CMSC&nbsp;416</a></td>
+<td style="text-align: left;">SO1</td>
+<td style="text-align: left;">SO2</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">SO6</td>
 <td style="text-align: left;"><a href="./CMSC416.html">Introduction to Natural Language Processing</a></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"><a href="./CMSC420.html">CMSC&nbsp;420</a></td>
+<td style="text-align: left;">SO1</td>
+<td style="text-align: left;">SO2</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">SO6</td>
 <td style="text-align: left;"><a href="./CMSC420.html">Software Project Management</a></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"><a href="./CMSC425.html">CMSC&nbsp;425</a></td>
+<td style="text-align: left;">SO1</td>
+<td style="text-align: left;">SO2</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">SO5</td>
+<td style="text-align: left;">SO6</td>
 <td style="text-align: left;"><a href="./CMSC425.html">Introduction to Software Analysis and Testing</a></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"><a href="./CMSC428.html">CMSC&nbsp;428</a></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">SO6</td>
 <td style="text-align: left;"><a href="./CMSC428.html">Mobile Programming: iOS</a></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"><a href="./CMSC435.html">CMSC&nbsp;435</a></td>
+<td style="text-align: left;">SO1</td>
+<td style="text-align: left;">SO2</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
 <td style="text-align: left;"><a href="./CMSC435.html">Introduction to Data Science</a></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"><a href="./CMSC440.html">CMSC&nbsp;440</a></td>
+<td style="text-align: left;">SO1</td>
+<td style="text-align: left;">SO2</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">SO6</td>
 <td style="text-align: left;"><a href="./CMSC440.html">Data Communication and Networking</a></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"><a href="./CMSC441.html">CMSC&nbsp;441</a></td>
+<td style="text-align: left;">SO1</td>
+<td style="text-align: left;">SO2</td>
+<td style="text-align: left;">SO3</td>
+<td style="text-align: left;">SO4</td>
+<td style="text-align: left;">SO5</td>
+<td style="text-align: left;">SO6</td>
 <td style="text-align: left;"><a href="./CMSC441.html">Senior Design Studio I (Laboratory/Project Time)</a></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"><a href="./CMSC442.html">CMSC&nbsp;442</a></td>
+<td style="text-align: left;">SO1</td>
+<td style="text-align: left;">SO2</td>
+<td style="text-align: left;">SO3</td>
+<td style="text-align: left;">SO4</td>
+<td style="text-align: left;">SO5</td>
+<td style="text-align: left;">SO6</td>
 <td style="text-align: left;"><a href="./CMSC442.html">Senior Design Studio II (Laboratory/Project Time)</a></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"><a href="./CMSC451.html">CMSC&nbsp;451</a></td>
+<td style="text-align: left;">SO1</td>
+<td style="text-align: left;">SO2</td>
+<td style="text-align: left;">SO3</td>
+<td style="text-align: left;">SO4</td>
+<td style="text-align: left;">SO5</td>
+<td style="text-align: left;">SO6</td>
 <td style="text-align: left;"><a href="./CMSC451.html">Senior Project I</a></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"><a href="./CMSC452.html">CMSC&nbsp;452</a></td>
+<td style="text-align: left;">SO1</td>
+<td style="text-align: left;">SO2</td>
+<td style="text-align: left;">SO3</td>
+<td style="text-align: left;">SO4</td>
+<td style="text-align: left;">SO5</td>
+<td style="text-align: left;">SO6</td>
 <td style="text-align: left;"><a href="./CMSC452.html">Senior Project II</a></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"><a href="./CMSC455.html">CMSC&nbsp;455</a></td>
+<td style="text-align: left;">SO1</td>
+<td style="text-align: left;">SO2</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">SO6</td>
 <td style="text-align: left;"><a href="./CMSC455.html">Software as a Service</a></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"><a href="./CMSC475.html">CMSC&nbsp;475</a></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">SO2</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">SO6</td>
 <td style="text-align: left;"><a href="./CMSC475.html">Design and Implementation of User Interfaces</a></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"><a href="./CMSC491.html">CMSC&nbsp;491</a></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
 <td style="text-align: left;"><a href="./CMSC491.html">Topics in Computer Science</a></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"><a href="./CMSC492.html">CMSC&nbsp;492</a></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">SO6</td>
 <td style="text-align: left;"><a href="./CMSC492.html">Independent Study</a></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"><a href="./CMSC501.html">CMSC&nbsp;501</a></td>
+<td style="text-align: left;">SO1</td>
+<td style="text-align: left;">SO2</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">SO6</td>
 <td style="text-align: left;"><a href="./CMSC501.html">Advanced Algorithms</a></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"><a href="./CMSC502.html">CMSC&nbsp;502</a></td>
+<td style="text-align: left;">SO1</td>
+<td style="text-align: left;">SO2</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">SO6</td>
 <td style="text-align: left;"><a href="./CMSC502.html">Parallel Algorithms</a></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"><a href="./CMSC506.html">CMSC&nbsp;506</a></td>
+<td style="text-align: left;">SO1</td>
+<td style="text-align: left;">SO2</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">SO6</td>
 <td style="text-align: left;"><a href="./CMSC506.html">Computer Networks and Communications</a></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"><a href="./CMSC508.html">CMSC&nbsp;508</a></td>
+<td style="text-align: left;">SO1</td>
+<td style="text-align: left;">SO2</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">SO6</td>
 <td style="text-align: left;"><a href="./CMSC508.html">Database Theory</a></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"><a href="./CMSC510.html">CMSC&nbsp;510</a></td>
+<td style="text-align: left;">SO1</td>
+<td style="text-align: left;">SO2</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">SO6</td>
 <td style="text-align: left;"><a href="./CMSC510.html">Regularization Methods for Machine Learning</a></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"><a href="./CMSC512.html">CMSC&nbsp;512</a></td>
+<td style="text-align: left;">SO1</td>
+<td style="text-align: left;">SO2</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">SO6</td>
 <td style="text-align: left;"><a href="./CMSC512.html">Advanced Social Network Analysis and Security</a></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"><a href="./CMSC516.html">CMSC&nbsp;516</a></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">SO2</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">SO6</td>
 <td style="text-align: left;"><a href="./CMSC516.html">Advanced Natural Language Processing</a></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"><a href="./CMSC525.html">CMSC&nbsp;525</a></td>
+<td style="text-align: left;">SO1</td>
+<td style="text-align: left;">SO2</td>
+<td style="text-align: left;">SO3</td>
+<td style="text-align: left;">SO4</td>
+<td style="text-align: left;">SO5</td>
+<td style="text-align: left;">SO6</td>
 <td style="text-align: left;"><a href="./CMSC525.html">Introduction to Software Analysis, Testing and Verification</a></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"><a href="./CMSC526.html">CMSC&nbsp;526</a></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">SO2</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">SO6</td>
 <td style="text-align: left;"><a href="./CMSC526.html">Theory of Programming Languages</a></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"><a href="./CMSC531.html">CMSC&nbsp;531</a></td>
+<td style="text-align: left;">SO1</td>
+<td style="text-align: left;">SO2</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">SO6</td>
 <td style="text-align: left;"><a href="./CMSC531.html">3D Computer Vision for Robot Navigation</a></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"><a href="./CMSC591.html">CMSC&nbsp;591</a></td>
+<td style="text-align: left;">SO1</td>
+<td style="text-align: left;">SO2</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">SO6</td>
 <td style="text-align: left;"><a href="./CMSC591.html">Topics in Computer Science</a></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"><a href="./CMSC601.html">CMSC&nbsp;601</a></td>
+<td style="text-align: left;">SO1</td>
+<td style="text-align: left;">SO2</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">SO6</td>
 <td style="text-align: left;"><a href="./CMSC601.html">Convex Optimization</a></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"><a href="./CMSC602.html">CMSC&nbsp;602</a></td>
+<td style="text-align: left;">SO1</td>
+<td style="text-align: left;">SO2</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">SO6</td>
 <td style="text-align: left;"><a href="./CMSC602.html">Operating Systems</a></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"><a href="./CMSC603.html">CMSC&nbsp;603</a></td>
+<td style="text-align: left;">SO1</td>
+<td style="text-align: left;">SO2</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">SO6</td>
 <td style="text-align: left;"><a href="./CMSC603.html">High Performance Distributed Systems</a></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"><a href="./CMSC605.html">CMSC&nbsp;605</a></td>
+<td style="text-align: left;">SO1</td>
+<td style="text-align: left;">SO2</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">SO6</td>
 <td style="text-align: left;"><a href="./CMSC605.html">Advanced Computer Architecture</a></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"><a href="./CMSC608.html">CMSC&nbsp;608</a></td>
+<td style="text-align: left;">SO1</td>
+<td style="text-align: left;">SO2</td>
+<td style="text-align: left;">SO3</td>
+<td style="text-align: left;">SO4</td>
+<td style="text-align: left;">SO5</td>
+<td style="text-align: left;">SO6</td>
 <td style="text-align: left;"><a href="./CMSC608.html">Advanced Database</a></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"><a href="./CMSC610.html">CMSC&nbsp;610</a></td>
+<td style="text-align: left;">SO1</td>
+<td style="text-align: left;">SO2</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">SO6</td>
 <td style="text-align: left;"><a href="./CMSC610.html">Algorithmic Foundations of Bioinformatics</a></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"><a href="./CMSC611.html">CMSC&nbsp;611</a></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">SO6</td>
 <td style="text-align: left;"><a href="./CMSC611.html">Computer Multimedia</a></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"><a href="./CMSC612.html">CMSC&nbsp;612</a></td>
+<td style="text-align: left;">SO1</td>
+<td style="text-align: left;">SO2</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">SO6</td>
 <td style="text-align: left;"><a href="./CMSC612.html">Game Theory and Security</a></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"><a href="./CMSC615.html">CMSC&nbsp;615</a></td>
+<td style="text-align: left;">SO1</td>
+<td style="text-align: left;">SO2</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">SO4</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">SO6</td>
 <td style="text-align: left;"><a href="./CMSC615.html">Cryptocurrency and Blockchain Techniques</a></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"><a href="./CMSC618.html">CMSC&nbsp;618</a></td>
+<td style="text-align: left;">SO1</td>
+<td style="text-align: left;">SO2</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">SO6</td>
 <td style="text-align: left;"><a href="./CMSC618.html">Database and Application Security</a></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"><a href="./CMSC619.html">CMSC&nbsp;619</a></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">SO2</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">SO6</td>
 <td style="text-align: left;"><a href="./CMSC619.html">The Design and Specifications of User Interfaces</a></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"><a href="./CMSC620.html">CMSC&nbsp;620</a></td>
+<td style="text-align: left;">SO1</td>
+<td style="text-align: left;">SO2</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">SO6</td>
 <td style="text-align: left;"><a href="./CMSC620.html">Applied Cryptography</a></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"><a href="./CMSC621.html">CMSC&nbsp;621</a></td>
+<td style="text-align: left;">SO1</td>
+<td style="text-align: left;">SO2</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">SO6</td>
 <td style="text-align: left;"><a href="./CMSC621.html">Theory of Computation</a></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"><a href="./CMSC622.html">CMSC&nbsp;622</a></td>
+<td style="text-align: left;">SO1</td>
+<td style="text-align: left;">SO2</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">SO6</td>
 <td style="text-align: left;"><a href="./CMSC622.html">Network and System Security</a></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"><a href="./CMSC623.html">CMSC&nbsp;623</a></td>
+<td style="text-align: left;">SO1</td>
+<td style="text-align: left;">SO2</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">SO6</td>
 <td style="text-align: left;"><a href="./CMSC623.html">Cloud Computing</a></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"><a href="./CMSC624.html">CMSC&nbsp;624</a></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">SO6</td>
 <td style="text-align: left;"><a href="./CMSC624.html">Software Quality Assurance</a></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"><a href="./CMSC625.html">CMSC&nbsp;625</a></td>
+<td style="text-align: left;">SO1</td>
+<td style="text-align: left;">SO2</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">SO6</td>
 <td style="text-align: left;"><a href="./CMSC625.html">Advanced Software Analysis, Testing and Verification</a></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"><a href="./CMSC628.html">CMSC&nbsp;628</a></td>
+<td style="text-align: left;">SO1</td>
+<td style="text-align: left;">SO2</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">SO6</td>
 <td style="text-align: left;"><a href="./CMSC628.html">Mobile Networks: Applications, Modeling and Analysis</a></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"><a href="./CMSC630.html">CMSC&nbsp;630</a></td>
+<td style="text-align: left;">SO1</td>
+<td style="text-align: left;">SO2</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">SO6</td>
 <td style="text-align: left;"><a href="./CMSC630.html">Image Analysis</a></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"><a href="./CMSC635.html">CMSC&nbsp;635</a></td>
+<td style="text-align: left;">SO1</td>
+<td style="text-align: left;">SO2</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">SO6</td>
 <td style="text-align: left;"><a href="./CMSC635.html">Knowledge Discovery and Data Mining</a></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"><a href="./CMSC636.html">CMSC&nbsp;636</a></td>
+<td style="text-align: left;">SO1</td>
+<td style="text-align: left;">SO2</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">SO6</td>
 <td style="text-align: left;"><a href="./CMSC636.html">Artificial Neural Networks and Deep Learning</a></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"><a href="./CMSC654.html">CMSC&nbsp;654</a></td>
+<td style="text-align: left;">SO1</td>
+<td style="text-align: left;">SO2</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">SO6</td>
 <td style="text-align: left;"><a href="./CMSC654.html">Memory and Malware Forensics</a></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"><a href="./CMSC678.html">CMSC&nbsp;678</a></td>
+<td style="text-align: left;">SO1</td>
+<td style="text-align: left;">SO2</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">SO6</td>
 <td style="text-align: left;"><a href="./CMSC678.html">Statistical Learning and Fuzzy Logic Algorithms</a></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"><a href="./CMSC691.html">CMSC&nbsp;691</a></td>
+<td style="text-align: left;">SO1</td>
+<td style="text-align: left;">SO2</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">SO6</td>
 <td style="text-align: left;"><a href="./CMSC691.html">Special Topics in Computer Science</a></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"><a href="./CMSC692.html">CMSC&nbsp;692</a></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">SO6</td>
 <td style="text-align: left;"><a href="./CMSC692.html">Independent Study</a></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"><a href="./CMSC697.html">CMSC&nbsp;697</a></td>
+<td style="text-align: left;">SO1</td>
+<td style="text-align: left;">SO2</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
 <td style="text-align: left;"><a href="./CMSC697.html">Directed Research</a></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"><a href="./CMSC701.html">CMSC&nbsp;701</a></td>
+<td style="text-align: left;">SO1</td>
+<td style="text-align: left;">SO2</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">SO6</td>
 <td style="text-align: left;"><a href="./CMSC701.html">Research Methods</a></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"><a href="./CMSC702.html">CMSC&nbsp;702</a></td>
+<td style="text-align: left;">SO1</td>
+<td style="text-align: left;">SO2</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">SO6</td>
 <td style="text-align: left;"><a href="./CMSC702.html">Computer Science Seminar</a></td>
 </tr>
 </tbody>
 </table>
+<p><strong>SO1</strong> - Analyze a complex computing problem and apply principles of computing and other relevant disciplines to identify solutions;</p>
+<p><strong>SO2</strong> - Design, implement and evaluate a computing-based solution to meet a given set of computing requirements in the context of the program’s discipline;</p>
+<p><strong>SO3</strong> - Communicate effectively in a variety of professional contexts;</p>
+<p><strong>SO4</strong> - Recognize professional responsibilities and make informed judgments in computing practice based on legal and ethical principles;</p>
+<p><strong>SO5</strong> - Function effectively as a member or leader of a team engaged in activities appropriate to the program’s discipline;</p>
+<p><strong>SO6</strong> - Apply computer science theory and software development fundamentals to produce computing-based solutions;</p>
 
 
 

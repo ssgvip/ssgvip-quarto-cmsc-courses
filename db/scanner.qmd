@@ -87,7 +87,7 @@ this email address should be added as a "share" to the file on the regular googl
 
 ```
 
-# Loading the course and topics data
+# Loading the courses, topics and outcomes data
 
 ```{python}
 #| label: Loading google sheet
@@ -122,13 +122,19 @@ for col in ["Count","Number","Level"]:
 
 topics_df["CourseId"] = topics_df["CourseId"].apply( str.strip )
 
-
 # Coverage data: restack ABET 1, 2 and 3 categories
 g1 = topics_df[ ["abet_tag1","ADJTopic","idx","CourseId"] ]
 g2 = topics_df[ ["abet_tag2","ADJTopic","idx","CourseId"] ].rename(columns={"abet_tag2":"abet_tag1"})
 g3 = topics_df[ ["abet_tag3","ADJTopic","idx","CourseId"] ].rename(columns={"abet_tag3":"abet_tag1"})
 g =  pd.concat( [g1,g2,g3],axis=0)
 coverage_df = g[ g["abet_tag1"] != ""]
+
+
+# Outcomes data: Read the data into a Pandas DataFrame
+sheet3 = client.open_by_key(spreadsheet_key).worksheet("CMSC-course-outcomes")
+data = sheet3.batch_get( ['A1:I'] )[0]
+headers = data.pop(0)
+outcomes_df = pd.DataFrame(data, columns=headers)
 
 ```
 
@@ -734,6 +740,166 @@ added to the catalog and have not yet been taught.
     tabulate(df, tablefmt='fancy', showindex=False, headers=df.columns)
   )
 
+  file.close()
+
+```
+
+# Autogenerating *outcomes.qmd*
+
+
+```{python}
+#| echo: true
+
+from textwrap import wrap
+
+filename = "qmds/outcomes.qmd"
+with open(filename, 'w',encoding="utf-8") as file:
+  file.write("""---
+title: "CMSC Map of courses to student outcomes"
+date: last-modified
+search: false
+format:
+  html:
+    include-in-header:
+      text: |
+        <script>
+        function myFunction() {
+          // Declare variables
+          var input, filter, table, tr, td, i, txtValue;
+          input = document.getElementById("myInput");
+          filter = input.value.toUpperCase();
+          table = document.getElementsByTagName("table")[0];
+          tr = table.getElementsByTagName("tr");
+
+          // Loop through all table rows, and hide those who don't match the search query
+          for (i = 0; i < tr.length; i++) {
+            var toggle;
+            toggle = "none";
+            td = tr[i].getElementsByTagName("td")[0];
+            if (td) {
+              txtValue = td.textContent || td.innerText;
+              if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                //tr[i].style.display = "";
+                toggle = "";
+              } else {
+                //tr[i].style.display = "none";
+              }
+            }
+            td = tr[i].getElementsByTagName("td")[1];
+            if (td) {
+              txtValue = td.textContent || td.innerText;
+              if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                //tr[i].style.display = "";
+                toggle = "";
+              } else {
+                //tr[i].style.display = "none";
+              }
+            }
+            td = tr[i].getElementsByTagName("td")[2];
+            if (td) {
+              txtValue = td.textContent || td.innerText;
+              if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                //tr[i].style.display = "";
+                toggle = "";
+              } else {
+                //tr[i].style.display = "none";
+              }
+            }
+            td = tr[i].getElementsByTagName("td")[3];
+            if (td) {
+              txtValue = td.textContent || td.innerText;
+              if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                //tr[i].style.display = "";
+                toggle = "";
+              } else {
+                //tr[i].style.display = "none";
+              }
+            }
+            td = tr[i].getElementsByTagName("td")[4];
+            if (td) {
+              txtValue = td.textContent || td.innerText;
+              if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                //tr[i].style.display = "";
+                toggle = "";
+              } else {
+                //tr[i].style.display = "none";
+              }
+            }
+            td = tr[i].getElementsByTagName("td")[5];
+            if (td) {
+              txtValue = td.textContent || td.innerText;
+              if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                //tr[i].style.display = "";
+                toggle = "";
+              } else {
+                //tr[i].style.display = "none";
+              }
+            }
+            td = tr[i].getElementsByTagName("td")[6];
+            if (td) {
+              txtValue = td.textContent || td.innerText;
+              if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                //tr[i].style.display = "";
+                toggle = "";
+              } else {
+                //tr[i].style.display = "none";
+              }
+            }
+            td = tr[i].getElementsByTagName("td")[7];
+            if (td) {
+              txtValue = td.textContent || td.innerText;
+              if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                //tr[i].style.display = "";
+                toggle = "";
+              } else {
+                //tr[i].style.display = "none";
+              }
+            }
+
+            tr[i].style.display = toggle
+          }
+        }
+        </script>
+---
+A list of student outcome descriptions is provided at the bottom of this page.\n\n
+
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Type in a course id, outcome id or title" style="width: 600px;">
+
+\n\n
+
+""" )
+
+  outcomes_df['urlID'] = "[" + outcomes_df["CourseId"].astype(str) + "](" + outcomes_df["idx"] + '.qmd)'
+  outcomes_df['urlTitle'] = "[" + outcomes_df["Title"].astype(str) + "](" + outcomes_df["idx"] + '.qmd)'
+
+  for x in ["SO1","SO2","SO3","SO4","SO5","SO6"]:
+    outcomes_df[x] = outcomes_df[x].replace( {'x':x})
+
+  cols = ["urlID","SO1","SO2","SO3","SO4","SO5","SO6","urlTitle"]
+  file.write(tabulate(
+  outcomes_df[ cols ],
+  showindex=False,
+  headers=["Course","SO1","SO2","SO3","SO4","SO5","SO6","Title"],
+#  align=["left","center","center","center","center","center","center","left"],
+  tablefmt="fancy"
+    )
+  )
+  file.write("""
+\n
+
+**SO1** - Analyze a complex computing problem and apply principles of computing and other relevant disciplines to identify solutions;
+\n\n
+**SO2** - Design, implement and evaluate a computing-based solution to meet a given set of computing requirements in the context of the program’s discipline;
+\n\n
+**SO3** - Communicate effectively in a variety of professional contexts;
+\n\n
+**SO4** - Recognize professional responsibilities and make informed judgments in computing practice based on legal and ethical principles;
+\n\n
+**SO5** - Function effectively as a member or leader of a team engaged in activities appropriate to the program’s discipline;
+\n\n
+**SO6** - Apply computer science theory and software development fundamentals to produce computing-based solutions;
+\n\n
+""")
   file.close()
 
 ```
