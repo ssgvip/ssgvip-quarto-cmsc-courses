@@ -3,14 +3,14 @@ project:
   output-dir: ..\..\docs
 
 website:
-  title: "CMSC Courses"
+  title: "VCU Computer Science Courses"
   search:
     location: navbar
     type: overlay
   navbar:
     background: primary
     search: true
-    left:
+    right: #changed nav menu items to align to the right
       - text: "Home"
         file: index.qmd
       - text: "Catalog"
@@ -27,6 +27,8 @@ website:
         file: bulletin.qmd
       - text: "Code"
         file: scanner.md
+    logo: assets/CS-icon-01.png #vcu computer science emblem 
+    logo-href: /index.html
   sidebar:
     style: "docked"
     search: false
@@ -37,7 +39,7 @@ website:
 format:
   html:
     theme: quarto_vcutheme.scss
-#    css: styles.css
+    mainfont: 'Roboto' #vcu's body text font.
     toc: true
     html-math-method: katex
 
