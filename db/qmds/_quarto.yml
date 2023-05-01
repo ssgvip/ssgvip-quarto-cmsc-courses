@@ -34,8 +34,8 @@ website:
 
 format:
   html:
-    theme: cosmo
-    css: styles.css
+    theme: quarto_vcutheme.scss
+#    css: styles.css
     toc: true
     html-math-method: katex
 
